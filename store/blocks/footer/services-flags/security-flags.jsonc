@@ -1,0 +1,82 @@
+{
+  "flex-layout.col#security-flags": {
+    "props": {
+      "blockClass": "security-flags-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#security-title",
+      "flex-layout.row#security-content"
+    ]
+  },
+
+  "flex-layout.row#security-title": {
+    "props": {
+      "blockClass": "security-title-container",
+      "colSizing": "auto"
+    },
+    "children": ["flex-layout.col#security-title"]
+  },
+  "flex-layout.col#security-title": {
+    "props": {
+      "blockClass": "security-title-content",
+      "preventVerticalStretch": true
+    },
+    "children": ["rich-text#security-title"]
+  },
+  "rich-text#security-title": {
+    "props": {
+      "blockClass": "footer-title",
+      "text": "#### Selos de segurança"
+    }
+  },
+
+  "flex-layout.row#security-content": {
+    "props": {
+      "blockClass": "security-content-container",
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#first-security-content",
+      "flex-layout.col#second-security-content"
+    ]
+  },
+  "flex-layout.col#first-security-content": {
+    "props": {
+      "blockClass": "first-security-content",
+      "preventVerticalStretch": true
+    },
+    "children": ["image#security-ebit"]
+  },
+  "image#security-ebit": {
+    "props": {
+      "src": "assets/flags/security/ebit.webp",
+      "alt": "Selo ebit de segurança"
+    }
+  },
+
+  "flex-layout.col#second-security-content": {
+    "props": {
+      "blockClass": "second-security-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "image#security-googlesf",
+      "image#security-siteblindado"
+    ]
+  },
+  "image#security-googlesf": {
+    "props": {
+      "src": "assets/flags/security/googlesf.svg",
+      "alt": "Selo Google Safe Browsing",
+      "maxWidth": 117
+    }
+  },
+  "image#security-siteblindado": {
+    "props": {
+      "src": "assets/flags/security/siteblindado.png",
+      "alt": "Selo Site Blindado",
+      "maxWidth": 117
+    }
+  }
+}

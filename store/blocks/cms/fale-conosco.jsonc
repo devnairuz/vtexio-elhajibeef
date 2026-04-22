@@ -1,0 +1,31 @@
+{
+  "store.custom#fale-conosco": {
+    "children": [
+      "flex-layout.row#fale-conosco"
+    ]
+  },
+  "flex-layout.row#fale-conosco": {
+    "props": {
+      "blockClass": ["custom-container"]
+    },
+    "children": ["flex-layout.col#faleconteudo"]
+  },
+  "flex-layout.col#faleconteudo": {
+    "children": ["rich-text#fale-title", "rich-text#faleconosco"],
+    "props": {
+      "blockClass": "container"
+    }
+  },
+  "rich-text#fale-title": {
+    "props": {
+      "text": "# Fale Conosco"
+    }
+  },
+  "rich-text#faleconosco": {
+    "props": {
+      "text": "CNPJ: 15.275.322/0001 \n\n Razão Social: Nairuz | Marketing Digital e Tecnologia. \n\n Endereço: R. 25 de Janeiro, 112 - 4 b - Centro, Monte Mor - SP, 13193-060 \n\n Telefone: [(19) 3217-6400](tel:1932176400) -  Telefone: [(19) 3217-6400](tel:1932176400)\n\n E-mail: [contato@nairuz.com.br](mailto:contato@nairuz.com.br).\n\n",
+      "textAlignment": "initial",
+      "textPosition": "initial"
+    }
+  }
+}

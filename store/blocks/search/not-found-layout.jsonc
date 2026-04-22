@@ -1,0 +1,22 @@
+{
+  "search-not-found-layout": {
+    "children": [
+      "flex-layout.row#search-bread",
+      "flex-layout.row#search-title",
+      "flex-layout.row#not-found-results"
+    ]
+  },
+
+  "flex-layout.row#not-found-results": {
+    "props": {
+      "blockClass": ["not-found-results-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#not-found-results"]
+  },
+  "flex-layout.col#not-found-results": {
+    "props": {
+      "blockClass": "not-found-results-content"
+    },
+    "children": ["not-found"]
+  }
+}

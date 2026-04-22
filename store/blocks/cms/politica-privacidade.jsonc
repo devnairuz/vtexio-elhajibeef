@@ -1,0 +1,425 @@
+{
+  "store.custom#politica-privacidade": {
+    "children": [
+      "flex-layout.row#politicas-de-privacidade"
+    ]
+  },
+
+  "flex-layout.row#politicas-de-privacidade": {
+    "props": {
+      "blockClass": ["politicas-de-privacidade", "custom-container"]
+    },
+    "children": [
+      "flex-layout.col#politicas-de-privacidade"
+    ]
+  },
+
+  "flex-layout.col#politicas-de-privacidade": {
+    "children": [
+      "rich-text#politicas-de-privacidade",
+      "disclosure-layout-group#group"
+    ]
+  },
+  "rich-text#politicas-de-privacidade": {
+    "props": {
+      "text": "# Aviso de Privacidade"
+    }
+  },
+
+  "disclosure-layout-group#group": {
+    "children": [
+      "disclosure-layout#first",
+      "disclosure-layout#second",
+      "disclosure-layout#third",
+      "disclosure-layout#fourth",
+      "disclosure-layout#fifth",
+      "disclosure-layout#sixth",
+      "disclosure-layout#seventh",
+      "disclosure-layout#eighth",
+      "disclosure-layout#ninth",
+      "disclosure-layout#tenth",
+      "disclosure-layout#eleventh",
+      "disclosure-layout#twelfth"
+    ]
+  },
+
+  "disclosure-layout#first": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#first", "disclosure-content#first"]
+  },
+  "disclosure-trigger#first": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question1"]
+  },
+  "disclosure-content#first": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer1"]
+  },
+  "rich-text#question1": {
+    "props": {
+      "text": "## 1. Declaração corporativa"
+    }
+  },
+  "rich-text#answer1": {
+    "props": {
+      "text": "A **DOCOL** tem como um de seus princípios organizacionais o respeito e a valorização das pessoas. A Privacidade de clientes, parceiros e colaboradores integra a missão de ofertar produtos e serviços sustentáveis. O uso consciente e controlado de dados pessoas compõe a missão de cada um na **DOCOL**. Os valores da excelência, simplicidade, empatia e confiança conduzem os esforços gerenciais, técnicos e criativos para assegurar proteção de dados em todos os seus processos internos.\nNos comprometemos com a proteção de seus dados pessoais no cumprimento da legislação brasileira aplicável, especialmente a Lei 13.709/2018 – Lei Geral de Proteção de Dados (LGPD).\nAs disposições deste Aviso de Privacidade são assumidas como compromisso pelas empresas DOCOL INDÚSTRIA E COMÉRCIO LTDA, inscrita no CNPJ/MF sob o nº 75.339.051/0001-41, e por MEKAL METALÚRGICA KADOW LTDA, inscrita no CNPJ/MF sob o nº 57.037.392/0001-80, empresas com sede na Avenida Edmundo Doubrawa nº 1001, Zona Industrial, no Município de Joinville, Estado de Santa Catarina, CEP 89219-502.\nCaso você tenha alguma dúvida ou necessite realizar alguma solicitação, entre em contato com nosso Chefe de Privacidade pelo e-mail: [privacidade@docol.com.br.](mailto:privacidade@docol.com.br)"
+    }
+  },
+
+  "disclosure-layout#second": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#second", "disclosure-content#second"]
+  },
+  "disclosure-trigger#second": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question2"]
+  },
+  "disclosure-content#second": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer2"]
+  },
+  "rich-text#question2": {
+    "props": {
+      "text": "## 2. Quais dados pessoais coletamos?"
+    }
+  },
+  "rich-text#answer2": {
+    "props": {
+      "text": "A **DOCOL** declara promover o tratamento de dados pessoais cadastrais de clientes, colaboradores, fornecedores e usuários, como, dentre outros, nome, CPF, endereço de e-mail, contato telefônico e endereço completo.\nAlém dos dados cadastrais, a **DOCOL** declara promover a coleta de dados pessoais indiretos relacionados ao acesso aos nossos portais na Internet, levantados pelo próprio sistema sem a necessária informação pelos usuários, tais como geolocalização e endereço de IP.\nCaso queira saber mais sobre os dados pessoais tratados, entre em contato pelo e-mail: [privacidade@docol.com.br.](mailto:privacidade@docol.com.br)"
+    }
+  },
+
+
+  "disclosure-layout#third": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#third", "disclosure-content#third"]
+  },
+  "disclosure-trigger#third": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question3"]
+  },
+  "disclosure-content#third": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer3"]
+  },
+  "rich-text#question3": {
+    "props": {
+      "text": "## 3. A DOCOL coleta dados pessoais sensíveis?"
+    }
+  },
+  "rich-text#answer3": {
+    "props": {
+      "text": "A **DOCOL** realiza o tratamento de dados sensíveis exclusivamente nas hipóteses **permitidas em lei:**\n- Proteção da vida ou da incolumidade física do titular ou de terceiros;\n- garantia da prevenção à fraude e à segurança do titular, nos processos de identificação e autenticação de cadastro em sistemas eletrônicos;\n- garantia da prevenção à fraude e à segurança do titular, nos processos de identificação e autenticação de cadastro em sistemas eletrônicos;\n- exercício regular de direitos, inclusive em contrato e em processo judicial;\n- cumprimento de obrigação legal ou regulatória pelo controlador;\n\nO tratamento de dados sensíveis, quando necessário, é submetido a controles de **segurança** como restrição de acesso, controles lógicos como senha, criptografia e bloqueio de acesso, entre outros."
+    }
+  },
+
+
+  "disclosure-layout#fourth": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#fourth", "disclosure-content#fourth"]
+  },
+  "disclosure-trigger#fourth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question4"]
+  },
+  "disclosure-content#fourth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer4"]
+  },
+  "rich-text#question4": {
+    "props": {
+      "text": "## 4. Por que precisamos tratar esses dados?"
+    }
+  },
+  "rich-text#answer4": {
+    "props": {
+      "text": "O tratamento de dados coletados pela **DOCOL** neste portal se dará em plena conformidade com a legislação brasileira de **proteção de dados** e no estrito propósito de atendimento às seguintes finalidades:\n-promoção dos produtos e serviços oferecidos pela DOCOL, divulgação de novas coleções e funcionalidades, anúncios sazonais e outras atividades relacionadas à publicidade voltada a seus produtos;\n- permitir aos clientes e interessados em produtos e serviços da DOCOL que mantenham histórico de seus acessos, produtos visualizados e destacados, compras e outros registros de interesse do cliente;\n- efetuar o processo de recrutamento e seleção para contratação de novos colaboradores;\n- realizar admissão de colaboradores, possibilitando o cumprimento de obrigações legais e contratuais, além da concessão de benefícios;\n- garantir a segurança dos estabelecimentos da DOCOL e de todos os presentes no mesmo;\n- estudar a interação dos usuários com os meios de comunicação da DOCOL, no propósito de desenvolver melhorias e novas formas de relacionamento;\n- estabelecer critérios de identificação do usuário cadastrado e suas atividades na plataforma, sistema e website;\n- evitar a ocorrência de fraudes contra o usuário e terceiros;\n- possibilitar a execução de funcionalidades do sistema, plataforma ou website, atendendo expectativas do usuário.\n\nO tratamento de dados sensíveis, quando necessário, é submetido a controles de **segurança** como restrição de acesso, controles lógicos como senha, criptografia e bloqueio de acesso, entre outros."
+    }
+  },
+
+  "disclosure-layout#fifth": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#fifth", "disclosure-content#fifth"]
+  },
+  "disclosure-trigger#fifth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question5"]
+  },
+  "disclosure-content#fifth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer5"]
+  },
+  "rich-text#question5": {
+    "props": {
+      "text": "## 5. Como trataremos seus dados?"
+    }
+  },
+  "rich-text#answer5": {
+    "props": {
+      "text": "A **DOCOL** se compromete a proteger as informações pessoais, mantendo medidas técnicas e gerenciais, preventivas e responsivas de segurança da informação, tais como, obrigação de **confidencialidade** entre os colaboradores, backups atualizados e segredados; ambientes operacionais monitorados por câmeras, controle de acesso de informações restrito por função, entre outros.\nEm que pese aplicação destas práticas de segurança da informação, a **DOCOL** não garante a impossibilidade de ocorrência de incidentes de segurança. Por isso, não se responsabiliza pela negligência do usuário ou pela ação maliciosa de terceiros, se eximindo do dever de reparar os danos decorrentes de incidentes de segurança ou violação de dados decorrentes de invasões, falhas ou vícios, salvo se comprovadamente ocasionadas por conduta culposa ou deliberada da própria DOCOL."
+    }
+  },
+
+  "disclosure-layout#sixth": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#sixth", "disclosure-content#sixth"]
+  },
+  "disclosure-trigger#sixth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question6"]
+  },
+  "disclosure-content#sixth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer6"]
+  },
+  "rich-text#question6": {
+    "props": {
+      "text": "## 6. Seus dados pessoais serão compartilhados?"
+    }
+  },
+  "rich-text#answer6": {
+    "props": {
+      "text": "Os dados de natureza pessoal somente poderão ser compartilhados pela DOCOL com terceiros, nas hipóteses de:\n- sucessão empresarial, a exemplo de fusão, aquisição e incorporação;\n- contratação de serviços de processamento de dados junto a terceiros (operadores), tais como hospedagem de dados, sistemas de processamento (serviços de computação em nuvem), serviços de atendimento ao consumidor, serviços de manutenção e atendimento técnico, organização de eventos em que a **DOCOL** participe, serviços de faturamento de créditos (financeiros). Estes terceiros não terão interesse direto nas informações e agirão sempre sob a diretiva e orientação da DOCOL.\n\nA **DOCOL** informa que é obrigada por lei a compartilhar dados pessoais dos usuários em caso de exigência emanada de autoridade judicial, policial ou administrativa. A disponibilização destes dados se dará apenas mediante validação da ordem emitida junto aos órgãos competentes."
+    }
+  },
+
+  "disclosure-layout#seventh": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#seventh", "disclosure-content#seventh"]
+  },
+  "disclosure-trigger#seventh": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question7"]
+  },
+  "disclosure-content#seventh": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer7"]
+  },
+  "rich-text#question7": {
+    "props": {
+      "text": "## 7. Seus dados serão transferidos para outro país?"
+    }
+  },
+  "rich-text#answer7": {
+    "props": {
+      "text": "Alguns dos processadores diretos e indiretos poderão estar fora do território brasileiro. A DOCOL se compromete a zelar e exigir o cumprimento das exigências legais decorrentes das normas de proteção de dados pessoais. Em especial, a **DOCOL** se compromete a exigir de terceiros Compromisso com os Termos de Segurança da informação e Proteção de Dados Pessoais."
+    }
+  },
+
+  "disclosure-layout#eighth": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#eighth", "disclosure-content#eighth"]
+  },
+  "disclosure-trigger#eighth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question8"]
+  },
+  "disclosure-content#eighth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer8"]
+  },
+  "rich-text#question8": {
+    "props": {
+      "text": "## 8. Como lidamos com cookies?"
+    }
+  },
+  "rich-text#answer8": {
+    "props": {
+      "text": "A **DOCOL** declara fazer uso de cookies para aprimorar a experiência de seus usuários em suas plataformas e páginas na Internet. Cookies são arquivos enviados pela DOCOL e instalados no navegador dos usuários. Os cookies permitem a identificação do terminal de Internet, autenticar o usuário, personalizar a experiência de navegação e contratação de serviços, registrar acessos e atividades na página.\nA DOCOL faz uso dos cookies do Google Analytics. Acesse a Política de Privacidade do Google para mais informações: [https://policies.google.com/privacy?hl=pt#about](https://policies.google.com/privacy?hl=pt#about).\nA DOCOL assegura que tanto na execução de cookies próprios quanto de terceiros, as melhores **práticas de segurança** são adotadas para garantir a **proteção dos dados** pessoais levantados.\nO uso dos cookies pela DOCOL é previamente comunicado ao usuário quando de seu acesso às plataformas e websites online. As autorizações podem ser revisadas e modificadas a qualquer tempo pelo usuário em seu navegador. A DOCOL esclarece que o bloqueio dos cookies pode interferir no pleno uso dos recursos disponibilizados, inclusive inviabilizando acesso a determinadas funções e ferramentas dos canais e plataformas."
+    }
+  },
+
+  "disclosure-layout#ninth": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#ninth", "disclosure-content#ninth"]
+  },
+  "disclosure-trigger#ninth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question9"]
+  },
+  "disclosure-content#ninth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer9"]
+  },
+  "rich-text#question9": {
+    "props": {
+      "text": "## 9. Por quanto tempo manteremos os dados?"
+    }
+  },
+  "rich-text#answer9": {
+    "props": {
+      "text": "O armazenamento dos dados pessoais referentes aos registros de acesso ao website da DOCOL se dará pelo período mínimo de 6 (seis) meses, em conformidade com as exigências do Marco Civil da Internet (MCI) brasileiro. Após esse período, esses dados serão irreversivelmente destruídos.\nOs dados pessoais mantidos para fins de marketing serão por nós mantidos até que você nos notifique que não deseja mais receber essas informações.\nA DOCOL assegura que, encerrada a relação contratual ou manifestado oposição ao tratamento dos dados, as informações de natureza pessoal, coletadas e armazenadas, serão eliminadas, ressalva feita à manutenção dos registros necessários ao cumprimento de dever legal ou para eventual defesa em processo judicial ou administrativo."
+    }
+  },
+
+  "disclosure-layout#tenth": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#tenth", "disclosure-content#tenth"]
+  },
+  "disclosure-trigger#tenth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question10"]
+  },
+  "disclosure-content#tenth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer10"]
+  },
+  "rich-text#question10": {
+    "props": {
+      "text": "## 10. Quais são os seus direitos?"
+    }
+  },
+  "rich-text#answer10": {
+    "props": {
+      "text": "A **DOCOL** assegura ao usuário o direito de acesso aos dados pessoais em uso. Além do acesso, é garantido ao usuário:\n- o direito à retificação de seus dados;\n- o direito à portabilidade dos dados, se aplicável;\n- o direito à oposição do uso dos dados para finalidade previamente autorizada;\n- o direito à exclusão dos dados, ressalvada a manutenção dos dados necessários ao cumprimento de dever legal e ao exercício do direito de defesa em processo judicial e/ou administrativo.\n\nPara solicitar o acesso a seus direitos, contate nosso chefe de privacidade: Encarregado de Dados/Data Protection Officer: Caio Henrique Amaro [privacidade@docol.com.br](mailto:privacidade@docol.com.br)."
+    }
+  },
+
+  "disclosure-layout#eleventh": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#eleventh", "disclosure-content#eleventh"]
+  },
+  "disclosure-trigger#eleventh": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question11"]
+  },
+  "disclosure-content#eleventh": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer11"]
+  },
+  "rich-text#question11": {
+    "props": {
+      "text": "## 11. Isenção de responsabilidades"
+    }
+  },
+  "rich-text#answer11": {
+    "props": {
+      "text": "A DOCOL não se responsabiliza pela negligência do usuário com seus próprios dados pessoais. A responsabilidade da DOCOL se limita aos esforços sobre a garantia do emprego das melhores práticas de segurança. Cabe ao usuário zelar pela confidencialidade de informações relacionadas ao acesso e operação de seus dados no sistema, plataforma e website da DOCOL, tais como informações de login, senha, chaves de segurança, duplo fator de autenticação e qualquer outra solução de segurança implementada pela Declarante."
+    }
+  },
+
+  "disclosure-layout#twelfth": {
+    "props": {
+      "animated": true
+    },
+    "children": ["disclosure-trigger#twelfth", "disclosure-content#twelfth"]
+  },
+  "disclosure-trigger#twelfth": {
+    "props": {
+      "blockClass": "question",
+      "as": "div"
+    },
+    "children": ["disclosure-state-indicator", "rich-text#question12"]
+  },
+  "disclosure-content#twelfth": {
+    "props": {
+      "blockClass": "answer"
+    },
+    "children": ["rich-text#answer12"]
+  },
+  "rich-text#question12": {
+    "props": {
+      "text": "## 12. Contato, dúvidas e solicitações"
+    }
+  },
+  "rich-text#answer12": {
+    "props": {
+      "text": "Em caso de dúvidas ou solicitações, a DOCOL fica à disposição na pessoa do chefe de privacidade:\nEncarregado de Dados/Data Protection Officer: Rodrigo Mauli\nE-mail: [privacidade@docol.com.br](mailto:privacidade@docol.com.br).\nData de Atualização: 08 de fevereiro de 2021."
+    }
+  },
+
+
+  "disclosure-state-indicator": {
+    "props": {
+      "Show": "icon-caret#down",
+      "Hide": "icon-caret#up"
+    }
+  },
+  "icon-caret#down": {
+    "props": {
+      "orientation": "down"
+    }
+  },
+  "icon-caret#up": {
+    "props": {
+      "orientation": "up"
+    }
+  }
+}

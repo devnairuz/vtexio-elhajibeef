@@ -1,0 +1,32 @@
+{
+  "flex-layout.row#related-products": {
+    "props": {
+      "blockClass": ["related-products-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#related-products"]
+  },
+  "flex-layout.col#related-products": {
+    "props": {
+      "blockClass": "related-products-content"
+    },
+    "children": [
+      "rich-text#related-products-title",
+      "list-context.product-list#list-pdp-related"
+    ]
+  },
+
+  "rich-text#related-products-title": {
+    "props": {
+      "blockClass": ["related-title", "shelf-title"],
+      "text": "#### Quem viu esse, viu também **Produtos relacionados**"
+    }
+  },
+
+  "list-context.product-list#list-pdp-related": {
+    "props": {
+      "blockClass": "related-products"
+    },
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#products"]
+  }
+}

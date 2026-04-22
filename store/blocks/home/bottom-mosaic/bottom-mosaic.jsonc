@@ -1,0 +1,57 @@
+{
+  "flex-layout.row#bottom-mosaic": {
+    "props": {
+      "blockClass": ["bottom-mosaic-container", "custom-container"],
+      "fullWidth": true,
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#bottom-mosaic-left",
+      "flex-layout.col#bottom-mosaic-right"
+    ]
+  },
+
+  "flex-layout.col#bottom-mosaic-left": {
+    "props": {
+      "blockClass": ["bottom-mosaic-left-content"]
+    },
+    "children": ["image#bottom-mosaic-first"]
+  },
+  "image#bottom-mosaic-first": {
+    "props": {
+      "blockClass":"image__bottom-mosaic",
+      "src": "assets/bottom-mosaic/outfits.png",
+      "alt": "Outfits Diamond, confira!",
+      "link": {
+        "url": "/outfits"
+      }
+    }
+  },
+
+  "flex-layout.col#bottom-mosaic-right": {
+    "props": {
+      "blockClass": ["bottom-mosaic-right-content"]
+    },
+    "children": ["image#bottom-mosaic-second", "image#bottom-mosaic-third"]
+  },
+  "image#bottom-mosaic-second": {
+    "props": {
+      "blockClass":"image__bottom-mosaic",
+      "src": "assets/bottom-mosaic/saias.png",
+      "alt": "Saias Skirts, confira!",
+      "link": {
+        "url": "/saias"
+      }
+    }
+  },
+  "image#bottom-mosaic-third": {
+    "props": {
+      "blockClass":"image__bottom-mosaic",
+      "src": "assets/bottom-mosaic/jeans.png",
+      "alt": "Jeans, confira!",
+      "link": {
+        "url": "/blusas"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "flex-layout.row#result-grid": {
+    "props": {
+      "blockClass": ["result-grid-container", "custom-container"],
+      "horizontalAlign": "left",
+      "preventHorizontalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#result-filter",
+      "flex-layout.col#result-content"
+    ]
+  }
+}

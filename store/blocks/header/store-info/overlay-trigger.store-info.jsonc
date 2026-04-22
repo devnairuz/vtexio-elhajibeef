@@ -1,0 +1,37 @@
+{
+  "overlay-trigger#store-info": {
+    "children": [
+      "image#info-icon",
+      "rich-text#store-info-text",
+      "overlay-layout#store-info"
+    ],
+    "props": {
+      "blockClass": "trigger-store-info"
+    }
+  },
+  "image#info-icon": {
+    "props": {
+      "src": "assets/icons/message.svg"
+    }
+  },
+  "rich-text#store-info-text": {
+    "props": {
+      "blockClass": ["store-info-text", "utils-text"],
+      "text": "Central de \n**Atendimento**"
+    }
+  },
+  "overlay-layout#store-info": {
+    "props": {
+      "placement": "bottom"
+    },
+    "children": [
+      "rich-text#store-info-popup"
+    ]
+  },
+  "rich-text#store-info-popup": {
+    "props": {
+      "blockClass": "store-info-popup-text",
+      "text": "Telefone: [0800 474 3333](tel:08004743333)\n Telefone: [0800 474 9000](tel:08004749000)\n E-mail: [dresponde@docol.com.br](mailto:dresponde@docol.com.br)\nHorário de Atendimento:\n De Segunda à Sexta-feira:\n das 7h às 17h."
+    }
+  }
+}

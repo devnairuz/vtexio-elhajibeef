@@ -1,0 +1,16 @@
+{
+  "slider-layout#products": {
+    "props": {
+      "blockClass": "shelf-carousel",
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 2
+      },
+      "infinite": true,
+      "showNavigationArrows": "always",
+      "showPaginationDots": "never",
+      "arrowSize": 10
+    }
+  }
+}

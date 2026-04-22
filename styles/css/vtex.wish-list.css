@@ -1,0 +1,26 @@
+/* CARD PRODUTO */
+.wishlistIconContainer :global(.vtex-button) {
+  border: 0;
+  min-height: initial;
+  padding: 12px;
+}
+.wishlistIconContainer :global(.vtex-button):hover {
+  background: transparent;
+}
+.wishlistIconContainer :global(.vtex-button__label) {
+  padding: 0 !important;
+}
+.wishlistIcon {
+  background: url(assets/icons/heart.svg);
+  background-position: center;
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* PÁGINA DO PRODUTO */
+.wishlistIconContainer--add-to-list-btn-pdp :global(.vtex-button) {
+  padding: 0;
+}

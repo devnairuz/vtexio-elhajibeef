@@ -1,0 +1,13 @@
+{
+  "flex-layout.row#services-flags": {
+    "props": {
+      "blockClass": ["custom-container", "services-flags-container"],
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#payments-flags",
+      "flex-layout.col#security-flags",
+      "flex-layout.col#shipping-flags"
+    ]
+  }
+}

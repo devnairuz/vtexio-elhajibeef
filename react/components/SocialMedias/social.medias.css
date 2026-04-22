@@ -1,0 +1,57 @@
+.socialMediasWrapper > div + div {
+  margin-top: 40px
+}
+
+.socialMediasHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.socialMediasHeaderTitle {
+  margin: 0 0 5px;
+  line-height: 33px;
+  font-size: 24px;
+}
+.socialMediasHeaderSubtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 23px;
+  color: #202020;
+}
+
+.socialMediasContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.socialMediaLink {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8E8E8E;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 540px) {
+  .socialMediasWrapper > div + div {
+    margin-top: 30px;
+  }
+  
+  .socialMediasHeader {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .socialMediasHeaderTitle {
+    line-height: 29px;
+    font-size: 20px;
+  }
+}

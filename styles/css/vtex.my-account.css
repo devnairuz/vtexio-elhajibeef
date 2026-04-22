@@ -1,0 +1,50 @@
+:global(.vtex-account) {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.menu {
+  padding: 0;
+}
+
+:global(.vtex-pageHeader__container) {
+  padding: 0 0 0 30px;
+}
+:global(.vtex-account__page) {
+  width: 100% !important;
+}
+
+.userInfo {
+  margin-bottom: 20px;
+}
+
+.userGreeting {
+  font-size: 14px;
+}
+.userName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .profile {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+  .boxContainerBody {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 720px) {
+  :global(.vtex-pageHeader__container) {
+    padding: 0;
+  }
+  
+  .profile {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "flex-layout.row#sku-selector": {
+    "props": {
+      "blockClass": "sku-selector-container"
+    },
+    "children": ["flex-layout.col#sku-selector"]
+  },
+
+  "flex-layout.col#sku-selector": {
+    "props": {
+      "blockClass": "sku-selector-content"
+    },
+    "children": ["sku-selector"]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "flex-layout.row#sku": {
+    "props": {
+      "blockClass": "sku-container"
+    },
+    "children": ["flex-layout.col#sku"]
+  },
+
+  "flex-layout.col#sku": {
+    "props": {
+      "blockClass": "sku-content"
+    },
+    "children": ["product-identifier.product"]
+  },
+
+  "product-identifier.product": {
+    "props": {
+      "label": "custom",
+      "customLabel": "Código"
+    }
+  }
+}

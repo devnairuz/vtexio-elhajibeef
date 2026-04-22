@@ -1,0 +1,35 @@
+{
+  "flex-layout.row#conditions": {
+    "props": {
+      "blockClass": ["conditions-container", "custom-container"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": ["responsive-layout.desktop#conditions", "responsive-layout.mobile#conditions"]
+  },
+  "responsive-layout.desktop#conditions": {
+    "children": ["flex-layout.col#conditions-desk"]
+  },
+  "responsive-layout.mobile#conditions": {
+    "children": ["flex-layout.col#conditions-mobi"]
+  },
+
+  "flex-layout.col#conditions-desk": {
+    "props": {
+      "blockClass": ["conditions-desk-content"]
+    },
+    "children": [
+      "info-card#condition1",
+      "info-card#condition2",
+      "info-card#condition3",
+      "info-card#condition4",
+      "info-card#condition5"
+    ]
+  },
+  "flex-layout.col#conditions-mobi": {
+    "props": {
+      "blockClass": ["conditions-mobi-content"]
+    },
+    "children": ["slider-layout#conditions"]
+  }
+}

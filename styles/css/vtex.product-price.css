@@ -1,0 +1,39 @@
+/* CARD PRODUTO */
+.currencyLiteral {
+  display: none;
+}
+.sellingPrice--selling-price-summary {
+  font-size: 21px;
+  line-height: 29px;
+}
+.installments--installments-summary {
+  font-size: 14px;
+  line-height: 20px;
+}
+.listPriceValue--list-price-summary {
+  font-size: 12px;
+  color: #979797;
+  margin-right: 7px;
+}
+.spotPrice {
+  color: #4F4F4F;
+}
+
+/* PÁGINA DO PRODUTO */
+.listPrice--list-price-pdp {
+  color: #b1b1b1;
+  font-size: 20px;
+}
+.sellingPrice--selling-price-pdp {
+  display: block;
+  margin: 15px 0;
+}
+.sellingPriceValue--selling-price-pdp {
+  display: block;
+  font-size: 32px;
+  line-height: 1;
+}
+.installments--installments-pdp {
+  font-size: 15px;
+  color: #5d5d5d;
+}

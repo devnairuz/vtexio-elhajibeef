@@ -1,0 +1,20 @@
+{
+  "flex-layout.row#product-breadcrumb": {
+    "props": {
+      "blockClass": ["product-breadcrumb-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#product-breadcrumb"]
+  },
+
+  "flex-layout.col#product-breadcrumb": {
+    "props": {
+      "blockClass": "product-breadcrumb-content"
+    },
+    "children": ["breadcrumb"]
+  },
+  "breadcrumb": {
+    "props": {
+      "showOnMobile": true
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "flex-layout.row#upper-mosaic": {
+    "props": {
+      "blockClass": ["upper-mosaic-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#upper-mosaic"]
+  },
+
+  "flex-layout.col#upper-mosaic": {
+    "props": {
+      "blockClass": "upper-mosaic-content"
+    },
+    "children": ["image#upper-mosaic-first", "image#upper-mosaic-second", "image#upper-mosaic-third"]
+  },
+
+  "image#upper-mosaic-first": {
+    "props": {
+      "blockClass":"image__upper-mosaic",
+      "src": "assets/upper-mosaic/promocoes.png",
+      "alt": "Promoções, conferir!",
+      "link": {
+        "url": "/promocoes"
+      }
+    }
+  },
+  "image#upper-mosaic-second": {
+    "props": {
+      "blockClass":"image__upper-mosaic",
+      "src": "assets/upper-mosaic/novidades.png",
+      "alt": "Novidades, conferir!",
+      "link": {
+        "url": "/novidades"
+      }
+    }
+  },
+  "image#upper-mosaic-third": {
+    "props": {
+      "blockClass":"image__upper-mosaic",
+      "src": "assets/upper-mosaic/outfits.png",
+      "alt": "Outfits, conferir!",
+      "link": {
+        "url": "/outfits"
+      }
+    }
+  }
+}

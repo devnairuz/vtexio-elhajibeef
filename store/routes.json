@@ -1,0 +1,17 @@
+{
+  "store.custom#fale-conosco": {
+    "path": "/fale-conosco"
+  },
+
+  "store.custom#quem-somos": {
+    "path": "/quem-somos"
+  },
+
+  "store.custom#frete-gratis": {
+    "path": "/frete-gratis"
+  },
+
+  "store.custom#politica-privacidade": {
+    "path": "/politicas-de-privacidade"
+  }
+}

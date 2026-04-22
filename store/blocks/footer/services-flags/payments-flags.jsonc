@@ -1,0 +1,54 @@
+{
+  "flex-layout.col#payments-flags": {
+    "props": {
+      "blockClass": "payments-flags-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#payments-title",
+      "flex-layout.row#payments-content"
+    ]
+  },
+
+  "flex-layout.row#payments-title": {
+    "props": {
+      "blockClass": "payments-title-container",
+      "colSizing": "auto"
+    },
+    "children": ["flex-layout.col#payments-title"]
+  },
+  "flex-layout.col#payments-title": {
+    "props": {
+      "blockClass": "payments-title-content",
+      "preventVerticalStretch": true
+    },
+    "children": ["rich-text#payments-title"]
+  },
+  "rich-text#payments-title": {
+    "props": {
+      "blockClass": "footer-title",
+      "text": "#### Formas de pagamento"
+    }
+  },
+
+  "flex-layout.row#payments-content": {
+    "props": {
+      "blockClass": "payments-content-container",
+      "colSizing": "auto"
+    },
+    "children": ["flex-layout.col#payments-content"]
+  },
+  "flex-layout.col#payments-content": {
+    "props": {
+      "blockClass": "payments-content",
+      "preventVerticalStretch": true
+    },
+    "children": ["image#payment-flags"]
+  },
+  "image#payment-flags": {
+    "props": {
+      "src": "assets/flags/payment/bandeiras-cartoes.webp",
+      "alt": "Formas de pagamento: Visa, Master, Amex, Dinners, Boleto, Depósito"
+    }
+  }
+}

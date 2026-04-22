@@ -1,0 +1,25 @@
+{
+  "flex-layout.row#shipping": {
+    "props": {
+      "blockClass": "shipping-container"
+    },
+    "children": ["flex-layout.col#shipping"]
+  },
+
+  "flex-layout.col#shipping": {
+    "props": {
+      "blockClass": "shipping-content-pdp"
+    },
+    "children": [
+      "rich-text#shipping-simulator-text",
+      "shipping-simulator"
+    ]
+  },
+
+  "rich-text#shipping-simulator-text": {
+    "props": {
+      "blockClass": "shipping-simulator-text",
+      "text": "Frete e Prazo de Entrega:"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.cashPriceContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  color: #4F4F4F;
+}
+
+.currencyLiteral {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .cashPriceContainer svg {
+    width: 15px;
+  }
+  .cashPriceContainer {
+    font-size: 14px;
+  }
+}

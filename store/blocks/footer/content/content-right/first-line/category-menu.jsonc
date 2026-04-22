@@ -1,0 +1,27 @@
+{
+  "flex-layout.col#footer-category-menu": {
+    "props": {
+      "blockClass": "footer-category-menu-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#category-menu-title",
+      "category-menu#footer-category-menu"
+    ]
+  },
+
+  "rich-text#category-menu-title": {
+    "props": {
+      "blockClass": "footer-title",
+      "text": "#### Categorias"
+    }
+  },
+
+  "category-menu#footer-category-menu": {
+    "props": {
+      "showAllDepartments": false,
+      "showSubcategories": false,
+      "blockClass": "footer-category-menu"
+    }
+  }
+}

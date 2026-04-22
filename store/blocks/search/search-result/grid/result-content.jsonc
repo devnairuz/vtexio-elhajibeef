@@ -1,0 +1,14 @@
+{
+  "flex-layout.col#result-content": {
+    "props": {
+      "blockClass": "result-content",
+      "preventVerticalStretch": true,
+      "width": "grow"
+    },
+    "children": [
+      "flex-layout.row#search-toolbar",
+      "flex-layout.row#search-products",
+      "flex-layout.row#search-fetchmore"
+    ]
+  }
+}

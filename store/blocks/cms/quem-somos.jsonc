@@ -1,0 +1,88 @@
+{
+  "store.custom#quem-somos": {
+    "children": [
+      "flex-layout.row#quem-somos"
+    ]
+  },
+  "flex-layout.row#quem-somos": {
+    "props": {
+      "blockClass": ["custom-container"]
+    },
+    "children": ["flex-layout.col#conteudoquem"]
+  },
+  "flex-layout.col#conteudoquem": {
+    "children": [
+      "rich-text#quem-title",
+      "rich-text#sobrequemsomos",
+      "rich-text#ambicao",
+      "rich-text#acreditamos",
+      "rich-text#fazemos",
+      "rich-text#missao",
+      "rich-text#visao",
+      "rich-text#valores"
+    ],
+    "props": {
+      "blockClass": "container"
+    }
+  },
+  "rich-text#quem-title": {
+    "props": {
+      "text": "# Sobre a Docol"
+    }
+  },
+  "rich-text#sobrequemsomos": {
+    "props": {
+      "text": "## Quem Somos\nOrgulhosamente brasileira, somos uma indústria que busca transformar o dia a dia por meio do design e proporcionar boas experiências através da água.",
+      "textAlignment": "initial",
+      "textPosition": "initial"
+    }
+  },
+
+  "rich-text#ambicao": {
+    "props": {
+      "text": "## Nossa ambição\nQueremos que as pessoas se relacionem com nossa marca e sintam-se em casa onde quer que estejam. Por isso, nosso desejo é que momentos onde sentir-se bem, confortável e seguro virem rotina.",
+      "textAlignment": "initial",
+      "textPosition": "initial"
+    }
+  },
+
+  "rich-text#acreditamos": {
+    "props": {
+      "text": "## No que acreditamos\nAcreditamos que o bom design é inovador, sustentável e tem o olhar atento às pessoas, além de ser capaz de transformar os momentos cotidianos e proporcionar bem-estar.",
+      "textAlignment": "initial",
+      "textPosition": "initial"
+    }
+  },
+
+  "rich-text#fazemos": {
+    "props": {
+      "text": "## Como fazemos\nImprimimos criatividade em cada passo, em cada expressão de nossa marca. Promovemos um ciclo em que as soluções pensadas para as pessoas possam construir reputação para a nossa marca, gerando fidelidade, conexão e boas experiências.",
+      "textAlignment": "initial",
+      "textPosition": "initial"
+    }
+  },
+
+  "rich-text#missao": {
+    "props": {
+      "text": "## Missão\nSer marca reconhecida nacional e internacionalmente por oferecer produtos sustentáveis, inovadores e de alta qualidade com ampla e eficaz distribuição, com lucratividade e crescimento.",
+      "textAlignment": "initial",
+      "textPosition": "initial"
+    }
+  },
+
+  "rich-text#visao": {
+    "props": {
+      "text": "## Visão\nContribuir para o uso consciente da água com design, conforto, qualidade e tecnologia, gerando valor para a sociedade, colaboradores e acionistas.",
+      "textAlignment": "initial",
+      "textPosition": "initial"
+    }
+  },
+
+  "rich-text#valores": {
+    "props": {
+      "text": "## Valores\n- Protagonismo \n- Agilidade e controle \n- Simplicidade \n- Empatia \n- Experimentação \n- Excelência \n- Padrão \n- Mérito",
+      "textAlignment": "initial",
+      "textPosition": "initial"
+    }
+  }
+}

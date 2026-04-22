@@ -1,0 +1,54 @@
+{
+  "flex-layout.row#shelf-releases": {
+    "props": {
+      "blockClass": ["shelf-container", "shelf-releases-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#shelf-releases"]
+  },
+  "flex-layout.col#shelf-releases": {
+    "children": [
+      "flex-layout.row#releases-title-container",
+      "flex-layout.row#releases-products-container"
+    ]
+  },
+
+  "flex-layout.row#releases-title-container": {
+    "props": {
+      "blockClass": ["releases-title-container"]
+    },
+    "children": ["flex-layout.col#releases-title-content"]
+  },
+  "flex-layout.col#releases-title-content": {
+    "props": {
+      "blockClass": ["releases-title-content"]
+    },
+    "children": ["rich-text#releases-title"]
+  },
+  "rich-text#releases-title": {
+    "props": {
+      "text": "#### Lançamentos **Confira nossas novidades!**",
+      "blockClass": ["releases-title", "shelf-title"]
+    }
+  },
+
+  "flex-layout.row#releases-products-container": {
+    "props": {
+      "blockClass": ["releases-products-container"]
+    },
+    "children": ["flex-layout.col#releases-products-container"]
+  },
+  "flex-layout.col#releases-products-container": {
+    "props": {
+      "blockClass": ["releases-products-content"]
+    },
+    "children": ["list-context.product-list#shelf-releases"]
+  },
+  "list-context.product-list#shelf-releases": {
+    "props": {
+      "listName": "Lançamentos",
+      "installmentCriteria": "MAX_WITH_INTEREST"
+    },
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#products"]
+  }
+}

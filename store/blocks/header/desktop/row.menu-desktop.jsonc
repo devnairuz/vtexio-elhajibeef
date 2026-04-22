@@ -1,0 +1,19 @@
+{
+  "flex-layout.row#menu-desktop": {
+    "children": ["flex-layout.col#menu-desktop"],
+    "props": {
+      "blockClass": ["menu-container", "custom-container"]
+    }
+  },
+  "flex-layout.col#menu-desktop": {
+    "children": ["category-menu#header-category-menu"]
+  },
+
+  "category-menu#header-category-menu": {
+    "props": {
+      "showAllDepartments": true,
+      "showSubcategories": true,
+      "menuDisposition": "center"
+    }
+  }
+}

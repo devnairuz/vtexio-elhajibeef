@@ -1,0 +1,216 @@
+/* GERAL */
+.container {
+  padding: 0;
+}
+.imageElementLink {
+  display: inline-block;
+  line-height: 0
+}
+.paragraph {
+  color: #202020;
+}
+
+:global(.vtex-toast) {
+  background: #000;
+}
+
+.discountContainer {
+  width: 100%;
+}
+
+/* LOGO */
+.logoContainer {
+  display: inline-block;
+  padding: 0;
+}
+
+/* BARRA DE PESQUISA */
+.searchBarContainer {
+  padding: 0;
+  min-width: 384px;
+}
+.searchBarContainer :global(.vtex-input-prefix__group) {
+  height: initial;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0px 3px 6px #00000029;
+  flex-direction: row-reverse;
+}
+.searchBarContainer :global(.vtex-input__suffix) {
+  padding: 0
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input) {
+  font-size: 14px;
+  border-radius: 0;
+  padding: 0;
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: #D0D0D0;
+}
+.searchBarIcon {
+  color: #D0D0D0;
+  padding: 11px 15px 13px
+}
+
+/* LINHA CONDIÇÕES ABAIXO DO BANNER PRINCIPAL */
+.infoCardCallActionContainer--info-card-condition {
+  display: none;
+}
+.infoCardContainer--info-card-condition {
+  display: flex;
+  padding: 0;
+  gap: 10px;
+  justify-content: initial;
+}
+.infoCardTextContainer--info-card-condition,
+.infoCardImageContainer--info-card-condition {
+  width: fit-content;
+  max-width: max-content;
+  padding: 0;
+}
+.infoCardImageContainer--info-card-condition {
+  line-height: 0;
+}
+.paragraph--info-card-condition {
+  margin: 0;
+  font-weight: 300;
+  line-height: 18px;
+}
+.strong--info-card-condition {
+  font-weight: 500;
+}
+
+/* CARD PRODUTO */
+.discountInsideContainer {
+  left: -12px;
+  right: unset;
+  top: -12px;
+  background: #B21E1E;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 3px 15px;
+  line-height: 22px;
+}
+
+/* PÁGINA DO PRODUTO */
+.carouselGaleryThumbs {
+  width: 100% !important;
+  max-width: 80px;
+}
+.productImagesThumb:not(:first-child) {
+  margin-top: 10px;
+}
+
+.shippingContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 65%;
+}
+.shippingContainer :global(.vtex-input__label) {
+  display: none;
+}
+.shippingContainer :global(.vtex-address-form__postalCode) {
+  width: 100%;
+  padding: 0;
+}
+.shippingContainer :global(.vtex-input-prefix__group) {
+  height: 45px;
+  box-shadow: rgba(0,0,0,0.2) -2px 1px 11px -4px;
+  border: 0;
+}
+.shippingContainer :global(.vtex-button) {
+  height: 45px;
+  max-width: 92px;
+  border: 0;
+  border-radius: 0;
+}
+.shippingContainer :global(.vtex-button):hover {
+  background: #000;
+}
+.shippingContainer :global(.vtex-button__label) {
+  font-size: 0;
+}
+.shippingContainer :global(.vtex-button__label)::before {
+  content: "CALCULAR";
+  font-size: 13px;
+}
+.shippingContainer :global(.vtex-address-form__postalCode-forgottenURL) {
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.shareContainer {
+  max-width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shareLabel {
+  margin: 0;
+  color: #5d5d5d;
+  font-size: 12px;
+}
+.shareSocialButton {
+  display: inline-block;
+  line-height: 0 !important;
+  margin: 0;
+}
+.shareSocialButton:not(:first-child) {
+  margin-left: 8px;
+}
+
+.productImagesThumb {
+  max-width: 75px;
+  max-height: 75px !important;
+  margin: 0;
+  border: 1px solid transparent;
+  transition: all .3s ease-in-out;
+}
+.productImagesThumb:hover,
+.productImagesThumbActive {
+  border: 1px solid #c7c7c7;
+}
+.thumbImg {
+  max-width: 75px;
+  max-height: 75px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 1199px) {
+  .paragraph--info-card-condition {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .searchBarContainer {
+    margin: 0 auto;
+  }
+
+  .carouselGaleryThumbs {
+    max-width: initial;
+  }
+  .productImagesThumb:not(:first-child) {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .carouselGaleryThumbs {
+    display: block;
+  }
+}
+
+@media (max-width: 575px) {
+  .shippingContainer,
+  .shareContainer {
+    max-width: 100%;
+  }
+}

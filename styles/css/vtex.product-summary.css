@@ -1,0 +1,38 @@
+.container {
+  text-align: left;
+}
+.clearLink {
+  padding: 6px;
+}
+.element {
+  padding: 20px 20px 25px;
+  transition: all .3s ease-in-out;
+  position: relative;
+  z-index: 0;
+}
+.element:hover {
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.imageContainer {
+  width: 100%;
+}
+.nameContainer--summary-name {
+  display: block;
+  padding: 12px 0 20px;
+}
+.nameWrapper--summary-name {
+  height: 42px;
+  overflow: hidden;
+}
+.brandName--summary-name {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@media (max-width: 991px) {
+  .element {
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 10px;
+  }
+}

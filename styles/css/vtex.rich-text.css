@@ -1,0 +1,226 @@
+.paragraph {
+  color: #202020;
+}
+
+/* MINICART */
+.paragraph--utils-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 300;
+}
+.container--minicart-text {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+  z-index: -2;
+}
+
+/* STORE INFOS */
+.strong--login-text,
+.strong--store-info-text {
+  display: flex;
+}
+.strong--store-info-text::after {
+  content: url(assets/icons/chevon-down-header.svg);
+  width: 10.88px;
+  height: 12px;
+}
+.paragraph--store-info-popup-text {
+  margin: 0;
+  font-size: 14px;
+}
+.link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* TITULOS DAS VITRINES */
+.container--shelf-title {
+  display: block;
+}
+.heading--shelf-title {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 0 14px;
+  padding: 8px 92px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.heading--shelf-title:not(.heading--promotions-title)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 123px;
+  background: #E9E9E9;
+}
+.heading--shelf-title.heading--promotions-title {
+  justify-content: space-between;
+  background: #E9E9E9;
+  font-weight: 400;
+}
+
+.strong--shelf-title {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 4px;
+  color: #8E8E8E;
+}
+.strong--shelf-title.strong--promotions-title {
+  font-weight: 500;
+  color: #000000;
+}
+.italic--shelf-title.italic--promotions-title {
+  font-weight: 300;
+  color: #000000;
+}
+
+/* NEWSLETTER */
+.paragraph--newsletter-cta {
+  margin: 0;
+  padding-left: 120px;
+  font-size: 17px;
+}
+
+/* FOOTER CONTEÚDO */
+.paragraph--brand-resume {
+  margin: 23px 0 26px;
+  color: #979797;
+  text-align: center;
+  font-size: 14px;
+}
+
+.heading--footer-title {
+  margin: 0 0 23px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+.paragraph--cms-link,
+.paragraph--sac-group-link {
+  margin: 0;
+  color: #979797;
+  font-size: 14px;
+  transition: all .3s ease-in-out;
+}
+.paragraph--cms-link:hover,
+.paragraph--sac-group-link:hover {
+  color: #000000;
+}
+.link--cms-link,
+.link--sac-group-link {
+  font-weight: inherit;
+}
+
+.paragraph--sac-group-title {
+  margin: 0 0 5px;
+  font-size: 14px;
+  color: #000000;
+  line-height: 20px;
+}
+
+/* COPY RODAPÉ */
+.paragraph--copy-text {
+  margin: 0;
+  color: #979797;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* DESCRIÇÃO CATEGORIA */
+.paragraph--description-text {
+  margin: 0;
+  color: #5d5d5d;
+  font-weight: 200;
+}
+
+/* PÁGINA DO PRODUTO */
+.paragraph--shipping-simulator-text {
+  margin: 0;
+  font-size: 13px;
+  text-transform: initial;
+  font-weight: 500;
+  color: #505050;
+  line-height: 1;
+}
+
+@media (max-width: 1199px) {
+  .paragraph--newsletter-cta {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container--newsletter-cta {
+    justify-content: center;
+  }
+  .paragraph--newsletter-cta {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .heading--shelf-title {
+    padding: 8px 32px;
+  }
+
+  .container--copy-text {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading--shelf-title {
+    padding: 8px 16px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .strong--shelf-title {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container--footer-title,
+  .container--sac-group-title {
+    justify-content: center;
+  }
+  .heading--footer-title {
+    margin: 0 0 10px;
+  }
+
+  .container--cms-link,
+  .container--sac-group-link {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 525px) {
+  .heading--shelf-title {
+    flex-direction: column;
+    gap: 5px;
+    align-items: baseline;
+  }
+  .strong--shelf-title {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .paragraph--copy-text {
+    font-size: 11px;
+  }
+}

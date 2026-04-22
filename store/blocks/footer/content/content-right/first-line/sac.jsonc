@@ -1,0 +1,131 @@
+{
+  "flex-layout.col#sac": {
+    "props": {
+      "blockClass": "sac-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#sac-title",
+      "flex-layout.row#sac-phone",
+      "flex-layout.row#sac-wpp",
+      "flex-layout.row#sac-email"
+    ]
+  },
+
+  "flex-layout.row#sac-title": {
+    "props": {
+      "blockClass": "sac-title-container"
+    },
+    "children": ["flex-layout.col#sac-title-content"]
+  },
+  "flex-layout.col#sac-title-content": {
+    "props": {
+      "blockClass": "sac-title-content"
+    },
+    "children": ["rich-text#sac-title"]
+  },
+  "rich-text#sac-title": {
+    "props": {
+      "blockClass": "footer-title",
+      "text": "#### Atendimento"
+    }
+  },
+
+  "flex-layout.row#sac-phone": {
+    "props": {
+      "blockClass": "sac-group-container"
+    },
+    "children": ["flex-layout.col#sac-phone"]
+  },
+  "flex-layout.col#sac-phone": {
+    "props": {
+      "blockClass": "sac-group-content"
+    },
+    "children": [
+      "rich-text#sac-phone-title",
+      "rich-text#sac-phone-first",
+      "rich-text#sac-phone-second"
+    ]
+  },
+  "rich-text#sac-phone-title": {
+    "props": {
+      "blockClass": "sac-group-title",
+      "text": "Telefone:"
+    }
+  },
+  "rich-text#sac-phone-first": {
+    "props": {
+      "blockClass": "sac-group-link",
+      "text": "[0800 3737.3737](tel:080037373737)"
+    }
+  },
+  "rich-text#sac-phone-second": {
+    "props": {
+      "blockClass": "sac-group-link",
+      "text": "[(19) 3737.3737](tel:1937373737)"
+    }
+  },
+
+  "flex-layout.row#sac-wpp": {
+    "props": {
+      "blockClass": "sac-group-container"
+    },
+    "children": ["flex-layout.col#sac-wpp"]
+  },
+  "flex-layout.col#sac-wpp": {
+    "props": {
+      "blockClass": "sac-group-content"
+    },
+    "children": [
+      "rich-text#sac-wpp-title",
+      "rich-text#sac-wpp-first",
+      "rich-text#sac-wpp-second"
+    ]
+  },
+  "rich-text#sac-wpp-title": {
+    "props": {
+      "blockClass": "sac-group-title",
+      "text": "WhatsApp:"
+    }
+  },
+  "rich-text#sac-wpp-first": {
+    "props": {
+      "blockClass": "sac-group-link",
+      "text": "<a href='https://wa.me/19999999999' target='_blank' class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--sac-group-link'>(19) 9 9999.9999</a>"
+    }
+  },
+  "rich-text#sac-wpp-second": {
+    "props": {
+      "blockClass": "sac-group-link",
+      "text": "<a href='https://wa.me/19999999999' target='_blank' class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--sac-group-link'>(19) 9 9999.9999</a>"
+    }
+  },
+
+  "flex-layout.row#sac-email": {
+    "props": {
+      "blockClass": "sac-group-container"
+    },
+    "children": ["flex-layout.col#sac-email"]
+  },
+  "flex-layout.col#sac-email": {
+    "props": {
+      "blockClass": "sac-group-content"
+    },
+    "children": [
+      "rich-text#sac-email-title",
+      "rich-text#sac-email"
+    ]
+  },
+  "rich-text#sac-email-title": {
+    "props": {
+      "blockClass": "sac-group-title",
+      "text": "E-mail:"
+    }
+  },
+  "rich-text#sac-email": {
+    "props": {
+      "blockClass": "sac-group-link",
+      "text": "<a href='mailto:suporte@diamond.com' target='_blank' class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--sac-group-link'>suporte@diamond.com</a>"
+    }
+  }
+}

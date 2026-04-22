@@ -1,0 +1,35 @@
+.paginationDot {
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px #00000061;
+}
+.paginationDot--main-slider--isActive {
+  border: 2px solid #000000;
+}
+
+.sliderArrows {
+  color: #7E7E7E;
+}
+
+/* SLIDER PRINCIPAL */
+.paginationDotsContainer--main-slider {
+  bottom: 15px;
+}
+
+/* SLIDER PRODUTOS */
+.sliderArrows--shelf-carousel {
+  background: transparent;
+  color: #7E7E7E;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 3px 6px #00000029;
+  top: 35%;
+}
+.sliderLeftArrow--shelf-carousel {
+  left: -15px;
+}
+.sliderRightArrow--shelf-carousel {
+  right: -15px;
+}

@@ -1,0 +1,91 @@
+.container {
+  background: transparent;
+}
+
+.section--department {
+  padding: 0;
+}
+.departmentList {
+  height: initial;
+}
+.departmentLink {
+  padding: 12.5px 45px;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+}
+.departmentLink,
+.departmentLink:active,
+.departmentLink:focus,
+.departmentLink:hover,
+.departmentLink:visited,
+.firstLevelLink:active,
+.firstLevelLink:focus,
+.firstLevelLink:hover,
+.firstLevelLink:visited,
+.secondLevelLink:active,
+.secondLevelLink:focus,
+.secondLevelLink:hover,
+.secondLevelLink:visited {
+  outline: none;
+  border: 0;
+  text-decoration: none;
+}
+.firstLevelLink {
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.secondLevelLink {
+  padding: 12px;
+  font-weight: 300;
+}
+
+.itemContainer--category {
+  border: 0;
+  box-shadow: 3px 3px 6px #00000014;
+}
+
+/* ITEM TODAS CATEGORIAS */
+.itemContainer--department:first-child {
+  padding: 12.5px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 1px;
+}
+.itemContainer--department:first-child::before {
+  content: url(assets/icons/menu.svg);
+}
+.itemContainer--department:first-child::after {
+  content: url(assets/icons/chevron-down.svg);
+}
+.itemContainer--department:first-child .departmentLink {
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.itemContainer--department:first-child .departmentLink::before {
+  content: 'Categorias';
+  font-size: 14px;
+  font-weight: 500;
+  color: #202020;
+  line-height: 20px;
+}
+
+@media (max-width: 1199px) {
+  .departmentLink {
+    padding: 12.5px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menuIcon--mobile-menu-container {
+    margin: -12px;
+  }
+}

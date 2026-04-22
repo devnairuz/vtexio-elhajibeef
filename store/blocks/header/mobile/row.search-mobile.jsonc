@@ -1,0 +1,15 @@
+{
+  "flex-layout.row#search-mobile": {
+    "props": {
+      "blockClass": ["custom-container", "search-mobile-container"]
+    },
+    "children": ["flex-layout.col#search-mobile"]
+  },
+
+  "flex-layout.col#search-mobile": {
+    "props": {
+      "blockClass": ["search-mobile-content"]
+    },
+    "children": ["search-bar"]
+  }
+}

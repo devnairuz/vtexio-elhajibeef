@@ -1,0 +1,53 @@
+.openIconContainer,
+.openIconContainer :global(.vtex-button__label) {
+  padding: 0;
+}
+.openIconContainer :global(.vtex-button__label) {
+  justify-content: initial;
+}
+.openIconContainer :global(.vtex-button) {
+  border: 0;
+  min-width: 100px;
+  min-height: initial;
+}
+.openIconContainer :global(.vtex-button):hover {
+  background: transparent;
+}
+
+.minicartIconContainer {
+  color: #202020;
+}
+
+.minicartQuantityBadge {
+  background: #979797;
+  font-weight: 700;
+  top: -8px;
+  right: -10px;
+}
+
+.drawerContent {
+  position: relative;
+  z-index: 0;
+}
+.closeIconContainer {
+  position: absolute;
+}
+.minicartTitle {
+  text-align: center;
+  margin: 0;
+  padding: 12px 15px;
+  border-bottom: 1px solid;
+}
+
+.minicartCheckoutButton :global(.vtex-button) {
+  border-radius: 0;
+}
+.minicartCheckoutButton :global(.vtex-button):hover {
+  background: #000;
+}
+
+@media (max-width: 1024px) {
+  .openIconContainer :global(.vtex-button) {
+    min-width: initial;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "login": {
+    "props": {
+      "emailAndPasswordTitle": "Login",
+      "accessCodeTitle": "Código de login",
+      "emailPlaceholder": "e-mail",
+      "passwordPlaceholder": "senha",
+      "showPasswordVerificationIntoTooltip": false,
+      "showIconProfile": false
+    }
+  }  
+}

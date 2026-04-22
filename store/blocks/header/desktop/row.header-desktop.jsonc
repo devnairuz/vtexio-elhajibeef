@@ -1,0 +1,109 @@
+{
+  "flex-layout.row#header-desktop": {
+    "props": {
+      "horizontalAlign": "between",
+      "fullWidth": true,
+      "colSizing": "auto",
+      "blockClass": ["header-container", "custom-container"]
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#search-desktop",
+      "flex-layout.col#utils-desktop"
+    ]
+  },
+
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "blockClass": "logo-desktop-container"
+    },
+    "children": ["logo"] // Arquivo logo.jsonc
+  },
+
+  "flex-layout.col#search-desktop": {
+    "props": {
+     "blockClass": "search-desktop-container"
+    },
+    "children": ["search-bar"] // Arquivo search-bar.jsonc
+  },
+
+  "flex-layout.col#utils-desktop": {
+    "props": {
+      "blockClass": "utils-desktop-container"
+    },
+    "children": [
+      "flex-layout.row#store-info-desktop",
+      "flex-layout.row#login-desktop",
+      "flex-layout.row#minicart-desktop"
+    ]
+  },
+
+  "flex-layout.row#store-info-desktop": {
+    "props": {
+      "blockClass": "row-store-info-container"
+    },
+    "children": ["flex-layout.col#store-info-desktop"]
+  },
+  "flex-layout.col#store-info-desktop": {
+    "children": ["overlay-trigger#store-info"] // Arquivo overlay-trigger.store-info.jsonc
+  },
+
+  "flex-layout.row#login-desktop": {
+    "children": ["flex-layout.col#login-icon-desktop", "flex-layout.col#login-control-desktop"],
+    "props": {
+      "blockClass": "row-login-container",
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.col#login-icon-desktop": {
+    "children": ["image#login-icon"],
+    "props": {
+      "blockClass": "login-icon"
+    }
+  },
+  "flex-layout.col#login-control-desktop": {
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "login-control"
+    },
+    "children": ["header-login"] // Componente na pasta react
+  },
+  "header-login": {
+    "children": ["login"] // Arquivo login.jsonc
+  },
+  "image#login-icon": {
+    "props": {
+      "src": "assets/icons/login.svg"
+    }
+  },
+  "rich-text#login-text": {
+    "props": {
+      "text": "Entrar ou\n**Cadastrar**",
+      "blockClass": ["login-text", "utils-text"]
+    }
+  },
+
+  "flex-layout.row#minicart-desktop": {
+    "props": {
+      "blockClass": "minicart-desktop-container"
+    },
+    "children": [
+      "flex-layout.col#minicart-icon-container",
+      "flex-layout.col#minicart-text-container"
+    ]
+  },
+  "flex-layout.col#minicart-icon-container": {
+    "children": [
+      "minicart.v2" // Arquivo minicart.v2.jsonc
+    ]
+  },
+  "flex-layout.col#minicart-text-container": {
+    "children": ["rich-text#minicart-text"]
+  },
+  "rich-text#minicart-text": {
+    "props": {
+      "text": "Meu\n**Carrinho**",
+      "blockClass": ["minicart-text", "utils-text"]
+    }
+  }
+}

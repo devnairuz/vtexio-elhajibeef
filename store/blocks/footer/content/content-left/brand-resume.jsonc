@@ -1,0 +1,8 @@
+{
+  "rich-text#brand-resume": {
+    "props": {
+      "blockClass": "brand-resume",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tortor leo, rutrum quis varius condimentum, aliquet sed diam. Ut egestas, quam at porta fermentum, quam dui congue ex, a efficitur nisl tellus vel tortor."
+    }
+  }
+}

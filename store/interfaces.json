@@ -1,0 +1,23 @@
+{
+  "header-login": {
+    "component": "HeaderLogin",
+    "composition": "children"
+  },
+
+  "short-description": {
+    "component": "ShortDescription"
+  },
+
+  "info-tabs": {
+    "component": "InfoTabs",
+    "composition": "children"
+  },
+
+  "cash-price": {
+    "component": "CashPrice"
+  },
+
+  "social-medias": {
+    "component": "SocialMedias"
+  }
+}

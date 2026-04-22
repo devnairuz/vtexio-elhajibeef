@@ -1,0 +1,28 @@
+.shortDescription {
+  margin: 0;
+}
+
+.shortDescriptionContent {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.shortDescriptionContent h1,
+.shortDescriptionContent h2,
+.shortDescriptionContent h3,
+.shortDescriptionContent h4,
+.shortDescriptionContent h5,
+.shortDescriptionContent h6 {
+  margin: 0 0 10px;
+}
+
+.shortDescriptionContent * {
+  font-size: 14px;
+  color: #5d5d5d;
+  line-height: 1.5;
+}
+
+.shortDescriptionContent ul,
+.shortDescriptionContent ol {
+  padding-left: 15px;
+}

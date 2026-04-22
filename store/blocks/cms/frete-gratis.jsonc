@@ -1,0 +1,32 @@
+{
+  "store.custom#frete-gratis": {
+    "children": [
+      "flex-layout.row#frete-gratis"
+    ]
+  },
+  "flex-layout.row#frete-gratis": {
+    "props": {
+      "blockClass": ["custom-container"]
+    },
+    "children": ["flex-layout.col#frete-conteudo"]
+  },
+  "flex-layout.col#frete-conteudo": {
+    "children": ["rich-text#frete-title", "rich-text#frete-gratis"],
+    "props": {
+      "blockClass": "container"
+    }
+  },
+  "rich-text#frete-title": {
+    "props": {
+      "text": "# Frete Grátis"
+    }
+  },
+  "rich-text#frete-gratis": {
+    "props": {
+      "text": "Retire direto na fábrica",
+      "textAlignment": "initial",
+      "textPosition": "initial"
+    }
+  }
+
+}

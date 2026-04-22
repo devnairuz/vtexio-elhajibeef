@@ -1,0 +1,15 @@
+{
+  "flex-layout.row#short-description": {
+    "props": {
+      "blockClass": "short-description-container"
+    },
+    "children": ["flex-layout.col#short-description"]
+  },
+
+  "flex-layout.col#short-description": {
+    "props": {
+      "blockClass": "short-description-content"
+    },
+    "children": ["short-description"] // Componente na pasta react
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "flex-layout.row#instagram": {
+    "props": {
+      "blockClass": ["instagram-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#instagram"]
+  },
+  "flex-layout.col#instagram": {
+    "props": {
+      "blockClass": "instagram-content"
+    },
+    "children": ["social-medias"] // componente na pasta react
+  }
+}

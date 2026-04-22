@@ -1,0 +1,54 @@
+{
+  "flex-layout.row#shelf-highlights": {
+    "props": {
+      "blockClass": ["shelf-container", "shelf-highlights-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#shelf-highlights"]
+  },
+  "flex-layout.col#shelf-highlights": {
+    "children": [
+      "flex-layout.row#highlights-title-container",
+      "flex-layout.row#highlights-products-container"
+    ]
+  },
+
+  "flex-layout.row#highlights-title-container": {
+    "props": {
+      "blockClass": ["highlights-title-container"]
+    },
+    "children": ["flex-layout.col#highlights-title-content"]
+  },
+  "flex-layout.col#highlights-title-content": {
+    "props": {
+      "blockClass": ["highlights-title-content"]
+    },
+    "children": ["rich-text#highlights-title"]
+  },
+  "rich-text#highlights-title": {
+    "props": {
+      "text": "#### Destaques **Todo mundo comprando!**",
+      "blockClass": ["highlights-title", "shelf-title"]
+    }
+  },
+
+  "flex-layout.row#highlights-products-container": {
+    "props": {
+      "blockClass": ["highlights-products-container"]
+    },
+    "children": ["flex-layout.col#highlights-products-container"]
+  },
+  "flex-layout.col#highlights-products-container": {
+    "props": {
+      "blockClass": ["highlights-products-content"]
+    },
+    "children": ["list-context.product-list#shelf-highlights"]
+  },
+  "list-context.product-list#shelf-highlights": {
+    "props": {
+      "listName": "Destaques",
+      "installmentCriteria": "MAX_WITH_INTEREST"
+    },
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#products"]
+  }
+}

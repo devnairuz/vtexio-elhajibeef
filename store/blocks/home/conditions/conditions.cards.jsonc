@@ -1,0 +1,62 @@
+{
+  "info-card#condition1": {
+    "props": {
+      "id": "info-card-condition",
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "assets/icons/truck.svg",
+      "headline": "Entregamos em \n**todo Brasil**",
+      "blockClass": "info-card-condition",
+      "callToActionMode": "none",
+      "textMode": "rich-text"
+    }
+  },
+  "info-card#condition2": {
+    "props": {
+      "id": "info-card-condition",
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "assets/icons/credit-card.svg",
+      "headline": "Parcelamos em \n**até 6x sem juros**",
+      "blockClass": "info-card-condition",
+      "callToActionMode": "none",
+      "textMode": "rich-text"
+    }
+  },
+  "info-card#condition3": {
+    "props": {
+      "id": "info-card-condition",
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "assets/icons/truck.svg",
+      "headline": "Desconto de \n**10% no boleto**",
+      "blockClass": "info-card-condition",
+      "callToActionMode": "none",
+      "textMode": "rich-text"
+    }
+  },
+  "info-card#condition4": {
+    "props": {
+      "id": "info-card-condition",
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "assets/icons/refresh-cw.svg",
+      "headline": "Troque grátis em \n**até 30 dias**",
+      "blockClass": "info-card-condition",
+      "callToActionMode": "none",
+      "textMode": "rich-text"
+    }
+  },
+  "info-card#condition5": {
+    "props": {
+      "id": "info-card-condition",
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "assets/icons/shield.svg",
+      "headline": "Compra garantida \n**Loja 100% segura**",
+      "blockClass": "info-card-condition",
+      "callToActionMode": "none",
+      "textMode": "rich-text"
+    }
+  }
+}

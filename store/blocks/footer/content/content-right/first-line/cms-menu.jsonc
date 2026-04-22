@@ -1,0 +1,95 @@
+{
+  "flex-layout.col#cms-menu": {
+    "props": {
+      "blockClass": "cms-menu-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#cms-menu-title",
+      "flex-layout.row#cms-menu-wrapper"
+    ]
+  },
+
+  "flex-layout.row#cms-menu-title": {
+    "props": {
+      "blockClass": "cms-menu-title-wrapper"
+    },
+    "children": ["flex-layout.col#cms-menu-title"]
+  },
+  "flex-layout.col#cms-menu-title": {
+    "props": {
+      "blockClass": "cms-menu-title-content"
+    },
+    "children": ["rich-text#cms-menu-title"]
+  },
+  "rich-text#cms-menu-title": {
+    "props": {
+      "blockClass": "footer-title",
+      "text": "#### Institucional"
+    }
+  },
+
+  "flex-layout.row#cms-menu-wrapper": {
+    "props": {
+      "blockClass": "cms-menu-wrapper"
+    },
+    "children": ["flex-layout.col#cms-menu-wrapper"]
+  },
+  "flex-layout.col#cms-menu-wrapper": {
+    "props": {
+      "blockClass": "cms-menu-wrapper-content"
+    },
+    "children": [
+      "rich-text#cms-fale-conosco",
+      "rich-text#cms-quem-somos",
+      "rich-text#cms-frete-gratis",
+      "rich-text#cms-politicas-privacidade",
+      "rich-text#cms-politicas-vendas",
+      "rich-text#cms-politicas-trocas",
+      "rich-text#cms-cancelamentos"
+    ]
+  },
+
+  "rich-text#cms-fale-conosco": {
+    "props": {
+      "text": "[Fale Conosco](/fale-conosco)",
+      "blockClass": "cms-link"
+    }
+  },
+  "rich-text#cms-quem-somos": {
+    "props": {
+      "text": "[Quem Somos](/quem-somos)",
+      "blockClass": "cms-link"
+    }
+  },
+  "rich-text#cms-frete-gratis": {
+    "props": {
+      "text": "[Frete Grátis](/frete-gratis)",
+      "blockClass": "cms-link"
+    }
+  },
+  "rich-text#cms-politicas-privacidade": {
+    "props": {
+      "text": "[Políticas de Privacidade](/politicas-de-privacidade)",
+      "blockClass": "cms-link"
+    }
+  },
+  "rich-text#cms-politicas-vendas": {
+    "props": {
+      "text": "[Políticas de Vendas](/politica-de-vendas)",
+      "blockClass": "cms-link"
+    }
+  },
+  "rich-text#cms-politicas-trocas": {
+    "props": {
+      "text": "[Políticas de Trocas](/politica-de-trocas)",
+      "blockClass": "cms-link"
+    }
+  },
+  "rich-text#cms-cancelamentos": {
+    "props": {
+      "text": "[Cancelamentos](/cancelamentos)",
+      "blockClass": "cms-link"
+    }
+  }
+}

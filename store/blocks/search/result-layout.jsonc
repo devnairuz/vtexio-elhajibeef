@@ -1,0 +1,17 @@
+{
+  "search-result-layout.desktop": {
+    "children": [
+      "flex-layout.row#search-bread",
+      "flex-layout.row#search-title",
+      "flex-layout.row#result-grid",
+      "flex-layout.row#result-description"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "blockClass": "search-result-layout",
+      "search-result-layout": "grid"
+    }
+  }
+}

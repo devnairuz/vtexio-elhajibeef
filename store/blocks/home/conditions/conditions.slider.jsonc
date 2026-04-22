@@ -1,0 +1,19 @@
+{
+  "slider-layout#conditions": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": "3000",
+        "stopOnHover": true
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never"
+    },
+    "children": ["info-card#condition1", "info-card#condition2", "info-card#condition3", "info-card#condition4", "info-card#condition5"]
+  }
+}

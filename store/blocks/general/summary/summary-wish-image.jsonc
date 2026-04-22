@@ -1,0 +1,23 @@
+{
+  "flex-layout.row#summary-wish-image": {
+    "props": {
+      "blockClass": ["summary-wish-image"]
+    },
+    "children": ["flex-layout.col#summary-wish-image"]
+  },
+
+  "flex-layout.col#summary-wish-image": {
+    "props": {
+      "blockClass": ["wish-image-content"]
+    },
+    "children": ["add-to-list-btn", "product-summary-image"]
+  },
+
+  "product-summary-image": {
+    "props": {
+      "showBadge": true,
+      "aspectRatio": "1:1",
+      "maxHeight": 240
+    }
+  }
+}

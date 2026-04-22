@@ -1,0 +1,75 @@
+{
+  "flex-layout.row#social-networks": {
+    "props": {
+      "blockClass": "social-networks-container"
+    },
+    "children": ["flex-layout.col#social-networks"]
+  },
+  "flex-layout.col#social-networks": {
+    "props": {
+      "blockClass": "social-networks-content"
+    },
+    "children": [
+      "image#pinterest",
+      "image#youtube",
+      "image#twitter",
+      "image#instagram",
+      "image#facebook"
+    ]
+  },
+
+  "image#pinterest": {
+    "props": {
+      "src": "assets/social-networks/pinterest.svg",
+      "alt": "Pinterest",
+      "link": {
+        "url": "https://br.pinterest.com/",
+        "newTab": true
+      }
+    }
+  },
+
+  "image#youtube": {
+    "props": {
+      "src": "assets/social-networks/youtube.svg",
+      "alt": "Youtube",
+      "link": {
+        "url": "https://youtube.com.br",
+        "newTab": true
+      }
+    }
+  },
+
+  "image#twitter": {
+    "props": {
+      "src": "assets/social-networks/twitter.svg",
+      "alt": "Twitter",
+      "link": {
+        "url": "https://twitter.com",
+        "newTab": true
+      }
+    }
+  },
+
+  "image#instagram": {
+    "props": {
+      "src": "assets/social-networks/instagram.svg",
+      "alt": "Instagram",
+      "link": {
+        "url": "https://instagram.com",
+        "newTab": true
+      }
+    }
+  },
+
+  "image#facebook": {
+    "props": {
+      "src": "assets/social-networks/facebook.svg",
+      "alt": "Facebook",
+      "link": {
+        "url": "https://www.facebook.com/facebook/?locale=pt_BR",
+        "newTab": true
+      }
+    }
+  }
+}

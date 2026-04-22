@@ -1,0 +1,18 @@
+{
+  "flex-layout.col#product-resume": {
+    "props": {
+      "blockClass": "product-resume-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#name-wish",
+      "flex-layout.row#sku",
+      "flex-layout.row#short-description",
+      "flex-layout.row#prices-pdp",
+      "flex-layout.row#sku-selector",
+      "flex-layout.row#actions-pdp",
+      "flex-layout.row#shipping",
+      "flex-layout.row#share"
+    ]
+  }
+}

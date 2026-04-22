@@ -1,0 +1,16 @@
+.trigger--trigger-store-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dropdown {
+  background: #fff;
+  box-shadow: 2px 2px 4px 2px rgba(0,0,0,.2);
+  padding: 15px;
+}
+
+.container  {
+  padding: 0;
+  border: 0;
+}

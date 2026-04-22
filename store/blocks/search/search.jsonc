@@ -1,0 +1,23 @@
+{
+  "store.search": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "installmentCriteria": "MAX_WITH_INTEREST",
+        "maxItemsPerPage": 12
+      }
+    }
+  },
+
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.productInfoTabs {
+  padding: 42px 0;
+}
+
+.infoControl {
+  padding: 16px 40px;
+  background: transparent;
+  border: 0;
+  color: #343434;
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
+  outline: none !important;
+  transition: all .3s ease-in-out;
+}
+.infoControl.active,
+.infoControl:hover {
+  background: #fff;
+  color: #000;
+}
+
+.tabContent {
+  padding: 25px 40px;
+  background: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  color: #343434;
+}
+.tabContent p {
+  margin: 0;
+}
+.tabContent p + p {
+  margin-top: 15px;
+}
+
+.tabContent a[href$=".pdf"] {
+  display: inline-block;
+  padding: 12px 18px 12px 40px;
+  border: 1px solid #000;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  z-index: 0;
+}
+.tabContent a[href$=".pdf"]::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  width: 14px;
+  height: 14px;
+  background: url(../../../assets/icons/download.svg);
+  top: 50%;
+  left: 18px;
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 1199px) {
+  .infoControl {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .productInfoTabs {
+    position: relative;
+    z-index: 0;
+    padding: 30px 0;
+  }
+  
+  .infoControl {
+    padding: 12px 20px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .infoControl:not(.active) {
+    display: none;
+  }
+  .infoControl.active {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: space-between;
+  }
+  .infoControl.active::after {
+    content: url(../../../assets/icons/chevron-down.svg);
+  }
+
+  .tabContent {
+    font-size: 12px;
+    padding: 20px;
+  }
+
+  .tabContent.active[data-content-for="Manual de Instalação"] {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .tabHeaderOpen {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: fit-content;
+    background: #f1f1f1;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    z-index: 10;
+  }
+  .tabHeaderOpen .infoControl:not(.active) {
+    display: inline-block;
+  }
+  .tabHeaderOpen .infoControl {
+    max-width: 100%;
+    text-align: left;
+  }
+}

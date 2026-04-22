@@ -1,0 +1,35 @@
+{
+  "flex-layout.row#content": {
+    "props": {
+      "blockClass": ["footer-container", "custom-container"],
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#content-left",
+      "flex-layout.col#content-right"
+    ]
+  },
+
+  "flex-layout.col#content-left": {
+    "props": {
+      "blockClass": "content-left-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "image#footer-logo",
+      "rich-text#brand-resume",
+      "flex-layout.row#social-networks"
+    ]
+  },
+
+  "flex-layout.col#content-right": {
+    "props": {
+      "blockClass": "content-right-content",
+      "preventVerticalStretch": true,
+      "width": "grow"
+    },
+    "children": [
+      "flex-layout.row#content-right-first-line"
+    ]
+  }
+}

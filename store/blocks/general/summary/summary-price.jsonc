@@ -1,0 +1,73 @@
+{
+  "flex-layout.row#summary-price": {
+    "props": {
+      "blockClass": ["summary-price-container"]
+    },
+    "children": ["flex-layout.col#summary-price"]
+  },
+  "flex-layout.col#summary-price": {
+    "props": {
+      "blockClass": ["summary-price-content"]
+    },
+    "children": [
+      "flex-layout.row#list-selling-price-summary",
+      "flex-layout.row#installments-summary",
+      "flex-layout.row#spot-price-summary"
+    ]
+  },
+
+  "flex-layout.row#list-selling-price-summary": {
+    "props": {
+      "blockClass": ["list-selling-price-summary-container"]
+    },
+    "children": ["flex-layout.col#list-selling-price-summary"]
+  },
+  "flex-layout.col#list-selling-price-summary": {
+    "props": {
+      "blockClass": ["list-selling-price-summary"]
+    },
+    "children": ["product-list-price#summary", "product-selling-price#summary"]
+  },
+  "product-list-price#summary": {
+    "props": {
+      "blockClass": "list-price-summary"
+    }
+  },
+  "product-selling-price#summary": {
+    "props": {
+      "blockClass": "selling-price-summary"
+    }
+  },
+
+  "flex-layout.row#installments-summary": {
+    "props": {
+      "blockClass": ["installments-summary-container"]
+    },
+    "children": ["flex-layout.col#installments-summary"]
+  },
+  "flex-layout.col#installments-summary": {
+    "props": {
+      "blockClass": ["installments-summary-content"]
+    },
+    "children": ["product-installments#summary"]
+  },
+  "product-installments#summary": {
+    "props": {
+      "blockClass": "installments-summary",
+      "message": "até {installmentsNumber}x de {hasInterest, select, true {{installmentValue} com juros} false {{installmentValue} sem juros}}"
+    }
+  },
+
+  "flex-layout.row#spot-price-summary": {
+    "props": {
+      "blockClass": ["spot-price-summary-container"]
+    },
+    "children": ["flex-layout.col#spot-price-summary"]
+  },
+  "flex-layout.col#spot-price-summary": {
+    "props": {
+      "blockClass": ["spot-price-summary-content"]
+    },
+    "children": ["cash-price"] // Componente na pasta react/components/Product/CashPrice
+  }
+}

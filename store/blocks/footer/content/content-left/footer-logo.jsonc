@@ -1,0 +1,12 @@
+{
+  "image#footer-logo": {
+    "props": {
+      "blockClass": "footer-logo",
+      "src": "assets/logos/logo-diamond.svg",
+      "alt": "Diamond",
+      "link": {
+        "url": "/"
+      }
+    }
+  }
+}

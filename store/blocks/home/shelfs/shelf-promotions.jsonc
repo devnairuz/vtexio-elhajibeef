@@ -1,0 +1,54 @@
+{
+  "flex-layout.row#shelf-promotions": {
+    "props": {
+      "blockClass": ["shelf-container", "shelf-promotions-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#shelf-promotions"]
+  },
+  "flex-layout.col#shelf-promotions": {
+    "children": [
+      "flex-layout.row#promotions-title-container",
+      "flex-layout.row#promotions-products-container"
+    ]
+  },
+
+  "flex-layout.row#promotions-title-container": {
+    "props": {
+      "blockClass": ["promotions-title-container"]
+    },
+    "children": ["flex-layout.col#promotions-title-content"]
+  },
+  "flex-layout.col#promotions-title-content": {
+    "props": {
+      "blockClass": ["promotions-title-content"]
+    },
+    "children": ["rich-text#promotions-title"]
+  },
+  "rich-text#promotions-title": {
+    "props": {
+      "text": "#### Promoções **Corre, *que é por tempo limitado!***",
+      "blockClass": ["promotions-title", "shelf-title"]
+    }
+  },
+
+  "flex-layout.row#promotions-products-container": {
+    "props": {
+      "blockClass": ["promotions-products-container"]
+    },
+    "children": ["flex-layout.col#promotions-products-container"]
+  },
+  "flex-layout.col#promotions-products-container": {
+    "props": {
+      "blockClass": ["promotions-products-content"]
+    },
+    "children": ["list-context.product-list#shelf-promotions"]
+  },
+  "list-context.product-list#shelf-promotions": {
+    "props": {
+      "listName": "Promoções",
+      "installmentCriteria": "MAX_WITH_INTEREST"
+    },
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#products"]
+  }
+}

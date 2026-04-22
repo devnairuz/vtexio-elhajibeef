@@ -1,0 +1,39 @@
+{
+  "flex-layout.col#product-image": {
+    "props": {
+      "blockClass": "product-image-content"
+    },
+    "children": ["responsive-layout.desktop#image-pdp", "responsive-layout.mobile#image-pdp"]
+  },
+
+  "responsive-layout.desktop#image-pdp": {
+    "children": ["product-images#desktop"]
+  },
+  "product-images#desktop": {
+    "props": {
+      "aspectRatio": "3:4",
+      "thumbnailAspectRatio": "1:1",
+      "showNavigationArrows": false,
+      "showPaginationDots": false,
+      "maxHeight": 504,
+      "thumbnailMaxHeight": 80,
+      "zoomMode": "in-place-hover"
+    }
+  },
+
+  "responsive-layout.mobile#image-pdp": {
+    "children": ["product-images#mobile"]
+  },
+  "product-images#mobile": {
+    "props": {
+      "aspectRatio": "3:4",
+      "thumbnailAspectRatio": "1:1",
+      "showNavigationArrows": false,
+      "showPaginationDots": false,
+      "maxHeight": 504,
+      "thumbnailMaxHeight": 80,
+      "zoomMode": "in-place-hover",
+      "thumbnailsOrientation": "horizontal"
+    }
+  }
+}

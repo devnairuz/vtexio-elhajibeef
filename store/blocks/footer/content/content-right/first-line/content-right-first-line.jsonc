@@ -1,0 +1,13 @@
+{
+  "flex-layout.row#content-right-first-line": {
+    "props": {
+      "blockClass": ["first-line-container"],
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#footer-category-menu",
+      "flex-layout.col#cms-menu",
+      "flex-layout.col#sac"
+    ]
+  }
+}

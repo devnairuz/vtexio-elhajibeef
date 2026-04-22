@@ -1,0 +1,21 @@
+{
+  "flex-layout.row#summary-name": {
+    "props": {
+      "blockClass": ["summary-name"]
+    },
+    "children": ["flex-layout.col#summary-name"]
+  },
+
+  "flex-layout.col#summary-name": {
+    "props": {
+      "blockClass": ["summary-name-content"]
+    },
+    "children": ["product-summary-name#summary-name"]
+  },
+
+  "product-summary-name#summary-name": {
+    "props": {
+      "blockClass": "summary-name"
+    }
+  }
+}

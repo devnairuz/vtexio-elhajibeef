@@ -1,0 +1,9 @@
+{
+  "flex-layout.col#result-filter": {
+    "props": {
+      "blockClass": "result-filter-content",
+      "preventVerticalStretch": true
+    },
+    "children": ["filter-navigator.v3"]
+  }
+}

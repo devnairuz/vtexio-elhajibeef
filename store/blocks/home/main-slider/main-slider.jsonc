@@ -1,0 +1,49 @@
+{
+  "flex-layout.row#main-slider": {
+    "props": {
+      "blockClass": ["main-slider-container"]
+    },
+    "children": ["flex-layout.col#main-slider"]
+  },
+  "flex-layout.col#main-slider": {
+    "children": ["list-context.image-list#main-slider"]
+  },
+  "list-context.image-list#main-slider": {
+    "children": ["slider-layout#main-slider"],
+    "props": {
+      "images": [
+        {
+          "image": "assets/slider-principal/desk/basic-looks.png",
+          "mobileImage": "assets/slider-principal/desk/basic-looks.png",
+          "description": "Basic Looks, confira!"
+        },
+        {
+          "image": "assets/slider-principal/desk/basic-looks.png",
+          "mobileImage": "assets/slider-principal/desk/basic-looks.png",
+          "description": "Basic Looks, confira!"
+        },
+        {
+          "image": "assets/slider-principal/desk/basic-looks.png",
+          "mobileImage": "assets/slider-principal/desk/basic-looks.png",
+          "description": "Basic Looks, confira!"
+        }
+      ]
+    }
+  },
+
+  "slider-layout#main-slider": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": "3000",
+        "stopOnHover": true
+      },
+      "infinite": true,
+      "blockClass": ["main-slider"]
+    }
+  }
+}

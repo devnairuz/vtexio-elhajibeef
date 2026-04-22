@@ -1,0 +1,15 @@
+{
+  "flex-layout.row#search-fetchmore": {
+    "props": {
+      "blockClass": "search-fetchmore-container"
+    },
+    "children": ["flex-layout.col#search-fetchmore"]
+  },
+
+  "flex-layout.col#search-fetchmore": {
+    "props": {
+      "blockClass": "search-fetchmore-content"
+    },
+    "children": ["search-fetch-more"]
+  }
+}

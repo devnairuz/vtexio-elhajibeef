@@ -1,0 +1,54 @@
+{
+  "flex-layout.row#shelf-best-sellers": {
+    "props": {
+      "blockClass": ["shelf-container", "shelf-best-sellers-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#shelf-best-sellers"]
+  },
+  "flex-layout.col#shelf-best-sellers": {
+    "children": [
+      "flex-layout.row#best-sellers-title-container",
+      "flex-layout.row#best-sellers-products-container"
+    ]
+  },
+
+  "flex-layout.row#best-sellers-title-container": {
+    "props": {
+      "blockClass": ["best-sellers-title-container"]
+    },
+    "children": ["flex-layout.col#best-sellers-title-content"]
+  },
+  "flex-layout.col#best-sellers-title-content": {
+    "props": {
+      "blockClass": ["best-sellers-title-content"]
+    },
+    "children": ["rich-text#best-sellers-title"]
+  },
+  "rich-text#best-sellers-title": {
+    "props": {
+      "text": "#### Mais Vendidos **Selecionamos produtos especiais para você!**",
+      "blockClass": ["best-sellers-title", "shelf-title"]
+    }
+  },
+
+  "flex-layout.row#best-sellers-products-container": {
+    "props": {
+      "blockClass": ["best-sellers-products-container"]
+    },
+    "children": ["flex-layout.col#best-sellers-products-container"]
+  },
+  "flex-layout.col#best-sellers-products-container": {
+    "props": {
+      "blockClass": ["best-sellers-products-content"]
+    },
+    "children": ["list-context.product-list#shelf-best-sellers"]
+  },
+  "list-context.product-list#shelf-best-sellers": {
+    "props": {
+      "listName": "Mais vendidos",
+      "installmentCriteria": "MAX_WITH_INTEREST"
+    },
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#products"]
+  }
+}

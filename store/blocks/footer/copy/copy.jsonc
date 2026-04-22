@@ -1,0 +1,84 @@
+{
+  "flex-layout.row#copy": {
+    "props": {
+      "blockClass": ["footer-copy-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#copy-brand", "flex-layout.col#copy-design"]
+  },
+
+  "flex-layout.col#copy-brand": {
+    "props": {
+      "blockClass": ["copy-brand-content"]
+    },
+    "children": ["rich-text#copy-brand"]
+  },
+  "rich-text#copy-brand": {
+    "props": {
+      "text": "Diamond Clothing® | Todos os direitos reservados.",
+      "blockClass": ["copy-brand", "copy-text"]
+    }
+  },
+
+  "flex-layout.col#copy-design": {
+    "props": {
+      "blockClass": ["copy-design-content"]
+    },
+    "children": ["flex-layout.row#copy-design"]
+  },
+  "flex-layout.row#copy-design": {
+    "props": {
+      "blockClass": "copy-design-container"
+    },
+    "children": ["flex-layout.col#copy-design-content", "flex-layout.col#copy-platform-content"]
+  },
+  
+  "flex-layout.col#copy-design-content": {
+    "props": {
+      "blockClass": "copy-design-content"
+    },
+    "children": ["rich-text#copy-design", "image#copy-design"]
+  },
+  "rich-text#copy-design": {
+    "props": {
+      "text": "Design",
+      "blockClass": ["copy-design", "copy-text"]
+    }
+  },
+  "image#copy-design": {
+    "props": {
+      "blockClass": "copy-design",
+      "src": "assets/logos/nairuz.png",
+      "alt": "nairuz",
+      "maxHeight": 13,
+      "link": {
+        "newTab": true,
+        "url": "https://nairuz.com.br"
+      }
+    }
+  },
+
+  "flex-layout.col#copy-platform-content": {
+    "props": {
+      "blockClass": "copy-platform-content"
+    },
+    "children": ["rich-text#copy-platform", "image#copy-platform"]
+  },
+  "rich-text#copy-platform": {
+    "props": {
+      "text": "Plataforma",
+      "blockClass": ["copy-design", "copy-text"]
+    }
+  },
+  "image#copy-platform": {
+    "props": {
+      "blockClass": "copy-design",
+      "src": "assets/logos/vtex.svg",
+      "alt": "nairuz",
+      "maxHeight": 20,
+      "link": {
+        "newTab": true,
+        "url": "https://vtex.com/br-pt/"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "flex-layout.row#product-main": {
+    "props": {
+      "blockClass": ["product-main-container", "custom-container"]
+    },
+    "children": [
+      "flex-layout.col#product-image",
+      "flex-layout.col#product-resume"
+    ]
+  }
+}

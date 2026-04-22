@@ -1,0 +1,55 @@
+{
+  "flex-layout.row#newsletter": {
+    "props": {
+      "blockClass": ["newsletter-container", "custom-container"]
+    },
+    "children": [
+      "flex-layout.col#newsletter-cta",
+      "flex-layout.col#newsletter-form"
+    ]
+  },
+  
+  "flex-layout.col#newsletter-cta": {
+    "props": {
+      "blockClass": ["newsletter-cta-content"]
+    },
+    "children": ["image#newsletter", "rich-text#newsletter"]
+  },
+  "image#newsletter": {
+    "props": {
+      "src": "assets/icons/newsletter.svg",
+      "alt": "Icone newsletter",
+      "blockClass": "icon-newsletter"
+    }
+  },
+  "rich-text#newsletter": {
+    "props": {
+      "text": "Assine nossa newsletter e fique por dentro de tudo!",
+      "blockClass": "newsletter-cta"
+    }
+  },
+
+  "flex-layout.col#newsletter-form": {
+    "props": {
+      "blockClass": ["newsletter-form-content"]
+    },
+    "children": ["newsletter-form"]
+  },
+
+  "newsletter-form": {
+    "children": [
+      "newsletter-input-email",
+      "newsletter-submit"
+    ]
+  },
+  "newsletter-input-email": {
+    "props": {
+      "placeholderText": "Digite aqui seu e-mail"
+    }
+  },
+  "newsletter-submit": {
+    "props": {
+      "submitButtonLabel": "Cadastrar"
+    }
+  }
+}

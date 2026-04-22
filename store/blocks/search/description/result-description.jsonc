@@ -1,0 +1,22 @@
+{
+  "flex-layout.row#result-description": {
+    "props": {
+      "blockClass": ["result-description-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#result-description"]
+  },
+
+  "flex-layout.col#result-description": {
+    "props": {
+      "blockClass": "result-description-content"
+    },
+    "children": ["rich-text#description-text"]
+  },
+
+  "rich-text#description-text": {
+    "props": {
+      "blockClass": "description-text",
+      "text": "Aqui você encontra os últimos lançamentos da temporada, os clássicos essenciais, as peças para impressionar. Arrase sem moderação."
+    }
+  }
+}

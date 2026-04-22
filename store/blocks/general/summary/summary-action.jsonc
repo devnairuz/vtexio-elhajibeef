@@ -1,0 +1,29 @@
+{
+  "flex-layout.row#summary-action": {
+    "props": {
+      "blockClass": ["summary-action-container"]
+    },
+    "children": ["flex-layout.col#summary-action"]
+  },
+
+  "flex-layout.col#summary-action": {
+    "props": {
+      "blockClass": ["summary-action-content"]
+    },
+    "children": [
+      "product-summary-quantity",
+      "add-to-cart-button#buy-button-shelf"
+    ]
+  },
+  "product-summary-quantity": {
+    "props": {
+      "showLabel": false,
+      "blockClass": "summary-quantity-shelf"
+    }
+  },
+  "add-to-cart-button#buy-button-shelf": {
+    "props": {
+      "blockClass": "buy-button-shelf"
+    }
+  }
+}
