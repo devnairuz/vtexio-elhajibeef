@@ -1,4 +1,33 @@
 {
+  "search-suggestions": {
+    "props": {
+      "title": "Produtos mais procurados",
+      "items": [
+        {
+          "label": "Picanha",
+          "href": "/picanha"
+        },
+        {
+          "label": "Hamburguer",
+          "href": "/hamburguer"
+        },
+        {
+          "label": "Ancho",
+          "href": "/ancho"
+        },
+        {
+          "label": "Contra Filé",
+          "href": "/contra-file"
+        },
+        {
+          "label": "Costela",
+          "href": "/costela"
+        }
+      ]
+    },
+    "children": ["search-bar"]
+  },
+
   "search-bar": {
     "props": {
       "placeholder": "O que você procura?"

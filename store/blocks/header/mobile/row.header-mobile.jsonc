@@ -1,5 +1,6 @@
 {
   "flex-layout.row#header-mobile": {
+    "title": "Header mobile > Barra principal",
     "children": [
       "flex-layout.col#drawer-mobile",
       "flex-layout.col#logo-mobile",
@@ -14,12 +15,14 @@
   },
 
   "flex-layout.col#drawer-mobile": {
+    "title": "Header mobile > Menu",
     "props": {
       "blockClass": ["drawer-mobile-content"]
     },
     "children": ["category-menu#mobile"]
   },
   "category-menu#mobile": {
+    "title": "Header mobile > Menu de categorias",
     "props":{
       "showAllDepartments": false,
       "showSubcategories": true,
@@ -31,6 +34,7 @@
   },
 
   "flex-layout.col#logo-mobile": {
+    "title": "Header mobile > Logo",
     "props": {
       "blockClass": ["logo-mobile-content"]
     },
@@ -38,6 +42,7 @@
   },
 
   "flex-layout.col#minicart-mobile": {
+    "title": "Header mobile > Carrinho",
     "props": {
       "blockClass": ["minicart-mobile-content"]
     },

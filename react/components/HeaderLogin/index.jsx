@@ -5,7 +5,7 @@ import LoginLabel from './LoginLabel'
 import styles from "./headerLogin.css"
 
 const HeaderLogin = ({ children }) => {
-  const { loading, session, error } = useRenderSession()
+  const { loading, error } = useRenderSession()
 
   if (loading) {
     return <LoginLabel />
@@ -17,15 +17,7 @@ const HeaderLogin = ({ children }) => {
 
   return (
     <div className={styles.headerLogin}>
-      {session?.namespaces?.profile?.firstName?.value ? (
-        <LoginLabel
-          greetingTitle="Olá"
-          greetingSubtitle={session.namespaces.profile.firstName.value}
-        />
-
-      ) : (
-        <LoginLabel />
-      )}
+      <LoginLabel />
 
       <div className={styles.loginForm}>
         {children}

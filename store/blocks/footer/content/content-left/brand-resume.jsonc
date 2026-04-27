@@ -1,8 +1,9 @@
 {
   "rich-text#brand-resume": {
+    "title": "Footer > Texto da marca",
     "props": {
       "blockClass": "brand-resume",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tortor leo, rutrum quis varius condimentum, aliquet sed diam. Ut egestas, quam at porta fermentum, quam dui congue ex, a efficitur nisl tellus vel tortor."
+      "text": "A El Haji Beef oferece carnes nobres e certificadas Halal, com controle total da cadeia produtiva e compromisso com qualidade e procedência, do campo à mesa."
     }
   }
 }

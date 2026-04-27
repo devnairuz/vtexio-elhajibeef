@@ -1,0 +1,29 @@
+{
+  "flex-layout.row#store-info": {
+    "title": "Header > Feed Shop",
+    "children": [
+      "image#info-icon",
+      "rich-text#store-info-text"
+    ],
+    "props": {
+      "blockClass": "store-info-link",
+      "preventVerticalStretch": true
+    }
+  },
+
+  "image#info-icon": {
+    "title": "Header > Feed Shop > Ícone",
+    "props": {
+      "src": "assets/icons/feed-shop.svg",
+      "blockClass": "store-info-icon"
+    }
+  },
+
+  "rich-text#store-info-text": {
+    "title": "Header > Feed Shop > Texto",
+    "props": {
+      "blockClass": ["store-info-text", "utils-text"],
+      "text": "Feed Shop"
+    }
+  }
+}

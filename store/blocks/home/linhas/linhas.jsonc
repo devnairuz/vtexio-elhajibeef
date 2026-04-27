@@ -1,0 +1,471 @@
+{
+  "flex-layout.row#home-linhas": {
+    "title": "Conheça nossas linhas",
+    "props": {
+      "blockClass": ["home-linhas-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#home-linhas"]
+  },
+
+  "flex-layout.col#home-linhas": {
+    "title": "Conheça nossas linhas > Conteúdo",
+    "props": {
+      "blockClass": "home-linhas-content"
+    },
+    "children": [
+      "rich-text#home-linhas-title",
+      "responsive-layout.desktop#home-linhas-gallery",
+      "responsive-layout.mobile#home-linhas-gallery",
+      "responsive-layout.desktop#home-linhas-cards",
+      "responsive-layout.mobile#home-linhas-cards"
+    ]
+  },
+
+  "rich-text#home-linhas-title": {
+    "title": "Conheça nossas linhas > Título",
+    "props": {
+      "blockClass": "home-linhas-title",
+      "text": "#### CONHEÇA NOSSAS LINHAS"
+    }
+  },
+
+  "responsive-layout.desktop#home-linhas-gallery": {
+    "title": "Conheça nossas linhas > Cards superiores desktop",
+    "children": ["flex-layout.row#home-linhas-gallery"]
+  },
+
+  "responsive-layout.mobile#home-linhas-gallery": {
+    "title": "Conheça nossas linhas > Cards superiores mobile",
+    "children": ["slider-layout#home-linhas-gallery-mobile"]
+  },
+
+  "slider-layout#home-linhas-gallery-mobile": {
+    "title": "Conheça nossas linhas > Slider superior mobile",
+    "props": {
+      "blockClass": "home-linhas-gallery-mobile",
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "always"
+    },
+    "children": [
+      "flex-layout.col#home-linhas-gallery-1",
+      "flex-layout.col#home-linhas-gallery-2",
+      "flex-layout.col#home-linhas-gallery-3",
+      "flex-layout.col#home-linhas-gallery-4"
+    ]
+  },
+
+  "flex-layout.row#home-linhas-gallery": {
+    "title": "Conheça nossas linhas > Cards superiores",
+    "props": {
+      "blockClass": "home-linhas-gallery"
+    },
+    "children": [
+      "flex-layout.col#home-linhas-gallery-1",
+      "flex-layout.col#home-linhas-gallery-2",
+      "flex-layout.col#home-linhas-gallery-3",
+      "flex-layout.col#home-linhas-gallery-4"
+    ]
+  },
+
+  "flex-layout.col#home-linhas-gallery-1": {
+    "props": {
+      "blockClass": "home-linhas-gallery-card"
+    },
+    "children": [
+      "image#home-linhas-gallery-1",
+      "flex-layout.row#home-linhas-gallery-1-hover"
+    ]
+  },
+  "image#home-linhas-gallery-1": {
+    "props": {
+      "blockClass": "home-linhas-gallery-image",
+      "src": "assets/linhas/linha-gallery-1.jpg",
+      "alt": "Linha El Haji Beef"
+    }
+  },
+  "flex-layout.row#home-linhas-gallery-1-hover": {
+    "props": {
+      "blockClass": "home-linhas-gallery-hover"
+    },
+    "children": ["flex-layout.col#home-linhas-gallery-1-hover"]
+  },
+  "flex-layout.col#home-linhas-gallery-1-hover": {
+    "props": {
+      "blockClass": "home-linhas-gallery-hover-content"
+    },
+    "children": [
+      "rich-text#home-linhas-gallery-1-title",
+      "rich-text#home-linhas-gallery-1-button"
+    ]
+  },
+  "rich-text#home-linhas-gallery-1-title": {
+    "props": {
+      "blockClass": "home-linhas-gallery-title",
+      "text": "### Linha\n**Original**"
+    }
+  },
+  "rich-text#home-linhas-gallery-1-button": {
+    "props": {
+      "blockClass": "home-linhas-gallery-button",
+      "text": "[ver mais](/)"
+    }
+  },
+
+  "flex-layout.col#home-linhas-gallery-2": {
+    "props": {
+      "blockClass": "home-linhas-gallery-card"
+    },
+    "children": [
+      "image#home-linhas-gallery-2",
+      "flex-layout.row#home-linhas-gallery-2-hover"
+    ]
+  },
+  "image#home-linhas-gallery-2": {
+    "props": {
+      "blockClass": "home-linhas-gallery-image",
+      "src": "assets/linhas/linha-gallery-2.jpg",
+      "alt": "Linha El Haji Beef"
+    }
+  },
+  "flex-layout.row#home-linhas-gallery-2-hover": {
+    "props": {
+      "blockClass": "home-linhas-gallery-hover"
+    },
+    "children": ["flex-layout.col#home-linhas-gallery-2-hover"]
+  },
+  "flex-layout.col#home-linhas-gallery-2-hover": {
+    "props": {
+      "blockClass": "home-linhas-gallery-hover-content"
+    },
+    "children": [
+      "rich-text#home-linhas-gallery-2-title",
+      "rich-text#home-linhas-gallery-2-button"
+    ]
+  },
+  "rich-text#home-linhas-gallery-2-title": {
+    "props": {
+      "blockClass": "home-linhas-gallery-title",
+      "text": "### Linha\n**Prestige**"
+    }
+  },
+  "rich-text#home-linhas-gallery-2-button": {
+    "props": {
+      "blockClass": "home-linhas-gallery-button",
+      "text": "[ver mais](/)"
+    }
+  },
+
+  "flex-layout.col#home-linhas-gallery-3": {
+    "props": {
+      "blockClass": "home-linhas-gallery-card"
+    },
+    "children": [
+      "image#home-linhas-gallery-3",
+      "flex-layout.row#home-linhas-gallery-3-hover"
+    ]
+  },
+  "image#home-linhas-gallery-3": {
+    "props": {
+      "blockClass": "home-linhas-gallery-image",
+      "src": "assets/linhas/linha-gallery-3.jpg",
+      "alt": "Linha El Haji Beef"
+    }
+  },
+  "flex-layout.row#home-linhas-gallery-3-hover": {
+    "props": {
+      "blockClass": "home-linhas-gallery-hover"
+    },
+    "children": ["flex-layout.col#home-linhas-gallery-3-hover"]
+  },
+  "flex-layout.col#home-linhas-gallery-3-hover": {
+    "props": {
+      "blockClass": "home-linhas-gallery-hover-content"
+    },
+    "children": [
+      "rich-text#home-linhas-gallery-3-title",
+      "rich-text#home-linhas-gallery-3-button"
+    ]
+  },
+  "rich-text#home-linhas-gallery-3-title": {
+    "props": {
+      "blockClass": "home-linhas-gallery-title",
+      "text": "### Linha\n**Supreme**"
+    }
+  },
+  "rich-text#home-linhas-gallery-3-button": {
+    "props": {
+      "blockClass": "home-linhas-gallery-button",
+      "text": "[ver mais](/)"
+    }
+  },
+
+  "flex-layout.col#home-linhas-gallery-4": {
+    "props": {
+      "blockClass": "home-linhas-gallery-card"
+    },
+    "children": [
+      "image#home-linhas-gallery-4",
+      "flex-layout.row#home-linhas-gallery-4-hover"
+    ]
+  },
+  "image#home-linhas-gallery-4": {
+    "props": {
+      "blockClass": "home-linhas-gallery-image",
+      "src": "assets/linhas/linha-gallery-4.jpg",
+      "alt": "Linha El Haji Beef"
+    }
+  },
+  "flex-layout.row#home-linhas-gallery-4-hover": {
+    "props": {
+      "blockClass": "home-linhas-gallery-hover"
+    },
+    "children": ["flex-layout.col#home-linhas-gallery-4-hover"]
+  },
+  "flex-layout.col#home-linhas-gallery-4-hover": {
+    "props": {
+      "blockClass": "home-linhas-gallery-hover-content"
+    },
+    "children": [
+      "rich-text#home-linhas-gallery-4-title",
+      "rich-text#home-linhas-gallery-4-button"
+    ]
+  },
+  "rich-text#home-linhas-gallery-4-title": {
+    "props": {
+      "blockClass": "home-linhas-gallery-title",
+      "text": "### Linha\n**Especial**"
+    }
+  },
+  "rich-text#home-linhas-gallery-4-button": {
+    "props": {
+      "blockClass": "home-linhas-gallery-button",
+      "text": "[ver mais](/)"
+    }
+  },
+
+  "responsive-layout.desktop#home-linhas-cards": {
+    "title": "Conheça nossas linhas > Cards inferiores desktop",
+    "children": ["flex-layout.row#home-linhas-cards"]
+  },
+
+  "responsive-layout.mobile#home-linhas-cards": {
+    "title": "Conheça nossas linhas > Cards inferiores mobile",
+    "children": ["slider-layout#home-linhas-cards-mobile"]
+  },
+
+  "slider-layout#home-linhas-cards-mobile": {
+    "title": "Conheça nossas linhas > Slider inferior mobile",
+    "props": {
+      "blockClass": "home-linhas-cards-mobile",
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "always"
+    },
+    "children": [
+      "flex-layout.col#home-linha-carnes",
+      "flex-layout.col#home-linha-aves",
+      "flex-layout.col#home-linha-peixes",
+      "flex-layout.col#home-linha-cordeiro"
+    ]
+  },
+
+  "flex-layout.row#home-linhas-cards": {
+    "title": "Conheça nossas linhas > Cards inferiores",
+    "props": {
+      "blockClass": "home-linhas-cards"
+    },
+    "children": [
+      "flex-layout.col#home-linha-carnes",
+      "flex-layout.col#home-linha-aves",
+      "flex-layout.col#home-linha-peixes",
+      "flex-layout.col#home-linha-cordeiro"
+    ]
+  },
+
+  "flex-layout.col#home-linha-carnes": {
+    "props": {
+      "blockClass": ["home-linha-card", "home-linha-card-carnes"]
+    },
+    "children": [
+      "image#home-linha-carnes",
+      "flex-layout.row#home-linha-carnes-copy"
+    ]
+  },
+  "image#home-linha-carnes": {
+    "props": {
+      "blockClass": "home-linha-card-image",
+      "src": "assets/linhas/linha-carnes.jpg",
+      "alt": "Carnes"
+    }
+  },
+  "flex-layout.row#home-linha-carnes-copy": {
+    "props": {
+      "blockClass": "home-linha-card-copy"
+    },
+    "children": ["flex-layout.col#home-linha-carnes-copy"]
+  },
+  "flex-layout.col#home-linha-carnes-copy": {
+    "props": {
+      "blockClass": "home-linha-card-copy-content"
+    },
+    "children": [
+      "rich-text#home-linha-carnes-title",
+      "rich-text#home-linha-carnes-button"
+    ]
+  },
+  "rich-text#home-linha-carnes-title": {
+    "props": {
+      "blockClass": "home-linha-card-title",
+      "text": "### Carnes"
+    }
+  },
+  "rich-text#home-linha-carnes-button": {
+    "props": {
+      "blockClass": "home-linha-card-button",
+      "text": "[Explorar](/carnes)"
+    }
+  },
+
+  "flex-layout.col#home-linha-aves": {
+    "props": {
+      "blockClass": ["home-linha-card", "home-linha-card-aves"]
+    },
+    "children": [
+      "image#home-linha-aves",
+      "flex-layout.row#home-linha-aves-copy"
+    ]
+  },
+  "image#home-linha-aves": {
+    "props": {
+      "blockClass": "home-linha-card-image",
+      "src": "assets/linhas/linha-aves.jpg",
+      "alt": "Aves"
+    }
+  },
+  "flex-layout.row#home-linha-aves-copy": {
+    "props": {
+      "blockClass": "home-linha-card-copy"
+    },
+    "children": ["flex-layout.col#home-linha-aves-copy"]
+  },
+  "flex-layout.col#home-linha-aves-copy": {
+    "props": {
+      "blockClass": "home-linha-card-copy-content"
+    },
+    "children": [
+      "rich-text#home-linha-aves-title",
+      "rich-text#home-linha-aves-button"
+    ]
+  },
+  "rich-text#home-linha-aves-title": {
+    "props": {
+      "blockClass": "home-linha-card-title",
+      "text": "### Aves"
+    }
+  },
+  "rich-text#home-linha-aves-button": {
+    "props": {
+      "blockClass": "home-linha-card-button",
+      "text": "[Explorar](/aves)"
+    }
+  },
+
+  "flex-layout.col#home-linha-peixes": {
+    "props": {
+      "blockClass": ["home-linha-card", "home-linha-card-peixes"]
+    },
+    "children": [
+      "image#home-linha-peixes",
+      "flex-layout.row#home-linha-peixes-copy"
+    ]
+  },
+  "image#home-linha-peixes": {
+    "props": {
+      "blockClass": "home-linha-card-image",
+      "src": "assets/linhas/linha-peixes.jpg",
+      "alt": "Peixes"
+    }
+  },
+  "flex-layout.row#home-linha-peixes-copy": {
+    "props": {
+      "blockClass": "home-linha-card-copy"
+    },
+    "children": ["flex-layout.col#home-linha-peixes-copy"]
+  },
+  "flex-layout.col#home-linha-peixes-copy": {
+    "props": {
+      "blockClass": "home-linha-card-copy-content"
+    },
+    "children": [
+      "rich-text#home-linha-peixes-title",
+      "rich-text#home-linha-peixes-button"
+    ]
+  },
+  "rich-text#home-linha-peixes-title": {
+    "props": {
+      "blockClass": "home-linha-card-title",
+      "text": "### Peixes"
+    }
+  },
+  "rich-text#home-linha-peixes-button": {
+    "props": {
+      "blockClass": "home-linha-card-button",
+      "text": "[Explorar](/peixes)"
+    }
+  },
+
+  "flex-layout.col#home-linha-cordeiro": {
+    "props": {
+      "blockClass": ["home-linha-card", "home-linha-card-cordeiro"]
+    },
+    "children": [
+      "image#home-linha-cordeiro",
+      "flex-layout.row#home-linha-cordeiro-copy"
+    ]
+  },
+  "image#home-linha-cordeiro": {
+    "props": {
+      "blockClass": "home-linha-card-image",
+      "src": "assets/linhas/linha-cordeiro.jpg",
+      "alt": "Cordeiro"
+    }
+  },
+  "flex-layout.row#home-linha-cordeiro-copy": {
+    "props": {
+      "blockClass": "home-linha-card-copy"
+    },
+    "children": ["flex-layout.col#home-linha-cordeiro-copy"]
+  },
+  "flex-layout.col#home-linha-cordeiro-copy": {
+    "props": {
+      "blockClass": "home-linha-card-copy-content"
+    },
+    "children": [
+      "rich-text#home-linha-cordeiro-title",
+      "rich-text#home-linha-cordeiro-button"
+    ]
+  },
+  "rich-text#home-linha-cordeiro-title": {
+    "props": {
+      "blockClass": "home-linha-card-title",
+      "text": "### Cordeiro"
+    }
+  },
+  "rich-text#home-linha-cordeiro-button": {
+    "props": {
+      "blockClass": "home-linha-card-button",
+      "text": "[Explorar](/cordeiro)"
+    }
+  }
+}

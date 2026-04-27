@@ -8,7 +8,6 @@
   "flex-layout.col#instagram": {
     "props": {
       "blockClass": "instagram-content"
-    },
-    "children": ["social-medias"] // componente na pasta react
+    }
   }
 }

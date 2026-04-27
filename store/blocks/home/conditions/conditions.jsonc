@@ -1,5 +1,6 @@
 {
   "flex-layout.row#conditions": {
+    "title": "Benefícios da loja",
     "props": {
       "blockClass": ["conditions-container", "custom-container"],
       "preventHorizontalStretch": true,
@@ -8,28 +9,43 @@
     "children": ["responsive-layout.desktop#conditions", "responsive-layout.mobile#conditions"]
   },
   "responsive-layout.desktop#conditions": {
-    "children": ["flex-layout.col#conditions-desk"]
+    "title": "Benefícios da loja > Desktop",
+    "children": ["info-cards#conditions"]
   },
   "responsive-layout.mobile#conditions": {
-    "children": ["flex-layout.col#conditions-mobi"]
+    "title": "Benefícios da loja > Mobile",
+    "children": ["info-cards#conditions"]
   },
-
-  "flex-layout.col#conditions-desk": {
+  "info-cards#conditions": {
+    "title": "Benefícios da loja > Cards",
     "props": {
-      "blockClass": ["conditions-desk-content"]
-    },
-    "children": [
-      "info-card#condition1",
-      "info-card#condition2",
-      "info-card#condition3",
-      "info-card#condition4",
-      "info-card#condition5"
-    ]
-  },
-  "flex-layout.col#conditions-mobi": {
-    "props": {
-      "blockClass": ["conditions-mobi-content"]
-    },
-    "children": ["slider-layout#conditions"]
+      "cards": [
+        {
+          "icon": "assets/icons/truck.svg",
+          "headline": "Entregamos em todo Brasil",
+          "subheadline": "Em pedidos acima de R$500,00"
+        },
+        {
+          "icon": "assets/icons/credit-card.svg",
+          "headline": "Parcelamos em até 6x sem juros",
+          "subheadline": "Em pedidos acima de R$500,00"
+        },
+        {
+          "icon": "assets/icons/truck.svg",
+          "headline": "Desconto de 10% no boleto",
+          "subheadline": "Em pedidos acima de R$500,00"
+        },
+        {
+          "icon": "assets/icons/refresh-cw.svg",
+          "headline": "Troque grátis em até 30 dias",
+          "subheadline": "Em pedidos acima de R$500,00"
+        },
+        {
+          "icon": "assets/icons/shield.svg",
+          "headline": "Compra garantida Loja 100% segura",
+          "subheadline": "Em pedidos acima de R$50,00"
+        }
+      ]
+    }
   }
 }

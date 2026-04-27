@@ -1,131 +1,145 @@
 {
   "flex-layout.col#sac": {
+    "title": "Footer > Atendimento",
     "props": {
       "blockClass": "sac-content",
       "preventVerticalStretch": true
     },
     "children": [
-      "flex-layout.row#sac-title",
+      "rich-text#sac-title",
+      "flex-layout.row#sac-whatsapp",
       "flex-layout.row#sac-phone",
-      "flex-layout.row#sac-wpp",
-      "flex-layout.row#sac-email"
+      "flex-layout.row#sac-email",
+      "flex-layout.row#sac-hours",
+      "flex-layout.row#sac-address"
     ]
   },
 
-  "flex-layout.row#sac-title": {
-    "props": {
-      "blockClass": "sac-title-container"
-    },
-    "children": ["flex-layout.col#sac-title-content"]
-  },
-  "flex-layout.col#sac-title-content": {
-    "props": {
-      "blockClass": "sac-title-content"
-    },
-    "children": ["rich-text#sac-title"]
-  },
   "rich-text#sac-title": {
+    "title": "Footer > Atendimento > Título",
     "props": {
       "blockClass": "footer-title",
       "text": "#### Atendimento"
     }
   },
 
-  "flex-layout.row#sac-phone": {
+  "flex-layout.row#sac-whatsapp": {
+    "title": "Footer > Atendimento > WhatsApp",
     "props": {
-      "blockClass": "sac-group-container"
-    },
-    "children": ["flex-layout.col#sac-phone"]
-  },
-  "flex-layout.col#sac-phone": {
-    "props": {
-      "blockClass": "sac-group-content"
+      "blockClass": "sac-info-item"
     },
     "children": [
-      "rich-text#sac-phone-title",
-      "rich-text#sac-phone-first",
-      "rich-text#sac-phone-second"
+      "image#sac-whatsapp-icon",
+      "rich-text#sac-whatsapp-text"
     ]
   },
-  "rich-text#sac-phone-title": {
+  "image#sac-whatsapp-icon": {
     "props": {
-      "blockClass": "sac-group-title",
-      "text": "Telefone:"
+      "blockClass": "sac-info-icon",
+      "src": "assets/icons/whatsapp.svg",
+      "alt": "WhatsApp"
     }
   },
-  "rich-text#sac-phone-first": {
+  "rich-text#sac-whatsapp-text": {
     "props": {
-      "blockClass": "sac-group-link",
-      "text": "[0800 3737.3737](tel:080037373737)"
-    }
-  },
-  "rich-text#sac-phone-second": {
-    "props": {
-      "blockClass": "sac-group-link",
-      "text": "[(19) 3737.3737](tel:1937373737)"
+      "blockClass": "sac-info-text",
+      "text": "[(11) 96831-4546](https://wa.me/5511968314546)"
     }
   },
 
-  "flex-layout.row#sac-wpp": {
+  "flex-layout.row#sac-phone": {
+    "title": "Footer > Atendimento > Telefone",
     "props": {
-      "blockClass": "sac-group-container"
-    },
-    "children": ["flex-layout.col#sac-wpp"]
-  },
-  "flex-layout.col#sac-wpp": {
-    "props": {
-      "blockClass": "sac-group-content"
+      "blockClass": "sac-info-item"
     },
     "children": [
-      "rich-text#sac-wpp-title",
-      "rich-text#sac-wpp-first",
-      "rich-text#sac-wpp-second"
+      "image#sac-phone-icon",
+      "rich-text#sac-phone-text"
     ]
   },
-  "rich-text#sac-wpp-title": {
+  "image#sac-phone-icon": {
     "props": {
-      "blockClass": "sac-group-title",
-      "text": "WhatsApp:"
+      "blockClass": "sac-info-icon",
+      "src": "assets/icons/phone.svg",
+      "alt": "Telefone"
     }
   },
-  "rich-text#sac-wpp-first": {
+  "rich-text#sac-phone-text": {
     "props": {
-      "blockClass": "sac-group-link",
-      "text": "<a href='https://wa.me/19999999999' target='_blank' class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--sac-group-link'>(19) 9 9999.9999</a>"
-    }
-  },
-  "rich-text#sac-wpp-second": {
-    "props": {
-      "blockClass": "sac-group-link",
-      "text": "<a href='https://wa.me/19999999999' target='_blank' class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--sac-group-link'>(19) 9 9999.9999</a>"
+      "blockClass": "sac-info-text",
+      "text": "[(11) 96831-4546](tel:5511968314546)"
     }
   },
 
   "flex-layout.row#sac-email": {
+    "title": "Footer > Atendimento > E-mail",
     "props": {
-      "blockClass": "sac-group-container"
-    },
-    "children": ["flex-layout.col#sac-email"]
-  },
-  "flex-layout.col#sac-email": {
-    "props": {
-      "blockClass": "sac-group-content"
+      "blockClass": "sac-info-item"
     },
     "children": [
-      "rich-text#sac-email-title",
-      "rich-text#sac-email"
+      "image#sac-email-icon",
+      "rich-text#sac-email-text"
     ]
   },
-  "rich-text#sac-email-title": {
+  "image#sac-email-icon": {
     "props": {
-      "blockClass": "sac-group-title",
-      "text": "E-mail:"
+      "blockClass": "sac-info-icon",
+      "src": "assets/icons/mail.svg",
+      "alt": "E-mail"
     }
   },
-  "rich-text#sac-email": {
+  "rich-text#sac-email-text": {
     "props": {
-      "blockClass": "sac-group-link",
-      "text": "<a href='mailto:suporte@diamond.com' target='_blank' class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--sac-group-link'>suporte@diamond.com</a>"
+      "blockClass": "sac-info-text",
+      "text": "[contato@elhajibeef.com.br](mailto:contato@elhajibeef.com.br)"
+    }
+  },
+
+  "flex-layout.row#sac-hours": {
+    "title": "Footer > Atendimento > Horário",
+    "props": {
+      "blockClass": "sac-info-item"
+    },
+    "children": [
+      "image#sac-hours-icon",
+      "rich-text#sac-hours-text"
+    ]
+  },
+  "image#sac-hours-icon": {
+    "props": {
+      "blockClass": "sac-info-icon",
+      "src": "assets/icons/clock.svg",
+      "alt": "Horario de atendimento"
+    }
+  },
+  "rich-text#sac-hours-text": {
+    "props": {
+      "blockClass": "sac-info-text",
+      "text": "Segunda à Sexta das 8h às 17h30"
+    }
+  },
+
+  "flex-layout.row#sac-address": {
+    "title": "Footer > Atendimento > Endereço",
+    "props": {
+      "blockClass": "sac-info-item"
+    },
+    "children": [
+      "image#sac-address-icon",
+      "rich-text#sac-address-text"
+    ]
+  },
+  "image#sac-address-icon": {
+    "props": {
+      "blockClass": "sac-info-icon",
+      "src": "assets/icons/loc.svg",
+      "alt": "Endereco"
+    }
+  },
+  "rich-text#sac-address-text": {
+    "props": {
+      "blockClass": "sac-info-text",
+      "text": "Rua Vereador Ezequiel Florentino da Silva, Porangaba - SP, 18.260-000"
     }
   }
 }

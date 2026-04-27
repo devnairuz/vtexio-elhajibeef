@@ -1,10 +1,12 @@
 {
   "store.custom#frete-gratis": {
+    "title": "Página Frete Grátis",
     "children": [
       "flex-layout.row#frete-gratis"
     ]
   },
   "flex-layout.row#frete-gratis": {
+    "title": "Frete Grátis > Conteúdo",
     "props": {
       "blockClass": ["custom-container"]
     },
@@ -17,11 +19,13 @@
     }
   },
   "rich-text#frete-title": {
+    "title": "Frete Grátis > Título",
     "props": {
       "text": "# Frete Grátis"
     }
   },
   "rich-text#frete-gratis": {
+    "title": "Frete Grátis > Texto",
     "props": {
       "text": "Retire direto na fábrica",
       "textAlignment": "initial",

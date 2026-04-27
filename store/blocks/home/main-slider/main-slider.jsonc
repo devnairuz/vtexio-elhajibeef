@@ -1,14 +1,17 @@
 {
   "flex-layout.row#main-slider": {
+    "title": "Banner principal",
     "props": {
       "blockClass": ["main-slider-container"]
     },
     "children": ["flex-layout.col#main-slider"]
   },
   "flex-layout.col#main-slider": {
+    "title": "Banner principal > Conteúdo",
     "children": ["list-context.image-list#main-slider"]
   },
   "list-context.image-list#main-slider": {
+    "title": "Banner principal > Imagens",
     "children": ["slider-layout#main-slider"],
     "props": {
       "images": [
@@ -32,6 +35,7 @@
   },
 
   "slider-layout#main-slider": {
+    "title": "Banner principal > Slider",
     "props": {
       "itemsPerPage": {
         "desktop": 1,

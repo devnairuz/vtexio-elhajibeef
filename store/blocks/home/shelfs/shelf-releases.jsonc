@@ -1,11 +1,13 @@
 {
   "flex-layout.row#shelf-releases": {
+    "title": "Vitrine Novidades",
     "props": {
       "blockClass": ["shelf-container", "shelf-releases-container", "custom-container"]
     },
     "children": ["flex-layout.col#shelf-releases"]
   },
   "flex-layout.col#shelf-releases": {
+    "title": "Vitrine Novidades > Conteúdo",
     "children": [
       "flex-layout.row#releases-title-container",
       "flex-layout.row#releases-products-container"
@@ -25,8 +27,9 @@
     "children": ["rich-text#releases-title"]
   },
   "rich-text#releases-title": {
+    "title": "Vitrine Novidades > Título",
     "props": {
-      "text": "#### Lançamentos **Confira nossas novidades!**",
+      "text": "#### NOVIDADES",
       "blockClass": ["releases-title", "shelf-title"]
     }
   },
@@ -44,6 +47,7 @@
     "children": ["list-context.product-list#shelf-releases"]
   },
   "list-context.product-list#shelf-releases": {
+    "title": "Vitrine Novidades > Produtos",
     "props": {
       "listName": "Lançamentos",
       "installmentCriteria": "MAX_WITH_INTEREST"

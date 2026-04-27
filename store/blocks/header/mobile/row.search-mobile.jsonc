@@ -1,5 +1,6 @@
 {
   "flex-layout.row#search-mobile": {
+    "title": "Header mobile > Busca",
     "props": {
       "blockClass": ["custom-container", "search-mobile-container"]
     },
@@ -7,9 +8,10 @@
   },
 
   "flex-layout.col#search-mobile": {
+    "title": "Header mobile > Campo de busca",
     "props": {
       "blockClass": ["search-mobile-content"]
     },
-    "children": ["search-bar"]
+    "children": ["search-suggestions"]
   }
 }

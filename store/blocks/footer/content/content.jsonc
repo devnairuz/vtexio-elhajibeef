@@ -1,5 +1,6 @@
 {
   "flex-layout.row#content": {
+    "title": "Footer > Conteúdo institucional",
     "props": {
       "blockClass": ["footer-container", "custom-container"],
       "colSizing": "auto"
@@ -11,6 +12,7 @@
   },
 
   "flex-layout.col#content-left": {
+    "title": "Footer > Marca",
     "props": {
       "blockClass": "content-left-content",
       "preventVerticalStretch": true
@@ -23,6 +25,7 @@
   },
 
   "flex-layout.col#content-right": {
+    "title": "Footer > Menus e atendimento",
     "props": {
       "blockClass": "content-right-content",
       "preventVerticalStretch": true,

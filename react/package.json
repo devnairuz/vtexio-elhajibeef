@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "license": "UNLICENSED",
   "devDependencies": {
-    "agencianairuzpartnerbr.diamond": "https://diamond--agencianairuzpartnerbr.myvtex.com/_v/private/typings/linked/v1/agencianairuzpartnerbr.diamond@1.0.0+build1680640439/public/@types/agencianairuzpartnerbr.diamond",
     "vtex.add-to-cart-button": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.add-to-cart-button@0.30.0/public/@types/vtex.add-to-cart-button",
     "vtex.breadcrumb": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.breadcrumb@1.9.4/public/@types/vtex.breadcrumb",
     "vtex.carousel": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.carousel@2.12.1/public/@types/vtex.carousel",

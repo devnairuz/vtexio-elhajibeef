@@ -1,11 +1,13 @@
 {
   "flex-layout.row#shelf-promotions": {
+    "title": "Vitrine Promoções",
     "props": {
       "blockClass": ["shelf-container", "shelf-promotions-container", "custom-container"]
     },
     "children": ["flex-layout.col#shelf-promotions"]
   },
   "flex-layout.col#shelf-promotions": {
+    "title": "Vitrine Promoções > Conteúdo",
     "children": [
       "flex-layout.row#promotions-title-container",
       "flex-layout.row#promotions-products-container"
@@ -25,8 +27,9 @@
     "children": ["rich-text#promotions-title"]
   },
   "rich-text#promotions-title": {
+    "title": "Vitrine Promoções > Título",
     "props": {
-      "text": "#### Promoções **Corre, *que é por tempo limitado!***",
+      "text": "#### PROMOÇÕES",
       "blockClass": ["promotions-title", "shelf-title"]
     }
   },
@@ -44,6 +47,7 @@
     "children": ["list-context.product-list#shelf-promotions"]
   },
   "list-context.product-list#shelf-promotions": {
+    "title": "Vitrine Promoções > Produtos",
     "props": {
       "listName": "Promoções",
       "installmentCriteria": "MAX_WITH_INTEREST"

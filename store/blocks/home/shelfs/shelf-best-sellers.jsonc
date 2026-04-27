@@ -1,11 +1,13 @@
 {
   "flex-layout.row#shelf-best-sellers": {
+    "title": "Vitrine Kits para churrasco",
     "props": {
       "blockClass": ["shelf-container", "shelf-best-sellers-container", "custom-container"]
     },
     "children": ["flex-layout.col#shelf-best-sellers"]
   },
   "flex-layout.col#shelf-best-sellers": {
+    "title": "Vitrine Kits para churrasco > Conteúdo",
     "children": [
       "flex-layout.row#best-sellers-title-container",
       "flex-layout.row#best-sellers-products-container"
@@ -25,8 +27,9 @@
     "children": ["rich-text#best-sellers-title"]
   },
   "rich-text#best-sellers-title": {
+    "title": "Vitrine Kits para churrasco > Título",
     "props": {
-      "text": "#### Mais Vendidos **Selecionamos produtos especiais para você!**",
+      "text": "#### KITS PARA CHURRASCO",
       "blockClass": ["best-sellers-title", "shelf-title"]
     }
   },
@@ -44,6 +47,7 @@
     "children": ["list-context.product-list#shelf-best-sellers"]
   },
   "list-context.product-list#shelf-best-sellers": {
+    "title": "Vitrine Kits para churrasco > Produtos",
     "props": {
       "listName": "Mais vendidos",
       "installmentCriteria": "MAX_WITH_INTEREST"

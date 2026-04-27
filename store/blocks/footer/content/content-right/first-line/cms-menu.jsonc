@@ -1,5 +1,6 @@
 {
   "flex-layout.col#cms-menu": {
+    "title": "Footer > Menu institucional",
     "props": {
       "blockClass": "cms-menu-content",
       "preventVerticalStretch": true
@@ -23,6 +24,7 @@
     "children": ["rich-text#cms-menu-title"]
   },
   "rich-text#cms-menu-title": {
+    "title": "Footer > Menu institucional > Título",
     "props": {
       "blockClass": "footer-title",
       "text": "#### Institucional"
@@ -30,6 +32,7 @@
   },
 
   "flex-layout.row#cms-menu-wrapper": {
+    "title": "Footer > Menu institucional > Links",
     "props": {
       "blockClass": "cms-menu-wrapper"
     },
@@ -51,42 +54,49 @@
   },
 
   "rich-text#cms-fale-conosco": {
+    "title": "Footer > Menu institucional > Fale Conosco",
     "props": {
       "text": "[Fale Conosco](/fale-conosco)",
       "blockClass": "cms-link"
     }
   },
   "rich-text#cms-quem-somos": {
+    "title": "Footer > Menu institucional > Quem Somos",
     "props": {
       "text": "[Quem Somos](/quem-somos)",
       "blockClass": "cms-link"
     }
   },
   "rich-text#cms-frete-gratis": {
+    "title": "Footer > Menu institucional > Frete Grátis",
     "props": {
       "text": "[Frete Grátis](/frete-gratis)",
       "blockClass": "cms-link"
     }
   },
   "rich-text#cms-politicas-privacidade": {
+    "title": "Footer > Menu institucional > Política de Privacidade",
     "props": {
       "text": "[Políticas de Privacidade](/politicas-de-privacidade)",
       "blockClass": "cms-link"
     }
   },
   "rich-text#cms-politicas-vendas": {
+    "title": "Footer > Menu institucional > Política de Vendas",
     "props": {
       "text": "[Políticas de Vendas](/politica-de-vendas)",
       "blockClass": "cms-link"
     }
   },
   "rich-text#cms-politicas-trocas": {
+    "title": "Footer > Menu institucional > Política de Trocas",
     "props": {
       "text": "[Políticas de Trocas](/politica-de-trocas)",
       "blockClass": "cms-link"
     }
   },
   "rich-text#cms-cancelamentos": {
+    "title": "Footer > Menu institucional > Cancelamentos",
     "props": {
       "text": "[Cancelamentos](/cancelamentos)",
       "blockClass": "cms-link"

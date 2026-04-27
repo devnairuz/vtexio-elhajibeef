@@ -1,20 +1,21 @@
 .clientGreeting p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 13px;
-  font-weight: 300;
-}
-
-.clientGreeting strong {
   display: flex;
-  font-weight: 700;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 300;
+  color: #fff;
+  white-space: nowrap;
 }
 
-.clientGreeting strong span {
+.clientGreeting span {
   display: inline-block;
-  max-width: 70px;
-  width: 100%;
+  max-width: none;
   overflow: hidden;
+  color: #fff;
+  white-space: nowrap;
 }
 
 @media (max-width: 1024px) {

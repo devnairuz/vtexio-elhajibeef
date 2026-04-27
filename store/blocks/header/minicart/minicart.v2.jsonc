@@ -3,16 +3,16 @@
     "props": {
       "quantityDisplay": "always",
       "itemCountMode": "total",
-      "MinicartIcon": "icon-cart#minicart-icon",
+      "MinicartIcon": "image#minicart-icon",
       "maxDrawerWidth": "476px"
     },
     "children": ["minicart-base-content"]
   },
 
-  "icon-cart#minicart-icon": {
+  "image#minicart-icon": {
     "props": {
-      "size": 28,
-      "viewBox": "0 0 29 28"
+      "src": "assets/icons/shopping_cart.svg",
+      "blockClass": "minicart-icon"
     }
   },
 

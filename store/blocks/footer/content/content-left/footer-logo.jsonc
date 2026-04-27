@@ -1,9 +1,10 @@
 {
   "image#footer-logo": {
+    "title": "Footer > Logo",
     "props": {
       "blockClass": "footer-logo",
-      "src": "assets/logos/logo-diamond.svg",
-      "alt": "Diamond",
+      "src": "assets/logos/logo-elhajibeef.svg",
+      "alt": "Logo El Haji Beef",
       "link": {
         "url": "/"
       }

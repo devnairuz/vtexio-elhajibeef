@@ -1,5 +1,6 @@
 {
   "flex-layout.row#related-products": {
+    "title": "Produto > Produtos relacionados",
     "props": {
       "blockClass": ["related-products-container", "custom-container"]
     },
@@ -16,6 +17,7 @@
   },
 
   "rich-text#related-products-title": {
+    "title": "Produto > Produtos relacionados > Título",
     "props": {
       "blockClass": ["related-title", "shelf-title"],
       "text": "#### Quem viu esse, viu também **Produtos relacionados**"
@@ -23,6 +25,7 @@
   },
 
   "list-context.product-list#list-pdp-related": {
+    "title": "Produto > Produtos relacionados > Lista",
     "props": {
       "blockClass": "related-products"
     },

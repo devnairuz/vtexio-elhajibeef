@@ -1,10 +1,11 @@
 {
   "logo": {
+    "title": "Logo principal",
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "assets/logos/logo-diamond.svg",
-      "width": "115",
+      "url": "assets/logos/logo-elhajibeef.svg",
+      "width": "60",
       "height": "60"
     }
   }

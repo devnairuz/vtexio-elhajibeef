@@ -1,5 +1,6 @@
 {
   "flex-layout.col#result-filter": {
+    "title": "Busca > Filtros",
     "props": {
       "blockClass": "result-filter-content",
       "preventVerticalStretch": true

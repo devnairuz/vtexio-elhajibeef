@@ -1,0 +1,58 @@
+{
+  "flex-layout.col#certificados": {
+    "title": "Footer > Certificações El Haji Beef",
+    "props": {
+      "blockClass": "certificados-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#certificados-title",
+      "flex-layout.row#certificados-content"
+    ]
+  },
+
+  "flex-layout.row#certificados-title": {
+    "props": {
+      "blockClass": "certificados-title-container",
+      "colSizing": "auto"
+    },
+    "children": ["flex-layout.col#certificados-title"]
+  },
+  "flex-layout.col#certificados-title": {
+    "props": {
+      "blockClass": "certificados-title-content",
+      "preventVerticalStretch": true
+    },
+    "children": ["rich-text#certificados-title"]
+  },
+  "rich-text#certificados-title": {
+    "title": "Footer > Certificações > Título",
+    "props": {
+      "blockClass": ["footer-title", "certificados-title"],
+      "text": "#### Certificações El Haji Beef"
+    }
+  },
+
+  "flex-layout.row#certificados-content": {
+    "props": {
+      "blockClass": "certificados-content-container",
+      "colSizing": "auto"
+    },
+    "children": ["flex-layout.col#certificados-content"]
+  },
+  "flex-layout.col#certificados-content": {
+    "props": {
+      "blockClass": "certificados-flags-content",
+      "preventVerticalStretch": true
+    },
+    "children": ["image#certificados-flags"]
+  },
+  "image#certificados-flags": {
+    "title": "Footer > Certificações > Imagem",
+    "props": {
+      "blockClass": "certificados-flags",
+      "src": "assets/certificados/certificados.svg",
+      "alt": "Certificações El Haji Beef"
+    }
+  }
+}

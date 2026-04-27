@@ -1,5 +1,6 @@
 {
   "flex-layout.row#product-main": {
+    "title": "Produto > Conteúdo principal",
     "props": {
       "blockClass": ["product-main-container", "custom-container"]
     },

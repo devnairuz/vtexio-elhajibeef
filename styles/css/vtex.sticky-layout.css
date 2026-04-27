@@ -1,3 +1,18 @@
 .container {
-  background: #fff;
+  background: transparent;
+}
+
+@media (min-width: 1025px) {
+  .wrapper--sticky-header {
+    height: 0 !important;
+  }
+
+  .container--sticky-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    background: transparent;
+  }
 }

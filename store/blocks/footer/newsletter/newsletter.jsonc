@@ -1,5 +1,6 @@
 {
   "flex-layout.row#newsletter": {
+    "title": "Footer > Newsletter",
     "props": {
       "blockClass": ["newsletter-container", "custom-container"]
     },
@@ -10,26 +11,22 @@
   },
   
   "flex-layout.col#newsletter-cta": {
+    "title": "Footer > Newsletter > Chamada",
     "props": {
       "blockClass": ["newsletter-cta-content"]
     },
-    "children": ["image#newsletter", "rich-text#newsletter"]
-  },
-  "image#newsletter": {
-    "props": {
-      "src": "assets/icons/newsletter.svg",
-      "alt": "Icone newsletter",
-      "blockClass": "icon-newsletter"
-    }
+    "children": ["rich-text#newsletter"]
   },
   "rich-text#newsletter": {
+    "title": "Footer > Newsletter > Texto",
     "props": {
-      "text": "Assine nossa newsletter e fique por dentro de tudo!",
+      "text": "Assine nossa **Newsletter** | Fique por dentro !",
       "blockClass": "newsletter-cta"
     }
   },
 
   "flex-layout.col#newsletter-form": {
+    "title": "Footer > Newsletter > Formulário",
     "props": {
       "blockClass": ["newsletter-form-content"]
     },
@@ -37,19 +34,22 @@
   },
 
   "newsletter-form": {
+    "title": "Footer > Newsletter > Campos",
     "children": [
       "newsletter-input-email",
       "newsletter-submit"
     ]
   },
   "newsletter-input-email": {
+    "title": "Footer > Newsletter > E-mail",
     "props": {
-      "placeholderText": "Digite aqui seu e-mail"
+      "placeholderText": "Insira seu e-mail"
     }
   },
   "newsletter-submit": {
+    "title": "Footer > Newsletter > Botão",
     "props": {
-      "submitButtonLabel": "Cadastrar"
+      "submitButtonLabel": "Inscreva-se"
     }
   }
 }

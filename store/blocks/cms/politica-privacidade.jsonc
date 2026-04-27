@@ -1,11 +1,13 @@
 {
   "store.custom#politica-privacidade": {
+    "title": "Página Política de Privacidade",
     "children": [
       "flex-layout.row#politicas-de-privacidade"
     ]
   },
 
   "flex-layout.row#politicas-de-privacidade": {
+    "title": "Política de Privacidade > Conteúdo",
     "props": {
       "blockClass": ["politicas-de-privacidade", "custom-container"]
     },
@@ -21,12 +23,14 @@
     ]
   },
   "rich-text#politicas-de-privacidade": {
+    "title": "Política de Privacidade > Título",
     "props": {
       "text": "# Aviso de Privacidade"
     }
   },
 
   "disclosure-layout-group#group": {
+    "title": "Política de Privacidade > Perguntas",
     "children": [
       "disclosure-layout#first",
       "disclosure-layout#second",

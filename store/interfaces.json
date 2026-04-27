@@ -17,7 +17,12 @@
     "component": "CashPrice"
   },
 
-  "social-medias": {
-    "component": "SocialMedias"
+  "info-cards": {
+    "component": "InfoCards"
+  },
+
+  "search-suggestions": {
+    "component": "SearchSuggestions",
+    "composition": "children"
   }
 }

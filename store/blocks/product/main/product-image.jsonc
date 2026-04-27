@@ -1,5 +1,6 @@
 {
   "flex-layout.col#product-image": {
+    "title": "Produto > Imagens",
     "props": {
       "blockClass": "product-image-content"
     },
@@ -7,9 +8,11 @@
   },
 
   "responsive-layout.desktop#image-pdp": {
+    "title": "Produto > Imagens desktop",
     "children": ["product-images#desktop"]
   },
   "product-images#desktop": {
+    "title": "Produto > Galeria desktop",
     "props": {
       "aspectRatio": "3:4",
       "thumbnailAspectRatio": "1:1",
@@ -22,9 +25,11 @@
   },
 
   "responsive-layout.mobile#image-pdp": {
+    "title": "Produto > Imagens mobile",
     "children": ["product-images#mobile"]
   },
   "product-images#mobile": {
+    "title": "Produto > Galeria mobile",
     "props": {
       "aspectRatio": "3:4",
       "thumbnailAspectRatio": "1:1",

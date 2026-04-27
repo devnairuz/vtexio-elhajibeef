@@ -1,5 +1,6 @@
 {
   "flex-layout.row#search-products": {
+    "title": "Busca > Produtos",
     "props": {
       "blockClass": "search-products-container"
     },
@@ -7,6 +8,7 @@
   },
 
   "flex-layout.col#search-products": {
+    "title": "Busca > Lista de produtos",
     "props": {
       "blockClass": "search-products-content"
     },
@@ -14,6 +16,7 @@
   },
 
   "search-content": {
+    "title": "Busca > Conteúdo da busca",
     "props": {
       "blockClass": "search-content"
     },
@@ -21,6 +24,7 @@
   },
 
   "gallery": {
+    "title": "Busca > Galeria de produtos",
     "props": {
       "layouts": [
         {

@@ -1,0 +1,82 @@
+{
+  "flex-layout.row#banner-origem": {
+    "title": "Banner origem",
+    "props": {
+      "blockClass": ["banner-origem-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#banner-origem"]
+  },
+
+  "flex-layout.col#banner-origem": {
+    "title": "Banner origem > Conteúdo",
+    "props": {
+      "blockClass": "banner-origem-content"
+    },
+    "children": [
+      "image#banner-origem",
+      "flex-layout.row#banner-origem-copy"
+    ]
+  },
+
+  "image#banner-origem": {
+    "title": "Banner origem > Imagem",
+    "props": {
+      "blockClass": "banner-origem",
+      "src": "assets/banner-origem/food.png",
+      "alt": "Banner El Haji Beef"
+    }
+  },
+
+  "flex-layout.row#banner-origem-copy": {
+    "title": "Banner origem > Textos",
+    "props": {
+      "blockClass": "banner-origem-copy-container"
+    },
+    "children": ["flex-layout.col#banner-origem-copy"]
+  },
+
+  "flex-layout.col#banner-origem-copy": {
+    "props": {
+      "blockClass": "banner-origem-copy-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#banner-origem-subtitle",
+      "rich-text#banner-origem-title",
+      "rich-text#banner-origem-description",
+      "rich-text#banner-origem-button"
+    ]
+  },
+
+  "rich-text#banner-origem-subtitle": {
+    "title": "Banner origem > Subtítulo",
+    "props": {
+      "blockClass": "banner-origem-subtitle",
+      "text": "ORIGEM NOBRE"
+    }
+  },
+
+  "rich-text#banner-origem-title": {
+    "title": "Banner origem > Título",
+    "props": {
+      "blockClass": "banner-origem-title",
+      "text": "#### Carne Halal de verdade."
+    }
+  },
+
+  "rich-text#banner-origem-description": {
+    "title": "Banner origem > Descrição",
+    "props": {
+      "blockClass": "banner-origem-description",
+      "text": ""
+    }
+  },
+
+  "rich-text#banner-origem-button": {
+    "title": "Banner origem > Botão",
+    "props": {
+      "blockClass": "banner-origem-button",
+      "text": "[Conheça nossa origem](/quem-somos)"
+    }
+  }
+}

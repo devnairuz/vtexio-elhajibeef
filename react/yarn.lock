@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"agencianairuzpartnerbr.diamond@https://diamond--agencianairuzpartnerbr.myvtex.com/_v/private/typings/linked/v1/agencianairuzpartnerbr.diamond@1.0.0+build1680640439/public/@types/agencianairuzpartnerbr.diamond":
-  version "1.0.0"
-  resolved "https://diamond--agencianairuzpartnerbr.myvtex.com/_v/private/typings/linked/v1/agencianairuzpartnerbr.diamond@1.0.0+build1680640439/public/@types/agencianairuzpartnerbr.diamond#2e345f93f504850f51b50a9c500b2a575244e730"
-
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"

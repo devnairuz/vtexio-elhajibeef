@@ -1,5 +1,6 @@
 {
   "flex-layout.row#header-desktop": {
+    "title": "Header desktop > Barra principal",
     "props": {
       "horizontalAlign": "between",
       "fullWidth": true,
@@ -14,6 +15,7 @@
   },
 
   "flex-layout.col#logo-desktop": {
+    "title": "Header desktop > Logo",
     "props": {
       "blockClass": "logo-desktop-container"
     },
@@ -21,13 +23,15 @@
   },
 
   "flex-layout.col#search-desktop": {
+    "title": "Header desktop > Busca",
     "props": {
      "blockClass": "search-desktop-container"
     },
-    "children": ["search-bar"] // Arquivo search-bar.jsonc
+    "children": ["search-suggestions"] // Arquivo search-bar.jsonc
   },
 
   "flex-layout.col#utils-desktop": {
+    "title": "Header desktop > Ações",
     "props": {
       "blockClass": "utils-desktop-container"
     },
@@ -39,16 +43,18 @@
   },
 
   "flex-layout.row#store-info-desktop": {
+    "title": "Header desktop > Feed Shop",
     "props": {
       "blockClass": "row-store-info-container"
     },
     "children": ["flex-layout.col#store-info-desktop"]
   },
   "flex-layout.col#store-info-desktop": {
-    "children": ["overlay-trigger#store-info"] // Arquivo overlay-trigger.store-info.jsonc
+    "children": ["flex-layout.row#store-info"] // Arquivo store-info.jsonc
   },
 
   "flex-layout.row#login-desktop": {
+    "title": "Header desktop > Minha conta",
     "children": ["flex-layout.col#login-icon-desktop", "flex-layout.col#login-control-desktop"],
     "props": {
       "blockClass": "row-login-container",
@@ -78,12 +84,13 @@
   },
   "rich-text#login-text": {
     "props": {
-      "text": "Entrar ou\n**Cadastrar**",
+      "text": "**Minha Conta**",
       "blockClass": ["login-text", "utils-text"]
     }
   },
 
   "flex-layout.row#minicart-desktop": {
+    "title": "Header desktop > Carrinho",
     "props": {
       "blockClass": "minicart-desktop-container"
     },
@@ -102,7 +109,7 @@
   },
   "rich-text#minicart-text": {
     "props": {
-      "text": "Meu\n**Carrinho**",
+      "text": "Meu Carrinho",
       "blockClass": ["minicart-text", "utils-text"]
     }
   }

@@ -1,5 +1,6 @@
 {
   "flex-layout.row#result-description": {
+    "title": "Busca > Descrição",
     "props": {
       "blockClass": ["result-description-container", "custom-container"]
     },
@@ -14,6 +15,7 @@
   },
 
   "rich-text#description-text": {
+    "title": "Busca > Descrição > Texto",
     "props": {
       "blockClass": "description-text",
       "text": "Aqui você encontra os últimos lançamentos da temporada, os clássicos essenciais, as peças para impressionar. Arrase sem moderação."

@@ -1,11 +1,13 @@
 {
   "flex-layout.row#shelf-highlights": {
+    "title": "Vitrine Destaques",
     "props": {
       "blockClass": ["shelf-container", "shelf-highlights-container", "custom-container"]
     },
     "children": ["flex-layout.col#shelf-highlights"]
   },
   "flex-layout.col#shelf-highlights": {
+    "title": "Vitrine Destaques > Conteúdo",
     "children": [
       "flex-layout.row#highlights-title-container",
       "flex-layout.row#highlights-products-container"
@@ -25,8 +27,9 @@
     "children": ["rich-text#highlights-title"]
   },
   "rich-text#highlights-title": {
+    "title": "Vitrine Destaques > Título",
     "props": {
-      "text": "#### Destaques **Todo mundo comprando!**",
+      "text": "#### Destaques",
       "blockClass": ["highlights-title", "shelf-title"]
     }
   },
@@ -44,8 +47,9 @@
     "children": ["list-context.product-list#shelf-highlights"]
   },
   "list-context.product-list#shelf-highlights": {
+    "title": "Vitrine Destaques > Produtos",
     "props": {
-      "listName": "Destaques",
+      "listName": "NOSSAS LOJAS",
       "installmentCriteria": "MAX_WITH_INTEREST"
     },
     "blocks": ["product-summary.shelf"],

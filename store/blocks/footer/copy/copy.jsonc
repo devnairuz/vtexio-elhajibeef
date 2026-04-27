@@ -1,5 +1,6 @@
 {
   "flex-layout.row#copy": {
+    "title": "Footer > Copyright",
     "props": {
       "blockClass": ["footer-copy-container", "custom-container"]
     },
@@ -7,6 +8,7 @@
   },
 
   "flex-layout.col#copy-brand": {
+    "title": "Footer > Copyright > Texto",
     "props": {
       "blockClass": ["copy-brand-content"]
     },
@@ -20,6 +22,7 @@
   },
 
   "flex-layout.col#copy-design": {
+    "title": "Footer > Copyright > Créditos",
     "props": {
       "blockClass": ["copy-design-content"]
     },

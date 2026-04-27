@@ -1,37 +1,29 @@
 {
   "flex-layout.row#social-networks": {
+    "title": "Footer > Redes sociais",
     "props": {
       "blockClass": "social-networks-container"
     },
     "children": ["flex-layout.col#social-networks"]
   },
   "flex-layout.col#social-networks": {
+    "title": "Footer > Redes sociais > Ícones",
     "props": {
       "blockClass": "social-networks-content"
     },
     "children": [
-      "image#pinterest",
-      "image#youtube",
-      "image#twitter",
+      "image#facebook",
       "image#instagram",
-      "image#facebook"
+      "image#tiktok",
+      "image#youtube"
     ]
   },
 
-  "image#pinterest": {
+  "image#facebook": {
+    "title": "Footer > Rede social Facebook",
     "props": {
-      "src": "assets/social-networks/pinterest.svg",
-      "alt": "Pinterest",
-      "link": {
-        "url": "https://br.pinterest.com/",
-        "newTab": true
-      }
-    }
-  },
-
-  "image#youtube": {
-    "props": {
-      "src": "assets/social-networks/youtube.svg",
+      "blockClass": "social-network-icon",
+      "src": "assets/social-networks/facebook.svg",
       "alt": "Youtube",
       "link": {
         "url": "https://youtube.com.br",
@@ -40,9 +32,11 @@
     }
   },
 
-  "image#twitter": {
+  "image#instagram": {
+    "title": "Footer > Rede social Instagram",
     "props": {
-      "src": "assets/social-networks/twitter.svg",
+      "blockClass": "social-network-icon",
+      "src": "assets/social-networks/instagram.svg",
       "alt": "Twitter",
       "link": {
         "url": "https://twitter.com",
@@ -51,9 +45,11 @@
     }
   },
 
-  "image#instagram": {
+  "image#tiktok": {
+    "title": "Footer > Rede social TikTok",
     "props": {
-      "src": "assets/social-networks/instagram.svg",
+      "blockClass": "social-network-icon",
+      "src": "assets/social-networks/tiktok.svg",
       "alt": "Instagram",
       "link": {
         "url": "https://instagram.com",
@@ -62,9 +58,11 @@
     }
   },
 
-  "image#facebook": {
+  "image#youtube": {
+    "title": "Footer > Rede social YouTube",
     "props": {
-      "src": "assets/social-networks/facebook.svg",
+      "blockClass": "social-network-icon",
+      "src": "assets/social-networks/youtube.svg",
       "alt": "Facebook",
       "link": {
         "url": "https://www.facebook.com/facebook/?locale=pt_BR",

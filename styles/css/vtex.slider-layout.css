@@ -33,3 +33,32 @@
 .sliderRightArrow--shelf-carousel {
   right: -15px;
 }
+
+/* CONHECA NOSSAS LINHAS MOBILE */
+.sliderLayoutContainer--home-linhas-gallery-mobile,
+.sliderLayoutContainer--home-linhas-cards-mobile {
+  padding-bottom: 28px;
+}
+
+.slide--home-linhas-gallery-mobile,
+.slide--home-linhas-cards-mobile {
+  padding: 0 6px;
+}
+
+.paginationDotsContainer--home-linhas-gallery-mobile,
+.paginationDotsContainer--home-linhas-cards-mobile {
+  bottom: 0;
+}
+
+.paginationDot--home-linhas-gallery-mobile,
+.paginationDot--home-linhas-cards-mobile {
+  width: 7px !important;
+  height: 7px !important;
+  background: #6f6f6f;
+  box-shadow: none;
+}
+
+.paginationDot--home-linhas-gallery-mobile--isActive,
+.paginationDot--home-linhas-cards-mobile--isActive {
+  background: #FA0209;
+}

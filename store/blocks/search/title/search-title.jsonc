@@ -1,5 +1,6 @@
 {
   "flex-layout.row#search-title": {
+    "title": "Busca > Título",
     "props": {
       "blockClass": ["search-title-container", "custom-container"],
       "colSizing": "auto"

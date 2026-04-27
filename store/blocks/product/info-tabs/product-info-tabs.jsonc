@@ -1,11 +1,13 @@
 {
   "flex-layout.row#product-info-tabs": {
+    "title": "Produto > Informações técnicas",
     "props": {
       "blockClass": ["info-tabs-container", "custom-container"]
     },
     "children": ["flex-layout.col#product-info-tabs"]
   },
   "flex-layout.col#product-info-tabs": {
+    "title": "Produto > Abas de informações",
     "props": {
       "blockClass": "info-tabs-content"
     },

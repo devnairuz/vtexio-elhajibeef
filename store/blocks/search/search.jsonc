@@ -1,5 +1,6 @@
 {
   "store.search": {
+    "title": "Busca",
     "blocks": ["search-result-layout"],
     "props": {
       "context": {
@@ -12,6 +13,7 @@
   },
 
   "search-result-layout": {
+    "title": "Busca > Resultado",
     "blocks": [
       "search-result-layout.desktop",
       "search-not-found-layout"

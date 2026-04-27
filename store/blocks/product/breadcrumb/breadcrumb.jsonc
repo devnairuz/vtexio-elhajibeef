@@ -1,5 +1,6 @@
 {
   "flex-layout.row#product-breadcrumb": {
+    "title": "Produto > Breadcrumb",
     "props": {
       "blockClass": ["product-breadcrumb-container", "custom-container"]
     },
@@ -13,6 +14,7 @@
     "children": ["breadcrumb"]
   },
   "breadcrumb": {
+    "title": "Produto > Breadcrumb > Navegação",
     "props": {
       "showOnMobile": true
     }

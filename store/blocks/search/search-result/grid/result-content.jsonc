@@ -1,5 +1,6 @@
 {
   "flex-layout.col#result-content": {
+    "title": "Busca > Conteúdo dos resultados",
     "props": {
       "blockClass": "result-content",
       "preventVerticalStretch": true,

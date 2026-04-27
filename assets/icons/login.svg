@@ -1,10 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="28.688" height="28.1" viewBox="0 0 28.688 28.1">
-  <g id="_003-user" data-name="003-user" transform="translate(109.743)">
-    <g id="Grupo_23" data-name="Grupo 23" transform="translate(-104.129)">
-      <g id="Grupo_22" data-name="Grupo 22" transform="translate(0)">
-        <path id="Caminho_4" data-name="Caminho 4" d="M148.057,0a8.729,8.729,0,1,0,8.729,8.729A8.74,8.74,0,0,0,148.057,0Zm0,15.872A7.142,7.142,0,1,1,155.2,8.729,7.151,7.151,0,0,1,148.057,15.872Z" transform="translate(-139.328)"/>
-      </g>
-    </g>
-    <path id="Caminho_5" data-name="Caminho 5" d="M-108.444,28.04s1.236-10.42,13.5-10.42,13.5,10.42,13.5,10.42" transform="translate(-0.455 -0.04)" fill="none" stroke="#000" stroke-width="1.7"/>
-  </g>
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1137_2425" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26">
+<rect width="26" height="26" fill="#AA1E1E"/>
+</mask>
+<g mask="url(#mask0_1137_2425)">
+<path d="M10.175 11.825C9.39167 11.0417 9 10.1 9 9C9 7.9 9.39167 6.95833 10.175 6.175C10.9583 5.39167 11.9 5 13 5C14.1 5 15.0417 5.39167 15.825 6.175C16.6083 6.95833 17 7.9 17 9C17 10.1 16.6083 11.0417 15.825 11.825C15.0417 12.6083 14.1 13 13 13C11.9 13 10.9583 12.6083 10.175 11.825ZM5 21V18.2C5 17.6333 5.14583 17.1125 5.4375 16.6375C5.72917 16.1625 6.11667 15.8 6.6 15.55C7.63333 15.0333 8.68333 14.6458 9.75 14.3875C10.8167 14.1292 11.9 14 13 14C14.1 14 15.1833 14.1292 16.25 14.3875C17.3167 14.6458 18.3667 15.0333 19.4 15.55C19.8833 15.8 20.2708 16.1625 20.5625 16.6375C20.8542 17.1125 21 17.6333 21 18.2V21H5Z" fill="#FA0209"/>
+</g>
 </svg>

@@ -1,5 +1,6 @@
 {
   "flex-layout.col#product-resume": {
+    "title": "Produto > Informações de compra",
     "props": {
       "blockClass": "product-resume-content",
       "preventVerticalStretch": true

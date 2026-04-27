@@ -1,15 +1,18 @@
 {
   "flex-layout.row#menu-desktop": {
+    "title": "Menu desktop",
     "children": ["flex-layout.col#menu-desktop"],
     "props": {
       "blockClass": ["menu-container", "custom-container"]
     }
   },
   "flex-layout.col#menu-desktop": {
+    "title": "Menu desktop > Categorias",
     "children": ["category-menu#header-category-menu"]
   },
 
   "category-menu#header-category-menu": {
+    "title": "Menu desktop > Menu de categorias",
     "props": {
       "showAllDepartments": true,
       "showSubcategories": true,

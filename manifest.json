@@ -1,7 +1,7 @@
 {
-  "vendor": "agencianairuzpartnerbr",
-  "name": "diamond",
-  "version": "1.0.1",
+  "vendor": "elhajibeef",
+  "name": "store-theme",
+  "version": "1.0.0",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
@@ -65,8 +65,7 @@
     "vtex.order-manager": "0.x"
   },
   "peerDependencies": {
-    "vtex.wish-list": "1.x",
-    "vtex.affiliates": "1.x"
+    "vtex.wish-list": "1.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

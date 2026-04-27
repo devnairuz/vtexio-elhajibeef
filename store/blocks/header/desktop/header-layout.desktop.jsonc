@@ -1,11 +1,13 @@
 {
   "header-layout.desktop": {
+    "title": "Header desktop",
     "children": [
       "sticky-layout#desktop"
     ]
   },
 
   "sticky-layout#desktop": {
+    "title": "Header desktop > Fixo",
     "props": {
       "blockClass": "sticky-header"
     },
