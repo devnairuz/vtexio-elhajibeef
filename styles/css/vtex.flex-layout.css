@@ -468,9 +468,11 @@
 }
 
 /* COPY RODAPÉ */
-.flexRowContent--footer-copy-container .stretchChildrenWidth {
+.flexRow--footer-copy-container {
+  background: #FFFFFF;
+}
+.flexRowContent--footer-copy-container {
   padding: 17px 0;
-  border-top: 1px solid #D0D0D0;
 }
 .flexCol--copy-design-content {
   display: flex;

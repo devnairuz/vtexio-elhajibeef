@@ -1,14 +1,14 @@
 {
   "flex-layout.row#copy": {
-    "title": "Footer > Copyright",
+    "title": "Copyright",
     "props": {
       "blockClass": ["footer-copy-container", "custom-container"]
     },
-    "children": ["flex-layout.col#copy-brand", "flex-layout.col#copy-design"]
+    "children": ["flex-layout.col#copy-brand", "flex-layout.col#copy-payments", "flex-layout.col#copy-design"]
   },
 
   "flex-layout.col#copy-brand": {
-    "title": "Footer > Copyright > Texto",
+    "title": "Marca",
     "props": {
       "blockClass": ["copy-brand-content"]
     },
@@ -16,13 +16,75 @@
   },
   "rich-text#copy-brand": {
     "props": {
-      "text": "Diamond Clothing® | Todos os direitos reservados.",
+      "text": "El Haji Beef (COMERCIO E INDUSTRIA DE CARNES LTDA)\n47.387.341/0001-25. Todos os direitos reservados.",
       "blockClass": ["copy-brand", "copy-text"]
     }
   },
 
+  "flex-layout.col#copy-payments": {
+    "title": "Selos de Pagamento",
+    "props": {
+      "blockClass": ["copy-payments-content"]
+    },
+    "children":["flex-layout.row#copy-payments"]
+  },
+  "flex-layout.row#copy-payments": {
+    "props": {
+      "blockClass": ["copy-payments-container"]
+    },
+    "children": ["image#copy-payment-1", "image#copy-payment-2", "image#copy-payment-3", "image#copy-payment-4", "image#copy-payment-5", "image#copy-payment-6"]
+  },
+  "image#copy-payment-1": {
+    "props": {
+      "blockClass": "copy-payment",
+      "src": "assets/flags/payment/mc.svg",
+      "alt": "MasterCard",
+      "maxWidth": 40
+    }
+  },
+  "image#copy-payment-2": {
+    "props": {
+      "blockClass": "copy-payment",
+      "src": "assets/flags/payment/visa.svg",
+      "alt": "Visa",
+      "maxWidth": 40
+    }
+  },
+  "image#copy-payment-3": {
+    "props": {
+      "blockClass": "copy-payment",
+      "src": "assets/flags/payment/elo.svg",
+      "alt": "Elo",
+      "maxWidth": 40
+    }
+  },
+  "image#copy-payment-4": {
+    "props": {
+      "blockClass": "copy-payment",
+      "src": "assets/flags/payment/hipercard.svg",
+      "alt": "Hipercard",
+      "maxWidth": 40
+    }
+  },
+  "image#copy-payment-5": {
+    "props": {
+      "blockClass": "copy-payment",
+      "src": "assets/flags/payment/amex.svg",
+      "alt": "Amex",
+      "maxWidth": 40
+    }
+  },
+  "image#copy-payment-6": {
+    "props": {
+      "blockClass": "copy-payment",
+      "src": "assets/flags/payment/pix.svg",
+      "alt": "Pix",
+      "maxWidth": 40
+    }
+  },
+
   "flex-layout.col#copy-design": {
-    "title": "Footer > Copyright > Créditos",
+    "title": "Créditos",
     "props": {
       "blockClass": ["copy-design-content"]
     },
@@ -32,7 +94,7 @@
     "props": {
       "blockClass": "copy-design-container"
     },
-    "children": ["flex-layout.col#copy-design-content", "flex-layout.col#copy-platform-content"]
+    "children": ["flex-layout.col#copy-platform-content", "flex-layout.col#copy-design-content"]
   },
   
   "flex-layout.col#copy-design-content": {
@@ -43,7 +105,7 @@
   },
   "rich-text#copy-design": {
     "props": {
-      "text": "Design",
+      "text": "Desenvolvimento",
       "blockClass": ["copy-design", "copy-text"]
     }
   },
@@ -76,7 +138,7 @@
     "props": {
       "blockClass": "copy-design",
       "src": "assets/logos/vtex.svg",
-      "alt": "nairuz",
+      "alt": "vtex",
       "maxHeight": 20,
       "link": {
         "newTab": true,

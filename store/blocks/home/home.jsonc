@@ -9,7 +9,8 @@
       "flex-layout.row#shelf-releases",
       "flex-layout.row#banner-origem",
       "flex-layout.row#shelf-best-sellers",
-      "flex-layout.row#shelf-highlights"
+      "flex-layout.row#shelf-highlights",
+      "flex-layout.row#nossas-unidades"
     ]
   }
 }

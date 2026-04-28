@@ -1,0 +1,45 @@
+{
+  "flex-layout.row#nossas-unidades": {
+    "title": "Home | Nossas Unidades",
+    "props": {
+      "blockClass": ["custom-container", "nossas-unidades-container"]
+    },
+    "children": ["nossas-unidades#slider"]
+  },
+
+  "nossas-unidades#slider": {
+    "title": "Home | Nossas Unidades > Slider",
+    "props": {
+      "stores": [
+        {
+          "name": "Moema",
+          "address": "Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090",
+          "openingHours": "Seg. a sab.: 09:00 as 18:00",
+          "holidayHours": "Dom. e feriados: 09:00 as 15:00",
+          "image": "assets/nossas-unidades/card-loja.png"
+        },
+        {
+          "name": "Moema",
+          "address": "Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090",
+          "openingHours": "Seg. a sab.: 09:00 as 18:00",
+          "holidayHours": "Dom. e feriados: 09:00 as 15:00",
+          "image": "assets/nossas-unidades/card-loja.png"
+        },
+        {
+          "name": "Moema",
+          "address": "Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090",
+          "openingHours": "Seg. a sab.: 09:00 as 18:00",
+          "holidayHours": "Dom. e feriados: 09:00 as 15:00",
+          "image": "assets/nossas-unidades/card-loja.png"
+        },
+        {
+          "name": "Moema",
+          "address": "Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090",
+          "openingHours": "Seg. a sab.: 09:00 as 18:00",
+          "holidayHours": "Dom. e feriados: 09:00 as 15:00",
+          "image": "assets/nossas-unidades/card-loja.png"
+        }
+      ]
+    }
+  }
+}
