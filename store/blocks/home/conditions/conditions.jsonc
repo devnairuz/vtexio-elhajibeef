@@ -6,18 +6,10 @@
       "preventHorizontalStretch": true,
       "preventVerticalStretch": true
     },
-    "children": ["responsive-layout.desktop#conditions", "responsive-layout.mobile#conditions"]
-  },
-  "responsive-layout.desktop#conditions": {
-    "title": "Benefícios da loja > Desktop",
-    "children": ["info-cards#conditions"]
-  },
-  "responsive-layout.mobile#conditions": {
-    "title": "Benefícios da loja > Mobile",
     "children": ["info-cards#conditions"]
   },
   "info-cards#conditions": {
-    "title": "Benefícios da loja > Cards",
+    "title": "Cards",
     "props": {
       "cards": [
         {
@@ -27,23 +19,23 @@
         },
         {
           "icon": "assets/icons/credit-card.svg",
-          "headline": "Parcelamos em até 6x sem juros",
-          "subheadline": "Em pedidos acima de R$500,00"
+          "headline": "Pagamento Facilitado",
+          "subheadline": "3x sem juros acima de R$600,00"
         },
         {
           "icon": "assets/icons/truck.svg",
-          "headline": "Desconto de 10% no boleto",
-          "subheadline": "Em pedidos acima de R$500,00"
+          "headline": "Entrega Agendada",
+          "subheadline": "Em até 24h para a cidade de São Paulo"
         },
         {
           "icon": "assets/icons/refresh-cw.svg",
-          "headline": "Troque grátis em até 30 dias",
-          "subheadline": "Em pedidos acima de R$500,00"
+          "headline": "Atendimento Especializado",
+          "subheadline": "Suporte de quem entende do produto"
         },
         {
           "icon": "assets/icons/shield.svg",
-          "headline": "Compra garantida Loja 100% segura",
-          "subheadline": "Em pedidos acima de R$50,00"
+          "headline": "Clube de Assinatura",
+          "subheadline": "Exclusividade todos os meses"
         }
       ]
     }
