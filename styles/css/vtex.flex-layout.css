@@ -592,6 +592,50 @@
   margin: 50px 0;
 }
 
+/* AJUSTES MENU CMS */
+
+/* Aplica espacamento entre os blocos do menu CMS, mas ignora o primeiro item. */
+.flexColChild--cms-menu-wrapper-content:not(:first-child) {
+  margin-top: 8px;
+}
+
+/* Esconde o breadcrumb quando ele esta dentro do container principal da pagina CMS. */
+:global(.vtex-flex-layout-0-x-flexRow--cms-page-container) .flexRowContent--linha-breadcms{
+    display: none;
+}
+
+/* Define a margem vertical da pagina CMS: 40px no topo e 80px embaixo. */
+
+.flexRow--cms-page-container {
+  margin: 11px 0 80px;
+}
+
+/* Define a largura fixa do menu lateral e cria a divisoria visual a direita. */
+.flexColChild--side-cms-menu {
+  width: 215px !important;
+}
+
+/* Alinha o conteudo da linha CMS no inicio, sem espacamento automatico entre colunas. */
+.flexRowContent--cms-page-container {
+  justify-content: initial;
+}
+
+/* Cria o espaco entre o menu lateral e o conteudo principal da pagina. */
+.flexCol--content-cms {
+  margin-left: 69px;
+}
+
+/* Organiza o breadcrumb em linha, com itens alinhados e espacados entre si. */
+.flexRowContent--linha-breadcms {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 30px;
+}
+
+
 @media (max-width: 1199px) {
   .flexColChild--summary-action-content :global(.vtex-button__label) {
     padding: 7px 18px!important;
@@ -657,6 +701,9 @@
 }
 
 @media (max-width: 991px) {
+  .flexRow--cms-page-container {
+    margin: 0px;
+  }
   .flexColChild--wish-image-content:first-child {
     opacity: 1;
     visibility: visible;
@@ -698,6 +745,16 @@
   .flexRowContent--home-linhas-gallery,
   .flexRowContent--home-linhas-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flexRowContent--linha-breadcms {
+    display: none;
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRow--cms-page-container) .flexRowContent--linha-breadcms{
+    display: flex!important;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -803,5 +860,23 @@
 
   .flexRow--actions-pdp-container {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .flexRowContent--cms-page-container {
+    flex-direction: column;
+  }
+
+  .flexColChild--side-cms-menu {
+    margin: auto;
+    text-align: center;
+    border: 0;
+    width: 100% !important;
+  }
+
+  .flexCol--content-cms {
+    margin-left: 0;
+    margin-top: 32px;
   }
 }

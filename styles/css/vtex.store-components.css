@@ -73,10 +73,11 @@
 
 .imageElement--banner-origem {
   display: block;
+  width: 100%;
   min-height: 178px;
   height: 100%;
   object-fit: cover;
-  object-position: left;
+  object-position: center;
 }
 
 .imageElementLink--banner-origem {

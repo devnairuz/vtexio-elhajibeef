@@ -3,7 +3,7 @@
     "blocks": [
       "flex-layout.row#main-slider",
       "flex-layout.row#conditions",
-      //"__fold__",
+      "__fold__",
       "flex-layout.row#shelf-promotions",
       "flex-layout.row#home-linhas",
       "flex-layout.row#shelf-releases",

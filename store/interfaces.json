@@ -4,6 +4,11 @@
     "composition": "children"
   },
 
+  "header-runtime": {
+    "component": "HeaderRuntime",
+    "composition": "children"
+  },
+
   "short-description": {
     "component": "ShortDescription"
   },

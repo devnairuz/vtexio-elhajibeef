@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './nossasUnidades.css'
 
 const DEFAULT_STORES = [
@@ -32,35 +32,41 @@ const DEFAULT_STORES = [
   },
 ]
 
-const ITEMS_PER_PAGE = {
-  desktop: 4,
-  tablet: 3,
-  phone: 1,
+const getItemsPerPage = () => {
+  if (typeof window === 'undefined') return 4
+  if (window.innerWidth < 640) return 1
+  if (window.innerWidth < 1024) return 3
+  return 4
 }
 
 const NossasUnidades = ({ stores }) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
   const storeItems = stores?.length ? stores : DEFAULT_STORES
 
-  const getItemsPerPage = useCallback(() => {
-    if (typeof window === 'undefined') return ITEMS_PER_PAGE.desktop
-    if (window.innerWidth < 640) return ITEMS_PER_PAGE.phone
-    if (window.innerWidth < 1024) return ITEMS_PER_PAGE.tablet
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage)
 
-    return ITEMS_PER_PAGE.desktop
+  // Atualiza itemsPerPage ao redimensionar a janela
+  useEffect(() => {
+    const handleResize = () => {
+      const next = getItemsPerPage()
+      setItemsPerPage(prev => {
+        if (prev !== next) setCurrentIndex(0) // reset ao mudar breakpoint
+        return next
+      })
+    }
+
+    window.addEventListener('resize', handleResize, { passive: true })
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const itemsPerPage = getItemsPerPage()
   const maxIndex = Math.max(0, storeItems.length - itemsPerPage)
-  const translateX = -(currentIndex * (100 / itemsPerPage))
 
-  const handlePrev = () => {
-    setCurrentIndex(prev => Math.max(0, prev - 1))
-  }
+  // Porcentagem baseada no viewport do slider, não no track inteiro
+  const cardWidthPercent = 100 / itemsPerPage
+  const translateX = -(currentIndex * cardWidthPercent)
 
-  const handleNext = () => {
-    setCurrentIndex(prev => Math.min(maxIndex, prev + 1))
-  }
+  const handlePrev = () => setCurrentIndex(prev => Math.max(0, prev - 1))
+  const handleNext = () => setCurrentIndex(prev => Math.min(maxIndex, prev + 1))
 
   return (
     <section className={styles.nossasUnidades}>
@@ -77,54 +83,37 @@ const NossasUnidades = ({ stores }) => {
           onClick={handlePrev}
           type="button"
         >
-          &#8592;
+          <span aria-hidden="true" className={`${styles.arrowIcon} ${styles.arrowLeftIcon}`} />
         </button>
 
         <div className={styles.sliderViewport}>
           <div
             className={styles.sliderTrack}
-            style={{
-              transform: `translateX(${translateX}%)`,
-              width: `${(storeItems.length / itemsPerPage) * 100}%`,
-            }}
+            style={{ transform: `translateX(${translateX}%)` }}
           >
             {storeItems.map((store, index) => (
               <article
                 className={styles.storeCard}
                 key={`${store.name}-${index}`}
-                style={{ width: `${100 / storeItems.length}%` }}
+                style={{ width: `${cardWidthPercent}%`, flexShrink: 0 }}
               >
                 <img
                   alt={`Loja ${store.name}`}
                   className={styles.storeImage}
                   src={store.image}
                 />
-
                 <div className={styles.storeOverlay}>
                   <span className={styles.storeLabel}>Loja</span>
                   <h3 className={styles.storeName}>{store.name}</h3>
-
                   <div className={styles.storeInfo}>
-                    <span
-                      aria-hidden="true"
-                      className={`${styles.storeIcon} ${styles.locationIcon}`}
-                    />
+                    <span aria-hidden="true" className={`${styles.storeIcon} ${styles.locationIcon}`} />
                     <p className={styles.storeText}>{store.address}</p>
                   </div>
-
                   <div className={styles.storeInfo}>
-                    <span
-                      aria-hidden="true"
-                      className={`${styles.storeIcon} ${styles.clockIcon}`}
-                    />
+                    <span aria-hidden="true" className={`${styles.storeIcon} ${styles.clockIcon}`} />
                     <p className={styles.storeText}>
                       {store.openingHours}
-                      {store.holidayHours && (
-                        <>
-                          <br />
-                          {store.holidayHours}
-                        </>
-                      )}
+                      {store.holidayHours && <><br />{store.holidayHours}</>}
                     </p>
                   </div>
                 </div>
@@ -140,7 +129,7 @@ const NossasUnidades = ({ stores }) => {
           onClick={handleNext}
           type="button"
         >
-          &#8594;
+          <span aria-hidden="true" className={`${styles.arrowIcon} ${styles.arrowRightIcon}`} />
         </button>
       </div>
 
@@ -174,33 +163,11 @@ NossasUnidades.schema = {
         title: 'Loja',
         type: 'object',
         properties: {
-          name: {
-            title: 'Nome da loja',
-            type: 'string',
-            default: 'Moema',
-          },
-          address: {
-            title: 'Endereco',
-            type: 'string',
-            default: 'Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090',
-          },
-          openingHours: {
-            title: 'Horario principal',
-            type: 'string',
-            default: 'Seg. a sab.: 09:00 as 18:00',
-          },
-          holidayHours: {
-            title: 'Horario domingos e feriados',
-            type: 'string',
-            default: 'Dom. e feriados: 09:00 as 15:00',
-          },
-          image: {
-            title: 'Imagem da loja',
-            type: 'string',
-            widget: {
-              'ui:widget': 'image-uploader',
-            },
-          },
+          name: { title: 'Nome da loja', type: 'string', default: 'Moema' },
+          address: { title: 'Endereco', type: 'string', default: 'Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090' },
+          openingHours: { title: 'Horario principal', type: 'string', default: 'Seg. a sab.: 09:00 as 18:00' },
+          holidayHours: { title: 'Horario domingos e feriados', type: 'string', default: 'Dom. e feriados: 09:00 as 15:00' },
+          image: { title: 'Imagem da loja', type: 'string', widget: { 'ui:widget': 'image-uploader' } },
         },
       },
     },

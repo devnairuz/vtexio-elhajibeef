@@ -1,14 +1,11 @@
 {
   "header-layout.mobile": {
     "title": "Header mobile",
-    "children": ["sticky-layout#mobile"]
+    "children": ["header-runtime#mobile"]
   },
 
-  "sticky-layout#mobile": {
-    "title": "Header mobile > Fixo",
-    "props": {
-      "blockClass": "sticky-header"
-    },
+  "header-runtime#mobile": {
+    "title": "Header mobile > Comportamento por pagina",
     "children": ["flex-layout.row#header-mobile", "flex-layout.row#search-mobile"]
   }
 }

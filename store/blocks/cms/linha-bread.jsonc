@@ -1,0 +1,34 @@
+{
+    "flex-layout.row#linha-bread": {
+      "props": {
+        "blockClass": ["custom-container", "linha-breadcms"],
+        "colSizing": "auto"
+      },
+      "children": [
+        "flex-layout.col#linha-crumb",
+        "flex-layout.col#linha-crumb2"
+      ]
+    },
+    "flex-layout.col#linha-crumb": {
+      "children": ["rich-text#bread"]
+    },
+    "rich-text#bread": {
+      "props": {
+        "text": "[Home](/)",
+        "textAlignment": "initial",
+        "textPosition": "initial",
+        "blockClass": "cmstopo"
+      }
+    },
+    "flex-layout.col#linha-crumb2": {
+      "children": ["rich-text#bread2"]
+    },
+    "rich-text#bread2": {
+      "props": {
+        "text": "Institucional",
+        "textAlignment": "initial",
+        "textPosition": "initial",
+        "blockClass": ["cmsbread2"]
+      }
+    }
+}

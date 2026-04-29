@@ -1,0 +1,136 @@
+{
+  "store.custom#fale-conosco": {
+    "children": [
+      "flex-layout.row#linha-bread",
+      "flex-layout.row#fale-conosco"
+    ]
+  },
+
+  "flex-layout.row#fale-conosco": {
+    "props": {
+      "blockClass": [
+        "custom-container",
+        "cms-page-container",
+        "cms-fale-conosco"
+      ],
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#side-cms-menu",
+      "flex-layout.col#conteudo-fale-conosco"
+    ]
+  },
+
+  "flex-layout.col#conteudo-fale-conosco": {
+    "props": {
+      "blockClass": ["container", "content-cms"],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#linha-bread",
+      "rich-text#fale-conosco-title",
+       "rich-text#fale-conosco-title-cards",
+      "flex-layout.row#fale-conosco-content"
+    ]
+  },
+
+  "rich-text#fale-conosco-title": {
+    "props": {
+      "text": "# Fale Conosco",
+      "blockClass": ["cms", "title"]
+    }
+  },
+
+  "flex-layout.row#fale-conosco-content": {
+    "props": {
+      "blockClass": ["fale-conosco-cards"]
+    },
+    "children": [
+      // "flex-layout.col#card-email",
+      "flex-layout.col#card-whatsapp"
+    ]
+  },
+
+    "rich-text#fale-conosco-title-cards": {
+    "props": {
+      "text": "## Nos envie uma mensagem!",
+      "blockClass": ["cms", "title", "fale-conosco"]
+    }
+  },
+
+  "flex-layout.col#card-email": {
+    "props": {
+      "blockClass": ["fale-conosco-card"]
+    },
+    "children": [
+      "image#icon-email",
+      "rich-text#titulo-email",
+      "rich-text#email",
+      "rich-text#email-link"
+    ]
+  },
+
+  "flex-layout.col#card-whatsapp": {
+    "props": {
+      "blockClass": ["fale-conosco-card"]
+    },
+    "children": [
+      "image#icon-whatsapp",
+      "rich-text#titulo-whatsapp",
+      "rich-text#whatsapp",
+      "rich-text#whatsapp-link"
+    ]
+  },
+
+  "image#icon-email": {
+    "props": {
+      "src": "assets/institucional/email.svg",
+      "alt": "Ícone de e-mail"
+    }
+  },
+
+  "image#icon-whatsapp": {
+    "props": {
+      "src": "assets/institucional/pensando.svg",
+      "alt": "Ícone de WhatsApp"
+    }
+  },
+
+  "rich-text#titulo-email": {
+    "props": {
+      "text": "### E-mail"
+    }
+  },
+
+  "rich-text#email": {
+    "props": {
+      "text": "cbv@voltsports.com.br"
+    }
+  },
+
+  "rich-text#email-link": {
+    "props": {
+      "text": "[Enviar mensagem](mailto:cbv@voltsports.com.br)",
+      "blockClass": ["link-fale-conosco"]
+    }
+  },
+
+  "rich-text#titulo-whatsapp": {
+    "props": {
+      "text": "### WhatsApp"
+    }
+  },
+
+  "rich-text#whatsapp": {
+    "props": {
+      "text": "(11) 99999-9999"
+    }
+  },
+
+  "rich-text#whatsapp-link": {
+    "props": {
+      "text": "[Enviar mensagem](https://wa.me/5511999999999)",
+      "blockClass": ["link-fale-conosco"]
+    }
+  }
+}

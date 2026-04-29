@@ -2,15 +2,12 @@
   "header-layout.desktop": {
     "title": "Header desktop",
     "children": [
-      "sticky-layout#desktop"
+      "header-runtime#desktop"
     ]
   },
 
-  "sticky-layout#desktop": {
-    "title": "Header desktop > Fixo",
-    "props": {
-      "blockClass": "sticky-header"
-    },
+  "header-runtime#desktop": {
+    "title": "Header desktop > Comportamento por pagina",
     "children": ["flex-layout.row#header-desktop", "flex-layout.row#menu-desktop"]
   }
 }

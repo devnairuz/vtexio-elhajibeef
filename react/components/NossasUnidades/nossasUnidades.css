@@ -120,17 +120,35 @@
 .arrowButton {
   background: #1a1a1a;
   color: #fff;
-  border: none;
+  border: 1px solid #FA0209;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  font-size: 1.1rem;
   cursor: pointer;
   flex-shrink: 0;
   transition: background 0.2s, opacity 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+}
+
+.arrowIcon {
+  display: block;
+  width: 12px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.arrowLeftIcon {
+  background-image: url('../../../assets/nossas-unidades/arrow-left.svg');
+}
+
+.arrowRightIcon {
+  background-image: url('../../../assets/nossas-unidades/arrow-right.svg');
 }
 
 .arrowButton:hover:not(:disabled) {
@@ -161,7 +179,22 @@
 }
 
 .dotActive {
-  background: #1a1a1a;
+  background: #FA0209;
+}
+
+.sliderTrack {
+  display: flex;
+  transition: transform 0.4s ease;
+  /* removido: width calculado via JS — não precisa mais */
+  will-change: transform;
+}
+
+.storeCard {
+  position: relative;
+  padding: 0 8px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  /* width vem do style inline agora */
 }
 
 @media (max-width: 1023px) {

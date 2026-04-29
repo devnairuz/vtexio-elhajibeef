@@ -1,0 +1,135 @@
+{
+  "flex-layout.col#side-cms-menu": {
+    "props": {
+      "blockClass": "side-cms-menu",
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": ["disclosure-layout#cms-menu"]
+  },
+  "disclosure-layout#cms-menu": {
+    "props": {
+      "blockClass": ["cms-menu"]
+    },
+    "children": ["disclosure-trigger#cms-menu", "disclosure-content#cms-menu"]
+  },
+  "disclosure-trigger#cms-menu": {
+    "props": {
+      "blockClass": ["cms-menu"]
+    },
+    "children": ["rich-text#side-cms-menu-title"]
+  },
+  "rich-text#side-cms-menu-title": {
+    "props": {
+      "text": "### Institucional",
+      "blockClass": ["side-cms-menu-title"]
+    }
+  },
+
+  "disclosure-content#cms-menu": {
+    "props": {
+      "blockClass": ["cms-menu"]
+    },
+    "children": [
+      "vtex.menu@2.x:menu#cms-institucionais" // herdado bloco dentro da pasta general/cms-menu.jsonc
+    ]
+  },
+
+  "vtex.menu@2.x:menu#cms-institucionais": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#fale-conosco-institucional",
+      "menu-item#trocas-devolucoes",
+      "menu-item#politicas-entrega",
+      "menu-item#politicas-privacidade",
+      "menu-item#ajuda"
+    ]
+  },
+
+  "menu-item#fale-conosco-institucional": {
+    "props": {
+      "id": "menu-item-fale-conosco",
+      "blockClass": "menu-item-fale-conosco",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/fale-conosco",
+        "noFollow": false,
+        "tagTitle": "Fale Conosco",
+        "text": "Fale Conosco"
+      }
+    }
+  },
+
+  "menu-item#trocas-devolucoes": {
+    "props": {
+      "id": "menu-item-devolucoes",
+      "blockClass": "menu-item-devolucoes",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/trocas-e-devolucoes",
+        "noFollow": false,
+        "tagTitle": "devolucoes",
+        "text": "Trocas e Devoluções"
+      }
+    }
+  },
+
+  "menu-item#politicas-entrega": {
+    "props": {
+      "id": "menu-item-entrega",
+      "blockClass": "menu-item-entrega",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/politicas-de-entrega",
+        "noFollow": false,
+        "tagTitle": "entrega",
+        "text": "Políticas de Entrega"
+      }
+    }
+  },
+
+  "menu-item#politicas-privacidade": {
+    "props": {
+      "id": "menu-item-privacidade",
+      "blockClass": "menu-item-privacidade",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/politicas-de-privacidade",
+        "noFollow": false,
+        "tagTitle": "privacidade",
+        "text": "Políticas de Privacidade"
+      }
+    }
+  },
+
+  "menu-item#ajuda": {
+    "props": {
+      "id": "menu-item-ajuda",
+      "blockClass": "menu-item-ajuda",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/ajuda",
+        "noFollow": false,
+        "tagTitle": "Ajuda",
+        "text": "Ajuda"
+      }
+    }
+  }
+}

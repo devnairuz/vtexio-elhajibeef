@@ -1,0 +1,42 @@
+{
+  "store.custom#politicas-privacidade": {
+    "children": ["flex-layout.row#linha-bread","flex-layout.row#politicas-de-privacidade"]
+  },
+
+  "flex-layout.row#politicas-de-privacidade": {
+    "props": {
+      "blockClass": [
+        "custom-container",
+        "cms-page-container",
+        "cms-privacidade"
+      ],
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#side-cms-menu",
+      "flex-layout.col#conteudo-privacidade"
+    ]
+  },
+
+  "flex-layout.col#conteudo-privacidade": {
+    "props": {
+      "blockClass": ["container", "content-cms"],
+      "preventVerticalStretch": true
+    },
+  "children": ["flex-layout.row#linha-bread","rich-text#privacidade-title", "rich-text#texto-privacidade"]
+  },
+
+    "rich-text#privacidade-title": {
+    "props": {
+      "text": "# Políticas de privacidade",
+      "blockClass": ["cms", "title"]
+    }
+  },
+
+   "rich-text#texto-privacidade": {
+    "props": {
+      "text": "# Política de Privacidade – Elhaji Beef\n\n## 1. Introdução\n\nA Elhaji Beef tem o compromisso de proteger a privacidade e os dados pessoais de seus clientes, parceiros e visitantes do nosso site. Esta Política de Privacidade explica como coletamos, utilizamos, armazenamos e protegemos suas informações, conforme a **Lei Geral de Proteção de Dados (LGPD – Lei nº 13.709/2018)**.\n\n## 2. Dados Coletados\n\nColetamos as seguintes informações para melhorar sua experiência de compra e garantir a segurança das transações:\n\n### 2.1. Dados fornecidos pelo usuário\n- Nome completo\n- CPF/CNPJ\n- Endereço para entrega e faturamento\n- E-mail\n- Telefone e WhatsApp\n- Dados de pagamento (processados por parceiros seguros)\n\n### 2.2. Dados coletados automaticamente\n- Endereço IP\n- Informações do navegador e dispositivo\n- Páginas acessadas em nosso site\n- Cookies para personalização e segurança\n\n## 3. Uso das Informações\n\nOs dados coletados são utilizados para:\n- ✅ Processamento e entrega de pedidos\n- ✅ Atendimento ao cliente e suporte\n- ✅ Envio de promoções, novidades e ofertas (caso autorizado)\n- ✅ Melhorias na experiência do usuário em nosso site\n- ✅ Prevenção a fraudes e garantia da segurança das transações\n\n## 4. Compartilhamento de Dados\n\nSeus dados podem ser compartilhados com:\n- Empresas de pagamento e antifraude (ClearSale)\n- Transportadoras e serviços de entrega\n- Autoridades legais, caso necessário\n\n⚠️ Nunca vendemos ou compartilhamos seus dados com terceiros para fins comerciais sem seu consentimento.\n\n## 5. Segurança das Informações\n\nAdotamos medidas rigorosas de segurança, incluindo **criptografia SSL**, controle de acessos e monitoramento contínuo para evitar acessos não autorizados.\n\n## 6. Seus Direitos\n\nDe acordo com a LGPD, você pode:\n- ✔ Acessar seus dados armazenados\n- ✔ Solicitar correção de informações\n- ✔ Solicitar exclusão dos seus dados (exceto quando houver obrigações legais de retenção)\n- ✔ Revogar consentimentos de marketing\n\nPara exercer seus direitos, entre em contato pelo e-mail: **seuemail@elhajibeef.com.br**"
+    }
+  }
+}
+
