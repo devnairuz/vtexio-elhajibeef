@@ -1,9 +1,5 @@
 .paginationDot {
   background: #FFFFFF;
-  box-shadow: 0px 3px 6px #00000061;
-}
-.paginationDot--main-slider--isActive {
-  border: 2px solid #000000;
 }
 
 .sliderArrows {
@@ -11,8 +7,43 @@
 }
 
 /* SLIDER PRINCIPAL */
+.paginationDot--main-slider {
+  background: #2F2F2F;
+  width: 8px !important;
+  height: 8px !important;
+}
+.paginationDot--main-slider--isActive {
+  background: #FA0209;;
+}
+
 .paginationDotsContainer--main-slider {
-  bottom: 15px;
+  bottom: -25px;
+}
+
+.caretIcon--main-slider {
+  display: none;
+}
+
+.sliderLeftArrow--main-slider::before {
+  content: "";
+  background-image: url("assets/icons/arrow_back.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: 128px;
+}
+
+.sliderRightArrow--main-slider::before {
+  content: "";
+  background-image: url("assets/icons/arrow_next.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 128px;
 }
 
 /* SLIDER PRODUTOS */

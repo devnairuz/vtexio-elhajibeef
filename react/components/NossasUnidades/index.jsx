@@ -70,9 +70,9 @@ const NossasUnidades = ({ stores }) => {
 
   return (
     <section className={styles.nossasUnidades}>
-      <div className={styles.header}>
-        <span className={styles.eyebrow}>El Haji Beef</span>
-        <h2 className={styles.title}>Nossas Unidades</h2>
+      <div className={styles.headerunidades}>
+        <span className={styles.eyebrow}> NOSSAS UNIDADES</span>
+        <h2 className={styles.title}>Localize a unidade El Haji Beef mais próxima para descobrir a excelência de nossos cortes exclusivos. Nossas boutiques unem a tradição da Fazenda São João à alta tecnologia: garantindo um atendimento especializado e o rigor do padrão 100% Halal em cada escolha.</h2>
       </div>
 
       <div className={styles.sliderContainer}>

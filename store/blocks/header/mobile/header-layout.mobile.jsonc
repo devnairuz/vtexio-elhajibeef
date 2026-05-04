@@ -1,11 +1,19 @@
 {
   "header-layout.mobile": {
     "title": "Header mobile",
-    "children": ["header-runtime#mobile"]
+    "children": ["aux-floating-container#header-mobile"]
   },
 
-  "header-runtime#mobile": {
-    "title": "Header mobile > Comportamento por pagina",
+  "aux-floating-container#header-mobile": {
+    "title": "Header mobile > Container flutuante",
+    "children": ["sticky-layout#header-mobile"]
+  },
+
+  "sticky-layout#header-mobile": {
+    "title": "Header mobile > Sticky",
+    "props": {
+      "blockClass": "sticky-header"
+    },
     "children": ["flex-layout.row#header-mobile", "flex-layout.row#search-mobile"]
   }
 }

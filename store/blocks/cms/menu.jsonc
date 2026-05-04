@@ -40,12 +40,30 @@
       "orientation": "vertical"
     },
     "children": [
+      "menu-item#quem-somos",
       "menu-item#fale-conosco-institucional",
       "menu-item#trocas-devolucoes",
       "menu-item#politicas-entrega",
       "menu-item#politicas-privacidade",
       "menu-item#ajuda"
     ]
+  },
+
+  "menu-item#quem-somos": {
+    "props": {
+      "id": "menu-item-quem-somos",
+      "blockClass": "menu-item-quem-somos",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/quem-somos",
+        "noFollow": false,
+        "tagTitle": "Quem Somos",
+        "text": "Quem Somos"
+      }
+    }
   },
 
   "menu-item#fale-conosco-institucional": {

@@ -589,3 +589,45 @@
     padding-inline: 1rem;
   }
 }
+
+/* Páginas Institucionais */
+
+.heading--cms {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1px
+  }
+
+.headingLevel2--texto-institucional,
+.headingLevel3--texto-institucional,
+.listItem--texto-institucional {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* INSTITUCIONAIS */
+.paragraph--label-destaque {
+  font-size: 12px;
+  color: #F5BE4B;
+  letter-spacing: 50%;
+}
+.heading--hero-titulo {
+  font-size: 32px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.paragraph--hero-subtitulo {
+  font-size: 16px;
+}
+
+/* LOGIN */
+
+.paragraph--login-footer {
+  Color: #979797;
+  font-size: 12px
+}

@@ -6,13 +6,37 @@
       "blockClass": ["menu-container", "custom-container"]
     }
   },
+
   "flex-layout.col#menu-desktop": {
     "title": "Menu desktop > Categorias",
-    "children": ["category-menu#header-category-menu"]
+  "props": {
+    "blockClass": ["menu-desktop-content"]
+  },
+  "children": [
+    // "flex-layout.col#header-mega-menu-card",
+    "category-menu#header-category-menu"
+  ]
   },
 
+  "flex-layout.col#header-mega-menu-card": {
+  "children": ["image#header-mega-menu-banner"]
+  },
+
+  "image#header-mega-menu-banner": {
+  "title": "Banner editável do menu",
+  "props": {
+    "blockClass": ["header-mega-menu-banner"],
+    "src": "assets/mega-menu/banner-default.png",
+    "alt": "Banner do menu",
+    "link": {
+      "url": "/",
+      "newTab": false
+    }
+  }
+},
+
   "category-menu#header-category-menu": {
-    "title": "Menu desktop > Menu de categorias",
+    "title": "Menu de categorias",
     "props": {
       "showAllDepartments": true,
       "showSubcategories": true,

@@ -1,0 +1,33 @@
+{
+  "store.login": {
+    "blocks": ["flex-layout.row#login-page"],
+    "props": {
+      "blockClass": "login"
+    },
+    "parent": {
+      "header": "header#login",
+      "footer": "footer#login"
+    }
+  },
+
+  "flex-layout.row#login-page": {
+    "children": ["login-content#default"],
+    "props": {
+      "blockClass": ["login-page"],
+      "fullWidth": true
+    }
+  },
+
+  "login-content#default": {
+    "props": {
+      "emailAndPasswordTitle": "Faça o seu login",
+      "emailPlaceholder": "Insira seu CPF ou E-mail",
+      "passwordPlaceholder": "Senha",
+      "providerPasswordButtonLabel": "Entrar com email e senha",
+      "isInitialScreenOptionOnly": true,
+      "defaultOption": 1,
+      "showPasswordVerificationIntoTooltip": true,
+      "blockClass": ["login-content"]
+    }
+  }
+}

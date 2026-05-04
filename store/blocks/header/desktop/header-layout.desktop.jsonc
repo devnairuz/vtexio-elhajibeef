@@ -2,12 +2,23 @@
   "header-layout.desktop": {
     "title": "Header desktop",
     "children": [
-      "header-runtime#desktop"
+      "aux-floating-container#header-desktop"
     ]
   },
 
-  "header-runtime#desktop": {
-    "title": "Header desktop > Comportamento por pagina",
-    "children": ["flex-layout.row#header-desktop", "flex-layout.row#menu-desktop"]
+  "aux-floating-container#header-desktop": {
+    "title": "Header desktop > Container flutuante",
+    "children": ["sticky-layout#header-desktop"]
+  },
+
+  "sticky-layout#header-desktop": {
+    "title": "Header desktop > Sticky",
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#header-desktop",
+      "flex-layout.row#menu-desktop"
+    ]
   }
 }

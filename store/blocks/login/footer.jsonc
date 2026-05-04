@@ -1,0 +1,105 @@
+{
+  "footer#login": {
+    "blocks": ["footer-layout.desktop#login", "footer-layout.mobile#login"]
+  },
+
+  "footer-layout.desktop#login": {
+    "children": ["flex-layout.row#login-footer"],
+    "props": {
+      "blockClass": ["login-footer"]
+    }
+  },
+  "footer-layout.mobile#login": {
+    "children": ["flex-layout.row#login-footer"],
+    "props": {
+      "blockClass": ["login-footer"]
+    }
+  },
+
+  "flex-layout.row#login-footer": {
+    "children": [
+      "flex-layout.col#login-copy",
+      "flex-layout.col#copy-design"
+    ],
+    "props": {
+      "blockClass": ["login-footer"]
+    }
+  },
+
+  "flex-layout.col#login-copy": {
+    "children": ["rich-text#login-copy"],
+    "props": {
+      "blockClass": ["login-footer"]
+    }
+  },
+  "rich-text#login-copy": {
+    "props": {
+      "text": "El Haji Beef (COMERCIO E INDUSTRIA DE CARNES LTDA) 47.387.341/0001-25. Todos os direitos reservados.",
+      "blockClass": ["login-footer"]
+    }
+  },
+
+  "flex-layout.col#copy-design": {
+    "title": "Créditos",
+    "props": {
+      "blockClass": ["copy-design-content"]
+    },
+    "children": ["flex-layout.row#copy-design"]
+  },
+  "flex-layout.row#copy-design": {
+    "props": {
+      "blockClass": "copy-design-container"
+    },
+    "children": ["flex-layout.col#copy-platform-content", "flex-layout.col#copy-design-content"]
+  },
+  
+  "flex-layout.col#copy-design-content": {
+    "props": {
+      "blockClass": "copy-design-content"
+    },
+    "children": ["rich-text#copy-design", "image#copy-design"]
+  },
+  "rich-text#copy-design": {
+    "props": {
+      "text": "Desenvolvimento",
+      "blockClass": ["copy-design", "copy-text"]
+    }
+  },
+  "image#copy-design": {
+    "props": {
+      "blockClass": "copy-design",
+      "src": "assets/logos/nairuz.png",
+      "alt": "nairuz",
+      "maxHeight": 13,
+      "link": {
+        "newTab": true,
+        "url": "https://nairuz.com.br"
+      }
+    }
+  },
+
+  "flex-layout.col#copy-platform-content": {
+    "props": {
+      "blockClass": "copy-platform-content"
+    },
+    "children": ["rich-text#copy-platform", "image#copy-platform"]
+  },
+  "rich-text#copy-platform": {
+    "props": {
+      "text": "Plataforma",
+      "blockClass": ["copy-design", "copy-text"]
+    }
+  },
+  "image#copy-platform": {
+    "props": {
+      "blockClass": "copy-design",
+      "src": "assets/logos/vtex.svg",
+      "alt": "vtex",
+      "maxHeight": 20,
+      "link": {
+        "newTab": true,
+        "url": "https://vtex.com/br-pt/"
+      }
+    }
+  }
+}

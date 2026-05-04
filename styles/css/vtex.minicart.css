@@ -31,12 +31,43 @@
 }
 .closeIconContainer {
   position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 24px;
+  color: #FFFFFF;
 }
 .minicartTitle {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   margin: 0;
-  padding: 12px 15px;
+  padding: 16px 20px;
+  font-size: 0;
+  line-height: 1;
   border-bottom: 1px solid;
+  background-color: #AA1E1E;
+}
+
+.minicartTitle::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  content: "";
+  background-image: url("assets/icons/carrinho.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex: 0 0 16px;
+}
+
+.minicartTitle::after {
+  content: "Carrinho";
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .minicartCheckoutButton :global(.vtex-button) {

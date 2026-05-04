@@ -37,8 +37,12 @@
 
 /* BOX LOGIN */
 .flexRowContent--row-login-container {
+  border-radius: 4px;
   width: 122px;
   gap: 4px;
+}
+.flexRowContent--row-login-container:hover {
+  background-color: #4D4D4D;
 }
 .flexCol--login-icon {
   min-width: 27.13px;
@@ -58,11 +62,42 @@
   gap: 4px;
 }
 
+/* LOGIN */
+.flexRow--login-page {
+  min-height: 74vh;
+  background-image: url("assets/login/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.flexRowContent--login-page {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 15px;
+}
+
+.flexRow--login-header {
+  background-color: #050505;
+}
+
+.flexRow--login-footer {
+  background-color: #FFFFFF;
+  padding: 0 128px;
+}
+
+.flexColChild--login-header {
+  padding: 9px 0;
+  margin: 0 auto
+}
+
 /* MENU */
 .flexRow--menu-container {
   background: #050505E5;
   box-shadow: none;
   padding: 10px 0;
+  border-top: 1px solid #525252;
 }
 .flexRowContent--menu-container,
 .flexCol--menu-desktop,
@@ -77,7 +112,7 @@
 
 /* LINHA CONDIÇÕES ABAIXO DO BANNER PRINCIPAL */
 .flexRow--conditions-container {
-  padding: 45px 0 60px;
+  padding: 58px 0 54px;
 }
 .flexRowContent--conditions-container {
   flex-direction: column;
@@ -879,4 +914,11 @@
     margin-left: 0;
     margin-top: 32px;
   }
+}
+
+/* INTITUCIONAIS */
+.flexCol--hero-texto {
+  background-image: url("assets/institucional/quem-somos-hero.png");
+  height: 452px;
+  padding: 0 315px;
 }

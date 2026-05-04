@@ -1,0 +1,33 @@
+{
+  "header#login": {
+    "blocks": ["header-layout.desktop#login", "header-layout.mobile#login"]
+  },
+
+  "header-layout.desktop#login": {
+    "children": ["flex-layout.row#header-login"],
+    "props": {
+      "blockClass": ["login-header"]
+    }
+  },
+
+  "header-layout.mobile#login": {
+    "children": ["flex-layout.row#header-login"],
+    "props": {
+      "blockClass": ["login-header"]
+    }
+  },
+
+  "flex-layout.row#header-login": {
+    "children": ["flex-layout.col#header-login"],
+    "props": {
+      "blockClass": ["login-header"]
+    }
+  },
+
+  "flex-layout.col#header-login": {
+    "children": ["logo"],
+    "props": {
+      "blockClass": ["login-header"]
+    }
+  }
+}

@@ -4,8 +4,8 @@
     "composition": "children"
   },
 
-  "header-runtime": {
-    "component": "HeaderRuntime",
+  "aux-floating-container": {
+    "component": "AuxFloatingContainer",
     "composition": "children"
   },
 
@@ -33,5 +33,9 @@
 
   "nossas-unidades": {
     "component": "NossasUnidades"
+  },
+
+  "banner-slider": {
+    "component": "BannerSlider"
   }
 }

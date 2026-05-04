@@ -1,0 +1,7 @@
+@media (min-width: 1100px) {
+  .homeRoute {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+  }
+}

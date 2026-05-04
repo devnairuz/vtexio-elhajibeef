@@ -24,7 +24,8 @@
 }
 
 .sendButton :global(.vtex-button) {
-  background: #202020;
+  background: #F5BE4B;
+  color:#050505;
   border: 0;
 }
 .optionsList :global(.vtex-button) {
@@ -43,6 +44,172 @@
   align-items: center;
   gap: 15px;
   padding: 30px 0 60px;
+  background-color: transparent;
+}
+
+.content--login-content,
+.content--emailAndPassword {
+  background: transparent;
+}
+
+.content--login-content {
+  width: 100%;
+  max-width: 352px;
+}
+
+.contentForm {
+  min-width: 325px;
+}
+
+.formLinkContainer {
+  margin: 0;
+}
+
+/* .content--emailAndPassword,
+.emailAndPasswordForm {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+} */
+
+.formTitle {
+  margin: 0 0 24px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* .inputContainer {
+  margin-bottom: 18px;
+} */
+
+.inputContainer :global(.vtex-input-prefix__group) {
+  height: 42px;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.inputContainer :global(.vtex-styleguide-9-x-input) {
+  height: 42px;
+  padding: 0 10px;
+  color: #202020;
+  font-size: 14px;
+  background: #fff;
+}
+
+.inputContainer :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: #c7c7c7;
+}
+
+.eyeIcon {
+  color: #777;
+}
+
+:global(.vtex-login-2-x-inputContainerPassword) :global(.vtex-input__suffix) {
+  background-color: transparent;
+}
+
+.backButton {
+  display: none;
+}
+
+.formFooter {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.sendButton {
+  order: 1;
+  margin: 0;
+}
+
+.sendButton :global(.vtex-button) {
+  width: 100%;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  border: 0;
+  border-radius: 3px;
+  background: #f5be4b;
+  color: #050505;
+}
+
+:global(.vtex-login-2-x-sendButton) :global(.vtex-button__label),
+:global(.vtex-login-2-x-sendButton) :global(.t-small) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px !important;
+  font-size: 16px;
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase !important;
+}
+
+.dontHaveAccount {
+  position: relative;
+  order: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+.dontHaveAccount::after {
+  position: relative;
+  content: "Cadastre-se";
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  
+}
+
+.formFooter::after {
+  position: relative;
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 40px 0;
+  content: "ou";
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #fff 0,
+    #fff calc(50% - 18px),
+    transparent calc(50% - 18px),
+    transparent calc(50% + 18px),
+    #fff calc(50% + 18px),
+    #fff 100%
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+
+:global(.vtex-login-2-x-contentInitialScreen),
+:global(.vtex-login-2-x-content--codeConfirmation),
+.content--beginCreatePass {
+  background-color: transparent;
+}
+
+:global(.vtex-login-2-x-content--emailVerification) :global(.vtex-login-2-x-formFooter::after) {
+  display: none;
 }
 
 @media (max-width: 1024px) {
