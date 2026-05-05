@@ -167,14 +167,14 @@
   cursor: not-allowed;
 }
 
-.dots {
-  display: flex;
+.nossasUnidades .dots {
+  display: none;
   justify-content: center;
   gap: 8px;
   margin-top: 24px;
 }
 
-.dot {
+.nossasUnidades .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -185,7 +185,7 @@
   transition: background 0.2s;
 }
 
-.dotActive {
+.nossasUnidades .dotActive {
   background: #FA0209;
 }
 
@@ -205,6 +205,10 @@
 }
 
 @media (max-width: 1023px) {
+  .nossasUnidades .dots {
+    display: flex;
+  }
+
   .storeImage {
     height: 300px;
   }

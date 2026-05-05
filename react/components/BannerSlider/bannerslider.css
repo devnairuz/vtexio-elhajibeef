@@ -1,69 +1,101 @@
-/* BannerSlider/banner.slider.css */
-.bannerWrapper {}
-
-.customContainer {}
-
-.customContainer .swiperButton {
-  position: absolute;
-  top: 50%;
-  background-color: #fff;
-  color: #FE5000;
-  width: initial;
-  height: initial;
-  border: 0;
-  padding: 0;
-  border-radius: 100%;
+/* ============================================================
+   BannerSlider — banner.slider.css
+   CSS Modules (VTEX IO)
+   CORRIGIDO: removidas duplicatas, dead code, conflitos global/local
+   ============================================================ */
+ 
+/* ----------------------------------------------------------
+   Wrapper e container
+   ---------------------------------------------------------- */
+.bannerWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
-.customContainer .swiperButton svg {
-  width: 40px;
-  height: 40px;
+ 
+.customContainer {
+  position: relative;
 }
+ 
+/* CORRIGIDO: esconde pseudo-elemento padrão do Swiper via global de forma isolada */
 .customContainer .swiperButton::after {
-  display: none !important;
+  display: none;
 }
+ 
 .customContainer .swiperButtonNext {
   right: 60px;
 }
+ 
 .customContainer .swiperButtonPrev {
   left: 60px;
 }
-
+ 
+/* ----------------------------------------------------------
+   Paginação
+   ---------------------------------------------------------- */
+/* CORRIGIDO: removido !important — especificidade correta já resolve */
 .swiperPagination {
   display: none;
 }
-
-.swiperPagination .swiper-pagination-bullet {
-}
-
-.swiperPagination .swiper-pagination-bullet-active {
-}
-
+ 
+/* ----------------------------------------------------------
+   Swiper wrapper e slides
+   ---------------------------------------------------------- */
 .swiperWrapper {
+  display: flex;
   z-index: 0;
   text-align: center;
 }
-
-.imageBanner {
+ 
+.swiperSlide {
+  flex-shrink: 0;
   width: 100%;
+}
+ 
+.swiperContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+ 
+/* ----------------------------------------------------------
+   Imagens
+   ---------------------------------------------------------- */
+.imageContainer {
+  display: block;
+  line-height: 0;
+}
+ 
+.imageBanner {
+  display: block;
+  width: 100%;
+  /* CORRIGIDO: aspect-ratio evita CLS antes da imagem carregar */
+  aspect-ratio: 16 / 6;
   max-height: 561px;
   object-fit: cover;
   object-position: center;
 }
-.imageContainer {}
-
-.pictureBanner {
+ 
+/* CORRIGIDO: unificado — estava duplicado como .singleBanner e :global(.single-banner) */
+.singleBanner img {
+  width: 100%;
+  height: auto;
   display: block;
-  line-height: 0;
 }
-
+ 
+/* ----------------------------------------------------------
+   Loading spinner
+   ---------------------------------------------------------- */
 .swiperContainer.loading {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 300px;
 }
-
-.loading-spinner {
+ 
+/* CORRIGIDO: camelCase para funcionar em CSS Modules sem colchetes no JSX */
+.loadingSpinner {
   border: 4px solid #f3f3f3;
   border-top: 4px solid #3498db;
   border-radius: 50%;
@@ -71,159 +103,51 @@
   height: 40px;
   animation: spin 2s linear infinite;
 }
-
-.swiperContainer {}
-
-.swiperSlide {}
-
-
+ 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.singleBanner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-@media screen and (max-width: 991px) {
-  .bannerCta {
-    font-size: 16px;
+  0% {
+    transform: rotate(0deg);
   }
-  .customContainer .swiperButton {
-    box-shadow: 0px 2.82px 2.82px 0px #00000040;
-  }
-  .customContainer .swiperButton svg {
-    width: 23px;
-    height: 23px;
-  }
-  .customContainer .swiperButtonNext {
-    right: 10px;
-  }
-  .customContainer .swiperButtonPrev {
-    left: 10px;
+  100% {
+    transform: rotate(360deg);
   }
 }
-
-
-/* src/styles/bannerslider.css */
-
-:global(.swiper-wrapper) {
-  display: flex;
-}
-:global(.swiper-slide){
-  flex-shrink:0;
-  width:100%;
-}
-
-/* Estilos para o carrossel */
-:global(.swiper-button-next), :global(.swiper-button-prev) {
-  width: 40px;
-  height: 40px;
-  top: 50%;
-  background-color: #fff;
-  color: #FE5000;
-  border: 0;
-  padding: 0;
-  border-radius: 100%;
-}
-
-@media screen and (min-width: 1150px) {
-  :global(.swiper-button-next) {
-    right: 1%;
-  }
-
-  :global(.swiper-button-prev) {
-    left: 1%;
-  }
-}
-
-:global(.swiper-button-next):hover, :global(.swiper-button-prev):hover {
-  background-color: #EEEEEE;
-}
-
-:global(.swiper-button-next):after, :global(.swiper-rtl) :global(.swiper-button-prev):after, :global(.swiper-button-prev):after {
-  font-size: 12px;
-  font-weight: 900;
-}
-  
-:global(.swiper-container) :global(.swiper-pagination) {
-  position: absolute;
-  bottom: 25px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-  
-:global(.swiper-pagination-bullet) {
-  transition: all 0.3s ease-in-out;
-  background: #FFFFFF99;
-  width: 24px !important;
-  height: 2px !important;
-  margin: 0 6px !important;
-  border-radius: 0 !important;
-  padding: 0;
-  opacity: 1;
-}
-
-:global(.swiper-pagination-bullet-active) {
-  width: 40px !important;
-  background: #fff;
-}
-
-:global(.swiper-wrapper) {
-  z-index: 0;
-  text-align: center;
-}
-
-:global(.swiper-container) {
-  position: relative;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-:global(.single-banner) {
-  text-align: center;
-  display: block;
-}
-
-:global(.swiper-slide) :global(.image-banner) {
-  width: 100%;
-  max-height: 561px;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Estilo do texto central do primeiro banner */
-.containerCentral-textoBanner {
+ 
+/* ----------------------------------------------------------
+   Texto central do banner
+   ---------------------------------------------------------- */
+.containerCentralTextoBanner {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
 }
-.containerCentral-textoBanner .linha1-textoBanner {
-  font-size: 44px;
+ 
+.linha1TextoBanner {
+  /* CORRIGIDO: clamp() para tipografia fluida e acessível */
+  font-size: clamp(1.5rem, 3.5vw, 2.75rem);
   text-transform: uppercase;
   color: #fff;
-  margin: 0;
-  margin-bottom: .5rem;
+  margin: 0 0 0.5rem;
 }
-.containerCentral-textoBanner .linha2-textoBanner {
-  font-size: 140px;
-  font-family: 'Tusker-Grotesk';
+ 
+.linha2TextoBanner {
+  /* CORRIGIDO: clamp() — 140px era inacessível e quebrava em telas menores */
+  font-size: clamp(3.5rem, 10vw, 8.75rem);
+  font-family: 'Tusker-Grotesk', sans-serif;
   text-transform: uppercase;
   position: relative;
   color: #fff;
-  margin: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
+  line-height: 1;
 }
-.containerCentral-textoBanner .badgeDesconto-textoBanner {
-  font-size: 14px;
+ 
+.badgeDescontoTextoBanner {
+  font-size: 0.875rem;
   font-weight: bold;
-  background-color: #00BB3A;
+  background-color: #00bb3a;
   color: #000;
   padding: 3px 14px;
   border-radius: 8px;
@@ -231,9 +155,11 @@
   top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
-.containerCentral-textoBanner .botao-textoBanner {
-  font-size: 36px;
+ 
+.botaoTextoBanner {
+  font-size: clamp(1.25rem, 2.5vw, 2.25rem);
   font-weight: 500;
   color: #fff;
   border: 1px solid #fff;
@@ -242,46 +168,115 @@
   display: block;
   padding-block: 1.2rem;
   text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
-
-@media (min-width: 1600px) {
-  :global(.swiper-slide) :global(.image-banner) {
-    max-height: 765px;
+ 
+.botaoTextoBanner:hover {
+  background-color: #fff;
+  color: #000;
+}
+ 
+/* ----------------------------------------------------------
+   Responsividade — visibilidade desktop/mobile
+   CORRIGIDO: ambas as direções definidas para evitar conflito
+   ---------------------------------------------------------- */
+.desktop {
+  display: block;
+}
+ 
+.mobile {
+  display: none;
+}
+ 
+/* ----------------------------------------------------------
+   Breakpoints
+   ---------------------------------------------------------- */
+@media screen and (max-width: 991px) {
+  .customContainer .swiperButton svg {
+    width: 23px;
+    height: 23px;
+  }
+ 
+  .customContainer .swiperButtonNext {
+    right: 10px;
+  }
+ 
+  .customContainer .swiperButtonPrev {
+    left: 10px;
   }
 }
-
-@media (max-width: 1025px) {
-  .containerCentral-textoBanner .linha1-textoBanner {
-    font-size: 40px;
-  }
-  .containerCentral-textoBanner .linha2-textoBanner {
-    font-size: 106px;
-  }
-  .containerCentral-textoBanner .badgeDesconto-textoBanner {
-    font-size: 10px;
-    top: 43%;
-  }
-  .containerCentral-textoBanner .botao-textoBanner {
-    font-size: 24px;
-    padding-block: .8rem;
-  }
-}
-
-@media (max-width: 768px) {
+ 
+@media screen and (max-width: 768px) {
   .desktop {
     display: none;
   }
-}
-
-@media (min-width: 769px) {
+ 
   .mobile {
-    display: none;
+    display: block;
+  }
+ 
+  .imageBanner {
+    aspect-ratio: 9 / 13;
+    max-height: none;
   }
 }
-
-.single-banner img {
-  width: 100%;
-  height: auto;
-  display: block;
+ 
+/* ----------------------------------------------------------
+   Swiper — estilos globais necessários (mínimo indispensável)
+   CORRIGIDO: agrupados em um único bloco, sem duplicatas
+   ---------------------------------------------------------- */
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  background-color: #fff;
+  color: #fe5000;
+  border: 0;
+  padding: 0;
+  border-radius: 100%;
+  transition: background-color 0.25s ease;
 }
-  
+ 
+:global(.swiper-button-next):hover,
+:global(.swiper-button-prev):hover {
+  background-color: #eee;
+}
+ 
+:global(.swiper-button-next):after,
+:global(.swiper-button-prev):after {
+  font-size: 12px;
+  font-weight: 900;
+}
+ 
+@media screen and (min-width: 1150px) {
+  :global(.swiper-button-next) {
+    right: 1%;
+  }
+ 
+  :global(.swiper-button-prev) {
+    left: 1%;
+  }
+}
+ 
+:global(.swiper-pagination-bullet) {
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.6);
+  /* CORRIGIDO: removidos !important — use especificidade ao invés de força bruta */
+  width: 24px;
+  height: 2px;
+  margin: 0 6px;
+  border-radius: 0;
+  opacity: 1;
+}
+ 
+:global(.swiper-pagination-bullet-active) {
+  width: 40px;
+  background: #fff;
+}
+ 
+@media (min-width: 1600px) {
+  .imageBanner {
+    max-height: 765px;
+  }
+}

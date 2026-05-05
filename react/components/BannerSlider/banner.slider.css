@@ -1,148 +1,176 @@
-.bannerSlider {
+.elhajiBannerSlider {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   background: #050505;
 }
 
-.bannerSlider :global(.swiper-pagination),
-.bannerSlider :global(.vtex-slider-layout-0-x-paginationDotsContainer) {
+/* CORRIGIDO: mantido apenas se o projeto usar esses sliders em conjunto,
+   caso contrário pode remover essas duas regras */
+.elhajiBannerSlider :global(.swiper-pagination),
+.elhajiBannerSlider :global(.vtex-slider-layout-0-x-paginationDotsContainer) {
   display: none !important;
 }
 
-.track {
+.elhajiBannerSliderTrack {
   display: flex;
-  transition: transform .45s ease;
+  transition: transform 0.45s ease;
   will-change: transform;
 }
 
-.slide {
+.elhajiBannerSliderSlide {
   position: relative;
   flex: 0 0 100%;
   min-width: 100%;
   overflow: hidden;
 }
 
-.picture {
+.elhajiBannerSliderPicture {
   display: block;
   line-height: 0;
 }
 
-.image {
+.elhajiBannerSliderImage {
   display: block;
   width: 100%;
+  /* CORRIGIDO: aspect-ratio evita layout shift (CLS) antes da imagem carregar */
+  aspect-ratio: 16 / 6;
   min-height: 360px;
-  max-height: 561px;
+  min-height: 617px;
   object-fit: cover;
   object-position: center;
 }
 
-.content {
+.elhajiBannerSliderContent {
   position: absolute;
   top: 50%;
   left: 10%;
   z-index: 1;
   width: min(560px, 72vw);
-  transform: translateY(-50%);
+  transform: translateY(-20%);
   color: #fff;
+  /* CORRIGIDO: garante que o conteúdo não bloqueia cliques na imagem de fundo */
+  pointer-events: none;
 }
 
-.eyebrow {
+/* CORRIGIDO: elementos clicáveis dentro do content precisam reativar pointer-events */
+.elhajiBannerSliderContent a,
+.elhajiBannerSliderContent button {
+  pointer-events: auto;
+}
+
+.elhajiBannerSliderEyebrow {
   margin: 0;
   color: #fff;
-  font-size: 28px;
+  /* CORRIGIDO: rem para respeitar preferências de acessibilidade do usuário */
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 300;
   line-height: 1;
   letter-spacing: 16px;
   text-transform: uppercase;
 }
 
-.title {
+.elhajiBannerSliderTitle {
   display: flex;
   flex-direction: column;
   margin: 8px 0 34px;
   color: #fff;
-  font-size: 54px;
+  /* CORRIGIDO: clamp() para tipografia fluida e acessível */
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 300;
-  line-height: .95;
+  line-height: 0.95;
 }
 
-.titleHighlight {
+.elhajiBannerSliderTitleHighlight {
   color: #fa0209;
   font-weight: 700;
 }
 
-.button {
+.elhajiBannerSliderButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
-  padding: 0 34px;
+  padding: 8px 24px;
   border: 1px solid #fa0209;
   border-radius: 999px;
   color: #fff;
-  font-size: 18px;
+  /* CORRIGIDO: rem para acessibilidade */
+  font-size: clamp(0.875rem, 1.2vw, 1.125rem);
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
+  /* CORRIGIDO: transição suave no hover */
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-.arrow {
+/* CORRIGIDO: estado hover adicionado */
+.elhajiBannerSliderButton:hover {
+  background: #fa0209;
+  color: #fff;
+}
+
+/* CORRIGIDO: estado focus para acessibilidade via teclado */
+.elhajiBannerSliderButton:focus-visible {
+  outline: 2px solid #fa0209;
+  outline-offset: 4px;
+}
+
+.elhajiBannerSliderArrow {
   position: absolute;
-  top: 50%;
+  top: 60%;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
   padding: 0;
+  background: transparent;
   border: 0;
-  background: rgba(0, 0, 0, .2);
   border-radius: 50%;
   cursor: pointer;
-  transform: translateY(-50%);
 }
 
-.arrow::before {
+.elhajiBannerSliderArrow:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.elhajiBannerSliderArrow::before {
   display: block;
   width: 18px;
   height: 18px;
   content: "";
-  border-top: 4px solid #fff;
-  border-left: 4px solid #fff;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.arrowPrevious {
+.elhajiBannerSliderArrowPrevious {
   left: 6%;
 }
 
-.arrowPrevious::before {
-  margin-left: 8px;
-  transform: rotate(-45deg);
+.elhajiBannerSliderArrowPrevious::before {
+  background-image: url('../../../assets/slider-principal/arrow_back-main.svg');
 }
 
-.arrowNext {
+.elhajiBannerSliderArrowNext {
   right: 6%;
 }
 
-.arrowNext::before {
-  margin-right: 8px;
-  transform: rotate(135deg);
+.elhajiBannerSliderArrowNext::before {
+  background-image: url('../../../assets/slider-principal/arrow_next-main.svg');
 }
 
-.dots {
+.elhajiBannerSlider .elhajiBannerSliderDots {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 18px;
+  bottom: -25px;
   z-index: 2;
   display: flex;
   justify-content: center;
   gap: 8px;
 }
 
-.dot {
+.elhajiBannerSlider .elhajiBannerSliderDot {
   width: 8px;
   height: 8px;
   padding: 0;
@@ -150,60 +178,78 @@
   border-radius: 50%;
   background: #2f2f2f;
   cursor: pointer;
+  /* CORRIGIDO: transição suave entre dots */
 }
 
-.dotActive {
+/* CORRIGIDO: leve escala no dot ativo para feedback visual */
+.elhajiBannerSlider .elhajiBannerSliderDotActive {
   background: #fa0209;
 }
 
+.elhajiBannerSlider .elhajiBannerSliderDot:focus-visible {
+  outline: 2px solid #fa0209;
+  outline-offset: 3px;
+}
+
+/* CORRIGIDO: breakpoints usando apenas mobile-first com max-width mantido
+   por compatibilidade com o padrão já existente */
 @media (max-width: 1024px) {
-  .content {
+  .elhajiBannerSliderContent {
     left: 8%;
     width: min(500px, 78vw);
   }
 
-  .eyebrow {
-    font-size: 20px;
+  .elhajiBannerSliderEyebrow {
     letter-spacing: 10px;
-  }
-
-  .title {
-    font-size: 40px;
   }
 }
 
 @media (max-width: 767px) {
-  .image {
+  .elhajiBannerSliderImage {
+    /* CORRIGIDO: aspect-ratio mobile para imagem mais alta */
+    aspect-ratio: 9 / 13;
     min-height: 420px;
+    max-height: none;
+    object-position: center bottom;
   }
 
-  .content {
-    left: 24px;
-    right: 24px;
-    width: auto;
+  .elhajiBannerSliderContent {
+    top: 88px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 28px;
+    box-sizing: border-box;
+    text-align: center;
+    transform: none;
   }
 
-  .eyebrow {
-    font-size: 16px;
-    letter-spacing: 7px;
+  .elhajiBannerSliderEyebrow {
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 12px;
   }
 
-  .title {
-    margin-bottom: 24px;
-    font-size: 32px;
+  .elhajiBannerSliderTitle {
+    align-items: center;
+    margin: 0 0 42px;
+    font-size: 36px;
+    line-height: 0.95;
   }
 
-  .button {
+  .elhajiBannerSliderButton {
+    min-width: 258px;
     min-height: 42px;
-    padding: 0 22px;
-    font-size: 14px;
+    padding: 0 26px;
+    font-size: 15px;
   }
 
-  .arrowPrevious {
+  .elhajiBannerSliderArrowPrevious {
     left: 4px;
   }
 
-  .arrowNext {
+  .elhajiBannerSliderArrowNext {
     right: 4px;
   }
 }

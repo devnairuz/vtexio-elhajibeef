@@ -1,21 +1,27 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState, useCallback } from 'react'
 import styles from './banner.slider.css'
 
 const DEFAULT_SLIDES = [
   {
-    imageDesktop: 'assets/slider-principal/desk/basic-looks.png',
-    imageMobile: 'assets/slider-principal/desk/basic-looks.png',
+    imageDesktop: 'assets/slider-principal/desk/bannertopo.png',
+    imageMobile: 'assets/slider-principal/mob/bannertopomob.png',
     eyebrow: 'ONDE A',
-    titleHighlight: 'excelencia',
-    title: 'comeca no corte.',
-    buttonText: 'Conheca nossa origem',
+    titleHighlight: 'excelência',
+    title: 'começa no corte.',
+    buttonText: 'Conheça nossa origem',
     link: '/quem-somos',
+    alt: 'Banner principal - Onde a excelência começa no corte',
   },
 ]
 
-const getSlideImage = slide => slide.imageMobile || slide.imageDesktop
+// CORRIGIDO: desktop como fallback, não mobile
+const getSlideImage = slide => slide.imageDesktop || slide.imageMobile
 
-const BannerSlider = ({ slides = DEFAULT_SLIDES, autoplay = true, autoplayDelay = 5000 }) => {
+const BannerSlider = ({
+  slides = DEFAULT_SLIDES,
+  autoplay = true,
+  autoplayDelay = 5000,
+}) => {
   const slideItems = useMemo(() => {
     return slides?.length ? slides : DEFAULT_SLIDES
   }, [slides])
@@ -36,75 +42,104 @@ const BannerSlider = ({ slides = DEFAULT_SLIDES, autoplay = true, autoplayDelay 
     return () => window.clearInterval(timer)
   }, [autoplay, autoplayDelay, slideItems.length])
 
-  const goToPrevious = () => {
+  // CORRIGIDO: useCallback para evitar recriação desnecessária das funções
+  const goToPrevious = useCallback(() => {
     setCurrentIndex(index => (index === 0 ? slideItems.length - 1 : index - 1))
-  }
+  }, [slideItems.length])
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setCurrentIndex(index => (index + 1) % slideItems.length)
-  }
+  }, [slideItems.length])
+
+  const goToIndex = useCallback(index => {
+    setCurrentIndex(index)
+  }, [])
 
   return (
-    <section className={styles.bannerSlider}>
+    // CORRIGIDO: aria-label adicionado para acessibilidade
+    <section
+      aria-label="Banner principal"
+      aria-roledescription="carrossel"
+      className={styles.elhajiBannerSlider}
+      role="region"
+    >
       <div
-        className={styles.track}
+        className={styles.elhajiBannerSliderTrack}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {slideItems.map((slide, index) => (
-          <article className={styles.slide} key={`${slide.imageDesktop}-${index}`}>
-            <picture className={styles.picture}>
-              {slide.imageMobile && (
-                <source media="(max-width: 767px)" srcSet={slide.imageMobile} />
-              )}
-              <img
-                alt={slide.alt || slide.title || 'Banner principal'}
-                className={styles.image}
-                loading={index === 0 ? 'eager' : 'lazy'}
-                src={getSlideImage(slide)}
-              />
-            </picture>
+        {slideItems.map((slide, index) => {
+          // CORRIGIDO: key mais robusta usando índice + título para evitar duplicatas
+          const slideKey = `slide-${index}-${slide.titleHighlight || slide.title || index}`
 
-            <div className={styles.content}>
-              {slide.eyebrow && <p className={styles.eyebrow}>{slide.eyebrow}</p>}
-              {(slide.titleHighlight || slide.title) && (
-                <h2 className={styles.title}>
-                  {slide.titleHighlight && (
-                    <span className={styles.titleHighlight}>{slide.titleHighlight}</span>
-                  )}
-                  {slide.title && <span>{slide.title}</span>}
-                </h2>
-              )}
-              {slide.buttonText && slide.link && (
-                <a className={styles.button} href={slide.link}>
-                  {slide.buttonText}
-                </a>
-              )}
-            </div>
-          </article>
-        ))}
+          return (
+            <article
+              aria-label={`Slide ${index + 1} de ${slideItems.length}`}
+              aria-roledescription="slide"
+              className={styles.elhajiBannerSliderSlide}
+              key={slideKey}
+            >
+              <picture className={styles.elhajiBannerSliderPicture}>
+                {slide.imageMobile && (
+                  <source media="(max-width: 767px)" srcSet={slide.imageMobile} />
+                )}
+                <img
+                  alt={slide.alt || slide.title || 'Banner principal'}
+                  className={styles.elhajiBannerSliderImage}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  src={getSlideImage(slide)}
+                />
+              </picture>
+
+              <div className={styles.elhajiBannerSliderContent}>
+                {slide.eyebrow && (
+                  <p className={styles.elhajiBannerSliderEyebrow}>{slide.eyebrow}</p>
+                )}
+                {(slide.titleHighlight || slide.title) && (
+                  <h2 className={styles.elhajiBannerSliderTitle}>
+                    {slide.titleHighlight && (
+                      <span className={styles.elhajiBannerSliderTitleHighlight}>
+                        {slide.titleHighlight}
+                      </span>
+                    )}
+                    {slide.title && <span>{slide.title}</span>}
+                  </h2>
+                )}
+                {slide.buttonText && slide.link && (
+                  <a className={styles.elhajiBannerSliderButton} href={slide.link}>
+                    {slide.buttonText}
+                  </a>
+                )}
+              </div>
+            </article>
+          )
+        })}
       </div>
 
       {slideItems.length > 1 && (
         <>
           <button
             aria-label="Banner anterior"
-            className={`${styles.arrow} ${styles.arrowPrevious}`}
+            className={`${styles.elhajiBannerSliderArrow} ${styles.elhajiBannerSliderArrowPrevious}`}
             onClick={goToPrevious}
             type="button"
           />
           <button
-            aria-label="Proximo banner"
-            className={`${styles.arrow} ${styles.arrowNext}`}
+            aria-label="Próximo banner"
+            className={`${styles.elhajiBannerSliderArrow} ${styles.elhajiBannerSliderArrowNext}`}
             onClick={goToNext}
             type="button"
           />
-          <div className={styles.dots}>
-            {slideItems.map((_, index) => (
+          <div aria-label="Navegação dos slides" className={styles.elhajiBannerSliderDots} role="tablist">
+            {slideItems.map((slide, index) => (
               <button
                 aria-label={`Ir para banner ${index + 1}`}
-                className={`${styles.dot} ${index === currentIndex ? styles.dotActive : ''}`}
-                key={index}
-                onClick={() => setCurrentIndex(index)}
+                aria-selected={index === currentIndex}
+                className={`${styles.elhajiBannerSliderDot} ${
+                  index === currentIndex ? styles.elhajiBannerSliderDotActive : ''
+                }`}
+                key={`dot-${index}`}
+                onClick={() => goToIndex(index)}
+                role="tab"
                 type="button"
               />
             ))}
@@ -117,7 +152,7 @@ const BannerSlider = ({ slides = DEFAULT_SLIDES, autoplay = true, autoplayDelay 
 
 BannerSlider.schema = {
   title: 'Banner principal',
-  description: 'Carrossel principal com imagem, textos e botao editaveis.',
+  description: 'Carrossel principal com imagem, textos e botão editáveis.',
   type: 'object',
   properties: {
     autoplay: {

@@ -14,8 +14,8 @@
       "autoplayDelay": 5000,
       "slides": [
         {
-          "imageDesktop": "assets/slider-principal/desk/basic-looks.png",
-          "imageMobile": "assets/slider-principal/desk/basic-looks.png",
+          "imageDesktop": "assets/slider-principal/desk/bannertopo.png",
+          "imageMobile": "assets/slider-principal/desk/bannertopo.png",
           "alt": "Banner principal El Haji Beef",
           "eyebrow": "ONDE A",
           "titleHighlight": "excelência",
