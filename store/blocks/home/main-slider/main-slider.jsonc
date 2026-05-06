@@ -15,7 +15,7 @@
       "slides": [
         {
           "imageDesktop": "assets/slider-principal/desk/bannertopo.png",
-          "imageMobile": "assets/slider-principal/desk/bannertopo.png",
+          "imageMobile": "assets/slider-principal/mob/bannertopomob.png",
           "alt": "Banner principal El Haji Beef",
           "eyebrow": "ONDE A",
           "titleHighlight": "excelência",

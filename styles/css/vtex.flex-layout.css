@@ -23,6 +23,15 @@
   width: initial !important;
 }
 
+.flexRow--wrapper-topbar {
+  background: #666666;
+}
+.flexRowContent--wrapper-topbar {
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+}
+
 .flexCol--utils-desktop-container {
   flex-direction: row;
   align-items: center;
@@ -684,6 +693,11 @@
 
   .flexRowContent--header-container {
     justify-content: space-between;
+  }
+
+  .flexRowContent--wrapper-topbar {
+    min-height: 30px;
+    padding: 0 15px;
   }
 
   .flexCol--drawer-mobile-content {

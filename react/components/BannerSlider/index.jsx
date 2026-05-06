@@ -63,11 +63,12 @@ const BannerSlider = ({
       className={styles.elhajiBannerSlider}
       role="region"
     >
-      <div
-        className={styles.elhajiBannerSliderTrack}
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {slideItems.map((slide, index) => {
+      <div className={styles.elhajiBannerSliderViewport}>
+        <div
+          className={styles.elhajiBannerSliderTrack}
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {slideItems.map((slide, index) => {
           // CORRIGIDO: key mais robusta usando índice + título para evitar duplicatas
           const slideKey = `slide-${index}-${slide.titleHighlight || slide.title || index}`
 
@@ -112,7 +113,8 @@ const BannerSlider = ({
               </div>
             </article>
           )
-        })}
+          })}
+        </div>
       </div>
 
       {slideItems.length > 1 && (

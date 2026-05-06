@@ -6,6 +6,15 @@
   color: #7E7E7E;
 }
 
+.sliderLayoutContainer--wrapper-topbar,
+.sliderTrackContainer--wrapper-topbar,
+.slide--wrapper-topbar {
+  width: 100%;
+}
+.sliderTrack--wrapper-topbar {
+  align-items: center;
+}
+
 /* SLIDER PRINCIPAL */
 .paginationDot--main-slider {
   background: #2F2F2F;

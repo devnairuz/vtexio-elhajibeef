@@ -17,6 +17,10 @@
     "props": {
       "blockClass":"image__upper-mosaic",
       "src": "assets/upper-mosaic/promocoes.png",
+      "loading": "lazy",
+      "decoding": "async",
+      "width": 363,
+      "height": 363,
       "alt": "Promoções, conferir!",
       "link": {
         "url": "/promocoes"
@@ -27,6 +31,10 @@
     "props": {
       "blockClass":"image__upper-mosaic",
       "src": "assets/upper-mosaic/novidades.png",
+      "loading": "lazy",
+      "decoding": "async",
+      "width": 363,
+      "height": 363,
       "alt": "Novidades, conferir!",
       "link": {
         "url": "/novidades"
@@ -37,6 +45,10 @@
     "props": {
       "blockClass":"image__upper-mosaic",
       "src": "assets/upper-mosaic/outfits.png",
+      "loading": "lazy",
+      "decoding": "async",
+      "width": 363,
+      "height": 363,
       "alt": "Outfits, conferir!",
       "link": {
         "url": "/outfits"

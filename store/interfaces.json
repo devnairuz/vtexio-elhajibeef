@@ -37,5 +37,9 @@
 
   "banner-slider": {
     "component": "BannerSlider"
+  },
+
+  "custom-slider": {
+    "component": "CustomSlider"
   }
 }

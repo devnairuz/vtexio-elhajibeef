@@ -5,10 +5,20 @@
       "aux-floating-container#header-desktop"
     ]
   },
+  "header-layout.desktop#home": {
+    "title": "Header desktop home",
+    "children": [
+      "aux-floating-container#header-desktop-home"
+    ]
+  },
 
   "aux-floating-container#header-desktop": {
     "title": "Header desktop > Container flutuante",
     "children": ["sticky-layout#header-desktop"]
+  },
+  "aux-floating-container#header-desktop-home": {
+    "title": "Header desktop home > Container flutuante",
+    "children": ["sticky-layout#header-desktop-home"]
   },
 
   "sticky-layout#header-desktop": {
@@ -17,6 +27,17 @@
       "blockClass": "sticky-header"
     },
     "children": [
+      "flex-layout.row#header-desktop",
+      "flex-layout.row#menu-desktop"
+    ]
+  },
+  "sticky-layout#header-desktop-home": {
+    "title": "Header desktop home > Sticky",
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#top-bar",
       "flex-layout.row#header-desktop",
       "flex-layout.row#menu-desktop"
     ]

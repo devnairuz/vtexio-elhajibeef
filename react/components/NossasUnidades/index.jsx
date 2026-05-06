@@ -100,7 +100,11 @@ const NossasUnidades = ({ stores }) => {
                 <img
                   alt={`Loja ${store.name}`}
                   className={styles.storeImage}
+                  decoding="async"
+                  height="370"
+                  loading="lazy"
                   src={store.image}
+                  width="255"
                 />
                 <div className={styles.storeOverlay}>
                   <span className={styles.storeLabel}>Loja</span>

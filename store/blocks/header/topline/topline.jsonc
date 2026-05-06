@@ -1,0 +1,56 @@
+{
+  "flex-layout.row#top-bar": {
+    "title": "Beneficios - Topo",
+    "children": ["slider-layout#topbar-desk"],
+    "props": {
+      "blockClass": ["wrapper-topbar", "custom-container"]
+    }
+  },
+
+  "slider-layout#topbar-desk": {
+    "children": [
+      "flex-layout.col#frete-bar",
+      "flex-layout.col#parcelamento-bar"
+    ],
+    "props": {
+      "blockClass": "wrapper-topbar",
+      "autoplay": {
+        "timeout": 3000,
+        "stopOnHover": false
+      },
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "arrowSize": 12,
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never"
+    }
+  },
+
+  "flex-layout.col#frete-bar": {
+    "children": ["rich-text#text-frete-gratis"]
+  },
+
+  "flex-layout.col#parcelamento-bar": {
+    "children": ["rich-text#text-parcelamento"]
+  },
+
+  "rich-text#text-frete-gratis": {
+    "title": "Texto 1",
+    "props": {
+      "blockClass": "text-topbar",
+      "text": "Tenha 10% OFF na primeira compra no site | CUPOM: ELHAJI10"
+    }
+  },
+
+  "rich-text#text-parcelamento": {
+    "title": "Texto 2",
+    "props": {
+      "blockClass": "text-topbar",
+      "text": "Frete grátis em São Paulo em pedidos acima de R$500,00"
+    }
+  }
+}

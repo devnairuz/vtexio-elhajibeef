@@ -2,7 +2,8 @@
   // ─── PÁGINA PRINCIPAL ───────────────────────────────────────────
   "store.custom#quem-somos": {
     "blocks": [
-      "flex-layout.row#hero"
+      "flex-layout.row#hero",
+      "flex-layout.row#custom-slider-quem-somos"
     ]
   },
 
@@ -50,6 +51,35 @@
       "text": "Referência em pecuária de alta performance, a El Haji Beef controla toda a cadeia produtiva — da Fazenda São João (Porangaba/SP) ao corte final.\n\nEspecializada em carnes premium com certificação Halal, entregamos o conceito farm to table com rigor técnico e bem-estar animal, garantindo procedência e qualidade superior direto da origem para sua mesa.",
       "textAlignment": "CENTER",
       "blockClass": "hero-subtitulo"
+    }
+  },
+
+  "flex-layout.row#custom-slider-quem-somos": {
+    "props": {
+      "blockClass": ["custom-slider-quem-somos-container", "custom-container"]
+    },
+    "children": ["custom-slider#quem-somos"]
+  },
+
+  "custom-slider#quem-somos": {
+    "props": {
+      "loop": true,
+      "autoplay": false,
+      "showDots": true,
+      "slides": [
+        {
+          "title": "Origem e procedência",
+          "text": "Controlamos a cadeia produtiva desde a Fazenda São João até o corte final, preservando qualidade, rastreabilidade e rigor técnico em cada etapa.",
+          "image": "assets/institucional/quem-somos-hero.png",
+          "imageAlt": "Fazenda São João, origem da El Haji Beef"
+        },
+        {
+          "title": "Cortes premium",
+          "text": "Selecionamos carnes com padrão superior para entregar uma experiência de excelência da nossa fazenda direto para sua mesa.",
+          "image": "assets/linhas/linha-carnes.jpg",
+          "imageAlt": "Corte premium El Haji Beef"
+        }
+      ]
     }
   }
 }

@@ -11,6 +11,9 @@
       "flex-layout.row#shelf-best-sellers",
       "flex-layout.row#shelf-highlights",
       "flex-layout.row#nossas-unidades"
-    ]
+    ],
+    "parent": {
+      "header": "header#home"
+    }
   }
 }

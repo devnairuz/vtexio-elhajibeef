@@ -3,6 +3,10 @@
     "title": "Header",
     "blocks": ["header-layout.desktop", "header-layout.mobile"]
   },
+  "header#home": {
+    "title": "Header home",
+    "blocks": ["header-layout.desktop#home", "header-layout.mobile#home"]
+  },
   "header.full": { //Arquivos nas pastas desktop e mobile
     "title": "Header completo",
     "blocks": ["header-layout.desktop", "header-layout.mobile"]

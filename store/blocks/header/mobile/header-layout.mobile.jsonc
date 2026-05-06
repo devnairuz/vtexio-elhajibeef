@@ -3,10 +3,18 @@
     "title": "Header mobile",
     "children": ["aux-floating-container#header-mobile"]
   },
+  "header-layout.mobile#home": {
+    "title": "Header mobile home",
+    "children": ["aux-floating-container#header-mobile-home"]
+  },
 
   "aux-floating-container#header-mobile": {
     "title": "Header mobile > Container flutuante",
     "children": ["sticky-layout#header-mobile"]
+  },
+  "aux-floating-container#header-mobile-home": {
+    "title": "Header mobile home > Container flutuante",
+    "children": ["sticky-layout#header-mobile-home"]
   },
 
   "sticky-layout#header-mobile": {
@@ -15,5 +23,16 @@
       "blockClass": "sticky-header"
     },
     "children": ["flex-layout.row#header-mobile", "flex-layout.row#search-mobile"]
+  },
+  "sticky-layout#header-mobile-home": {
+    "title": "Header mobile home > Sticky",
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#top-bar",
+      "flex-layout.row#header-mobile",
+      "flex-layout.row#search-mobile"
+    ]
   }
 }
