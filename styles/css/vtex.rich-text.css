@@ -345,10 +345,10 @@
 /* PÁGINA DO PRODUTO */
 .paragraph--shipping-simulator-text {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   text-transform: initial;
-  font-weight: 500;
-  color: #505050;
+  font-weight: 400;
+  color: #FFFFFF;
   line-height: 1;
 }
 

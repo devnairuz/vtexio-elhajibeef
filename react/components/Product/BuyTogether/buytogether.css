@@ -1,0 +1,165 @@
+.buyTogetherTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+}
+
+.buyTogetherProducts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.buyTogetherProduct {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 1rem 0;
+  gap: 1rem;
+  text-align: left;
+}
+
+.buyTogetherProductImage {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.buyTogetherProductImage img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #2a2a2a;
+}
+
+.buyTogetherProductContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.buyTogetherProductName {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  min-height: auto;
+  margin: 0 0 8px 0;
+}
+
+.buyTogetherPriceHighlight {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0;
+}
+
+/* Separador + e = compartilham base */
+.buyTogetherPlus,
+.buyTogetherEqual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.5rem 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  min-width: unset;
+  max-width: unset;
+  min-height: unset;
+  max-height: unset;
+}
+
+.buyTogetherPlus::before,
+.buyTogetherEqual::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #333;
+  z-index: 0;
+}
+
+/* o span dentro do + e = */
+.buyTogetherPlus span,
+.buyTogetherEqual span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Total */
+.buyTogetherTotal {
+  background: transparent;
+  box-shadow: none;
+  color: #ffffff;
+  height: auto;
+  padding: 1rem 0 0;
+  width: 100%;
+  flex: none;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.buyTogetherTotalPrice {
+  margin-bottom: 1rem;
+}
+
+.buyTogetherTotalPrice .buyTogetherPriceHighlight {
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.buyTogetherPriceMax {
+  font-size: 13px;
+  color: #888888;
+  margin: 4px 0;
+}
+
+.buyTogetherInstallments {
+  font-size: 12px;
+  color: #888888;
+  margin: 0;
+}
+
+/* Botão */
+.buyTogetherButton :global(.bg-action-primary) {
+  background: transparent !important;
+}
+
+.buyTogetherButton :global(.vtex-button__label) {
+  background: transparent;
+  border: 2px solid #c9a84c;
+  color: #c9a84c;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 0 !important;
+  width: min(100%, 461px);
+  text-transform: none;
+  transition: all 0.2s ease;
+}
+
+.buyTogetherButton :global(.vtex-button__label):hover {
+  background: #c9a84c;
+  color: #1a1a1a;
+}

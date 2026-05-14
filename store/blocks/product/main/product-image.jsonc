@@ -14,13 +14,14 @@
   "product-images#desktop": {
     "title": "Produto > Galeria desktop",
     "props": {
-      "aspectRatio": "3:4",
+      "aspectRatio": "1:1",
       "thumbnailAspectRatio": "1:1",
       "showNavigationArrows": false,
       "showPaginationDots": false,
-      "maxHeight": 504,
-      "thumbnailMaxHeight": 80,
-      "zoomMode": "in-place-hover"
+      "maxHeight": 540,
+      "thumbnailMaxHeight": 90,
+      "zoomMode": "in-place-hover",
+      "blockClass": ["pdp"]
     }
   },
 
@@ -35,7 +36,7 @@
       "thumbnailAspectRatio": "1:1",
       "showNavigationArrows": false,
       "showPaginationDots": false,
-      "maxHeight": 504,
+      "maxHeight": 540,
       "thumbnailMaxHeight": 80,
       "zoomMode": "in-place-hover",
       "thumbnailsOrientation": "horizontal"

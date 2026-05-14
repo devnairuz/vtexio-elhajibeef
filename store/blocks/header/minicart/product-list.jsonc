@@ -72,6 +72,11 @@
       "marginRight": "5"
     }
   },
+  "quantity-selector": {
+    "props": {
+      "mode": "stepper"
+    }
+  },
 
   "flex-layout.col#price-container": {
     "children": ["flex-layout.row#price.mobile"],

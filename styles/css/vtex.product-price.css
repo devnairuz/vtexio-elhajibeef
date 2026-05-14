@@ -3,8 +3,10 @@
   display: none;
 }
 .sellingPrice--selling-price-summary {
-  font-size: 21px;
+  font-size: 24px;
   line-height: 29px;
+  color: #FFFFFF;
+  font-weight: 700;
 }
 .installments--installments-summary {
   font-size: 14px;
@@ -29,9 +31,15 @@
   margin: 15px 0;
 }
 .sellingPriceValue--selling-price-pdp {
+  font-family: 'DM Sans', sans-serif;
   display: block;
-  font-size: 32px;
+  font-size: 16px;
   line-height: 1;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.sellingPriceValue--selling-price-pdp::before {
+  content: "Preço máximo: ";
 }
 .installments--installments-pdp {
   font-size: 15px;

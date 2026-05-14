@@ -1,0 +1,33 @@
+.productWeightFlag {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 6px;
+  width: fit-content;
+  max-width: 116px;
+  min-height: 24px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  padding: 3px 8px;
+  border: 1px solid #bdbdbd;
+  border-radius: 999px;
+  color: #f5be4b;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.productWeightFlagIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #f5be4b;
+  color: #292929;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}

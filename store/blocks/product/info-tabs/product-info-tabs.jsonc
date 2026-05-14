@@ -1,16 +1,24 @@
 {
   "flex-layout.row#product-info-tabs": {
-    "title": "Produto > Informações técnicas",
     "props": {
       "blockClass": ["info-tabs-container", "custom-container"]
     },
-    "children": ["flex-layout.col#product-info-tabs"]
+    "children": [
+      "flex-layout.col#product-info-tabs",
+      "flex-layout.col#buy-together-placeholder"
+    ]
   },
   "flex-layout.col#product-info-tabs": {
-    "title": "Produto > Abas de informações",
     "props": {
+      "width": "57%",
       "blockClass": "info-tabs-content"
     },
-    "children": ["info-tabs"] // Componente na pasta react
+    "children": ["info-tabs"]
+  },
+  "flex-layout.col#buy-together-placeholder": {
+    "props": {
+      "blockClass": "buy-together-placeholder"
+    },
+    "children": ["compre-junto"]
   }
 }

@@ -222,3 +222,125 @@
     transform: translate(0, 0);
   }
 }
+
+/* MINICART */
+:global(.vtex-product-list-0-x-productName) {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 400;
+}
+:global(.vtex-product-list-0-x-productBrandName) {
+  display: none;
+  margin: 0;
+}
+:global(.vtex-product-list-0-x-price--price-minicart) {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+}
+:global(.vtex-flex-layout-0-x-flexColChild--minicart-product-info) {
+  height: auto;
+}
+:global(.vtex-dropdown__button) {
+  color: #FFFFFF;
+}
+:global(.vtex-dropdown__container) {
+  border: none;
+  background-color: #3D3D3D;
+}
+:global(.vtex-product-list-0-x-inputContainer) {
+  width: 24px;
+  padding: 0;
+  border: none;
+}
+:global(.vtex-product-list-0-x-inputContainer) input {
+  font-family: 'DM Sans', sans-serif;
+  color: #FFFFFF;
+  font-size: 17px;
+}
+:global(.vtex-product-list-0-x-quantitySelectorDecrease),
+:global(.vtex-product-list-0-x-quantitySelectorIncrease) {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+:global(.vtex-product-list-0-x-quantitySelectorWrapper) {
+  background-color: #3D3D3D;
+  border-radius: 4px;
+  height: 36px;
+}
+:global(.vtex-product-list-0-x-quantitySelectorDecrease:hover),
+:global(.vtex-product-list-0-x-quantitySelectorIncrease:hover),
+:global(.vtex-product-list-0-x-quantitySelectorDecrease:focus),
+:global(.vtex-product-list-0-x-quantitySelectorIncrease:focus) {
+  background-color: transparent;
+}
+:global(.vtex-product-list-0-x-quantitySelectorDecrease) svg,
+:global(.vtex-product-list-0-x-quantitySelectorIncrease) svg {
+  color: #F5BE4B;
+  width: 14px;
+  height: 14px;
+  padding: 0 5px;
+}
+/* FIM MINICART */
+
+/* PDP */
+
+:global(.vtex-store-components-3-x-productBrand) {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 24px;
+  font-style: bold;
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--actions-pdp-container) :global(.vtex-numeric-stepper-container) {
+  min-height: 48px;
+}
+:global(.vtex-address-form__postalCode-forgottenURL) {
+  display: none;
+}
+:global(.vtex-store-components-3-x-shippingContainer) :global(.vtex-address-form-4-x-input) {
+  color: #FFFFFF;
+}
+
+:global(.vtex-address-form__field-empty) :global(.vtex-input-prefix__group) {
+  position: relative;
+}
+:global(.vtex-address-form__field-empty) :global(.vtex-input-prefix__group)::after {
+  content: 'Insira o seu CEP';
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  color: #474747;
+}
+
+:global(.vtex-store-components-3-x-shippingContainer)
+  :global(.vtex-address-form-4-x-input):-webkit-autofill,
+:global(.vtex-store-components-3-x-shippingContainer)
+  :global(.vtex-address-form-4-x-input):-webkit-autofill:hover,
+:global(.vtex-store-components-3-x-shippingContainer)
+  :global(.vtex-address-form-4-x-input):-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff;
+  box-shadow: 0 0 0px 1000px #1C1C1C inset;
+  border-radius: unset;
+  caret-color: #ffffff;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--product-breadcrumb-content) {
+  margin: 20px 0 32px 0;
+}
+:global(.vtex-breadcrumb-1-x-term) {
+  color: #FFFFFF;
+}
+
+:global(.vtex-product-summary-2-x-imageStackContainer) {
+  border-radius: 8px;
+}
+
+:global(.vtex-product-summary-2-x-imageNormal) {
+  border-radius: 8px;
+}
+/* FIM PDP */

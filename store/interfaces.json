@@ -22,6 +22,26 @@
     "component": "CashPrice"
   },
 
+  "kg-price": {
+    "component": "KgPrice"
+  },
+
+  "compre-junto": {
+    "component": "BuyTogether"
+  },
+
+  "variable-weight-notice": {
+    "component": "VariableWeightNotice"
+  },
+
+  "product-weight-flag": {
+    "component": "ProductWeightFlag"
+  },
+
+  "product-summary-price-custom": {
+    "component": "ProductSummaryPrice"
+  },
+
   "info-cards": {
     "component": "InfoCards"
   },

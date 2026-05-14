@@ -19,7 +19,7 @@
   "rich-text#shipping-simulator-text": {
     "props": {
       "blockClass": "shipping-simulator-text",
-      "text": "Frete e Prazo de Entrega:"
+      "text": "Calcular frete e prazo de entrega:"
     }
   }
 }

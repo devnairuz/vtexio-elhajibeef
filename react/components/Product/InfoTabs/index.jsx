@@ -1,70 +1,189 @@
-import { useState, useEffect } from 'react';
-import { useProduct } from 'vtex.product-context';
+import { useState, useEffect } from 'react'
+import { useProduct } from 'vtex.product-context'
 
 import styles from './infoTabs.css'
 
-const InfoTabs = () => {
-  const productContext = useProduct();
-  const product = productContext?.product
-  const productId = productContext?.product?.cacheId
+const PREPARATION_SPECIFICATION_NAME = 'Sugest\u00e3o de preparo'
 
-  const [productSpecifications, setProductSpecifications] = useState({
-    activeSpecification: null,
-    specificationsTabs: null,
-    specificationContent: null
-  })
+const preparationIconClasses = {
+  assado: 'preparationTagIconAssado',
+  grelhado: 'preparationTagIconGrelhado',
+  cozido: 'preparationTagIconCozido',
+  'air fryer': 'preparationTagIconAirFryer',
+  airfryer: 'preparationTagIconAirFryer',
+}
 
-  const [openTabHeader, setOpenTabHeader] = useState(false)
+const normalizeText = value =>
+  String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+    .toLowerCase()
+
+const getPreparationIconClass = value => {
+  const iconClassName = preparationIconClasses[normalizeText(value)]
+
+  return iconClassName ? styles[iconClassName] : null
+}
+
+const InfoTabs = ({ children, imageDescription }) => {
+  const { product } = useProduct()
+
+  const productDescription = product?.description
+  const productId = product?.cacheId
+  const productSpecificationGroups = product?.specificationGroups ?? []
+
+  const [productSpecifications, setProductSpecifications] = useState([])
+  const [activeIndex, setActiveIndex] = useState(null)
 
   useEffect(() => {
-    const specifications = product?.properties
+    if (!productSpecificationGroups.length) {
+      setProductSpecifications([])
+      return
+    }
 
-    setProductSpecifications({
-      activeSpecification: 0,
-      specificationsTabs: specifications,
-      specificationContent: specifications[0]?.values[0]
-    })
-    setOpenTabHeader(false);
-  }, [productId])
+    const specificationsIndex = productSpecificationGroups.findIndex(
+      ({ name }) => name === 'allSpecifications'
+    )
 
-  const handleBtnControl = ( tabIndex ) => {
-    setProductSpecifications(prevState => {
-      return {
-        ...prevState,
-        activeSpecification: tabIndex,
-        specificationContent: prevState.specificationsTabs[tabIndex]?.values[0]
-      }
-    })
-    setOpenTabHeader(!openTabHeader)
+    if (specificationsIndex === -1) {
+      setProductSpecifications([])
+      return
+    }
+
+    const specificationsGroup =
+      productSpecificationGroups[specificationsIndex].specifications ?? []
+
+    setProductSpecifications(specificationsGroup)
+  }, [productId, productSpecificationGroups])
+
+  const toggleMapAccordion = (index) => {
+    setActiveIndex(prevIndex => (prevIndex === index ? null : index))
   }
-
-  if (!product?.properties?.length) return null
 
   return (
     <>
-      {productSpecifications.specificationsTabs?.length > 0 && (
-      <div className={styles.productInfoTabs}>
-        <div className={openTabHeader ? styles.tabHeaderOpen : styles.tabHeader}>
-          {productSpecifications.specificationsTabs?.map((info, index) => (
-            <button
-              type="button"
-              onClick={() => handleBtnControl(index)}
-              key={info.name}
-              data-control-for={info.name}
-              className={`${styles.infoControl}${productSpecifications.activeSpecification === index ? ` ${styles.active}`:''}`}>
-                {info.name}
-              </button>
-          ))}
+      {productDescription && (
+        <div className={styles.containerInfoTabs}>
+          <button
+            id="tab-descricao"
+            className={styles.headerAccordion}
+            onClick={() => toggleMapAccordion('descricao')}
+          >
+            <span className={styles.buttonContent}>Sobre o produto</span>
+            <svg
+              style={activeIndex === 'descricao' ? { transform: 'rotate(180deg)' } : {}}
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="7"
+              viewBox="0 0 12 7"
+              fill="#F3F3F3"
+            >
+              <path d="M11.8337 1.16667L6.00033 7L0.166992 1.16667L1.20241 0.131249L6.00033 4.92917L10.7982 0.131249L11.8337 1.16667Z" fill="#F3F3F3" />
+            </svg>
+          </button>
+          {activeIndex === 'descricao' && (
+            <div className={styles.containerImageDescription}>
+              <div dangerouslySetInnerHTML={{ __html: productDescription }} />
+              {imageDescription && (
+                <img
+                  src={imageDescription.src}
+                  alt={imageDescription.alt}
+                  title={imageDescription.title}
+                />
+              )}
+            </div>
+          )}
         </div>
+      )}
 
-        <div
-          className={styles.tabContent}
-          dangerouslySetInnerHTML={{__html: productSpecifications.specificationContent}}
-        />
-      </div>
-    )}
+      {productSpecifications.length > 0 &&
+        productSpecifications.map((specification, index) => {
+          const isPreparationSpecification =
+            normalizeText(specification.name) === normalizeText(PREPARATION_SPECIFICATION_NAME)
+
+          return (
+            <div className={styles.containerInfoTabs} key={specification.name || index}>
+              <button
+                id={`tab-${specification.name.toLowerCase()}`}
+                className={styles.headerAccordion}
+                onClick={() => toggleMapAccordion(index)}
+              >
+                <span className={styles.buttonContent}>{specification.name}</span>
+                <svg
+                  style={activeIndex === index ? { transform: 'rotate(180deg)' } : {}}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="7"
+                  viewBox="0 0 12 7"
+                  fill="#F3F3F3"
+                >
+                  <path d="M11.8337 1.16667L6.00033 7L0.166992 1.16667L1.20241 0.131249L6.00033 4.92917L10.7982 0.131249L11.8337 1.16667Z" fill="#F3F3F3" />
+                </svg>
+              </button>
+              {activeIndex === index && (
+                <div className={styles.contentTab}>
+                  {isPreparationSpecification ? (
+                    <div className={styles.preparationTags}>
+                      {specification.values?.map((value, valueIndex) => {
+                        const iconClassName = getPreparationIconClass(value)
+
+                        return (
+                          <span
+                            key={`${value}-${valueIndex}`}
+                            className={styles.preparationTag}
+                          >
+                            {iconClassName && (
+                              <span
+                                className={`${styles.preparationTagIcon} ${iconClassName}`}
+                                aria-hidden="true"
+                              />
+                            )}
+                            {value}
+                          </span>
+                        )
+                      })}
+                    </div>
+                  ) : (
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: specification.values?.join('<br />'),
+                      }}
+                    />
+                  )}
+                </div>
+              )}
+            </div>
+          )
+        })}
     </>
   )
+}
+
+InfoTabs.schema = {
+  title: 'Imagem da Descri\u00e7\u00e3o do Produto',
+  type: 'object',
+  properties: {
+    imageDescription: {
+      title: 'Image Prop',
+      type: 'object',
+      properties: {
+        src: {
+          type: 'string',
+          title: 'Image URL',
+          description: 'URL image',
+        },
+        alt: {
+          type: 'string',
+          title: 'Image Text Alternative',
+        },
+        title: {
+          type: 'string',
+          title: 'Attribute title',
+        },
+      },
+    },
+  },
 }
 
 export default InfoTabs

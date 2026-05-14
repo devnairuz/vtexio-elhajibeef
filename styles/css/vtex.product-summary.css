@@ -1,11 +1,8 @@
 .container {
   text-align: left;
 }
-.clearLink {
-  padding: 6px;
-}
 .element {
-  padding: 20px 20px 25px;
+  padding: 16px;
   transition: all .3s ease-in-out;
   position: relative;
   z-index: 0;
@@ -19,15 +16,16 @@
 }
 .nameContainer--summary-name {
   display: block;
-  padding: 12px 0 20px;
+  padding: 8px 0;
 }
 .nameWrapper--summary-name {
   height: 42px;
   overflow: hidden;
 }
 .brandName--summary-name {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 21px;
+  color: #FFFFFF;
 }
 
 @media (max-width: 991px) {

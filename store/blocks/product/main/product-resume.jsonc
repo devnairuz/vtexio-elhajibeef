@@ -3,13 +3,14 @@
     "title": "Produto > Informações de compra",
     "props": {
       "blockClass": "product-resume-content",
-      "preventVerticalStretch": true
+      "preventVerticalStretch": true,
+      "width": "43%"
     },
     "children": [
       "flex-layout.row#name-wish",
       "flex-layout.row#sku",
-      "flex-layout.row#short-description",
       "flex-layout.row#prices-pdp",
+      "flex-layout.row#variable-weight-notice",
       "flex-layout.row#sku-selector",
       "flex-layout.row#actions-pdp",
       "flex-layout.row#shipping",

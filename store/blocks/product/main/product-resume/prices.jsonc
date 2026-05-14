@@ -14,10 +14,13 @@
       "blockClass": "prices-pdp-content"
     },
     "children": [
+      "kg-price#pdp",
       "product-list-price#pdp",
       "product-selling-price#pdp"
     ]
   },
+
+  "kg-price#pdp": {},
 
   "product-list-price#pdp": {
     "props": {
@@ -40,6 +43,19 @@
   "product-installments": {
     "props": {
       "blockClass": "installments-pdp"
+    }
+  },
+
+  "flex-layout.row#variable-weight-notice": {
+    "props": {
+      "blockClass": "variable-weight-notice-container"
+    },
+    "children": ["variable-weight-notice#pdp"]
+  },
+
+  "variable-weight-notice#pdp": {
+    "props": {
+      "blockClass": "pdp"
     }
   }
 }
