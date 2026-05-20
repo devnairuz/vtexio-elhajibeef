@@ -51,6 +51,11 @@
     "composition": "children"
   },
 
+  "top-searches": {
+    "component": "TopSearches",
+    "composition": "children"
+  },
+
   "nossas-unidades": {
     "component": "NossasUnidades"
   },

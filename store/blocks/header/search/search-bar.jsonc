@@ -1,36 +1,36 @@
 {
-  "search-suggestions": {
+  "search-bar": {
+    "props": {
+      "placeholder": "O que voc\u00ea procura?"
+    }
+  },
+
+  "top-searches#header": {
     "props": {
       "title": "Produtos mais procurados",
       "items": [
         {
           "label": "Picanha",
-          "href": "/picanha"
+          "link": "/picanha"
         },
         {
           "label": "Hamburguer",
-          "href": "/hamburguer"
+          "link": "/hamburguer"
         },
         {
           "label": "Ancho",
-          "href": "/ancho"
+          "link": "/ancho"
         },
         {
-          "label": "Contra Filé",
-          "href": "/contra-file"
+          "label": "Contra Fil\u00e9",
+          "link": "/contra-file"
         },
         {
           "label": "Costela",
-          "href": "/costela"
+          "link": "/costela"
         }
       ]
     },
     "children": ["search-bar"]
-  },
-
-  "search-bar": {
-    "props": {
-      "placeholder": "O que você procura?"
-    }
   }
 }
