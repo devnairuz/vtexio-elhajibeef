@@ -14,8 +14,8 @@
       "blockClass": "prices-pdp-content"
     },
     "children": [
-      "kg-price#pdp",
       "product-list-price#pdp",
+      "kg-price#pdp",
       "product-selling-price#pdp"
     ]
   },

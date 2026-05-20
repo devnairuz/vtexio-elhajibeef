@@ -1,13 +1,15 @@
 import styles from "./loginLabel.css"
 
-const LoginLabel = ({ greetingTitle = "Minha Conta", greetingSubtitle }) => {
+const LoginLabel = ({ greetingTitle = "Minha Conta", greetingSubtitle, href = "/login" }) => {
 
   return (
-    <div className={styles.clientGreeting}>
-      <p className={styles.clientName}>
-        <span>{greetingSubtitle || greetingTitle}</span>
-      </p>
-    </div>
+    <a href={href} className={styles.loginLink}>
+      <div className={styles.clientGreeting}>
+        <p className={styles.clientName}>
+          <span>{greetingSubtitle || greetingTitle}</span>
+        </p>
+      </div>
+    </a>
   )
 }
 

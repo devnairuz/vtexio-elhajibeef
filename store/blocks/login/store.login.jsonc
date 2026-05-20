@@ -1,12 +1,9 @@
 {
   "store.login": {
     "blocks": ["flex-layout.row#login-page"],
-    "props": {
-      "blockClass": "login"
-    },
     "parent": {
-      "header": "header#login",
-      "footer": "footer#login"
+      "header": "header",
+      "footer": "footer"
     }
   },
 
@@ -20,13 +17,13 @@
 
   "login-content#default": {
     "props": {
-      "emailAndPasswordTitle": "Faça o seu login",
-      "emailPlaceholder": "Insira seu CPF ou E-mail",
+      "emailAndPasswordTitle": "Entrar com e-mail e senha",
+      "emailPlaceholder": "E-mail",
       "passwordPlaceholder": "Senha",
-      "providerPasswordButtonLabel": "Entrar com email e senha",
-      "isInitialScreenOptionOnly": true,
+      "providerPasswordButtonLabel": "Entrar com e-mail e senha",
+      "isInitialScreenOptionOnly": false,
       "defaultOption": 1,
-      "showPasswordVerificationIntoTooltip": true,
+      "showPasswordVerificationIntoTooltip": false,
       "blockClass": ["login-content"]
     }
   }

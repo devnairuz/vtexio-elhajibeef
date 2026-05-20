@@ -1,0 +1,149 @@
+.containerFaleConosco {
+  width: 822px;
+  box-sizing: border-box;
+}
+
+.formContato {
+  width: 100%;
+  background: #292929;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow:
+  0px 4px 4px -4px rgba(12, 12, 13, 0.05),
+  0px 16px 32px -4px rgba(12, 12, 13, 0.10);
+  box-sizing: border-box;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 36px;
+  row-gap: 18px;
+}
+
+.fullField {
+  grid-column: 1 / -1;
+}
+
+.labelForm {
+  display: block;
+  margin-bottom: 10px;
+  color: #f2f2f2;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.formContato input,
+.formContato select,
+.formContato textarea {
+  width: 100%;
+  background: #3f3f3f;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.formContato input,
+.formContato select {
+  height: 43px;
+}
+
+.formContato textarea {
+  min-height: 130px;
+  padding-top: 16px;
+  resize: vertical;
+}
+
+.formContato input:focus,
+.formContato select:focus,
+.formContato textarea:focus {
+  border-color: #f6bd48;
+}
+
+.formContato select {
+  color: #bcbcbc;
+  appearance: auto;
+}
+
+.submitButton {
+  font-family: 'Dm Sans', sans-serif;
+  display: block;
+  width: fit-content;
+  min-width: 216px;
+  height: 46px;
+  margin: 20px auto 0;
+  padding: 0 18px;
+  background: #f6bd48;
+  border: none;
+  border-radius: 5px;
+  color: #050505;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background: #ffc95c;
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.errorText {
+  display: block;
+  margin-top: 5px;
+  color: #ff8a8a;
+  font-size: 12px;
+}
+
+.formErrorBox {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  background: rgba(192, 57, 43, 0.15);
+  border: 1px solid #c0392b;
+  border-radius: 8px;
+  color: #ffb4b4;
+  font-size: 14px;
+}
+
+.successBanner {
+  padding: 16px;
+  background: rgba(46, 204, 113, 0.15);
+  border: 1px solid #2ecc71;
+  border-radius: 8px;
+  color: #dfffe9;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .formContato {
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .fullField {
+    grid-column: auto;
+  }
+
+  .formContato input,
+  .formContato select {
+    height: 50px;
+  }
+
+  .submitButton {
+    width: 100%;
+    min-width: unset;
+  }
+}

@@ -12,7 +12,6 @@
     "children": [
       "flex-layout.row#list-selling-price-summary",
       "flex-layout.row#product-weight-flag-summary",
-      "flex-layout.row#installments-summary",
       "flex-layout.row#spot-price-summary"
     ]
   },
@@ -44,25 +43,6 @@
   },
   "product-weight-flag#summary": {},
 
-  "flex-layout.row#installments-summary": {
-    "props": {
-      "blockClass": ["installments-summary-container"]
-    },
-    "children": ["flex-layout.col#installments-summary"]
-  },
-  "flex-layout.col#installments-summary": {
-    "props": {
-      "blockClass": ["installments-summary-content"]
-    },
-    "children": ["product-installments#summary"]
-  },
-  "product-installments#summary": {
-    "props": {
-      "blockClass": "installments-summary",
-      "message": "até {installmentsNumber}x de {hasInterest, select, true {{installmentValue} com juros} false {{installmentValue} sem juros}}"
-    }
-  },
-
   "flex-layout.row#spot-price-summary": {
     "props": {
       "blockClass": ["spot-price-summary-container"]
@@ -73,6 +53,6 @@
     "props": {
       "blockClass": ["spot-price-summary-content"]
     },
-    "children": ["cash-price"] // Componente na pasta react/components/Product/CashPrice
+    "children": ["cash-price"]
   }
 }

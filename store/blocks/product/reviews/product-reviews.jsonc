@@ -1,0 +1,16 @@
+{
+  "flex-layout.row#product-reviews": {
+    "title": "Avaliações",
+    "props": {
+      "blockClass": ["product-reviews-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#product-reviews"]
+  },
+
+  "flex-layout.col#product-reviews": {
+    "props": {
+      "blockClass": "product-reviews-content"
+    },
+    "children": ["product-reviews"]
+  }
+}

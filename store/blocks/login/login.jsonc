@@ -1,14 +1,12 @@
 {
   "login": {
     "props": {
-      "emailAndPasswordTitle": "Faça o seu login",
-      "accessCodeTitle": "Código Rápido",
-      "emailPlaceholder": "Digite aqui seu e-mail",
-      "passwordPlaceholder": "Disite aqui sua senha",
-      "showPasswordVerificationIntoTooltip": true,
-      "showIconProfile": false,
-      "iconLabel": "Entrar ou Cadastrar",
-      "logInButtonBehavior": "link"
+      "emailAndPasswordTitle": "Login",
+      "accessCodeTitle": "Código de login",
+      "emailPlaceholder": "e-mail",
+      "passwordPlaceholder": "senha",
+      "showPasswordVerificationIntoTooltip": false,
+      "showIconProfile": false
     }
   }  
 }

@@ -1,3 +1,7 @@
+.loginLink {
+  text-decoration: none;
+}
+
 .clientGreeting p {
   display: flex;
   align-items: center;

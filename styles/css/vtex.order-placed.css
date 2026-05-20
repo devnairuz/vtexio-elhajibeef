@@ -1,0 +1,248 @@
+.orderPlacedWrapper {
+  font-family: 'DM Sans', sans-serif;
+  background: transparent;
+  color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 77px;
+}
+
+.section--op-print,
+.section--notices,
+.section--bank-invoice,
+.noticesList,
+.noticeListItem,
+.customerInfoListEmail,
+.customerInfoListDocument,
+.customerInfoListPhone,
+.packageShippingEstimate,
+.packageSLA {
+  display: none;
+}
+
+/* PRESERVADO: selo inicial */
+.confirmationIconWrapper {
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  text-align: center;
+  visibility: hidden;
+}
+
+.confirmationIconWrapper::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3E%3Cg clip-path='url(%23clip0_14001_8951)'%3E%3Cpath d='M39.0281 17.6428L36.3 14.9152C35.6525 14.2677 35.1219 12.9882 35.1219 12.0706V8.21311C35.1219 6.37811 33.6229 4.87906 31.7884 4.87809H27.9293C27.0128 4.87809 25.7318 4.34653 25.0843 3.69955L22.3567 0.971955C21.0606 -0.324066 18.9386 -0.324066 17.6426 0.971955L14.915 3.7015C14.267 4.34897 12.9845 4.87906 12.0699 4.87906H8.21244C6.37988 4.87906 4.87888 6.37811 4.87888 8.21311V12.0707C4.87888 12.9847 4.3484 14.2682 3.70083 14.9153L0.972748 17.6429C-0.324249 18.9389 -0.324249 21.0609 0.972748 22.359L3.70083 25.0866C4.34879 25.7341 4.87888 27.0171 4.87888 27.9312V31.7888C4.87888 33.6218 6.37988 35.1228 8.21244 35.1228H12.07C12.9866 35.1228 14.2675 35.6533 14.9151 36.3004L17.6427 39.0289C18.9387 40.324 21.0607 40.324 22.3568 39.0289L25.0844 36.3004C25.7324 35.6529 27.0129 35.1228 27.9294 35.1228H31.7885C33.623 35.1228 35.122 33.6218 35.122 31.7888V27.9312C35.122 27.0132 35.653 25.7337 36.3001 25.0866L39.0282 22.359C40.3231 21.0609 40.3231 18.9388 39.0281 17.6428ZM17.3536 27.5005L9.999 20.1449L12.3561 17.7883L17.3542 22.7864L27.6429 12.5002L29.9994 14.8568L17.3536 27.5005Z' fill='%23FE5000'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_14001_8951'%3E%3Crect width='40' height='40' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  display: block;
+  visibility: visible;
+}
+
+.confirmationTitle {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.confirmationMessage {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 20px;
+  max-width: 520px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.printButtonWrapper,
+.orderOptionsWrapper {
+  min-height: initial;
+  padding: 6px 18px;
+  background: transparent;
+  border: 1px solid #f5be4b;
+  box-shadow: none;
+  border-radius: 999px;
+  color: #f5be4b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: initial;
+}
+
+.printButtonWrapper:hover,
+.orderOptionsWrapper:hover {
+  background: #f5be4b;
+  color: #1a1a1a;
+}
+
+.orderPlacedMainWrapper {
+  width: 100%;
+  border-top: 1px solid #333333;
+  margin: 55px 0 0;
+}
+
+.orderList {
+  padding-top: 40px;
+}
+
+.orderNumber {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.customerInfoListName {
+  color: #ffffff;
+  font-size: 13px;
+  padding: 16px 0 64px;
+}
+
+.section--paymentMethods,
+.section--deliveryPackages {
+  border-bottom: 1px solid #333333;
+}
+
+.paymentGroup,
+.packageDeliveryTitle {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.orderPaymentItem {
+  color: #ffffff;
+  font-size: 12px;
+  padding-bottom: 40px;
+}
+
+.orderPaymentItem {
+  min-height: initial;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: #f5be4b;
+  color: #1a1a1a;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: initial;
+}
+
+.package--delivery {
+  margin: 40px 0;
+}
+
+.addressContainer {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.cancelOrderButton {
+  border: none;
+  box-shadow: none;
+  padding: 8px 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cancelOrderButton:hover {
+  background: transparent;
+  color: #f5be4b;
+  text-decoration: underline;
+}
+
+.productList {
+  width: 50%;
+}
+
+.productImageWrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.productName {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 17px;
+  max-width: 190px;
+  text-align: left;
+}
+
+.productQuantity {
+  color: #bfbfbf;
+  font-size: 11px;
+}
+
+.productPrice {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.totalList {
+  margin-top: 64px;
+}
+
+.totalListItem {
+  padding: 0;
+}
+
+.totalListItem:not(:first-child) {
+  margin-top: 14px;
+}
+
+.totalListItemLabel,
+.totalListItemValue {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.totalListItem:last-child .totalListItemLabel,
+.totalListItem:last-child .totalListItemValue {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 991px) {
+  .orderPlacedWrapper {
+    padding-top: 30px;
+  }
+
+  .orderPlacedMainWrapper {
+    margin: 32px 0 0;
+  }
+
+  .orderList {
+    padding-top: 32px;
+  }
+
+  .customerInfoListName {
+    padding: 20px 0;
+  }
+
+  .package--delivery {
+    margin: 24px 0 0;
+  }
+
+  .productList {
+    width: 100%;
+  }
+
+  .productImageWrapper {
+    width: 56px;
+    height: 56px;
+  }
+
+  .productPrice {
+    width: 100%;
+    text-align: right;
+    margin-top: 8px;
+  }
+
+  .totalList {
+    margin-top: 30px;
+  }
+}

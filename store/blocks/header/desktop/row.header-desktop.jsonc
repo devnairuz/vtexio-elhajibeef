@@ -27,7 +27,7 @@
     "props": {
      "blockClass": "search-desktop-container"
     },
-    "children": ["search-suggestions"] // Arquivo search-bar.jsonc
+    "children": ["top-searches#header"] // Arquivo search-bar.jsonc
   },
 
   "flex-layout.col#utils-desktop": {
@@ -55,7 +55,7 @@
 
   "flex-layout.row#login-desktop": {
     "title": "Header desktop > Minha conta",
-    "children": ["flex-layout.col#login-icon-desktop", "flex-layout.col#login-control-desktop"],
+    "children": ["flex-layout.col#login-control-desktop"],
     "props": {
       "blockClass": "row-login-container",
       "preventVerticalStretch": true

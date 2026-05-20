@@ -1,6 +1,6 @@
 {
   "flex-layout.col#product-resume": {
-    "title": "Produto > Informações de compra",
+    "title": "Informações de compra",
     "props": {
       "blockClass": "product-resume-content",
       "preventVerticalStretch": true,
@@ -8,7 +8,7 @@
     },
     "children": [
       "flex-layout.row#name-wish",
-      "flex-layout.row#sku",
+      "flex-layout.row#reviews-and-ratings",
       "flex-layout.row#prices-pdp",
       "flex-layout.row#variable-weight-notice",
       "flex-layout.row#sku-selector",
@@ -16,5 +16,11 @@
       "flex-layout.row#shipping",
       "flex-layout.row#share"
     ]
+  },
+  "flex-layout.row#reviews-and-ratings": {
+    "props": {
+      "blockClass": "reviews-pdp"
+    },
+    "children": ["product-reviews", "reviews-summary-cleaner"]
   }
 }

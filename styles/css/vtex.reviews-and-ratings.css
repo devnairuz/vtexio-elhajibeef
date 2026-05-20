@@ -1,0 +1,98 @@
+.container,
+.summaryContainer {
+  background: transparent;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  padding: 0;
+}
+
+.summaryContainer {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.stars,
+.starsContainer,
+.reviewsRating,
+.reviewCommentRating {
+  color: #f5be4b;
+}
+
+.star,
+.star--filled,
+.star--empty {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.star--filled {
+  background-image: url("assets/icons/star-fill.svg");
+}
+
+.star--empty {
+  background-image: url("assets/icons/star.svg");
+}
+
+.reviewsRatingCount,
+.reviewsRatingAverage,
+.summaryTotalReviews {
+  color: #8a8a8a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+}
+
+.reviewsHeading {
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 10px;
+  border: 0;
+}
+
+.reviewComment {
+  background: transparent;
+  border-bottom: 1px solid #f0f0f0;
+  color: #e0e0e0;
+  padding: 16px 0;
+}
+
+.reviewAuthorName,
+.reviewTitle {
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+}
+
+.reviewMessage,
+.reviewCommentMessage,
+.reviewCommentUser,
+.reviewText,
+.reviewAuthor,
+.reviewInfo,
+.reviewDate,
+.reviewDateSubmitted,
+.reviewDateValue,
+.reviewsPaging {
+  color: #e0e0e0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.loginLink,
+.writeReviewButton {
+  color: #f5be4b;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+}

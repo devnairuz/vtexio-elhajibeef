@@ -1,0 +1,18 @@
+.continuar {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #bcbcbc;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.continuar:hover {
+  color: #f2f2f2;
+}

@@ -42,6 +42,10 @@
     "component": "ProductSummaryPrice"
   },
 
+  "reviews-summary-cleaner": {
+    "component": "ReviewsSummaryCleaner"
+  },
+
   "info-cards": {
     "component": "InfoCards"
   },
@@ -66,5 +70,21 @@
 
   "custom-slider": {
     "component": "CustomSlider"
+  },
+
+  "form-contato": {
+    "component": "FormContato"
+  },
+
+  "minicart-header": {
+    "component": "MinicartHeader"
+  },
+
+  "minicart-continuar": {
+    "component": "MinicartContinuar"
+  },
+
+  "minicart-custom-summary": {
+    "component": "MinicartSummary"
   }
 }

@@ -45,7 +45,7 @@
       "menu-item#trocas-devolucoes",
       "menu-item#politicas-entrega",
       "menu-item#politicas-privacidade",
-      "menu-item#ajuda"
+      "menu-item#faq"
     ]
   },
 
@@ -86,7 +86,7 @@
   "menu-item#trocas-devolucoes": {
     "props": {
       "id": "menu-item-devolucoes",
-      "blockClass": "menu-item-devolucoes",
+      "blockClass": "menu-item-trocas",
       "type": "custom",
       "iconId": null,
       "highlight": false,
@@ -134,19 +134,19 @@
     }
   },
 
-  "menu-item#ajuda": {
+  "menu-item#faq": {
     "props": {
-      "id": "menu-item-ajuda",
-      "blockClass": "menu-item-ajuda",
+      "id": "menu-item-faq",
+      "blockClass": "menu-item-faq",
       "type": "custom",
       "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/ajuda",
+        "href": "/faq",
         "noFollow": false,
-        "tagTitle": "Ajuda",
-        "text": "Ajuda"
+        "tagTitle": "faq",
+        "text": "FAQ"
       }
     }
   }

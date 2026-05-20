@@ -1,0 +1,129 @@
+.wrapper {
+  padding: 0 16px;
+}
+
+/* ── ROWS ─────────────────────────────────────────────── */
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0 4px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-size: 14px;
+  color: #bcbcbc;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.value {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.valueLight {
+  font-size: 14px;
+  color: #bcbcbc;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.rowTotal {
+  margin-top: 4px;
+}
+
+.labelTotal {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.valueTotal {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── DIVIDER ──────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 12px 0;
+}
+
+/* ── INFO TEXT ────────────────────────────────────────── */
+.infoText {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: #bcbcbc;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 10px;
+}
+
+.infoIcon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #bcbcbc;
+}
+
+/* ── CÁPSULA ──────────────────────────────────────────── */
+.capsule {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  background: #3a3a3a;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #1E955E;
+  border-radius: 50px;
+  transition: width 0.5s ease;
+  pointer-events: none;
+}
+
+.truckBadge {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding-right: 8px;
+  flex-shrink: 0;
+}
+
+.capsuleText {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.capsuleText strong {
+  font-weight: 400;
+}

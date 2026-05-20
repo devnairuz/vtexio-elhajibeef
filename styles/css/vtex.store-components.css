@@ -209,14 +209,15 @@
 
 /* CARD PRODUTO */
 .discountInsideContainer {
-  left: -12px;
   right: unset;
-  top: -12px;
+  top: 16px;
   background: #B21E1E;
-  font-size: 16px;
-  font-weight: 300;
-  padding: 3px 15px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
   line-height: 22px;
+  border-radius: 0 5px 5px 0;
+  text-transform: uppercase;
 }
 
 /* PÁGINA DO PRODUTO */
