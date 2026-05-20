@@ -55,7 +55,10 @@
 
   "flex-layout.row#login-desktop": {
     "title": "Header desktop > Minha conta",
-    "children": ["flex-layout.col#login-control-desktop"],
+    "children": [
+      "flex-layout.col#login-icon-desktop",
+      "flex-layout.col#login-control-desktop"
+    ],
     "props": {
       "blockClass": "row-login-container",
       "preventVerticalStretch": true

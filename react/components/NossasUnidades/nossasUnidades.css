@@ -43,6 +43,7 @@
 .sliderViewport {
   overflow: hidden;
   width: 100%;
+  touch-action: pan-y;
 }
 
 .sliderTrack {
@@ -208,18 +209,26 @@
   .nossasUnidades .dots {
     display: flex;
   }
-
+  .title {
+    font-size: 14px;
+    color: #FFFFFF;
+  }
   .storeImage {
-    height: 300px;
+    height: 370px;
   }
 }
 
 @media (max-width: 639px) {
+  .arrowButton {
+    display: none;
+  }
+
   .storeImage {
-    height: 260px;
+    height: 370px;
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 14px;
+    color: #FFFFFF;
   }
 }

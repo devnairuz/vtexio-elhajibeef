@@ -112,5 +112,6 @@
 @media (max-width: 1024px) {
   .menuIcon--mobile-menu-container {
     margin: -12px;
+    color: #FFFFFF;
   }
 }

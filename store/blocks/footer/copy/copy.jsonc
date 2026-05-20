@@ -30,7 +30,8 @@
   },
   "flex-layout.row#copy-payments": {
     "props": {
-      "blockClass": ["copy-payments-container"]
+      "blockClass": ["copy-payments-container"],
+      "preserveLayoutOnMobile": true
     },
     "children": ["image#copy-payment-1", "image#copy-payment-2", "image#copy-payment-3", "image#copy-payment-4", "image#copy-payment-5", "image#copy-payment-6"]
   },
@@ -92,7 +93,8 @@
   },
   "flex-layout.row#copy-design": {
     "props": {
-      "blockClass": "copy-design-container"
+      "blockClass": "copy-design-container",
+      "preserveLayoutOnMobile": true
     },
     "children": ["flex-layout.col#copy-platform-content", "flex-layout.col#copy-design-content"]
   },

@@ -12,6 +12,6 @@
     "props": {
       "blockClass": ["search-mobile-content"]
     },
-    "children": ["search-suggestions"]
+    "children": ["top-searches#header"]
   }
 }

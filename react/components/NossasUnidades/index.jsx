@@ -44,6 +44,7 @@ const NossasUnidades = ({ stores }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage)
+  const [touchStartX, setTouchStartX] = useState(null)
 
   // Atualiza itemsPerPage ao redimensionar a janela
   useEffect(() => {
@@ -68,6 +69,28 @@ const NossasUnidades = ({ stores }) => {
   const handlePrev = () => setCurrentIndex(prev => Math.max(0, prev - 1))
   const handleNext = () => setCurrentIndex(prev => Math.min(maxIndex, prev + 1))
 
+  const handleTouchStart = event => {
+    setTouchStartX(event.touches[0].clientX)
+  }
+
+  const handleTouchEnd = event => {
+    if (touchStartX === null) return
+
+    const touchEndX = event.changedTouches[0].clientX
+    const swipeDistance = touchStartX - touchEndX
+    const minSwipeDistance = 40
+
+    if (Math.abs(swipeDistance) >= minSwipeDistance) {
+      if (swipeDistance > 0) {
+        handleNext()
+      } else {
+        handlePrev()
+      }
+    }
+
+    setTouchStartX(null)
+  }
+
   return (
     <section className={styles.nossasUnidades}>
       <div className={styles.headerunidades}>
@@ -86,7 +109,11 @@ const NossasUnidades = ({ stores }) => {
           <span aria-hidden="true" className={`${styles.arrowIcon} ${styles.arrowLeftIcon}`} />
         </button>
 
-        <div className={styles.sliderViewport}>
+        <div
+          className={styles.sliderViewport}
+          onTouchEnd={handleTouchEnd}
+          onTouchStart={handleTouchStart}
+        >
           <div
             className={styles.sliderTrack}
             style={{ transform: `translateX(${translateX}%)` }}

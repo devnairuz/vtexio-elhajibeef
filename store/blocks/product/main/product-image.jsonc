@@ -32,14 +32,15 @@
   "product-images#mobile": {
     "title": "Produto > Galeria mobile",
     "props": {
-      "aspectRatio": "3:4",
+      "aspectRatio": "1:1",
       "thumbnailAspectRatio": "1:1",
       "showNavigationArrows": false,
-      "showPaginationDots": false,
-      "maxHeight": 540,
-      "thumbnailMaxHeight": 80,
+      "showPaginationDots": true,
+      "maxHeight": 388,
+      "thumbnailMaxHeight": 90,
       "zoomMode": "in-place-hover",
-      "thumbnailsOrientation": "horizontal"
+      "thumbnailsOrientation": "horizontal",
+      "blockClass": ["pdp"]
     }
   }
 }

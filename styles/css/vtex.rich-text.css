@@ -136,6 +136,44 @@
   transform: translateY(-1px);
 }
 
+@media (max-width: 767px) {
+  .container--banner-origem-subtitle,
+  .container--banner-origem-title,
+  .container--banner-origem-description,
+  .container--banner-origem-button {
+    text-align: center;
+  }
+
+  .paragraph--banner-origem-subtitle,
+  .heading--banner-origem-title,
+  .paragraph--banner-origem-description {
+    text-align: center;
+  }
+
+  .paragraph--banner-origem-subtitle {
+    font-size: 16px;
+    letter-spacing: 7px;
+    line-height: 1.2;
+  }
+
+  .heading--banner-origem-title {
+    max-width: 280px;
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  .paragraph--banner-origem-button {
+    margin-top: 22px;
+  }
+
+  .link--banner-origem-button {
+    min-height: 38px;
+    padding: 0 24px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 /* CONHECA NOSSAS LINHAS */
 .container--home-linhas-title {
   display: block;
@@ -440,7 +478,7 @@
 @media (max-width: 575px) {
   .container--footer-title,
   .container--sac-group-title {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .heading--footer-title {
     margin: 0 0 10px;
@@ -448,7 +486,7 @@
 
   .container--cms-link,
   .container--sac-group-link {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
@@ -590,11 +628,10 @@
   }
 
   .paragraph--brand-resume {
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
     margin-top: 28px;
     margin-bottom: 1rem;
-    padding-inline: 1rem;
   }
 }
 

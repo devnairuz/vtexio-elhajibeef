@@ -21,6 +21,27 @@
   color: #4F4F4F;
 }
 
+@media (max-width: 767px) {
+  .sellingPrice--selling-price-summary {
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  .listPriceValue--list-price-summary {
+    display: block;
+    margin-right: 0;
+    font-size: 11px;
+    line-height: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .sellingPrice--selling-price-summary {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
+
 /* PÁGINA DO PRODUTO */
 .listPrice--list-price-pdp {
   color: #b1b1b1;

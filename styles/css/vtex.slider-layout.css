@@ -67,11 +67,111 @@
   box-shadow: 0px 3px 6px #00000029;
   top: 35%;
 }
+
+.caretIcon--shelf-carousel {
+  display: none;
+}
+
+.sliderLeftArrow--shelf-carousel::before,
+.sliderRightArrow--shelf-carousel::before {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 19px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sliderLeftArrow--shelf-carousel::before {
+  background-image: url("assets/icons/arrow_back.svg");
+}
+
+.sliderRightArrow--shelf-carousel::before {
+  background-image: url("assets/icons/arrow_next.svg");
+}
+
 .sliderLeftArrow--shelf-carousel {
   left: -15px;
 }
 .sliderRightArrow--shelf-carousel {
   right: -15px;
+}
+
+@media (max-width: 767px) {
+  .sliderLayoutContainer--shelf-carousel {
+    padding-bottom: 30px;
+  }
+
+  .sliderTrackContainer--shelf-carousel {
+    overflow: hidden;
+  }
+
+  .slide--shelf-carousel {
+    padding: 0 5px;
+  }
+
+  .sliderArrows--shelf-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 39%;
+    width: 36px;
+    height: 36px;
+    background: #292929;
+    border: 1px solid #fa0209;
+    border-radius: 50%;
+    color: #ffffff;
+    box-shadow: 0 4px 12px #0000004d;
+    z-index: 2;
+  }
+
+  .sliderLeftArrow--shelf-carousel {
+    left: -3px;
+  }
+
+  .sliderRightArrow--shelf-carousel {
+    right: -3px;
+  }
+
+  .paginationDotsContainer--shelf-carousel {
+    bottom: 0;
+  }
+
+  .paginationDot--shelf-carousel {
+    width: 8px !important;
+    height: 8px !important;
+    background: #3f3f3f;
+    box-shadow: none;
+  }
+
+  .paginationDot--shelf-carousel--isActive {
+    background: #fa0209;
+  }
+}
+
+@media (max-width: 360px) {
+  .sliderLayoutContainer--shelf-carousel {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .slide--shelf-carousel {
+    padding: 0 4px;
+  }
+
+  .sliderArrows--shelf-carousel {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sliderLeftArrow--shelf-carousel {
+    left: 6px;
+  }
+
+  .sliderRightArrow--shelf-carousel {
+    right: 6px;
+  }
 }
 
 /* CONHECA NOSSAS LINHAS MOBILE */

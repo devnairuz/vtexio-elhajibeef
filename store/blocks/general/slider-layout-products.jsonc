@@ -9,7 +9,7 @@
       },
       "infinite": true,
       "showNavigationArrows": "always",
-      "showPaginationDots": "never",
+      "showPaginationDots": "mobileOnly",
       "arrowSize": 10
     }
   }

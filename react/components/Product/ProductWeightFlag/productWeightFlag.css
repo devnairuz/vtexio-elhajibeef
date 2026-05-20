@@ -31,3 +31,21 @@
   font-weight: 700;
   line-height: 1;
 }
+
+@media (max-width: 767px) {
+  .productWeightFlag {
+    gap: 6px;
+    max-width: 85px;
+    min-height: 18px;
+    margin-top: 6px;
+    margin-bottom: 0;
+    padding: 3px 8px;
+    font-size: 8px;
+  }
+
+  .productWeightFlagIcon {
+    width: 10px;
+    height: 10px;
+    font-size: 8px;
+  }
+}
