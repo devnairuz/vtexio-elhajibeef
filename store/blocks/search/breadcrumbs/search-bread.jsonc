@@ -5,19 +5,22 @@
       "preserveLayoutOnMobile": true,
       "fullWidth": true
     },
-    "children": ["flex-layout.col#search-bread"]
+    "children": [
+      "breadcrumb.search",
+      "flex-layout.col#order-by-and-switcher"
+    ]
   },
 
-  "flex-layout.col#search-bread": {
-    "props": {
-      "blockClass": "search-bread-content"
-    },
-    "children": ["breadcrumb.search"]
-  },
   "breadcrumb.search": {
     "props": {
-      "blockClass": "breadcrumb-search",
-      "showOnMobile": true
+      "showOnMobile": true,
+      "homeIconSize": 18
     }
+  },
+  "flex-layout.col#order-by-and-switcher": {
+    "props": {
+      "blockClass": "order-by-and-switcher-content"
+    },
+    "children": ["order-by.v2"]
   }
 }

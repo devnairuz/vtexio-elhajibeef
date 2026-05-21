@@ -1,6 +1,5 @@
 {
   "flex-layout.row#result-grid": {
-    "title": "Busca > Grade de resultados",
     "props": {
       "blockClass": ["result-grid-container", "custom-container"],
       "horizontalAlign": "left",

@@ -1,0 +1,28 @@
+{
+  "search-result-layout.mobile": {
+    "title": "Layout Mobile",
+    "children": [
+      "flex-layout.row#search-bread",
+      "flex-layout.row#search-title",
+      "flex-layout.row#search-toolbar-mobile",
+      "flex-layout.row#search-products",
+      "flex-layout.row#search-fetchmore",
+      "flex-layout.row#result-description"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "showFacetQuantity": true,
+      "defaultGalleryLayout": "grid",
+      "blockClass": "search-result-layout",
+      "search-result-layout": "grid"
+    }
+  },
+
+  "flex-layout.row#search-toolbar-mobile": {
+    "props": {
+      "blockClass": ["toolbar-mobile", "custom-container"]
+    },
+    "children": ["flex-layout.col#order-by-and-switcher", "filter-navigator.v3"]
+  }
+}

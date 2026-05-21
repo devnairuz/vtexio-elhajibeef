@@ -20,7 +20,7 @@
     "title": "Produto > Produtos relacionados > Título",
     "props": {
       "blockClass": ["related-title", "shelf-title"],
-      "text": "#### Quem viu esse, viu também **Produtos relacionados**"
+      "text": "#### COMPRE TAMBÉM"
     }
   },
 

@@ -258,4 +258,8 @@
   box-shadow: none;
   background-color: #292929;
 }
- 
+
+:global(.vtex-numeric-stepper-wrapper) {
+  background-color: #3F3F3F;
+  border-radius: 4px;
+}

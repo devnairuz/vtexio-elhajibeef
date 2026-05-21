@@ -1,0 +1,9 @@
+{
+  "flex-layout.row#search-toolbar": {
+    "props": {
+      "blockClass": ["custom-container", "search-toolbar-container"],
+      "colSizing": "auto"
+    },
+    "children": [ "flex-layout.col#search-title" ]
+  }
+}

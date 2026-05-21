@@ -1,84 +1,243 @@
 .galleryTitle--layout {
+  width: fit-content;
   margin: 0;
-  font-size: 32px;
-  line-height: 32px;
-  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33px;
+  margin-bottom: 2px;
+  color: #FA0209;
+  position: relative;
 }
 
-.filter__container {
-  border-color: #aeaeae;
+.orderByButton {
+  line-height: 19px;
+  border: 0;
+  padding-bottom: 6px;
+}
+.filterPopupTitle {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: initial;
+  color: #FFFFFF;
+}
+.orderByText {
+  padding-right: 14px;
+  color: #A2A2A2;
+  font-weight: 400;
+  margin: 0;
+  position: relative;
+  z-index: 0;
 }
 
 .filterMessage {
-  margin: 0 0 10px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 10px;
+  display: none;
+}
+.filter {
+  padding: 0;
+}
+.filter__container {
+  background-color: #292929;
+  border-radius: 8px;
+  border: 0;
+  padding: 16px;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+.filter.filterIsOpen,
+.filter__container--priceRange .filter {
+  margin-bottom: 24px;
+}
+.filter__container :global(.vtex-slider-container) {
+  padding: 0 8px;
 }
 
-.filterSelected {
-  padding: 7px 10px;
+.filter__container--priceRange :global(.vtex-slider__base-internal) {
+  background: #d9d9d9;
 }
-.filterTitleSpan {
-  color: #5d5d5d;
-  font-weight: 400;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-.filterTemplateOverflow  {
-  padding: 10px;
+.filter__container--priceRange :global(.vtex-slider__selector) {
+  background: #151F6D;
 }
 
+.filterItem:not(:first-child) {
+  margin-top: 12px;
+}
+.filterItem :global(.vtex-checkbox__container),
+.filterItem :global(.vtex-checkbox__inner-container),
+.filterItem :global(.vtex-checkbox__box-wrapper),
+.filterItem :global(.vtex-checkbox__input) {
+  width: 12px;
+  height: 12px;
+}
+.filterItem :global(.vtex-checkbox__inner-container) {
+  border-color: #3F3F3F;
+  border-width: 1px;
+  border-radius: 2px;
+  background-color: #3F3F3F;
+}
 .filterItem :global(.vtex-checkbox__line-container) {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .filterItem :global(.vtex-checkbox__label),
 .filter__container :global(.vtex-slider__left-value),
 .filter__container :global(.vtex-slider__right-value) {
+  font-size: 14px;
+  line-height: 19px;
+  color: #F3F3F3;
+  transition: all 0.3s ease-in-out;
+}
+.productCount {
+  color: #666666;
   font-size: 12px;
-  line-height: 14px;
-  color: #b1b1b1;
-  font-weight: 500;
+  line-height: 16px;
 }
 
-.filter {
-  padding: 15px 10px 10px;
-}
-
-.filter__container :global(.vtex-slider-container) {
-  padding: 0 8px;
+.filterIcon {
+  padding: 0;
+  color: #FFFFFF;
 }
 
 .totalProducts--layout,
 .orderByButton {
   padding: 0;
 }
+.totalProducts--layout {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #696969;
+  text-transform: lowercase;
+  border: none;
+}
+.totalProductsMessage {
+  color: inherit;
+  font-size: 0;
+}
+.totalProductsMessage::before {
+  content: 'resultados encontrados';
+  font-size: 12px;
+  line-height: 19px;
+}
 
-.gallery--grid {
+.filter__container--title {
+  display: none;
+}
+
+.totalProducts--layout,
+.orderByButton {
   padding: 0;
-  margin: 0;
-  row-gap: 30px;
 }
-.galleryItem {
-  padding: 0;
+.totalProducts--layout {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #F3F3F3;
+  text-transform: lowercase;
+  border: none;
+}
+.totalProductsMessage {
+  color: inherit;
+  font-size: 0;
+}
+.totalProductsMessage::before {
+  content: 'resultados';
+  color: #F3F3F3;
+  font-size: 14px;
+  line-height: 19px;
 }
 
-.buttonShowMore :global(.vtex-button) {
-  margin-top: 30px;
-}
-.buttonShowMore :global(.vtex-button):hover {
-  background: #000;
-}
+@media (max-width: 1025px) {
+  .orderByButton .caretIcon,
+  .filterPopupButton .filterIcon {
+    display: none;
+  }
+  .orderByButton::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='10' viewBox='0 0 15 10' fill='none'%3E%3Cpath d='M5.83333 10V8.33333H9.16667V10H5.83333ZM2.5 5.83333V4.16667H12.5V5.83333H2.5ZM0 1.66667V0H15V1.66667H0Z' fill='%232D2926'/%3E%3C/svg%3E");
+    line-height: 0;
+    position: relative;
+  }
+  .orderByButton .filterPopupArrowIcon::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.35117e-07 5L5 -2.18557e-07L10 5L9.1125 5.8875L5 1.775L0.887501 5.8875L7.35117e-07 5Z' fill='%23F3F3F3'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 0;
+    position: relative;
+    left: 1px;
+  }
+  .filterPopupButton .filterPopupArrowIcon::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.35117e-07 5L5 -2.18557e-07L10 5L9.1125 5.8875L5 1.775L0.887501 5.8875L7.35117e-07 5Z' fill='%23F3F3F3'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    line-height: 0;
+    position: relative;
+    left: 20px;
+  }
+  .filterAccordionItemBox {
+    padding-right: 0;
+    min-height: initial;
+  }
+  .filterAccordionItemBox:not(:first-child) {
+    padding-top: 15px;
+  }
+  .filterAccordionItemBox :global(.vtex-checkbox__label),
+  .accordionFilterItemTitle {
+    font-size: 14px;
+  }
+  .container--layout--search-result-layout {
+    margin-bottom: 80px;
+  }
+  .accordionFilterContainer {
+    padding-left: 16px;
+  }
+  .accordionFilterContent {
+    padding: 0;
+  }
 
-@media (max-width: 1024px) {
+  .totalProducts--layout {
+    margin-bottom: 32px;
+  }
+  .orderByButton {
+    padding: 7px;
+    min-width: initial;
+    align-items: center;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+  }
   .filterPopupButton {
     width: 100%;
+    height: initial;
+    padding: 7px 21px 10px 10px;
+    flex-direction: row-reverse;
   }
-  .filterPopupTitle,
-  .filterPopupArrowIcon,
+  .filterPopupButton .filterPopupTitle, .filterPopupTitle {
+    font-weight: 400;
+    color: #2D2926;
+    font-size: 14px;
+    text-align: center;
+  }
+  .orderByText {
+    display: none;
+  }
+  .filterIcon {
+    padding: 0 0 0 32px;
+  }
   .galleryTitle--layout {
-    margin: 0;
+    font-size: 20px;
+    line-height: 27px;
   }
+  .filtersWrapperMobile {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+  }
+
 }

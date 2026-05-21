@@ -1,0 +1,14 @@
+{
+  "flex-layout.col#result-filter": {
+    "props": {
+      "blockClass": "result-filter-content",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      //"flex-layout.row#search-title",
+      //"total-products.v2",
+      "flex-layout.row#search-toolbar",
+      "filter-navigator.v3"
+    ]
+  }
+}

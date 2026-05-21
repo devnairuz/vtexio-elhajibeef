@@ -17,7 +17,7 @@
 .flexRowContent--header-container.flexRowContent--custom-container {
   width: 100%;
   max-width: 100vw;
-  padding: 0 21px;
+  padding: 0 59px;
 }
 .flexRowContent--header-container .stretchChildrenWidth {
   width: initial !important;
@@ -621,7 +621,6 @@
 
 .flexRow--search-toolbar-container {
   padding-bottom: 24px;
-  border-bottom: 1px solid #aeaeae;
 }
 
 .flexRow--result-grid-container {
@@ -1036,6 +1035,47 @@
   font-size: 12px;
 }
 
+/*FIM CUSTOM CMS INTERNAS*/
+
+.flexRow--result-grid-container {
+  margin-bottom: 80px;
+}
+.flexRowContent--result-grid-container {
+  gap: 30px;
+}
+.flexCol--result-filter-content {
+  min-width: 255px;
+}
+
+.flexRowContent--search-bread-container {
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 40px;
+  z-index: 100;
+}
+
+.flexRowContent--search-bread-container .stretchChildrenWidth {
+  width: auto !important;
+}
+
+.flexRow--search-toolbar-container {
+  padding-bottom: 16px;
+}
+.flexRowContent--search-toolbar-container {
+  justify-content: space-between;
+  z-index: 1;
+  padding-left: 0;
+}
+
+.flexRow--search-products-container {
+  margin-bottom: 40px;
+}
+
+.flexRow--search-fetchmore-container {
+  margin-bottom: 32px;
+}
+
 @media (max-width: 768px) {
   .flexRow--product-reviews-container :global(.vtex-reviews-and-ratings-3-x-reviewsHeading) {
     font-size: 20px;
@@ -1108,6 +1148,10 @@
 
   .flexRowContent--header-container {
     justify-content: space-between;
+  }
+
+  .flexRowContent--header-container.flexRowContent--custom-container {
+    padding: 0 21px;
   }
 
   .flexRowContent--wrapper-topbar {

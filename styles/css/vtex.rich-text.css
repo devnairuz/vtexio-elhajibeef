@@ -505,7 +505,6 @@
 
 @media (max-width: 525px) {
   .heading--shelf-title {
-    flex-direction: column;
     gap: 5px;
     align-items: baseline;
   }

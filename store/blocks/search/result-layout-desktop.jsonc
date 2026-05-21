@@ -1,15 +1,14 @@
 {
   "search-result-layout.desktop": {
-    "title": "Busca > Resultado desktop",
+    "title": "Layout Desktop",
     "children": [
       "flex-layout.row#search-bread",
-      "flex-layout.row#search-title",
-      "flex-layout.row#result-grid",
-      "flex-layout.row#result-description"
+      "flex-layout.row#result-grid"
     ],
     "props": {
       "pagination": "show-more",
       "preventRouteChange": true,
+      "showFacetQuantity": true,
       "defaultGalleryLayout": "grid",
       "blockClass": "search-result-layout",
       "search-result-layout": "grid"

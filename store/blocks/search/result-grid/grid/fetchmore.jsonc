@@ -1,6 +1,5 @@
 {
   "flex-layout.row#search-fetchmore": {
-    "title": "Busca > Carregar mais",
     "props": {
       "blockClass": "search-fetchmore-container"
     },
@@ -8,10 +7,13 @@
   },
 
   "flex-layout.col#search-fetchmore": {
-    "title": "Busca > Botão carregar mais",
     "props": {
       "blockClass": "search-fetchmore-content"
     },
-    "children": ["search-fetch-more"]
+    "children": [
+      "search-products-count-per-page",
+      "search-products-progress-bar",
+      "search-fetch-more"
+    ]
   }
 }

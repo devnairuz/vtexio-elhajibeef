@@ -49,7 +49,6 @@
 
 @media (max-width: 767px) {
   .quantitySelectorContainer :global(.vtex-numeric-stepper-container) {
-    max-width: 52px;
     max-height: 34px;
   }
 
