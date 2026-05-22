@@ -3,7 +3,8 @@
   "store.custom#quem-somos": {
     "blocks": [
       "flex-layout.row#hero",
-      "flex-layout.row#custom-slider-quem-somos"
+      "flex-layout.row#custom-slider-quem-somos",
+      "flex-layout.row#conheca-fazenda"
     ]
   },
 
@@ -19,7 +20,7 @@
   "flex-layout.col#hero-texto": {
     "props": {
       "blockClass": "hero-texto",
-      "verticalGap": 4,
+      "verticalGap": 0,
       "horizontalAlign": "center",
       "verticalAlign": "middle"
     },
@@ -40,7 +41,7 @@
 
   "rich-text#hero-titulo": {
     "props": {
-      "text": "## Da nossa fazenda direto para sua mesa.",
+      "text": "# Da nossa fazenda direto para sua mesa.",
       "textAlignment": "CENTER",
       "blockClass": "hero-titulo"
     }
@@ -54,6 +55,7 @@
     }
   },
 
+  // ─── ROW 2: SLIDER ──────────────────────────────────────────────
   "flex-layout.row#custom-slider-quem-somos": {
     "props": {
       "blockClass": ["custom-slider-quem-somos-container", "custom-container"]
@@ -65,21 +67,81 @@
     "props": {
       "loop": true,
       "autoplay": false,
-      "showDots": true,
+      "showDots": false,
       "slides": [
         {
-          "title": "Origem e procedência",
-          "text": "Controlamos a cadeia produtiva desde a Fazenda São João até o corte final, preservando qualidade, rastreabilidade e rigor técnico em cada etapa.",
-          "image": "assets/institucional/quem-somos-hero.png",
-          "imageAlt": "Fazenda São João, origem da El Haji Beef"
-        },
-        {
-          "title": "Cortes premium",
-          "text": "Selecionamos carnes com padrão superior para entregar uma experiência de excelência da nossa fazenda direto para sua mesa.",
-          "image": "assets/linhas/linha-carnes.jpg",
-          "imageAlt": "Corte premium El Haji Beef"
+          "title": "Elhaji Beef: Carnes Premium com Tradição desde 2001",
+          "text": "🥩 Qualidade e Sustentabilidade na Produção de Carnes.\n\nDesde 2001, a El Haji Beef se destaca como referência em carne de alta qualidade, unindo tradição, tecnologia e compromisso com o bem-estar animal. Com mais de 24 anos de experiência, iniciamos com 20 cabeças de gado e hoje operamos uma estrutura moderna temos mais de 6 mil cabeças, garantindo padrões rigorosos do campo à mesa.",
+          "image": "assets/institucional/quem-somos-slider.png",
+          "imageAlt": "Fazenda São João — El Haji Beef"
         }
       ]
+    }
+  },
+
+  // ─── ROW 3: CONHEÇA A FAZENDA SÃO JOÃO ──────────────────────────
+  "flex-layout.row#conheca-fazenda": {
+    "props": {
+      "blockClass": ["conheca-fazenda", "custom-container"],
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center",
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "flex-layout.col#conheca-fazenda-img",
+      "flex-layout.col#conheca-fazenda-texto"
+    ]
+  },
+
+  "flex-layout.col#conheca-fazenda-img": {
+    "props": {
+      "blockClass": "conheca-fazenda-img"
+    },
+    "children": ["image#conheca-fazenda"]
+  },
+
+  "image#conheca-fazenda": {
+    "props": {
+      "src": "assets/institucional/fazenda-sao-joao.png",
+      "alt": "Fazenda São João",
+      "blockClass": "conheca-fazenda-image"
+    }
+  },
+
+  "flex-layout.col#conheca-fazenda-texto": {
+    "props": {
+      "blockClass": "conheca-fazenda-texto",
+      "verticalGap": 0,
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "rich-text#conheca-fazenda-label",
+      "rich-text#conheca-fazenda-titulo",
+      "rich-text#conheca-fazenda-texto"
+    ]
+  },
+
+  "rich-text#conheca-fazenda-label": {
+    "props": {
+      "text": "QUALIDADE E EXCLUSIVIDADE",
+      "textAlignment": "LEFT",
+      "blockClass": "label-destaque-left"
+    }
+  },
+
+  "rich-text#conheca-fazenda-titulo": {
+    "props": {
+      "text": "## Conheça a fazenda São João",
+      "textAlignment": "LEFT",
+      "blockClass": "conheca-fazenda-titulo"
+    }
+  },
+
+  "rich-text#conheca-fazenda-texto": {
+    "props": {
+      "text": "El Haji Beef constrói sua história no campo com foco em qualidade, tecnologia e respeito ao bem-estar animal. Seguindo protocolos sanitários rigorosos e controle zootécnico eficiente. A fazenda investe continuamente em melhoramento genético, inovação e práticas sustentáveis, garantindo uma produção responsável e uma carne de alto padrão desde a origem.",
+      "textAlignment": "LEFT",
+      "blockClass": "conheca-fazenda-paragrafo"
     }
   }
 }

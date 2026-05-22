@@ -18,13 +18,15 @@
       "paddingBottom": "6",
       "paddingTop": "5",
       "colSizing": "auto",
+      "blockClass": "minicart-item-row",
       "preserveLayoutOnMobile": "true"
     }
   },
   "flex-layout.col#image.mobile": {
     "children": ["product-list-image"],
     "props": {
-      "marginRight": "5"
+      "marginRight": "5",
+      "blockClass": "minicart-item-image"
     }
   },
   "product-list-image": {
@@ -36,7 +38,6 @@
   "flex-layout.col#main-container.mobile": {
     "children": [
       "flex-layout.row#top.mobile",
-      "product-identifier.product",
       "flex-layout.row#qty-price"
       //"flex-layout.row#message.mobile"
     ],
@@ -69,7 +70,8 @@
   "flex-layout.col#qty-selector": {
     "children": ["quantity-selector"],
     "props": {
-      "marginRight": "5"
+      "marginRight": "5",
+      "blockClass": "minicart-qty-selector"
     }
   },
   "quantity-selector": {

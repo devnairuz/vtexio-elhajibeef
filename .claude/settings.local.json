@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(ls \"C:\\\\Users\\\\User\\\\OneDrive - Nairuz Marketing Digital\\\\Área de Trabalho\\\\CBV analise\\\\vtexio-volt-cbv\\\\store\\\\blocks\\\\header\\\\login\\\\\")",
-      "Read(//c/Users/User/OneDrive - Nairuz Marketing Digital/Área de Trabalho/CBV analise/vtexio-volt-cbv/store/blocks/header/**)"
+      "Read(//c/Users/User/OneDrive - Nairuz Marketing Digital/Área de Trabalho/CBV analise/vtexio-volt-cbv/store/blocks/header/**)",
+      "Bash(git checkout *)",
+      "mcp__figma-context__get_figma_data",
+      "mcp__figma-context__download_figma_images",
+      "WebSearch"
     ]
   }
 }

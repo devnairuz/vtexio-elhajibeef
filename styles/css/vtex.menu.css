@@ -33,6 +33,8 @@
   .styledLinkContent--menu-item-privacidade,
 :global(.vtex-flex-layout-0-x-flexRowContent--cms-trocas)
   .styledLinkContent--menu-item-trocas,
+:global(.vtex-flex-layout-0-x-flexRowContent--cms-faq)
+  .styledLinkContent--menu-item-faq,
 :global(.vtex-flex-layout-0-x-flexRowContent--cms-entrega)
   .styledLinkContent--menu-item-entrega,
 :global(.vtex-render__container-id-ajuda)

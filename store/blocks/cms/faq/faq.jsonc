@@ -4,12 +4,14 @@
     },
     "flex-layout.row#faq": {
       "props": {
-        "blockClass": ["custom-container", "cms-page-container", "cms-faq"]
+        "blockClass": ["custom-container", "cms-page-container", "cms-faq"],
+        "colSizing": "auto"
       },
       "children": [
         "flex-layout.col#side-cms-menu",
         "flex-layout.col#conteudo-faq"
       ]
+      
     },
   
     "flex-layout.col#conteudo-faq": {
@@ -177,7 +179,6 @@
       "blockClass": ["faq-trigger"]
     }
   },
-
   "disclosure-content#menu-faq": {
     "props": {
       "blockClass": ["faq-dropdown-content"]
@@ -321,4 +322,3 @@
     }
   }
   }
-  

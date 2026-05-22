@@ -4,7 +4,7 @@
       "quantityDisplay": "always",
       "itemCountMode": "total",
       "MinicartIcon": "image#minicart-icon",
-      "maxDrawerWidth": "476px"
+      "maxDrawerWidth": "478px"
     },
     "children": ["minicart-base-content"]
   },
@@ -18,7 +18,7 @@
 
   "minicart-base-content": {
     "blocks": ["minicart-empty-state"],
-    "children": ["minicart-header", "minicart-product-list", "flex-layout.row#minicart-footer"]
+    "children": ["minicart-header", "minicart-meat-notice", "minicart-product-list", "flex-layout.row#minicart-footer"]
   },
   "flex-layout.row#minicart-footer": {
     "props": {

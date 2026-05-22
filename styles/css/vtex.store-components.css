@@ -71,6 +71,15 @@
   height: auto;
 }
 
+.imageElement--conheca-fazenda-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 331px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .imageElement--banner-origem {
   display: block;
   width: 100%;

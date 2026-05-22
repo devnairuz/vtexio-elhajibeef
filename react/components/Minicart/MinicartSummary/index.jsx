@@ -51,15 +51,15 @@ const MinicartSummary = () => {
     <div className={styles.wrapper}>
       <div className={styles.rows}>
         <div className={styles.row}>
-          <span className={styles.label}>Subtotal</span>
+          <span className={styles.label}>Total:</span>
           <span className={styles.value}>{formatCurrency(subtotal)}</span>
         </div>
         <div className={styles.row}>
-          <span className={styles.label}>Entrega</span>
+          <span className={styles.label}>Entrega:</span>
           <span className={styles.valueLight}>A calcular</span>
         </div>
         <div className={`${styles.row} ${styles.rowTotal}`}>
-          <span className={styles.labelTotal}>Total</span>
+          <span className={styles.labelTotal}>Total:</span>
           <span className={styles.valueTotal}>{formatCurrency(total)}</span>
         </div>
       </div>
@@ -77,7 +77,7 @@ const MinicartSummary = () => {
         <span className={styles.capsuleText}>
           {freeShipping
             ? 'Você ganhou frete grátis!'
-            : <>Com mais <strong>{formatCurrency(remaining)}</strong> o frete é grátis para Grande São Paulo!</>}
+            : <>Com mais <strong>{formatCurrency(remaining)}</strong> o frete é grátis para Grande São Paulo</>}
         </span>
       </div>
     </div>

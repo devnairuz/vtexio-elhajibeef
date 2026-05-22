@@ -9,38 +9,19 @@
 
   "flex-layout.col#menu-desktop": {
     "title": "Menu desktop > Categorias",
-  "props": {
-    "blockClass": ["menu-desktop-content"]
-  },
-  "children": [
-    // "flex-layout.col#header-mega-menu-card",
-    "category-menu#header-category-menu"
-  ]
-  },
-
-  "flex-layout.col#header-mega-menu-card": {
-  "children": ["image#header-mega-menu-banner"]
-  },
-
-  "image#header-mega-menu-banner": {
-  "title": "Banner editável do menu",
-  "props": {
-    "blockClass": ["header-mega-menu-banner"],
-    "src": "assets/mega-menu/banner-default.png",
-    "alt": "Banner do menu",
-    "link": {
-      "url": "/",
-      "newTab": false
-    }
-  }
-},
-
-  "category-menu#header-category-menu": {
-    "title": "Menu de categorias",
     "props": {
-      "showAllDepartments": true,
-      "showSubcategories": true,
-      "menuDisposition": "center"
+      "blockClass": ["menu-desktop-content"]
+    },
+    "children": ["header-mega-menu#desktop"]
+  },
+
+  "header-mega-menu#desktop": {
+    "props": {
+      "categoryTreeLevel": 2,
+      "allCategoriesLabel": "Todas as Categorias",
+      "allCategoriesBanner": "",
+      "allCategoriesAlt": "Todas as Categorias",
+      "categoryBanners": []
     }
   }
 }

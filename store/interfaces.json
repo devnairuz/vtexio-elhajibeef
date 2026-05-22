@@ -4,6 +4,10 @@
     "composition": "children"
   },
 
+  "header-mega-menu": {
+    "component": "HeaderMegaMenu"
+  },
+
   "aux-floating-container": {
     "component": "AuxFloatingContainer",
     "composition": "children"
@@ -86,5 +90,9 @@
 
   "minicart-custom-summary": {
     "component": "MinicartSummary"
+  },
+
+  "minicart-meat-notice": {
+    "component": "MinicartMeatNotice"
   }
 }

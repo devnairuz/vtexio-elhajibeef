@@ -1,12 +1,18 @@
 .continuar {
-  display: block;
-  width: 100%;
-  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 40px);
+  max-width: 436px;
+  min-height: 16px;
+  margin: clamp(18px, 4vh, 32px);
   padding: 0;
   background: transparent;
   border: none;
-  color: #bcbcbc;
-  font-size: 14px;
+  color: #ececec;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
   font-family: 'DM Sans', sans-serif;
   text-align: center;
   cursor: pointer;
@@ -15,4 +21,17 @@
 
 .continuar:hover {
   color: #f2f2f2;
+}
+
+@media (max-width: 480px) {
+  .continuar {
+    width: calc(100% - 40px);
+    margin-top: 32px;
+  }
+}
+
+@media (max-height: 680px) {
+  .continuar {
+    margin-top: 14px;
+  }
 }
