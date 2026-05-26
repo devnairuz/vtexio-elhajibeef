@@ -1,0 +1,17 @@
+.unavailableMessage {
+  width: 100%;
+  min-width: 153px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 16px;
+  border: 1px solid #696969;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}

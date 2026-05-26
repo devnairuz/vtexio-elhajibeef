@@ -41,8 +41,7 @@
 .menuLink:focus {
   color: #fa0209;
   outline: none;
-  text-decoration: underline;
-  text-decoration-color: #fa0209;
+  border-bottom: 2px solid #fa0209;
 }
 
 .dropdown {

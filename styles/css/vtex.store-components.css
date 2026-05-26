@@ -340,6 +340,33 @@
   font-size: 12px;
 }
 
+.subscriberContainer {
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.subscriberContainer :global(.vtex-input-prefix__group) {
+  min-height: 40px;
+  border: 1px solid #3f3f3f;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.subscriberContainer :global(.vtex-styleguide-9-x-input),
+.subscriberContainer :global(.vtex-input__label) {
+  color: #ffffff;
+}
+
+.subscriberContainer :global(.vtex-button) {
+  min-height: 40px;
+  border: 0;
+  border-radius: 4px;
+  background: #f5be4b;
+  color: #050505;
+  font-weight: 700;
+  text-transform: none;
+}
+
 .shareContainer {
   display: none;
 }

@@ -3,6 +3,13 @@
     "props": {
       "blockClass": ["summary-action-container"]
     },
+    "children": ["product-availability-gate#summary"]
+  },
+
+  "product-availability-gate#summary": {
+    "props": {
+      "message": "Produto indisponível"
+    },
     "children": ["flex-layout.col#summary-action"]
   },
 

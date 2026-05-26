@@ -9,7 +9,20 @@ const normalizeText = value =>
     .trim()
     .toLowerCase()
 
-const toCategoryUrl = category => category?.url || category?.href || '#'
+const toCategoryUrl = category => {
+  const rawUrl = String(category?.url || category?.href || '').trim()
+
+  if (!rawUrl) return '#'
+
+  try {
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://localhost'
+    const parsedUrl = new URL(rawUrl, baseUrl)
+
+    return `${parsedUrl.pathname}${parsedUrl.search}${parsedUrl.hash}` || '#'
+  } catch (error) {
+    return rawUrl.charAt(0) === '/' ? rawUrl : `/${rawUrl}`
+  }
+}
 
 const isAllCategoriesItem = item => item?.type === 'all-categories'
 

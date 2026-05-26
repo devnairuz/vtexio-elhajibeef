@@ -1,0 +1,34 @@
+{
+  "my-account-link.wishlist-link": {
+    "props": {
+      "label": "Favoritos"
+    }
+  },
+
+  "my-account-page.wishlist-page": {
+    "props": {
+      "title": "Favoritos",
+      "blockClass": ["wishlist"]
+    },
+    "children": ["list-context.wishlist"]
+  },
+
+  "list-context.wishlist": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#wishlist"]
+  },
+
+  "slider-layout#wishlist": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 2,
+        "phone": 2
+      },
+      "infinite": true,
+      "showNavigationArrows": "always",
+      "showPaginationDots": "desktopOnly",
+      "blockClass": ["wishlist"]
+    }
+  }
+}

@@ -12,7 +12,8 @@
       "flex-layout.row#prices-pdp",
       "flex-layout.row#variable-weight-notice",
       "flex-layout.row#sku-selector",
-      "flex-layout.row#actions-pdp",
+      "product-availability-gate#actions-pdp",
+      "availability-subscriber",
       "flex-layout.row#shipping",
       "flex-layout.row#share"
     ]

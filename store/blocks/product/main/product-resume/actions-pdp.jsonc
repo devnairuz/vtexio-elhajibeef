@@ -1,4 +1,11 @@
 {
+  "product-availability-gate#actions-pdp": {
+    "props": {
+      "showMessage": false
+    },
+    "children": ["flex-layout.row#actions-pdp"]
+  },
+
   "flex-layout.row#actions-pdp": {
     "props": {
       "blockClass": "actions-pdp-container",

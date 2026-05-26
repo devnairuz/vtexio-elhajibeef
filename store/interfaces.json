@@ -46,6 +46,11 @@
     "component": "ProductSummaryPrice"
   },
 
+  "product-availability-gate": {
+    "component": "ProductAvailabilityGate",
+    "composition": "children"
+  },
+
   "reviews-summary-cleaner": {
     "component": "ReviewsSummaryCleaner"
   },

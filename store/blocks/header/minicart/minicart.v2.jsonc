@@ -39,7 +39,7 @@
   },
   "minicart-checkout-button": {
     "props": {
-      "finishShoppingButtonLink": "/checkout/#/orderform"
+      "finishShoppingButtonLink": "/checkout/#/cart"
     }
   },
   "minicart-empty-state": {
