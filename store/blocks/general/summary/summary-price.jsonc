@@ -26,13 +26,9 @@
     "props": {
       "blockClass": ["list-selling-price-summary"]
     },
-    "children": ["product-list-price#summary", "product-summary-price-custom#summary"]
+    "children": ["summary-kg-list-price#summary", "product-summary-price-custom#summary"]
   },
-  "product-list-price#summary": {
-    "props": {
-      "blockClass": "list-price-summary"
-    }
-  },
+  "summary-kg-list-price#summary": {},
   "product-summary-price-custom#summary": {},
 
   "flex-layout.row#product-weight-flag-summary": {

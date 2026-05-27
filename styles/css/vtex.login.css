@@ -51,9 +51,11 @@
   background-color: #3D3D3D;
 }
 :global(.vtex-product-list-0-x-inputContainer) {
-  width: 24px;
+  flex: 0 0 28px;
+  width: 28px;
   padding: 0;
   border: none;
+  text-align: center;
 }
 :global(.vtex-product-list-0-x-inputContainer) input {
   font-family: 'DM Sans', sans-serif;
@@ -62,14 +64,25 @@
 }
 :global(.vtex-product-list-0-x-quantitySelectorDecrease),
 :global(.vtex-product-list-0-x-quantitySelectorIncrease) {
+  display: flex;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 36px;
   padding: 0;
   background-color: transparent;
   border: none;
 }
 :global(.vtex-product-list-0-x-quantitySelectorWrapper) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
   background-color: #3D3D3D;
   border-radius: 4px;
   height: 36px;
+  overflow: hidden;
 }
 :global(.vtex-product-list-0-x-quantitySelectorDecrease:hover),
 :global(.vtex-product-list-0-x-quantitySelectorIncrease:hover),
@@ -82,7 +95,7 @@
   color: #F5BE4B;
   width: 14px;
   height: 14px;
-  padding: 0 5px;
+  padding: 0;
 }
 
 /* PDP */

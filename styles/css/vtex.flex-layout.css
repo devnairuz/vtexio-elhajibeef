@@ -1493,10 +1493,6 @@
   .flexRow--search-toolbar-container {
     padding: 15px 0;
   }
-  .flexRowContent--search-toolbar-container {
-    display: flex;
-    align-items: center;
-  }
 
   .flexRow--name-wish-container .flexRowContent--name-wish-container {
     display: flex;
@@ -1506,6 +1502,7 @@
     gap: 30px;
   }
 }
+
 
 @media (max-width: 360px) {
   .flexColChild--summary-action-content:first-child {

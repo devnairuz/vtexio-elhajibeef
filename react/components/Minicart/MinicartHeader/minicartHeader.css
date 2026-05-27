@@ -4,7 +4,6 @@
   justify-content: center;
   gap: 8px;
   min-height: clamp(52px, 8vh, 58px);
-  padding: 14px 72px 14px 20px;
   background-color: #aa1e1e;
   box-sizing: border-box;
 }
@@ -41,7 +40,6 @@
   .header {
     justify-content: center;
     min-height: 58px;
-    padding: 16px 64px 16px 20px;
   }
 
   .title {

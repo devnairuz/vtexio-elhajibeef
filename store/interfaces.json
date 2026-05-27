@@ -30,6 +30,14 @@
     "component": "KgPrice"
   },
 
+  "kg-list-price": {
+    "component": "KgListPrice"
+  },
+
+  "summary-kg-list-price": {
+    "component": "SummaryKgListPrice"
+  },
+
   "compre-junto": {
     "component": "BuyTogether"
   },
@@ -99,5 +107,9 @@
 
   "minicart-meat-notice": {
     "component": "MinicartMeatNotice"
+  },
+
+  "mobile-menu": {
+    "component": "MobileMenu"
   }
 }

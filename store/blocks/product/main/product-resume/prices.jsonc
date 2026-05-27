@@ -14,7 +14,7 @@
       "blockClass": "prices-pdp-content"
     },
     "children": [
-      "product-list-price#pdp",
+      "kg-list-price#pdp",
       "kg-price#pdp",
       "product-selling-price#pdp"
     ]
@@ -22,11 +22,7 @@
 
   "kg-price#pdp": {},
 
-  "product-list-price#pdp": {
-    "props": {
-      "blockClass": "list-price-pdp"
-    }
-  },
+  "kg-list-price#pdp": {},
 
   "product-selling-price#pdp": {
     "props": {

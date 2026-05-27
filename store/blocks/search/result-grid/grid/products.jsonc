@@ -26,7 +26,10 @@
         {
           "name": "grid",
           "component": "GridSummary",
-          "itemsPerRow": 3
+          "itemsPerRow": {
+            "(min-width: 768px)": 3,
+            "(max-width: 767px)": 2
+          }
         }
       ],
       "GridSummary": "product-summary.shelf"

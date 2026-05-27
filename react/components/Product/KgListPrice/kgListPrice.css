@@ -1,0 +1,7 @@
+.kgListPrice {
+  display: block;
+  color: #b1b1b1;
+  font-size: 20px;
+  line-height: 1;
+  text-decoration: line-through;
+}

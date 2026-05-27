@@ -1,0 +1,324 @@
+.root {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.triggerIcon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('../../../assets/icons/menu.svg') center / contain no-repeat;
+  filter: invert(1);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  width: min(345px, 85vw);
+  background: #1c1c1c;
+  color: #ffffff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.drawerOpen {
+  transform: translateX(0);
+}
+
+.headerMenuMob {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url('../../../assets/icons/close-menu.svg') center / contain no-repeat;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 16px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.categoryList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.categoryItem {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #3f3f3f;
+}
+
+.categoryItemExpanded {
+  padding-bottom: 16px;
+}
+
+.categoryItemLast {
+  display: block;
+}
+
+.categoryLink {
+  display: block;
+  padding: 16px 10px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.categoryLink:hover,
+.categoryLink:focus {
+  color: #fa0209;
+  text-decoration: none;
+  outline: none;
+}
+
+.categoryToggle {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 44px;
+  padding: 16px 10px;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+
+.categoryToggle:hover,
+.categoryToggle:focus {
+  color: #fa0209;
+  outline: none;
+}
+
+.categoryChevron {
+  display: block;
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  background: url('../../../assets/icons/chevron-down.svg') center / contain no-repeat;
+  filter: invert(1);
+  transition: transform 0.2s ease;
+}
+
+.categoryToggleOpen .categoryChevron {
+  transform: rotate(180deg);
+}
+
+.categoryToggleLabel {
+  display: inline-block;
+}
+
+.subList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 10px 10px 16px;
+  padding: 8px 16px;
+  list-style: none;
+  background-color: #292929;
+  border-radius: 8px;
+}
+
+.subItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subLink {
+  display: block;
+  padding: 8px 0;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.subLinkAll {
+  display: block;
+  padding: 8px 0;
+  color: #f5be4b;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  text-decoration: underline;
+}
+
+.subLinkAll:hover,
+.subLinkAll:focus {
+  color: #fa0209;
+  outline: none;
+}
+
+.subLink:hover,
+.subLink:focus {
+  color: #fa0209;
+  outline: none;
+}
+
+.subSubList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0 0 8px 12px;
+  list-style: none;
+}
+
+.subSubItem {
+  display: block;
+}
+
+.subSubLink {
+  display: block;
+  padding: 6px 0;
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.subSubLink:hover,
+.subSubLink:focus {
+  color: #fa0209;
+  outline: none;
+}
+
+.accountList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.accountItem {
+  display: block;
+  border-bottom: 1px solid #3f3f3f;
+}
+
+.accountItem:last-child {
+  border-bottom: 0;
+}
+
+.accountLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 28px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.accountLink:hover,
+.accountLink:focus {
+  color: #fa0209;
+  text-decoration: none;
+  outline: none;
+}
+
+.accountIcon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+}
+
+.iconPerson {
+  background: url('../../../assets/icons/person.svg') center / contain no-repeat;
+}
+
+.iconPackage {
+  background: url('../../../assets/icons/package.png') center / contain no-repeat;
+}
+
+.iconHeart {
+  background: url('../../../assets/icons/heart.svg') center / 18px 16px no-repeat;
+}
+
+.accountLabel {
+  display: inline-block;
+}

@@ -1,0 +1,16 @@
+.summaryKgListPrice {
+  display: block;
+  margin-right: 7px;
+  color: #979797;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: line-through;
+}
+
+@media (max-width: 767px) {
+  .summaryKgListPrice {
+    margin-right: 0;
+    font-size: 11px;
+    line-height: 14px;
+  }
+}

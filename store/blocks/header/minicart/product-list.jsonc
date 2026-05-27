@@ -57,6 +57,9 @@
       "blockClass": ["minicart--row-top"]
     }
   },
+  "flex-layout.col#product-description": {
+    "children": ["vtex.product-list:product-name"]
+  },
 
   "flex-layout.row#qty-price": {
     "children": ["flex-layout.col#qty-selector", "flex-layout.col#price-container"],

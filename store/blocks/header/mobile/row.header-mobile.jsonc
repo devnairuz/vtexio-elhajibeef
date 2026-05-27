@@ -19,17 +19,13 @@
     "props": {
       "blockClass": ["drawer-mobile-content"]
     },
-    "children": ["category-menu#mobile"]
+    "children": ["mobile-menu"]
   },
-  "category-menu#mobile": {
-    "title": "Header mobile > Menu de categorias",
-    "props":{
-      "showAllDepartments": false,
-      "showSubcategories": true,
-      "menuDisposition": "center",
-      "sortSubcategories": "name",
-      "mobileMode": true,
-      "blockClass": "mobile-menu-container"
+  "mobile-menu": {
+    "title": "Header mobile > Menu lateral",
+    "props": {
+      "allCategoriesLabel": "Todas as Categorias",
+      "allCategoriesUrl": "#"
     }
   },
 

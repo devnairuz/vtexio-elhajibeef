@@ -96,11 +96,14 @@ export const getPaymentDiscountPercent = offer =>
 
 export const getProductPriceInfo = product => {
   const offer = getOffer(product)
-  const rangePrice =
+  const rangeSellingPrice =
     product?.priceRange?.sellingPrice?.lowPrice ||
     product?.priceRange?.sellingPrice?.highPrice
-  const sellingPrice = Number(offer?.Price || rangePrice || 0)
-  const listPrice = Number(offer?.ListPrice || 0)
+  const rangeListPrice =
+    product?.priceRange?.listPrice?.highPrice ||
+    product?.priceRange?.listPrice?.lowPrice
+  const sellingPrice = Number(offer?.Price || rangeSellingPrice || 0)
+  const listPrice = Number(offer?.ListPrice || rangeListPrice || 0)
   const spotPrice = Number(offer?.spotPrice || 0)
   const discountPercent = getPaymentDiscountPercent(offer)
   const teaserPrice = sellingPrice > 0 && discountPercent > 0
