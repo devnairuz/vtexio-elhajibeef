@@ -19,12 +19,13 @@ const CSS_HANDLES = [
 const fmt = (price) =>
   new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price || 0)
 
-const getOffer = (p) => p?.items?.[0]?.sellers?.[0]?.commertialOffer
-const getSku = (p) => p?.items?.[0]?.itemId || p?.productId
-const getSeller = (p) => p?.items?.[0]?.sellers?.[0]?.sellerId || '1'
+const getSelectedItem = (p) => p?.selectedItem || p?.items?.[0]
+const getOffer = (p) => getSelectedItem(p)?.sellers?.[0]?.commertialOffer
+const getSku = (p) => getSelectedItem(p)?.itemId || p?.productId
+const getSeller = (p) => getSelectedItem(p)?.sellers?.[0]?.sellerId || '1'
 
 const getImageUrl = (p) => {
-  const images = p?.items?.[0]?.images || []
+  const images = getSelectedItem(p)?.images || []
   return (
     images.find((img) => img?.imageUrl && !/\.svg(?:\?|$)/i.test(img.imageUrl))?.imageUrl ||
     images[0]?.imageUrl ||
@@ -191,7 +192,18 @@ const BuyTogether = ({ title = 'Não se esqueça' }) => {
       .finally(() => setLoading(false))
   }, [mainProduct?.productId])
 
-  const allProducts = useMemo(() => recommended, [recommended])
+  const allProducts = useMemo(() => {
+    const sourceProducts = mainProduct
+      ? [
+        mainProduct,
+        ...recommended.filter(
+          (p) => String(p?.productId) !== String(mainProduct.productId)
+        ),
+      ]
+      : recommended
+
+    return sourceProducts.filter(isWeightVariable)
+  }, [mainProduct, recommended])
 
   const pricing = useMemo(() => {
     const cards = allProducts.map((p) => ({
@@ -207,7 +219,8 @@ const BuyTogether = ({ title = 'Não se esqueça' }) => {
 
     const totalInst = withDisplay.reduce((s, c) => s + (c.inst.total || 0), 0)
     const totalCash = withDisplay.reduce((s, c) => s + (c.cash.final || 0), 0)
-    const minCount = Math.min(...withDisplay.map((c) => c.inst.count || 10).filter(Boolean))
+    const installmentCounts = withDisplay.map((c) => c.inst.count || 10).filter(Boolean)
+    const minCount = installmentCounts.length ? Math.min(...installmentCounts) : 10
 
     return {
       cards: withDisplay,
@@ -251,21 +264,21 @@ const BuyTogether = ({ title = 'Não se esqueça' }) => {
   }
 
   const handleAddToCart = async () => {
-    if (!recommended.length || isAdding) return
+    if (!allProducts.length || isAdding) return
     setIsAdding(true)
     try {
       const current = await refreshOrderForm()
       const id = current?.id || orderForm?.id
       if (!id) throw new Error('No orderForm id')
 
-      for (const p of recommended) {
+      for (const p of allProducts) {
         const sku = getSku(p); const seller = getSeller(p)
         const result = await addItem(id, p, sku, seller)
         if (!result) await fetch(`/checkout/cart/add?sku=${sku}&qty=1&seller=${seller}&sc=1`, { credentials: 'include' })
       }
 
       const latest = await refreshOrderForm()
-      const imgMap = recommended.reduce((acc, p) => {
+      const imgMap = allProducts.reduce((acc, p) => {
         const sku = String(getSku(p) || '')
         if (sku) acc[sku] = getCartImageUrl(p)
         return acc
@@ -291,7 +304,7 @@ const BuyTogether = ({ title = 'Não se esqueça' }) => {
     finally { setIsAdding(false) }
   }
 
-  if (!mainProduct || !recommended.length || loading) return null
+  if (!mainProduct || loading || !allProducts.length) return null
 
   return (
     <div className={styles.buyTogetherContainer}>

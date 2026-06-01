@@ -3,31 +3,73 @@ import styles from './nossasUnidades.css'
 
 const DEFAULT_STORES = [
   {
-    name: 'Moema',
-    address: 'Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090',
-    openingHours: 'Seg. a sab.: 09:00 as 18:00',
-    holidayHours: 'Dom. e feriados: 09:00 as 15:00',
+    name: 'Brás',
+    address: 'Rua Rio Bonito, 1528 - Brás, São Paulo - SP, 03023-000',
+    openingHours: 'Seg. a sáb.: 08:00 às 19:00',
+    holidayHours: 'Dom. e feriados: 09:00 às 15:00',
     image: 'assets/nossas-unidades/card-loja.png',
   },
   {
     name: 'Moema',
-    address: 'Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090',
-    openingHours: 'Seg. a sab.: 09:00 as 18:00',
-    holidayHours: 'Dom. e feriados: 09:00 as 15:00',
+    address: 'Alameda dos Nhambiquaras, 801, Moema, São Paulo - SP, 04090',
+    openingHours: 'Seg. a sáb.: 09:00 às 20:00',
+    holidayHours: 'Dom. e feriados: 09:00 às 15:00',
     image: 'assets/nossas-unidades/card-loja.png',
   },
   {
-    name: 'Moema',
-    address: 'Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090',
-    openingHours: 'Seg. a sab.: 09:00 as 18:00',
-    holidayHours: 'Dom. e feriados: 09:00 as 15:00',
+    name: 'Tatuapé',
+    address: 'Rua Serra de Japi, 843, Tatuapé, São Paulo - SP, 03309-000',
+    openingHours: 'Seg. a sáb.: 09:00 às 20:00',
+    holidayHours: 'Dom. e feriados: 09:00 às 15:00',
     image: 'assets/nossas-unidades/card-loja.png',
   },
   {
-    name: 'Moema',
-    address: 'Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090',
-    openingHours: 'Seg. a sab.: 09:00 as 18:00',
-    holidayHours: 'Dom. e feriados: 09:00 as 15:00',
+    name: 'Centro - SP',
+    address: 'R. Barão de Duprat, 400 - Box 09 Mercado Municipal Kinjo Yamato',
+    openingHours: 'Seg. a sáb.: 09:00 às 17:00',
+    holidayHours: 'Feriados: 09:00 às 15:00',
+    image: 'assets/nossas-unidades/card-loja.png',
+  },
+  {
+    name: 'Santo Amaro',
+    address: 'R. Sócrates, 196, Vila Sofia, São Paulo - SP, 04671-070',
+    openingHours: 'Seg. a sáb.: 09:00 às 20:00',
+    holidayHours: 'Dom. e feriados: 09:00 às 15:00',
+    image: 'assets/nossas-unidades/card-loja.png',
+  },
+  {
+    name: 'Aclimação',
+    address: 'R. Esmeralda, 61, Aclimação, São Paulo - SP, 01531-040',
+    openingHours: 'Seg. a sáb.: 09:00 às 20:00',
+    holidayHours: 'Dom. e feriados: 09:00 às 15:00',
+    image: 'assets/nossas-unidades/card-loja.png',
+  },
+  {
+    name: 'Tatuí',
+    address: 'R. Chiquinha Rodrigues, 1105, Vila Dr. Laurindo, Tatuí - SP, 18271-712',
+    openingHours: 'Seg. a sáb.: 08:30 às 19:30',
+    holidayHours: 'Dom. e feriados: 08:30 às 15:00',
+    image: 'assets/nossas-unidades/card-loja.png',
+  },
+  {
+    name: 'Boituva',
+    address: 'Av. Zélia de Lima Rosa, 437, Ah Boituva - SP, 18552-320',
+    openingHours: 'Seg. a sáb.: 08:30 às 19:30',
+    holidayHours: 'Dom. e feriados: 08:30 às 15:00',
+    image: 'assets/nossas-unidades/card-loja.png',
+  },
+  {
+    name: 'Cesário Lange',
+    address: 'Avenida 3 de Maio, 1307, Cesário Lange - SP, 18285-000',
+    openingHours: 'Seg. a sáb.: 08:30 às 19:30',
+    holidayHours: 'Dom. e feriados: 08:00 às 15:00',
+    image: 'assets/nossas-unidades/card-loja.png',
+  },
+  {
+    name: 'Cerquilho',
+    address: 'R. Dr. Campos, 332, Centro, Cerquilho - SP, 18520-103',
+    openingHours: 'Seg. a sáb.: 08:30 às 19:30',
+    holidayHours: 'Dom. e feriados: 08:30 às 15:00',
     image: 'assets/nossas-unidades/card-loja.png',
   },
 ]
@@ -95,7 +137,7 @@ const NossasUnidades = ({ stores }) => {
     <section className={styles.nossasUnidades}>
       <div className={styles.headerunidades}>
         <span className={styles.eyebrow}> NOSSAS UNIDADES</span>
-        <h2 className={styles.title}>Localize a unidade El Haji Beef mais próxima para descobrir a excelência de nossos cortes exclusivos. Nossas boutiques unem a tradição da Fazenda São João à alta tecnologia: garantindo um atendimento especializado e o rigor do padrão 100% Halal em cada escolha.</h2>
+        <h2 className={styles.lojastitle}>Localize a unidade El Haji Beef mais próxima para descobrir a excelência de nossos cortes exclusivos. Nossas boutiques unem a tradição da Fazenda São João à alta tecnologia: garantindo um atendimento especializado e o rigor do padrão 100% Halal em cada escolha.</h2>
       </div>
 
       <div className={styles.sliderContainer}>
@@ -134,8 +176,10 @@ const NossasUnidades = ({ stores }) => {
                   width="255"
                 />
                 <div className={styles.storeOverlay}>
-                  <span className={styles.storeLabel}>Loja</span>
-                  <h3 className={styles.storeName}>{store.name}</h3>
+                  <div className={styles.storeHeading}>
+                    <span className={styles.storeLabel}>Loja</span>
+                    <h3 className={styles.storeName}>{store.name}</h3>
+                  </div>
                   <div className={styles.storeInfo}>
                     <span aria-hidden="true" className={`${styles.storeIcon} ${styles.locationIcon}`} />
                     <p className={styles.storeText}>{store.address}</p>
@@ -195,9 +239,9 @@ NossasUnidades.schema = {
         type: 'object',
         properties: {
           name: { title: 'Nome da loja', type: 'string', default: 'Moema' },
-          address: { title: 'Endereco', type: 'string', default: 'Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090' },
-          openingHours: { title: 'Horario principal', type: 'string', default: 'Seg. a sab.: 09:00 as 18:00' },
-          holidayHours: { title: 'Horario domingos e feriados', type: 'string', default: 'Dom. e feriados: 09:00 as 15:00' },
+          address: { title: 'Endereco', type: 'string', default: 'Alameda dos Nhambiquaras, 801, Moema, São Paulo - SP, 04090' },
+          openingHours: { title: 'Horario principal', type: 'string', default: 'Seg. a sáb.: 09:00 às 20:00' },
+          holidayHours: { title: 'Horario domingos e feriados', type: 'string', default: 'Dom. e feriados: 09:00 às 15:00' },
           image: { title: 'Imagem da loja', type: 'string', widget: { 'ui:widget': 'image-uploader' } },
         },
       },

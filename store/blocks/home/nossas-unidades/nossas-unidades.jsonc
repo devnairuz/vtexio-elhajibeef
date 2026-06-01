@@ -12,31 +12,73 @@
     "props": {
       "stores": [
         {
-          "name": "Moema",
-          "address": "Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090",
-          "openingHours": "Seg. a sab.: 09:00 as 18:00",
-          "holidayHours": "Dom. e feriados: 09:00 as 15:00",
+          "name": "Brás",
+          "address": "Rua Rio Bonito, 1528 - Brás, São Paulo - SP, 03023-000",
+          "openingHours": "Seg. a sáb.: 08:00 às 19:00",
+          "holidayHours": "Dom. e feriados: 09:00 às 15:00",
           "image": "assets/nossas-unidades/card-loja.png"
         },
         {
           "name": "Moema",
-          "address": "Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090",
-          "openingHours": "Seg. a sab.: 09:00 as 18:00",
-          "holidayHours": "Dom. e feriados: 09:00 as 15:00",
+          "address": "Alameda dos Nhambiquaras, 801, Moema, São Paulo - SP, 04090",
+          "openingHours": "Seg. a sáb.: 09:00 às 20:00",
+          "holidayHours": "Dom. e feriados: 09:00 às 15:00",
           "image": "assets/nossas-unidades/card-loja.png"
         },
         {
-          "name": "Moema",
-          "address": "Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090",
-          "openingHours": "Seg. a sab.: 09:00 as 18:00",
-          "holidayHours": "Dom. e feriados: 09:00 as 15:00",
+          "name": "Tatuapé",
+          "address": "Rua Serra de Japi, 843, Tatuapé, São Paulo - SP, 03309-000",
+          "openingHours": "Seg. a sáb.: 09:00 às 20:00",
+          "holidayHours": "Dom. e feriados: 09:00 às 15:00",
           "image": "assets/nossas-unidades/card-loja.png"
         },
         {
-          "name": "Moema",
-          "address": "Alameda dos Nhambiquaras, 801, Moema, Sao Paulo - SP, 04090",
-          "openingHours": "Seg. a sab.: 09:00 as 18:00",
-          "holidayHours": "Dom. e feriados: 09:00 as 15:00",
+          "name": "Centro - SP",
+          "address": "R. Barão de Duprat, 400 - Box 09 Mercado Municipal Kinjo Yamato",
+          "openingHours": "Seg. a sáb.: 09:00 às 17:00",
+          "holidayHours": "Feriados: 09:00 às 15:00",
+          "image": "assets/nossas-unidades/card-loja.png"
+        },
+        {
+          "name": "Santo Amaro",
+          "address": "R. Sócrates, 196, Vila Sofia, São Paulo - SP, 04671-070",
+          "openingHours": "Seg. a sáb.: 09:00 às 20:00",
+          "holidayHours": "Dom. e feriados: 09:00 às 15:00",
+          "image": "assets/nossas-unidades/card-loja.png"
+        },
+        {
+          "name": "Aclimação",
+          "address": "R. Esmeralda, 61, Aclimação, São Paulo - SP, 01531-040",
+          "openingHours": "Seg. a sáb.: 09:00 às 20:00",
+          "holidayHours": "Dom. e feriados: 09:00 às 15:00",
+          "image": "assets/nossas-unidades/card-loja.png"
+        },
+        {
+          "name": "Tatuí",
+          "address": "R. Chiquinha Rodrigues, 1105, Vila Dr. Laurindo, Tatuí - SP, 18271-712",
+          "openingHours": "Seg. a sáb.: 08:30 às 19:30",
+          "holidayHours": "Dom. e feriados: 08:30 às 15:00",
+          "image": "assets/nossas-unidades/card-loja.png"
+        },
+        {
+          "name": "Boituva",
+          "address": "Av. Zélia de Lima Rosa, 437, Ah Boituva - SP, 18552-320",
+          "openingHours": "Seg. a sáb.: 08:30 às 19:30",
+          "holidayHours": "Dom. e feriados: 08:30 às 15:00",
+          "image": "assets/nossas-unidades/card-loja.png"
+        },
+        {
+          "name": "Cesário Lange",
+          "address": "Avenida 3 de Maio, 1307, Cesário Lange - SP, 18285-000",
+          "openingHours": "Seg. a sáb.: 08:30 às 19:30",
+          "holidayHours": "Dom. e feriados: 08:00 às 15:00",
+          "image": "assets/nossas-unidades/card-loja.png"
+        },
+        {
+          "name": "Cerquilho",
+          "address": "R. Dr. Campos, 332, Centro, Cerquilho - SP, 18520-103",
+          "openingHours": "Seg. a sáb.: 08:30 às 19:30",
+          "holidayHours": "Dom. e feriados: 08:30 às 15:00",
           "image": "assets/nossas-unidades/card-loja.png"
         }
       ]

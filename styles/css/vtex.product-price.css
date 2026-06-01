@@ -23,22 +23,22 @@
 
 @media (max-width: 767px) {
   .sellingPrice--selling-price-summary {
-    font-size: 19px;
-    line-height: 24px;
+    font-size: 22px;
+    line-height: 26px;
   }
 
   .listPriceValue--list-price-summary {
     display: block;
     margin-right: 0;
-    font-size: 11px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 
 @media (max-width: 360px) {
   .sellingPrice--selling-price-summary {
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 19px;
+    line-height: 24px;
   }
 }
 

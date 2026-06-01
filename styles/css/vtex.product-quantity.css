@@ -2,17 +2,27 @@
   margin: 0;
 }
 .quantitySelectorContainer :global(.vtex-numeric-stepper-container) {
-  display: flex;
+  display: grid;
+  grid-template-columns: 18px minmax(18px, 1fr) 18px;
   align-items: center;
-  max-width: 61px;
-  max-height: 36px;
+  width: 61px;
+  max-width: none;
+  height: 36px;
+  max-height: none;
+  overflow: visible;
 }
 :global(.vtex-product-quantity-1-x-summaryContainer) {
+  display: block;
+  width: fit-content;
   background-color: #3F3F3F;
   border-radius: 4px;
+  overflow: visible;
 }
 .quantitySelectorContainer :global(.vtex-numeric-stepper__minus-button-container) {
   order: 1;
+  position: static !important;
+  width: 18px;
+  height: 36px;
 }
 
 .quantitySelectorContainer :global(.vtex-numeric-stepper__input) {
@@ -21,51 +31,81 @@
 
 .quantitySelectorContainer :global(.vtex-numeric-stepper__plus-button-container) {
   order: 3;
+  position: static !important;
+  width: 18px;
+  height: 36px;
 }
 .quantitySelectorContainer :global(.vtex-numeric-stepper__input) {
   width: 100%;
-  height: 50px;
+  min-width: 18px;
+  height: 36px;
   border: 0;
   border-radius: 4px;
   background-color: transparent;
   color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 36px;
+  opacity: 1;
+  padding: 0 !important;
+  text-align: center;
 }
 .quantitySelectorContainer :global(.vtex-numeric-stepper__plus-button-container) {
-  top: 4px;
+  top: auto;
 }
 .quantitySelectorContainer :global(.vtex-numeric-stepper__minus-button-container) {
-  bottom: 4px;
+  bottom: auto;
 }
 .quantitySelectorContainer :global(.vtex-numeric-stepper__plus-button),
 .quantitySelectorContainer :global(.vtex-numeric-stepper__minus-button) {
+  width: 18px;
+  min-width: 18px;
   max-width: 18px;
-  height: 19px;
-  line-height: 10px;
+  height: 36px;
+  min-height: 36px;
+  line-height: 36px;
   border-radius: 0px;
   background: transparent;
   border: 0;
   color: #F5BE4B;
+  padding: 0;
 }
 
 @media (max-width: 767px) {
   .quantitySelectorContainer :global(.vtex-numeric-stepper-container) {
-    max-height: 34px;
+    grid-template-columns: 18px minmax(20px, 1fr) 18px;
+    width: 58px;
+    height: 36px;
+    max-width: none;
   }
 
   .quantitySelectorContainer :global(.vtex-numeric-stepper__input) {
-    height: 34px;
+    height: 36px;
     font-size: 14px;
   }
 
   .quantitySelectorContainer :global(.vtex-numeric-stepper__plus-button),
   .quantitySelectorContainer :global(.vtex-numeric-stepper__minus-button) {
-    max-width: 16px;
-    height: 17px;
+    width: 18px;
+    min-width: 18px;
+    max-width: 18px;
+    height: 36px;
+    min-height: 36px;
   }
 }
 
 @media (max-width: 360px) {
   .quantitySelectorContainer :global(.vtex-numeric-stepper-container) {
-    max-width: 48px;
+    grid-template-columns: 16px minmax(18px, 1fr) 16px;
+    width: 50px;
+  }
+
+  .quantitySelectorContainer :global(.vtex-numeric-stepper__minus-button-container),
+  .quantitySelectorContainer :global(.vtex-numeric-stepper__plus-button-container),
+  .quantitySelectorContainer :global(.vtex-numeric-stepper__plus-button),
+  .quantitySelectorContainer :global(.vtex-numeric-stepper__minus-button) {
+    width: 16px;
+    min-width: 16px;
+    max-width: 16px;
   }
 }

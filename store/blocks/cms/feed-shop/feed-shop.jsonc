@@ -1,0 +1,54 @@
+{
+  "store.custom#feed-shop": {
+    "children": [
+      "flex-layout.row#feed-shop-page"
+    ]
+  },
+
+  "flex-layout.row#feed-shop-page": {
+    "props": {
+      "blockClass": ["feed-shop-page", "custom-container"],
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#feed-shop-content"
+    ]
+  },
+
+  "flex-layout.col#feed-shop-content": {
+    "props": {
+      "blockClass": "feed-shop-content",
+      "horizontalAlign": "center",
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "image#feed-shop-icon",
+      "rich-text#feed-shop-title",
+      "rich-text#feed-shop-description"
+    ]
+  },
+
+  "image#feed-shop-icon": {
+    "props": {
+      "src": "assets/icons/feed-shop.svg",
+      "alt": "Feed Shop",
+      "blockClass": "feed-shop-page-icon"
+    }
+  },
+
+  "rich-text#feed-shop-title": {
+    "props": {
+      "text": "# Feed Shop",
+      "textAlignment": "CENTER",
+      "blockClass": "feed-shop-title"
+    }
+  },
+
+  "rich-text#feed-shop-description": {
+    "props": {
+      "text": "Confira as novidades e selecoes especiais da El Haji Beef.",
+      "textAlignment": "CENTER",
+      "blockClass": "feed-shop-description"
+    }
+  }
+}

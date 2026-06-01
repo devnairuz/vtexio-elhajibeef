@@ -311,6 +311,10 @@
   background: url('../../../assets/icons/person.svg') center / contain no-repeat;
 }
 
+.iconFeedShop {
+  background: url('../../../assets/icons/feed-shop.svg') center / contain no-repeat;
+}
+
 .iconPackage {
   background: url('../../../assets/icons/package.png') center / contain no-repeat;
 }

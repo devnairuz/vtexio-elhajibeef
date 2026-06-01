@@ -42,6 +42,13 @@
     "props": {
       "blockClass": ["minicart-mobile-content"]
     },
-    "children": ["flex-layout.row#login-desktop", "minicart.v2"]
+    "children": ["header-login#mobile", "minicart.v2"]
+  },
+
+  "header-login#mobile": {
+    "props": {
+      "iconOnly": true
+    },
+    "children": ["login#mobile"]
   }
 }

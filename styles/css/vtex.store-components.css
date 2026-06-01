@@ -39,6 +39,12 @@
   display: block;
 }
 
+.imageElement--feed-shop-page-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
 .searchBarContainer {
   padding: 0;
   width: 100%;

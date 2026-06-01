@@ -21,7 +21,8 @@
 
   "flex-layout.row#search-toolbar-mobile": {
     "props": {
-      "blockClass": ["toolbar-mobile", "custom-container"]
+      "blockClass": ["toolbar-mobile", "custom-container"],
+      "colSizing": "auto"
     },
     "children": ["flex-layout.col#order-by-and-switcher", "filter-navigator.v3"]
   }

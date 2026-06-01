@@ -13,6 +13,7 @@
 
 .imageContainer {
   width: 100%;
+  line-height: 0;
 }
 .nameContainer--summary-name {
   display: block;
@@ -36,48 +37,66 @@
 }
 
 @media (max-width: 767px) {
+  .container {
+    height: 100%;
+    min-width: 0;
+  }
+
   .element {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 8px;
+    min-height: 430px;
+    padding: 16px;
     box-shadow: none;
   }
 
   .imageContainer {
     aspect-ratio: 154 / 206;
+    width: 100%;
+    flex: 0 0 auto;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 4px;
   }
 
   .imageContainer :global(.vtex-product-summary-2-x-image),
   .imageContainer :global(.vtex-product-summary-2-x-imageNormal) {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover !important;
   }
 
   .nameContainer--summary-name {
-    padding: 8px 0 6px;
+    padding: 8px 0;
   }
 
   .nameWrapper--summary-name {
-    height: 38px;
+    height: 54px;
   }
 
   .brandName--summary-name {
+    display: -webkit-box;
+    overflow: hidden;
     font-size: 14px;
-    line-height: 19px;
+    line-height: 18px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 }
 
 @media (max-width: 360px) {
   .element {
-    padding: 7px;
+    min-height: 390px;
+    padding: 12px;
+  }
+
+  .nameWrapper--summary-name {
+    height: 50px;
   }
 
   .brandName--summary-name {
     font-size: 13px;
-    line-height: 18px;
+    line-height: 17px;
   }
 }

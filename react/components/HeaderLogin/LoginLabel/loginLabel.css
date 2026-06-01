@@ -1,5 +1,24 @@
 .loginLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
+}
+
+.loginLinkIconOnly {
+  width: 26px;
+  height: 26px;
+  line-height: 0;
+}
+
+.loginIcon {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-image: url('../../../../assets/icons/login.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .clientGreeting p {

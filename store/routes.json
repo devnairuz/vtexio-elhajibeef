@@ -16,5 +16,8 @@
 },
 "store.custom#faq": {
   "path": "/faq"
+},
+"store.custom#feed-shop": {
+  "path": "/feed-shop"
 }
 }

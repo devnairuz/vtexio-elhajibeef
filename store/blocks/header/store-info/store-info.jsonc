@@ -23,7 +23,7 @@
     "title": "Header > Feed Shop > Texto",
     "props": {
       "blockClass": ["store-info-text", "utils-text"],
-      "text": "Feed Shop"
+      "text": "[Feed Shop](/feed-shop)"
     }
   }
 }

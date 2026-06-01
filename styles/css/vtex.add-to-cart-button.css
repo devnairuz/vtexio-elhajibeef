@@ -25,9 +25,9 @@
 
 @media (max-width: 767px) {
   .buttonText--buy-button-shelf::before {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 130%;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
   }
 }
 

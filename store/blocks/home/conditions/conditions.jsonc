@@ -28,12 +28,12 @@
           "subheadline": "Em até 24h para a cidade de São Paulo"
         },
         {
-          "icon": "assets/icons/refresh-cw.svg",
+          "icon": "assets/icons/call.svg",
           "headline": "Atendimento Especializado",
           "subheadline": "Suporte de quem entende do produto"
         },
         {
-          "icon": "assets/icons/shield.svg",
+          "icon": "assets/icons/assinatura.svg",
           "headline": "Clube de Assinatura",
           "subheadline": "Exclusividade todos os meses"
         }

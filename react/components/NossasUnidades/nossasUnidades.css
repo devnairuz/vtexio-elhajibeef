@@ -6,7 +6,7 @@
 
 .headerunidades {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   background: none;
 }
 
@@ -24,12 +24,15 @@
   margin-bottom: 8px;
 }
 
-.title {
+.lojastitle {
   text-align: center;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #FFFFFF;
+  max-width: 730px;
+  margin: 0 auto;
 }
 
 .sliderContainer {
@@ -60,43 +63,70 @@
 
 .storeImage {
   width: 100%;
-  height: 380px;
+  height: 370px;
   object-fit: cover;
   display: block;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .storeOverlay {
   position: absolute;
+  top: 0;
   bottom: 0;
   left: 8px;
   right: 8px;
-  background: linear-gradient(to top, rgba(0, 0, 0, .85) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 21%, #000000 76%);
   color: #fff;
-  padding: 32px 20px 20px;
-  border-radius: 0 0 4px 4px;
+  padding: 10px 16px 16px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .25s ease, transform .25s ease;
+  pointer-events: none;
+}
+
+.storeHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.storeCard:hover .storeOverlay,
+.storeCard:focus-within .storeOverlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .storeLabel {
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  opacity: 0.7;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 1;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: -2px;
 }
 
 .storeName {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 12px;
+  color: #FA0209;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 26px;
+  line-height: normal;
+  font-weight: 600;
+  margin: 0;
 }
 
 .storeInfo {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .storeIcon {
@@ -119,10 +149,11 @@
 }
 
 .storeText {
-  font-size: 0.82rem;
-  line-height: 1.5;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  line-height: normal;
   margin: 0;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .arrowButton {
@@ -206,6 +237,12 @@
 }
 
 @media (max-width: 1023px) {
+  .storeOverlay {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
   .nossasUnidades .dots {
     display: flex;
   }

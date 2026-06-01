@@ -4,7 +4,7 @@ import LoginLabel from './LoginLabel'
 
 import styles from "./headerLogin.css"
 
-const HeaderLogin = ({ children }) => {
+const HeaderLogin = ({ children, iconOnly = false }) => {
   const { session, loading, error } = useRenderSession()
 
   const isAuthenticated =
@@ -13,20 +13,22 @@ const HeaderLogin = ({ children }) => {
   const href = isAuthenticated ? '/account' : '/login'
 
   if (loading) {
-    return <LoginLabel href={href} />
+    return <LoginLabel href={href} iconOnly={iconOnly} />
   }
 
   if (error) {
-    return <LoginLabel href={href} />
+    return <LoginLabel href={href} iconOnly={iconOnly} />
   }
 
   return (
     <div className={styles.headerLogin}>
-      <LoginLabel href={href} />
+      <LoginLabel href={href} iconOnly={iconOnly} />
 
-      <div className={styles.loginForm}>
-        {children}
-      </div>
+      {!iconOnly && (
+        <div className={styles.loginForm}>
+          {children}
+        </div>
+      )}
     </div>
   )
 }
