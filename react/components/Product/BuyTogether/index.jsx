@@ -163,7 +163,7 @@ const BuyTogether = ({ title = 'Não se esqueça' }) => {
     if (!mainProduct?.productId) return
     setLoading(true)
 
-    fetch(`/api/catalog_system/pub/products/crossselling/showtogether/${mainProduct.productId}`)
+    fetch(`/api/catalog_system/pub/products/crossselling/suggestions/${mainProduct.productId}`)
       .then((r) => r.ok ? r.json() : [])
       .then(async (products) => {
         const unique = products.filter(
@@ -192,21 +192,21 @@ const BuyTogether = ({ title = 'Não se esqueça' }) => {
       .finally(() => setLoading(false))
   }, [mainProduct?.productId])
 
-  const allProducts = useMemo(() => {
-    const sourceProducts = mainProduct
-      ? [
-        mainProduct,
-        ...recommended.filter(
-          (p) => String(p?.productId) !== String(mainProduct.productId)
-        ),
-      ]
-      : recommended
+  const displayProducts = useMemo(
+    () => recommended.filter(
+      (p) => p?.productId && String(p.productId) !== String(mainProduct?.productId)
+    ),
+    [mainProduct?.productId, recommended]
+  )
 
-    return sourceProducts.filter(isWeightVariable)
-  }, [mainProduct, recommended])
+  const purchaseProducts = useMemo(() => {
+    if (!mainProduct || !displayProducts.length) return []
+
+    return [mainProduct, ...displayProducts]
+  }, [displayProducts, mainProduct])
 
   const pricing = useMemo(() => {
-    const cards = allProducts.map((p) => ({
+    const cards = purchaseProducts.map((p) => ({
       product: p,
       cash: getCashPrice(p),
       inst: getInstallments(p),
@@ -229,7 +229,7 @@ const BuyTogether = ({ title = 'Não se esqueça' }) => {
       totalInstallment: totalInst / minCount,
       installmentCount: minCount,
     }
-  }, [allProducts])
+  }, [purchaseProducts])
 
   const refreshOrderForm = async () => {
     try {
@@ -264,21 +264,21 @@ const BuyTogether = ({ title = 'Não se esqueça' }) => {
   }
 
   const handleAddToCart = async () => {
-    if (!allProducts.length || isAdding) return
+    if (!purchaseProducts.length || isAdding) return
     setIsAdding(true)
     try {
       const current = await refreshOrderForm()
       const id = current?.id || orderForm?.id
       if (!id) throw new Error('No orderForm id')
 
-      for (const p of allProducts) {
+      for (const p of purchaseProducts) {
         const sku = getSku(p); const seller = getSeller(p)
         const result = await addItem(id, p, sku, seller)
         if (!result) await fetch(`/checkout/cart/add?sku=${sku}&qty=1&seller=${seller}&sc=1`, { credentials: 'include' })
       }
 
       const latest = await refreshOrderForm()
-      const imgMap = allProducts.reduce((acc, p) => {
+      const imgMap = purchaseProducts.reduce((acc, p) => {
         const sku = String(getSku(p) || '')
         if (sku) acc[sku] = getCartImageUrl(p)
         return acc
@@ -304,7 +304,7 @@ const BuyTogether = ({ title = 'Não se esqueça' }) => {
     finally { setIsAdding(false) }
   }
 
-  if (!mainProduct || loading || !allProducts.length) return null
+  if (!mainProduct || loading || !displayProducts.length) return null
 
   return (
     <div className={styles.buyTogetherContainer}>

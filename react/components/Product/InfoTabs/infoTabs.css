@@ -1,11 +1,19 @@
 .containerInfoTabs {
   max-width: 679px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 0fr;
   padding: 16px;
   margin-bottom: 24px;
   background-color: #292929;
   border-radius: 8px;
+  overflow: hidden;
+  transition:
+    grid-template-rows .42s cubic-bezier(.22, 1, .36, 1),
+    background-color .24s ease;
+}
+
+.containerInfoTabsOpen {
+  grid-template-rows: auto 1fr;
 }
 
 /* .containerInfoTabs:first-child {
@@ -16,6 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   background-color: transparent;
   border: none;
   padding-inline: 0;
@@ -33,7 +42,29 @@
 }
 
 .headerAccordion svg {
-  transition: ease-in-out .3s;
+  flex-shrink: 0;
+  transition: transform .32s cubic-bezier(.22, 1, .36, 1);
+}
+
+.accordionPanel {
+  min-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition:
+    opacity .26s ease,
+    transform .38s cubic-bezier(.22, 1, .36, 1);
+  will-change: opacity, transform;
+}
+
+.accordionPanelOpen {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accordionPanelInner {
+  min-height: 0;
+  overflow: hidden;
 }
 
 .contentTab {
@@ -147,5 +178,16 @@
 @media (max-width: 1040px) {
   .containerImageDescription {
     flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .headerAccordion svg,
+  .accordionPanel {
+    transition: none;
+  }
+
+  .accordionPanel {
+    transform: none;
   }
 }

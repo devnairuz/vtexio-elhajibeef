@@ -215,14 +215,14 @@
 @media (max-width: 767px) {
   .elhajiBannerSliderImage {
     /* CORRIGIDO: aspect-ratio mobile para imagem mais alta */
-    aspect-ratio: 9 / 13;
-    min-height: 420px;
+    aspect-ratio: 1 / 1.06;
+    min-height: 455px;
     max-height: none;
     object-position: center bottom;
   }
 
   .elhajiBannerSliderContent {
-    top: 88px;
+    top: 48px;
     left: 0;
     right: 0;
     width: 100%;
@@ -253,11 +253,7 @@
     font-size: 15px;
   }
 
-  .elhajiBannerSliderArrowPrevious {
-    left: 4px;
-  }
-
-  .elhajiBannerSliderArrowNext {
-    right: 4px;
+  .elhajiBannerSliderArrow {
+    display: none;
   }
 }

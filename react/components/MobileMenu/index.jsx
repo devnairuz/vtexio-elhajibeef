@@ -20,12 +20,6 @@ const toCategoryUrl = category => {
 
 const ACCOUNT_LINKS = [
   {
-    key: 'feed-shop',
-    label: 'Feed Shop',
-    url: '/feed-shop',
-    iconClass: 'iconFeedShop',
-  },
-  {
     key: 'minha-conta',
     label: 'Minha Conta',
     url: '/account',

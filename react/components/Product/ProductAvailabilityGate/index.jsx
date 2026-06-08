@@ -34,7 +34,7 @@ const isProductAvailable = product => {
 
 const ProductAvailabilityGate = ({
   children,
-  message = 'Produto indisponivel',
+  message = 'Indisponivel',
   showMessage = true,
 }) => {
   const productSummary = useContext(ProductSummaryContext)

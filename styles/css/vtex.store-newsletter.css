@@ -51,9 +51,11 @@
   padding: 0 26px;
   width: 152px;
   line-height: 18px;
+  transition: all 0.3s ease-in-out;
 }
 .formSubmitContainer :global(.vtex-button):hover {
-  background: #F2AF1F;
+  background: #7B590F;
+  color: #FFFFFF;
 }
 .formSubmitContainer :global(.vtex-button__label) {
   padding: 0 !important;
@@ -67,14 +69,41 @@
 
 @media (max-width: 575px) {
   .newsletterForm {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
     width: 100%;
   }
 
-  .emailInputContainer,
-  .formSubmitContainer,
-  .formSubmitContainer :global(.vtex-button) {
+  .emailInputContainer {
+    flex: 1 1 auto;
+    min-width: 0;
     width: 100%;
     max-width: 100%;
+  }
+
+  .formSubmitContainer {
+    flex: 0 0 111px;
+    width: 111px;
+  }
+
+  .formSubmitContainer :global(.vtex-button) {
+    width: 111px;
+    min-height: 31px;
+    padding: 0 18px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .newsletterForm {
+    gap: 10px;
+  }
+
+  .formSubmitContainer,
+  .formSubmitContainer :global(.vtex-button) {
+    flex-basis: 104px;
+    width: 104px;
   }
 }

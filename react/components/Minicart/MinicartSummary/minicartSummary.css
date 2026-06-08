@@ -73,10 +73,19 @@
 
 .infoIcon {
   display: inline-flex;
-  flex: 0 0 auto;
+  flex: 0 0 20px;
   align-items: center;
   justify-content: center;
+  width: 20px;
+  height: 20px;
   color: #a2a2a2;
+  line-height: 0;
+}
+
+.infoIcon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .capsule {

@@ -79,11 +79,11 @@
   border-radius: 4px;
   background-color: #f5be4b !important;
   border: none;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .minicartCheckoutButton :global(.vtex-button):hover {
-  background-color: #ffc64d !important;
+  background-color: #7b590f !important;
 }
 
 /* Substitui "IR PARA O CHECKOUT" por "Finalizar compra" */
@@ -107,11 +107,18 @@
   font-family: 'DM Sans', sans-serif;
   letter-spacing: 1px;
   text-transform: none;
+  transition: color 0.2s ease;
+}
+
+.minicartCheckoutButton :global(.vtex-button):hover :global(.vtex-button__label)::after {
+  color: #ffffff;
 }
 
 /* ── SCROLLBAR DO DRAWER ─────────────────────────────── */
 .drawerContent ::-webkit-scrollbar {
-  width: 4px;
+  display: none;
+  width: 0;
+  height: 0;
 }
 .drawerContent ::-webkit-scrollbar-track {
   background: transparent;
@@ -150,7 +157,14 @@
   height: calc(100dvh - 392px);
   min-height: 118px;
   overflow-y: auto;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+:global(.vtex-minicart-2-x-minicartProductListContainer)::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 :global(.vtex-minicart-2-x-minicartProductListContainer)
@@ -203,7 +217,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  line-height: 1;
+  line-height: 120%;
 }
 
 :global(.vtex-product-list-0-x-productPriceCurrency--price-minicart) {
@@ -211,10 +225,10 @@
   font-size: 14px !important;
   font-weight: 400;
   margin: 0;
+  line-height: 18px;
 }
 
 :global(.vtex-flex-layout-0-x-flexRow--minicart-item-row) {
-  margin-bottom: clamp(16px, 4vh, 32px);
   padding: 0 !important;
 }
 

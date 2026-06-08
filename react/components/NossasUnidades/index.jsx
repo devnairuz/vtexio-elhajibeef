@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import styles from './nossasUnidades.css'
 
 const DEFAULT_STORES = [
@@ -81,20 +81,35 @@ const getItemsPerPage = () => {
   return 4
 }
 
+const getIsMobile = () => {
+  if (typeof window === 'undefined') return false
+  return window.innerWidth < 640
+}
+
+const MOBILE_ITEM_WIDTH = 255
+const MOBILE_GAP = 12
+
 const NossasUnidades = ({ stores }) => {
   const storeItems = stores?.length ? stores : DEFAULT_STORES
 
+  const scrollRef = useRef(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage)
+  const [isMobile, setIsMobile] = useState(getIsMobile)
   const [touchStartX, setTouchStartX] = useState(null)
 
   // Atualiza itemsPerPage ao redimensionar a janela
   useEffect(() => {
     const handleResize = () => {
       const next = getItemsPerPage()
+      const nextIsMobile = getIsMobile()
       setItemsPerPage(prev => {
         if (prev !== next) setCurrentIndex(0) // reset ao mudar breakpoint
         return next
+      })
+      setIsMobile(prev => {
+        if (prev !== nextIsMobile) setCurrentIndex(0)
+        return nextIsMobile
       })
     }
 
@@ -102,11 +117,48 @@ const NossasUnidades = ({ stores }) => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!isMobile || !el || storeItems.length <= 1) return undefined
+
+    let frame = null
+    const step = MOBILE_ITEM_WIDTH + MOBILE_GAP
+
+    const handleScroll = () => {
+      if (frame) return
+
+      frame = window.requestAnimationFrame(() => {
+        const index = Math.round(el.scrollLeft / step)
+        const clamped = Math.max(0, Math.min(index, storeItems.length - 1))
+        setCurrentIndex(prev => (prev === clamped ? prev : clamped))
+        frame = null
+      })
+    }
+
+    el.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => {
+      el.removeEventListener('scroll', handleScroll)
+      if (frame) window.cancelAnimationFrame(frame)
+    }
+  }, [isMobile, storeItems.length])
+
   const maxIndex = Math.max(0, storeItems.length - itemsPerPage)
 
   // Porcentagem baseada no viewport do slider, não no track inteiro
   const cardWidthPercent = 100 / itemsPerPage
   const translateX = -(currentIndex * cardWidthPercent)
+
+  const goToMobileIndex = useCallback(index => {
+    const el = scrollRef.current
+    if (!el) return
+
+    const clamped = Math.max(0, Math.min(index, storeItems.length - 1))
+    el.scrollTo({
+      left: clamped * (MOBILE_ITEM_WIDTH + MOBILE_GAP),
+      behavior: 'smooth',
+    })
+  }, [storeItems.length])
 
   const handlePrev = () => setCurrentIndex(prev => Math.max(0, prev - 1))
   const handleNext = () => setCurrentIndex(prev => Math.min(maxIndex, prev + 1))
@@ -122,7 +174,7 @@ const NossasUnidades = ({ stores }) => {
     const swipeDistance = touchStartX - touchEndX
     const minSwipeDistance = 40
 
-    if (Math.abs(swipeDistance) >= minSwipeDistance) {
+    if (!isMobile && Math.abs(swipeDistance) >= minSwipeDistance) {
       if (swipeDistance > 0) {
         handleNext()
       } else {
@@ -152,19 +204,28 @@ const NossasUnidades = ({ stores }) => {
         </button>
 
         <div
+          ref={scrollRef}
           className={styles.sliderViewport}
           onTouchEnd={handleTouchEnd}
           onTouchStart={handleTouchStart}
         >
           <div
             className={styles.sliderTrack}
-            style={{ transform: `translateX(${translateX}%)` }}
+            style={isMobile ? undefined : { transform: `translateX(${translateX}%)` }}
           >
             {storeItems.map((store, index) => (
               <article
                 className={styles.storeCard}
                 key={`${store.name}-${index}`}
-                style={{ width: `${cardWidthPercent}%`, flexShrink: 0 }}
+                style={
+                  isMobile
+                    ? {
+                        width: `${MOBILE_ITEM_WIDTH}px`,
+                        flexBasis: `${MOBILE_ITEM_WIDTH}px`,
+                        flexShrink: 0,
+                      }
+                    : { width: `${cardWidthPercent}%`, flexShrink: 0 }
+                }
               >
                 <img
                   alt={`Loja ${store.name}`}
@@ -209,12 +270,12 @@ const NossasUnidades = ({ stores }) => {
       </div>
 
       <div className={styles.dots}>
-        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+        {Array.from({ length: isMobile ? storeItems.length : maxIndex + 1 }).map((_, i) => (
           <button
             aria-label={`Ir para slide ${i + 1}`}
             className={`${styles.dot} ${i === currentIndex ? styles.dotActive : ''}`}
             key={i}
-            onClick={() => setCurrentIndex(i)}
+            onClick={() => (isMobile ? goToMobileIndex(i) : setCurrentIndex(i))}
             type="button"
           />
         ))}

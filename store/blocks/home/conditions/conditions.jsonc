@@ -13,29 +13,29 @@
     "props": {
       "cards": [
         {
-          "icon": "assets/icons/truck.svg",
-          "headline": "Entregamos em todo Brasil",
-          "subheadline": "Em pedidos acima de R$500,00"
-        },
-        {
           "icon": "assets/icons/credit-card.svg",
-          "headline": "Pagamento Facilitado",
-          "subheadline": "3x sem juros acima de R$600,00"
+          "headline": "Pagamento\nFacilitado",
+          "subheadline": "3x sem juros\nacima de R$600,00"
         },
         {
           "icon": "assets/icons/truck.svg",
-          "headline": "Entrega Agendada",
-          "subheadline": "Em até 24h para a cidade de São Paulo"
+          "headline": "Frete Grátis\nem São Paulo",
+          "subheadline": "Em pedidos\nacima de R$500,00"
+        },
+        {
+          "icon": "assets/icons/calendar_month.svg",
+          "headline": "Entrega\nAgendada",
+          "subheadline": "Em até 24h para\na cidade de São Paulo"
         },
         {
           "icon": "assets/icons/call.svg",
-          "headline": "Atendimento Especializado",
-          "subheadline": "Suporte de quem entende do produto"
+          "headline": "Atendimento\nEspecializado",
+          "subheadline": "Suporte de quem\nentende do produto"
         },
         {
           "icon": "assets/icons/assinatura.svg",
-          "headline": "Clube de Assinatura",
-          "subheadline": "Exclusividade todos os meses"
+          "headline": "Clube de\nAssinatura",
+          "subheadline": "Exclusividade\ntodos os meses"
         }
       ]
     }

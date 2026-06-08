@@ -23,7 +23,7 @@
     },
     "rich-text#faq-title": {
       "props": {
-        "text": "# FAQ",
+        "text": "# FAQ - Perguntas Frequentes",
         "blockClass": ["cms", "title"]
       }
     },
@@ -56,7 +56,10 @@
       "disclosure-layout#menu-faq3",
       "disclosure-layout#menu-faq4",
       "disclosure-layout#menu-faq5",
-      "disclosure-layout#menu-faq6"
+      "disclosure-layout#menu-faq6",
+      "disclosure-layout#menu-faq7",
+      "disclosure-layout#menu-faq8",
+      "disclosure-layout#menu-faq9"
     ]
   },
   
@@ -123,6 +126,33 @@
       "disclosure-content#menu-faq6"
     ]
   },
+  "disclosure-layout#menu-faq7": {
+    "props": {
+      "blockClass": ["faq-dropdown"]
+    },
+    "children": [
+      "disclosure-trigger#menu-faq7",
+      "disclosure-content#menu-faq7"
+    ]
+  },
+  "disclosure-layout#menu-faq8": {
+    "props": {
+      "blockClass": ["faq-dropdown"]
+    },
+    "children": [
+      "disclosure-trigger#menu-faq8",
+      "disclosure-content#menu-faq8"
+    ]
+  },
+  "disclosure-layout#menu-faq9": {
+    "props": {
+      "blockClass": ["faq-dropdown"]
+    },
+    "children": [
+      "disclosure-trigger#menu-faq9",
+      "disclosure-content#menu-faq9"
+    ]
+  },
   "disclosure-trigger#menu-faq": {
     "children": [
       "rich-text#menu-title-faq"
@@ -174,6 +204,30 @@
   "disclosure-trigger#menu-faq6": {
     "children": [
       "rich-text#menu-title-faq6"
+    ],
+    "props": {
+      "blockClass": ["faq-trigger"]
+    }
+  },
+  "disclosure-trigger#menu-faq7": {
+    "children": [
+      "rich-text#menu-title-faq7"
+    ],
+    "props": {
+      "blockClass": ["faq-trigger"]
+    }
+  },
+  "disclosure-trigger#menu-faq8": {
+    "children": [
+      "rich-text#menu-title-faq8"
+    ],
+    "props": {
+      "blockClass": ["faq-trigger"]
+    }
+  },
+  "disclosure-trigger#menu-faq9": {
+    "children": [
+      "rich-text#menu-title-faq9"
     ],
     "props": {
       "blockClass": ["faq-trigger"]
@@ -236,88 +290,148 @@
       "rich-text#menu-texto6"
     ]
   },
+  "disclosure-content#menu-faq7": {
+    "props": {
+      "blockClass": ["faq-dropdown-content"]
+    },
+    "children": [
+      "rich-text#menu-texto7"
+    ]
+  },
+  "disclosure-content#menu-faq8": {
+    "props": {
+      "blockClass": ["faq-dropdown-content"]
+    },
+    "children": [
+      "rich-text#menu-texto8"
+    ]
+  },
+  "disclosure-content#menu-faq9": {
+    "props": {
+      "blockClass": ["faq-dropdown-content"]
+    },
+    "children": [
+      "rich-text#menu-texto9"
+    ]
+  },
   "rich-text#menu-title-faq": {
     "props": {
-      "text": "Os produtos têm garantia? Como funciona?",
+      "text": "1\\. O que é a Elhaji Beef?",
       "blockClass": ["current-page-faq"]
     }
   },
   "rich-text#menu-title-faq1": {
     "props": {
-      "text": "Vocês oferecem serviço de instalação dos produtos?",
+      "text": "2\\. Onde estão localizadas as lojas da Elhaji Beef?",
       "blockClass": ["current-page-faq"]
     }
   },
   "rich-text#menu-title-faq2": {
     "props": {
-      "text": "Os móveis são feitos sob medida ou têm tamanhos padrão?",
+      "text": "3\\.Como faço um pedido na Elhaji Beef?",
       "blockClass": ["current-page-faq"]
     }
   },
   "rich-text#menu-title-faq3": {
     "props": {
-      "text": "Quais são os prazos de entrega?",
+      "text": "4\\. Vocês vendem no atacado?",
       "blockClass": ["current-page-faq"]
     }
   },
   "rich-text#menu-title-faq4": {
     "props": {
-      "text": "É possível agendar a entrega para um dia específico?",
+      "text": "5\\. Quais formas de pagamento são aceitas?",
       "blockClass": ["current-page-faq"]
     }
   },
   "rich-text#menu-title-faq5": {
     "props": {
-      "text": "Qual o prazo de aprovação do pedido?",
+      "text": "6\\.Posso parcelar minha compra?",
       "blockClass": ["current-page-faq"]
     }
   },
   "rich-text#menu-title-faq6": {
     "props": {
-      "text": "Quais canais de atendimento e horários?",
+      "text": "7\\. Qual é o prazo de entrega para o meu endereço?",
+      "blockClass": ["current-page-faq"]
+    }
+  },
+  "rich-text#menu-title-faq7": {
+    "props": {
+      "text": "8\\. Como é garantida a qualidade das carnes da Elhaji Beef?",
+      "blockClass": ["current-page-faq"]
+    }
+  },
+  "rich-text#menu-title-faq8": {
+    "props": {
+      "text": "9\\. Vocês trabalham com carnes maturadas?",
+      "blockClass": ["current-page-faq"]
+    }
+  },
+  "rich-text#menu-title-faq9": {
+    "props": {
+      "text": "10\\. Meus dados estão seguros ao comprar com a Elhaji Beef?",
       "blockClass": ["current-page-faq"]
     }
   },
   "rich-text#menu-texto": {
     "props": {
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "text": "A Elhaji Beef é uma marca especializada em carnes premium, com foco em qualidade, procedência e cortes selecionados.",
       "blockClass": ["current-text-faq"]
     }
   },
   "rich-text#menu-texto1": {
     "props": {
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "text": "As lojas ficam em São Paulo. Consulte a página Nossas Lojas para ver endereços, horários e informações de atendimento.",
       "blockClass": ["current-text-faq"]
     }
   },
   
   "rich-text#menu-texto2": {
     "props": {
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "text": "Escolha os produtos no site, adicione ao carrinho, informe seus dados de entrega e finalize o pagamento no checkout.",
       "blockClass": ["current-text-faq"]
     }
   },
   "rich-text#menu-texto3": {
     "props": {
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "text": "Sim. Para compras em maior volume, entre em contato com nossa equipe para verificar condições comerciais.",
       "blockClass": ["current-text-faq"]
     }
   },
   "rich-text#menu-texto4": {
     "props": {
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "text": "Aceitamos as formas de pagamento disponíveis no checkout, incluindo cartões e Pix, conforme as opções exibidas no momento da compra.",
       "blockClass": ["current-text-faq"]
     }
   },
   "rich-text#menu-texto5": {
     "props": {
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "text": "Sim. As condições de parcelamento aparecem no checkout de acordo com a forma de pagamento escolhida.",
       "blockClass": ["current-text-faq"]
     }
   },
   "rich-text#menu-texto6": {
     "props": {
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "text": "O prazo depende do CEP, disponibilidade logística e modalidade escolhida. Informe seu endereço no carrinho para consultar as opções.",
+      "blockClass": ["current-text-faq"]
+    }
+  },
+  "rich-text#menu-texto7": {
+    "props": {
+      "text": "Trabalhamos com seleção criteriosa de fornecedores, controle de armazenamento e processos voltados para preservar sabor, textura e segurança.",
+      "blockClass": ["current-text-faq"]
+    }
+  },
+  "rich-text#menu-texto8": {
+    "props": {
+      "text": "Sim. A disponibilidade de carnes maturadas pode variar conforme estoque e seleção de produtos.",
+      "blockClass": ["current-text-faq"]
+    }
+  },
+  "rich-text#menu-texto9": {
+    "props": {
+      "text": "Sim. Os dados informados no site são tratados em ambiente seguro e usados apenas para processar seu pedido e atendimento.",
       "blockClass": ["current-text-faq"]
     }
   }

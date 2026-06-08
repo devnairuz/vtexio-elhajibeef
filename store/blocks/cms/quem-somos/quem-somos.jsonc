@@ -71,9 +71,24 @@
       "slides": [
         {
           "title": "Elhaji Beef: Carnes Premium com Tradição desde 2001",
-          "text": "🥩 Qualidade e Sustentabilidade na Produção de Carnes.\n\nDesde 2001, a El Haji Beef se destaca como referência em carne de alta qualidade, unindo tradição, tecnologia e compromisso com o bem-estar animal. Com mais de 24 anos de experiência, iniciamos com 20 cabeças de gado e hoje operamos uma estrutura moderna temos mais de 6 mil cabeças, garantindo padrões rigorosos do campo à mesa.",
-          "image": "assets/institucional/quem-somos-slider.png",
-          "imageAlt": "Fazenda São João — El Haji Beef"
+          "text": "🥩 Qualidade e Sustentabilidade na Produção de Carnes.\nDesde 2001, a El Haji Beef se destaca como referência em carne de alta qualidade, unindo tradição, tecnologia e compromisso com o bem-estar animal. Com mais de 24 anos de experiência, iniciamos com 20 cabeças de gado e hoje operamos uma estrutura moderna temos mais de 6 mil cabeças, garantindo padrões rigorosos do campo à mesa.",
+          "image": "assets/institucional/quem-somos-slider-1-card.png",
+          "imageAlt": "Corte premium El Haji Beef",
+          "imagePosition": "center"
+        },
+        {
+          "title": "📍 Tecnologia e Sustentabilidade no Campo",
+          "text": "Investimos constantemente em tecnologia, inovação e protocolos sanitários rigorosos, garantindo um controle zootécnico eficiente e responsável. Nosso foco está no bem-estar animal e no melhoramento genético, assegurando um produto final de altíssima qualidade, com sabor e maciez incomparáveis.\n🍽️ O Melhor da Carne para Você\nNosso compromisso vai além da produção; buscamos sempre superar expectativas e levar à mesa dos nossos clientes uma carne segura, suculenta e nutritiva. A El Haji Beef é sinônimo de confiança, transparência e respeito ao consumidor.",
+          "image": "assets/institucional/quem-somos-slider-2-card.png",
+          "imageAlt": "Cortes embalados El Haji Beef",
+          "imagePosition": "center"
+        },
+        {
+          "title": "📍 Por que Escolher a El Haji Beef?",
+          "text": "Tecnologia no Agronegócio: investimos em melhoramento genético bovino e protocolos sanitários avançados para entregar carne macia, suculenta e segura.\nSustentabilidade no Campo: produção responsável com foco em bem-estar animal e práticas ecoeficientes.\nCortes Premium: carne com sabor incomparável, selecionada para consumidores exigentes.",
+          "image": "assets/institucional/quem-somos-slider-3-card.png",
+          "imageAlt": "Cortes premium preparados",
+          "imagePosition": "center"
         }
       ]
     }
@@ -97,14 +112,13 @@
     "props": {
       "blockClass": "conheca-fazenda-img"
     },
-    "children": ["image#conheca-fazenda"]
+    "children": ["youtube-video#quem-somos"]
   },
 
-  "image#conheca-fazenda": {
+  "youtube-video#quem-somos": {
     "props": {
-      "src": "assets/institucional/fazenda-sao-joao.png",
-      "alt": "Fazenda São João",
-      "blockClass": "conheca-fazenda-image"
+      "youtubeUrl": "https://youtube.com/shorts/pELYldb4YXU?si=xOpIM3yTqzsS6z66",
+      "title": "Video institucional El Haji Beef"
     }
   },
 

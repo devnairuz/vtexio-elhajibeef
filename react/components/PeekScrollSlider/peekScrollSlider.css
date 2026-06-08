@@ -1,0 +1,57 @@
+.peekSliderWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.peekSliderTrack {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-left: 0 !important;
+}
+
+.peekSliderTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.peekSliderSlide {
+  flex-grow: 0;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.peekSliderDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.peekSliderDot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #6f6f6f;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.peekSliderDot:focus-visible {
+  outline: 2px solid #fa0209;
+  outline-offset: 3px;
+}
+
+.peekSliderDotActive {
+  background: #fa0209;
+}

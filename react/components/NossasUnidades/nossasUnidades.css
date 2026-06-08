@@ -165,7 +165,7 @@
   border-radius: 50%;
   cursor: pointer;
   flex-shrink: 0;
-  transition: background 0.2s, opacity 0.2s;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,7 +191,12 @@
 }
 
 .arrowButton:hover:not(:disabled) {
-  background: #444;
+  background: #FA0209;
+  border-color: #FA0209;
+}
+
+.arrowButton:hover:not(:disabled) .arrowIcon {
+  filter: brightness(0);
 }
 
 .arrowButton:disabled {
@@ -210,7 +215,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #ccc;
+  background: #6f6f6f;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -242,7 +247,9 @@
     transform: none;
     pointer-events: auto;
   }
-
+  .nossasUnidades {
+    padding: 40px 0 64px;
+  }
   .nossasUnidades .dots {
     display: flex;
   }
@@ -256,6 +263,44 @@
 }
 
 @media (max-width: 639px) {
+  .sliderContainer {
+    display: block;
+    padding: 0;
+  }
+
+  .sliderViewport {
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    touch-action: auto;
+  }
+
+  .sliderViewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sliderTrack {
+    gap: 12px;
+    padding: 0 20px;
+    transition: none;
+    will-change: auto;
+  }
+
+  .storeCard {
+    width: 255px;
+    flex: 0 0 255px;
+    padding: 0;
+    scroll-snap-align: start;
+  }
+
+  .storeOverlay {
+    left: 0;
+    right: 0;
+  }
+
   .arrowButton {
     display: none;
   }

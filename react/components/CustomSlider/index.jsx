@@ -85,6 +85,12 @@ const CustomSlider = ({
   const slide = slides[current]
   const canGoPrev = loop || current > 0
   const canGoNext = loop || current < total - 1
+  const titleIsAccent = typeof slide.title === 'string' && slide.title.trim().startsWith('📍')
+  const textLines = String(slide.text || '')
+    .split('\n')
+    .map(line => line.trim())
+    .filter(Boolean)
+  const shouldRenderList = titleIsAccent && textLines.length > 1 && textLines.every(line => line.includes(':'))
 
   return (
     <section className={styles.customSliderRoot} aria-label="Slider de conteúdo">
@@ -96,19 +102,43 @@ const CustomSlider = ({
             {String(current + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
           </div>
 
-          <h2 className={styles.customSliderTitle}>{slide.title}</h2>
-          <p className={styles.customSliderText}>{slide.text}</p>
+          <div className={styles.customSliderTextCard}>
+            <h2 className={`${styles.customSliderTitle} ${titleIsAccent ? styles.customSliderTitleAccent : ''}`}>
+              {slide.title}
+            </h2>
 
-          {slide.buttonLabel && slide.buttonUrl && (
-            <a
-              href={slide.buttonUrl}
-              className={styles.customSliderButton}
-              target={slide.buttonNewTab ? '_blank' : '_self'}
-              rel={slide.buttonNewTab ? 'noopener noreferrer' : undefined}
-            >
-              {slide.buttonLabel}
-            </a>
-          )}
+            {shouldRenderList ? (
+              <ul className={styles.customSliderList}>
+                {textLines.map((line, index) => (
+                  <li key={`${line}-${index}`} className={styles.customSliderListItem}>
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div className={styles.customSliderText}>
+                {textLines.map((line, index) => (
+                  <p
+                    key={`${line}-${index}`}
+                    className={index === 0 && !titleIsAccent ? styles.customSliderHighlight : styles.customSliderParagraph}
+                  >
+                    {line}
+                  </p>
+                ))}
+              </div>
+            )}
+
+            {slide.buttonLabel && slide.buttonUrl && (
+              <a
+                href={slide.buttonUrl}
+                className={styles.customSliderButton}
+                target={slide.buttonNewTab ? '_blank' : '_self'}
+                rel={slide.buttonNewTab ? 'noopener noreferrer' : undefined}
+              >
+                {slide.buttonLabel}
+              </a>
+            )}
+          </div>
 
           {/* ── NAVEGAÇÃO ── */}
           <div className={styles.customSliderNav}>
@@ -155,6 +185,7 @@ const CustomSlider = ({
             src={slide.image}
             alt={slide.imageAlt || slide.title}
             loading="lazy"
+            style={{ objectPosition: slide.imagePosition || 'center' }}
           />
         </div>
       </div>
@@ -224,6 +255,12 @@ CustomSlider.schema = {
             title: 'Texto alternativo da imagem (acessibilidade)',
             type: 'string',
             default: '',
+          },
+          imagePosition: {
+            title: 'Posição da imagem',
+            description: 'Exemplo: center, center 65%, left top',
+            type: 'string',
+            default: 'center',
           },
           buttonLabel: {
             title: 'Texto do botão',

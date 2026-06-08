@@ -42,7 +42,22 @@
 
   "responsive-layout.mobile#home-linhas-gallery": {
     "title": "Galeria mobile",
-    "children": ["slider-layout#home-linhas-gallery-mobile"]
+    "children": ["peek-scroll-slider#home-linhas-gallery-mobile"]
+  },
+
+  "peek-scroll-slider#home-linhas-gallery-mobile": {
+    "title": "Galeria mobile (peek + dots)",
+    "props": {
+      "itemWidth": 220,
+      "gap": 12,
+      "edgePadding": 20
+    },
+    "children": [
+      "flex-layout.col#home-linhas-gallery-1",
+      "flex-layout.col#home-linhas-gallery-2",
+      "flex-layout.col#home-linhas-gallery-3",
+      "flex-layout.col#home-linhas-gallery-4"
+    ]
   },
 
   "flex-layout.row#home-linhas-gallery": {
@@ -314,7 +329,22 @@
 
   "responsive-layout.mobile#home-linhas-cards": {
     "title": "Cards mobile",
-    "children": ["slider-layout#home-linhas-cards-mobile"]
+    "children": ["peek-scroll-slider#home-linhas-cards-mobile"]
+  },
+
+  "peek-scroll-slider#home-linhas-cards-mobile": {
+    "title": "Cards mobile (peek + dots)",
+    "props": {
+      "itemWidth": 255,
+      "gap": 12,
+      "edgePadding": 20
+    },
+    "children": [
+      "flex-layout.col#home-linha-carnes",
+      "flex-layout.col#home-linha-aves",
+      "flex-layout.col#home-linha-peixes",
+      "flex-layout.col#home-linha-cordeiro"
+    ]
   },
 
   "flex-layout.row#home-linhas-cards": {

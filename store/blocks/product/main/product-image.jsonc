@@ -34,7 +34,7 @@
     "props": {
       "aspectRatio": "1:1",
       "thumbnailAspectRatio": "1:1",
-      "showNavigationArrows": false,
+      "showNavigationArrows": true,
       "showPaginationDots": true,
       "maxHeight": 388,
       "thumbnailMaxHeight": 90,

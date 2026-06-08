@@ -7,6 +7,14 @@
     "children": ["flex-layout.col#copy-brand", "flex-layout.col#copy-payments", "flex-layout.col#copy-design"]
   },
 
+  "flex-layout.row#copy-mobile": {
+    "title": "Copyright mobile",
+    "props": {
+      "blockClass": ["footer-copy-container", "custom-container"]
+    },
+    "children": ["flex-layout.col#copy-payments", "flex-layout.col#copy-design", "flex-layout.col#copy-brand"]
+  },
+
   "flex-layout.col#copy-brand": {
     "title": "Marca",
     "props": {

@@ -26,7 +26,7 @@
       "src": "assets/social-networks/facebook.svg",
       "alt": "Youtube",
       "link": {
-        "url": "https://youtube.com.br",
+        "url": "https://www.facebook.com/p/El-Haji-Beef-61550361472437/",
         "newTab": true
       }
     }
@@ -39,7 +39,7 @@
       "src": "assets/social-networks/instagram.svg",
       "alt": "Twitter",
       "link": {
-        "url": "https://twitter.com",
+        "url": "https://www.instagram.com/elhajibeef/",
         "newTab": true
       }
     }
@@ -52,7 +52,7 @@
       "src": "assets/social-networks/tiktok.svg",
       "alt": "Instagram",
       "link": {
-        "url": "https://instagram.com",
+        "url": "https://www.tiktok.com/@elhajibeef",
         "newTab": true
       }
     }
@@ -65,7 +65,7 @@
       "src": "assets/social-networks/youtube.svg",
       "alt": "Facebook",
       "link": {
-        "url": "https://www.facebook.com/facebook/?locale=pt_BR",
+        "url": "https://www.youtube.com/@ElHajiBeef",
         "newTab": true
       }
     }

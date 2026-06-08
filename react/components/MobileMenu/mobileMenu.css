@@ -206,9 +206,9 @@
   display: block;
   padding: 8px 0;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 18px;
   text-decoration: none;
 }
@@ -216,18 +216,12 @@
 .subLinkAll {
   display: block;
   padding: 8px 0;
-  color: #f5be4b;
+  color: #666;
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   font-weight: 600;
   line-height: 18px;
-  text-decoration: underline;
-}
-
-.subLinkAll:hover,
-.subLinkAll:focus {
-  color: #fa0209;
-  outline: none;
+  text-decoration: none;
 }
 
 .subLink:hover,
@@ -320,7 +314,7 @@
 }
 
 .iconHeart {
-  background: url('../../../assets/icons/heart.svg') center / 18px 16px no-repeat;
+  background: url('../../../assets/icons/heart-menu.svg') center / 18px 16px no-repeat;
 }
 
 .accountLabel {

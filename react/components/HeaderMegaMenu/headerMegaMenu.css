@@ -101,8 +101,9 @@
 
 .subcategoryLink:hover,
 .subcategoryLink:focus {
-  color: #aa1e1e;
+  color: #fa0209;
   outline: none;
+  border-bottom: 2px solid #fa0209;
 }
 
 .fullDropdown {
@@ -168,6 +169,7 @@
 .fullColumnTitle:focus {
   color: #fa0209;
   outline: none;
+  border-bottom: 2px solid #fa0209;
 }
 
 .fullSubcategoryList {
@@ -198,8 +200,9 @@
 
 .fullSubcategoryLink:hover,
 .fullSubcategoryLink:focus {
-  color: #aa1e1e;
+  color: #fa0209;
   outline: none;
+  border-bottom: 2px solid #fa0209;
 }
 
 @media (max-width: 1024px) {

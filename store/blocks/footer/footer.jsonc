@@ -21,7 +21,7 @@
       "flex-layout.row#newsletter",
       "flex-layout.row#content",
       "flex-layout.row#services-flags",
-      "flex-layout.row#copy"
+      "flex-layout.row#copy-mobile"
     ]
   }
 }

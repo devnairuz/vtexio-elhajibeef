@@ -8,6 +8,11 @@
     "component": "HeaderMegaMenu"
   },
 
+  "peek-scroll-slider": {
+    "component": "PeekScrollSlider",
+    "composition": "children"
+  },
+
   "aux-floating-container": {
     "component": "AuxFloatingContainer",
     "composition": "children"
@@ -87,6 +92,10 @@
 
   "custom-slider": {
     "component": "CustomSlider"
+  },
+
+  "youtube-video": {
+    "component": "YoutubeVideo"
   },
 
   "form-contato": {

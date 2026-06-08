@@ -387,16 +387,24 @@ const FormContato = () => {
               <label htmlFor="fc-assunto" className={styles.labelForm}>
                 Assunto
               </label>
-              <input
+              <select
                 id="fc-assunto"
-                type="text"
                 name="assunto"
                 value={formData.assunto}
                 onChange={handleInputChange}
                 onBlur={(e) => validateField('assunto', e.target.value)}
                 disabled={isLoading}
                 aria-invalid={!!errors.assunto}
-              />
+                className={!formData.assunto ? styles.selectPlaceholder : undefined}
+              >
+                <option value="" disabled>Selecione</option>
+                <option value="Dúvida">Dúvida</option>
+                <option value="Sugestão">Sugestão</option>
+                <option value="Reclamação">Reclamação</option>
+                <option value="Elogio">Elogio</option>
+                <option value="Atendimento">Atendimento</option>
+                <option value="Outros">Outros</option>
+              </select>
               {errors.assunto && (
                 <small className={styles.errorText}>{errors.assunto}</small>
               )}

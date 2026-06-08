@@ -2,7 +2,7 @@
   font-family: 'DM Sans', sans-serif;
   background-color: #1C1C1C;
   width: 100%;
-  padding: 64px 128px;
+  padding: 32px 0px 43px;
   overflow: hidden;
 }
 
@@ -16,19 +16,26 @@
   display: grid;
   grid-template-columns: 445px 1fr;
   gap: 30px;
-  align-items: center;
+  align-items: start;
   min-height: unset;
 }
 
 .customSliderContentSide {
   padding: 0;
-  background: #292929;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.customSliderTextCard {
+  width: 100%;
+  min-height: 161px;
   padding: 16px;
+  background: #292929;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .customSliderCounter {
@@ -42,7 +49,11 @@
   font-weight: 600;
   line-height: 1.2;
   color: #FFFFFF;
-  margin: 0;
+  margin: 0 0 16px;
+}
+
+.customSliderTitleAccent {
+  color: #F5BE4B;
 }
 
 .customSliderText {
@@ -52,15 +63,37 @@
   color: #FFFFFF;
   font-family: 'Nunito', 'DM Sans', sans-serif;
   font-size: 14px;
-  line-height: 1.45;
+  line-height: 1.25;
   max-width: 100%;
   margin: 0;
-  white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
-.customSliderText::first-line {
+.customSliderParagraph,
+.customSliderHighlight,
+.customSliderListItem {
+  margin: 0;
+  font-family: 'Nunito', 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.customSliderHighlight {
+  font-family: 'DM Sans', sans-serif;
   color: #F5BE4B;
   font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.customSliderList {
+  margin: 0;
+  padding-left: 20px;
+  color: #FFFFFF;
 }
 
 .customSliderButton {
@@ -71,7 +104,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 7px;
   margin-top: 0;
 }
 
@@ -79,14 +112,17 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1px solid #e00000;
+  border: 1px solid #fa0209;
   background-color: transparent;
   color: #ffffff;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .customSliderArrow:hover:not(.customSliderArrowDisabled) {
-  background-color: #e00000;
-  border-color: #e00000;
+  background-color: #fa0209;
+  border-color: #fa0209;
   color: #ffffff;
 }
 
@@ -115,7 +151,8 @@
 .customSliderImageSide {
   width: 635px;
   max-width: 100%;
-  height: 254px;
+  aspect-ratio: 635 / 254;
+  height: auto;
   border-radius: 8px;
   overflow: hidden;
   background-color: #1a1a1a;
@@ -157,25 +194,24 @@
 
   .customSliderContentSide {
     order: 2;
+    width: 100%;
   }
 
   .customSliderImageSide {
     order: 1;
     width: 100%;
-    height: 240px;
   }
 
   .customSliderText {
-    font-size: 16px;
-    padding: 20px;
+    font-size: 14px;
   }
 
   .customSliderTitle {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .customSliderArrow {
-    width: 48px;
-    height: 48px;
+    width: 38px;
+    height: 38px;
   }
 }

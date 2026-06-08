@@ -25,7 +25,7 @@
     },
     "rich-text#bread2": {
       "props": {
-        "text": "Institucional",
+        "text": "Institucionais",
         "textAlignment": "initial",
         "textPosition": "initial",
         "blockClass": ["cmsbread2"]

@@ -8,7 +8,7 @@
 
   "product-availability-gate#summary": {
     "props": {
-      "message": "Produto indisponível"
+      "message": "Indisponível"
     },
     "children": ["flex-layout.col#summary-action"]
   },

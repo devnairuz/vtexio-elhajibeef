@@ -42,7 +42,20 @@
     "props": {
       "blockClass": ["minicart-mobile-content"]
     },
-    "children": ["header-login#mobile", "minicart.v2"]
+    "children": ["image#feed-shop-mobile", "header-login#mobile", "minicart.v2"]
+  },
+
+  "image#feed-shop-mobile": {
+    "title": "Header mobile > Feed Shop",
+    "props": {
+      "src": "assets/icons/feed-shop.svg",
+      "alt": "Feed Shop",
+      "link": {
+        "url": "/feed-shop",
+        "attributeNofollow": false
+      },
+      "blockClass": "feed-shop-mobile-icon"
+    }
   },
 
   "header-login#mobile": {

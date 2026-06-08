@@ -20,7 +20,7 @@
   "rich-text#newsletter": {
     "title": "Footer > Newsletter > Texto",
     "props": {
-      "text": "Assine nossa **Newsletter** | Fique por dentro !",
+      "text": "**Assine nossa** | Fique por dentro !",
       "blockClass": "newsletter-cta"
     }
   },

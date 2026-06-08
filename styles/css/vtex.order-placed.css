@@ -2,7 +2,7 @@
   font-family: 'DM Sans', sans-serif;
   background: transparent;
   color: #ffffff;
-  padding-top: 40px;
+  padding-top: 32px;
   padding-bottom: 77px;
 }
 
@@ -19,7 +19,6 @@
   display: none;
 }
 
-/* PRESERVADO: selo inicial */
 .confirmationIconWrapper {
   color: transparent;
   font-size: 0;
@@ -27,49 +26,71 @@
   overflow: hidden;
   text-align: center;
   visibility: hidden;
+  margin-bottom: -30px;
 }
 
 .confirmationIconWrapper::before {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3E%3Cg clip-path='url(%23clip0_14001_8951)'%3E%3Cpath d='M39.0281 17.6428L36.3 14.9152C35.6525 14.2677 35.1219 12.9882 35.1219 12.0706V8.21311C35.1219 6.37811 33.6229 4.87906 31.7884 4.87809H27.9293C27.0128 4.87809 25.7318 4.34653 25.0843 3.69955L22.3567 0.971955C21.0606 -0.324066 18.9386 -0.324066 17.6426 0.971955L14.915 3.7015C14.267 4.34897 12.9845 4.87906 12.0699 4.87906H8.21244C6.37988 4.87906 4.87888 6.37811 4.87888 8.21311V12.0707C4.87888 12.9847 4.3484 14.2682 3.70083 14.9153L0.972748 17.6429C-0.324249 18.9389 -0.324249 21.0609 0.972748 22.359L3.70083 25.0866C4.34879 25.7341 4.87888 27.0171 4.87888 27.9312V31.7888C4.87888 33.6218 6.37988 35.1228 8.21244 35.1228H12.07C12.9866 35.1228 14.2675 35.6533 14.9151 36.3004L17.6427 39.0289C18.9387 40.324 21.0607 40.324 22.3568 39.0289L25.0844 36.3004C25.7324 35.6529 27.0129 35.1228 27.9294 35.1228H31.7885C33.623 35.1228 35.122 33.6218 35.122 31.7888V27.9312C35.122 27.0132 35.653 25.7337 36.3001 25.0866L39.0282 22.359C40.3231 21.0609 40.3231 18.9388 39.0281 17.6428ZM17.3536 27.5005L9.999 20.1449L12.3561 17.7883L17.3542 22.7864L27.6429 12.5002L29.9994 14.8568L17.3536 27.5005Z' fill='%23FE5000'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_14001_8951'%3E%3Crect width='40' height='40' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.6425 0.97206C18.9385 -0.32402 21.0605 -0.32402 22.3565 0.97206L25.0841 3.69966C25.7316 4.34663 27.0126 4.87819 27.9291 4.87819H31.7882C33.6228 4.87917 35.1218 6.37823 35.1218 8.21323V12.0708C35.1218 12.9883 35.6524 14.2678 36.3 14.9153L39.0281 17.6428C40.323 18.9388 40.323 21.0608 39.0281 22.3589L36.3 25.0865C35.6529 25.7336 35.1219 27.0131 35.1219 27.9311V31.7887C35.1219 33.6217 33.6229 35.1227 31.7884 35.1227H27.9293C27.0128 35.1227 25.7322 35.6528 25.0843 36.3003L22.3567 39.0289C21.0607 40.3239 18.9387 40.3239 17.6426 39.0289L14.915 36.3003C14.2674 35.6532 12.9865 35.1227 12.07 35.1227H8.2124C6.3798 35.1227 4.8788 33.6217 4.8788 31.7887V27.9311C4.8788 27.017 4.3487 25.734 3.7008 25.0865L0.9727 22.3589C-0.3242 21.0608 -0.3242 18.9388 0.9727 17.6428L3.7008 14.9152C4.3484 14.2681 4.8788 12.9846 4.8788 12.0706V8.21323C4.8788 6.37823 6.3798 4.87917 8.2124 4.87917H12.0699C12.9845 4.87917 14.267 4.34908 14.9149 3.70161L17.6425 0.97206Z' fill='%231E955E'/%3E%3Cpath d='M17.3535 27.5004L10 20.1449L12.3561 17.7884L17.3541 22.7864L27.6428 12.5002L29.9993 14.8568L17.3535 27.5004Z' fill='%23050505'/%3E%3C/svg%3E");
   display: block;
   visibility: visible;
 }
 
 .confirmationTitle {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
-  margin: 16px 0;
+  line-height: 1;
+  margin: 0 0 24px;
   text-align: center;
 }
 
 .confirmationMessage {
   color: #ffffff;
-  font-size: 13px;
-  line-height: 20px;
-  max-width: 520px;
-  margin: 0 auto 24px;
+  font-size: 16px;
+  line-height: 1.45;
+  max-width: 558px;
+  margin: 0 auto 32px;
   text-align: center;
 }
 
-.printButtonWrapper,
-.orderOptionsWrapper {
+.myOrdersButton,
+.updateOrderButton {
+  width: 151px;
+  min-width: 151px;
   min-height: initial;
-  padding: 6px 18px;
+}
+
+.myOrdersButton :global(.vtex-button),
+.updateOrderButton :global(.vtex-button) {
+  width: 100%;
+  height: 31px;
+  min-height: initial;
   background: transparent;
   border: 1px solid #f5be4b;
   box-shadow: none;
   border-radius: 999px;
   color: #f5be4b;
-  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
   font-weight: 700;
+  line-height: 20px;
   text-transform: initial;
+  transition: all 0.3s ease-in-out;
 }
 
-.printButtonWrapper:hover,
-.orderOptionsWrapper:hover {
-  background: #f5be4b;
-  color: #1a1a1a;
+.myOrdersButton :global(.vtex-button__label),
+.updateOrderButton :global(.vtex-button__label) {
+  padding: 0 !important;
+  color: inherit;
+}
+
+.myOrdersButton:hover :global(.vtex-button),
+.myOrdersButton :global(.vtex-button):hover,
+.updateOrderButton:hover :global(.vtex-button),
+.updateOrderButton :global(.vtex-button):hover {
+  background-color: #f5be4b;
+  color: #1c1c1c;
+  border-color: #f5be4b;
 }
 
 .orderPlacedMainWrapper {
@@ -112,18 +133,6 @@
   padding-bottom: 40px;
 }
 
-.orderPaymentItem {
-  min-height: initial;
-  padding: 8px 20px;
-  border: 0;
-  border-radius: 999px;
-  background: #f5be4b;
-  color: #1a1a1a;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: initial;
-}
-
 .package--delivery {
   margin: 40px 0;
 }
@@ -142,6 +151,11 @@
   color: #ffffff;
   font-size: 11px;
   font-weight: 700;
+  display: none;
+}
+
+.orderSeller {
+  color: #f5be4b;
 }
 
 .cancelOrderButton:hover {
@@ -211,6 +225,26 @@
     padding-top: 30px;
   }
 
+  .myOrdersButton,
+  .updateOrderButton {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex: 0 0 100%;
+  }
+
+  .myOrdersButton {
+    margin-top: 20px;
+  }
+
+  .myOrdersButton :global(.vtex-button),
+  .updateOrderButton :global(.vtex-button) {
+    height: 38px;
+    min-height: 38px;
+    padding: 8px 24px;
+  }
+
   .orderPlacedMainWrapper {
     margin: 32px 0 0;
   }
@@ -231,18 +265,67 @@
     width: 100%;
   }
 
+  .productListItem {
+    margin-bottom: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .productWrapper {
+    display: grid !important;
+    grid-template-columns: 72px minmax(0, 1fr) auto;
+    column-gap: 12px;
+    align-items: start;
+    text-align: left !important;
+  }
+
+  .productImageColumn {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin: 0 !important;
+  }
+
   .productImageWrapper {
-    width: 56px;
-    height: 56px;
+    width: 72px;
+    height: 72px;
+    margin: 0 !important;
+  }
+
+  .productInfoColumn {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    min-width: 0;
+  }
+
+  .productName {
+    max-width: none;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: left;
+  }
+
+  .productQuantity {
+    display: block;
+    margin-top: 6px !important;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .productPrice {
-    width: 100%;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: start;
+    justify-self: end;
+    width: auto;
     text-align: right;
-    margin-top: 8px;
+    margin-top: 0 !important;
+    font-size: 12px;
+    line-height: 16px;
+    white-space: nowrap;
   }
 
   .totalList {
     margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid #5a5a5a;
   }
 }

@@ -127,7 +127,29 @@
   font-size: 12px;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  color: #474747;
+  color: #CCCCCC;
+}
+
+:global(.dib.mr2) {
+  font-weight: 400;
+  color: #666666;
+}
+
+:global(.dib.mr2 strong) {
+  font-weight: 400;
+  color: #666666;
+}
+
+:global(ul.pa0.mv2.t-small) :global(li.dib.mr2),
+:global(ul.pa0.mv2.t-small) :global(li.dib.mr5) {
+  font-weight: 400;
+  color: #666666;
+}
+
+:global(ul.pa0.mv2.t-small) :global(li.dib.mr2 strong),
+:global(ul.pa0.mv2.t-small) :global(li.dib.mr5 strong) {
+  font-weight: 400;
+  color: #666666;
 }
 
 :global(.vtex-store-components-3-x-shippingContainer)
@@ -275,4 +297,12 @@
 :global(.vtex-numeric-stepper-wrapper) {
   background-color: #3F3F3F;
   border-radius: 4px;
+}
+
+:global(.relative.justify-center.flex) :global(.absolute.w-100.h-100.z-2) {
+  background: #29292999 !important;
+}
+
+:global(.vtex-rich-text-0-x-heading--conheca-fazenda-titulo) {
+  font-size: 50px;
 }

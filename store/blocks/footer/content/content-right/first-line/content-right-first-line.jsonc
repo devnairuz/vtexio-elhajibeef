@@ -5,9 +5,19 @@
       "colSizing": "auto"
     },
     "children": [
-      "flex-layout.col#footer-category-menu",
-      "flex-layout.col#cms-menu",
+      "flex-layout.row#footer-menu-columns",
       "flex-layout.col#sac"
+    ]
+  },
+
+  "flex-layout.row#footer-menu-columns": {
+    "props": {
+      "blockClass": "footer-menu-columns",
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#footer-category-menu",
+      "flex-layout.col#cms-menu"
     ]
   }
 }

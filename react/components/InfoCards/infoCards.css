@@ -68,3 +68,75 @@
     height: 60px;
   }
 }
+
+@media (max-width: 767px) {
+  .container {
+    --benefit-card-gap: 10px;
+    --benefit-peek-width: 34px;
+    --benefit-card-width: min(
+      182px,
+      calc((100% - var(--benefit-card-gap) - var(--benefit-peek-width)) / 2)
+    );
+
+    align-items: center;
+    justify-content: flex-start;
+    width: min(408px, 100%);
+    max-width: 408px;
+    min-height: 114px;
+    gap: var(--benefit-card-gap);
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    box-sizing: border-box;
+    flex: 0 0 var(--benefit-card-width);
+    width: var(--benefit-card-width);
+    min-width: var(--benefit-card-width);
+    min-height: 114px;
+    padding: 0 16px;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .card:nth-child(2) {
+    justify-content: flex-start;
+    padding-top: 4px;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .text {
+    width: 100%;
+    gap: 4px;
+    justify-content: center;
+  }
+
+  .headline {
+    max-width: 166px;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: pre-line;
+  }
+
+  .subheadline {
+    max-width: 166px;
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    white-space: pre-line;
+  }
+}

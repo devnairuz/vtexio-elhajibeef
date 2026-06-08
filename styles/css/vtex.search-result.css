@@ -40,6 +40,7 @@
   padding: 0 0 6px;
   line-height: 19px;
   min-width: initial;
+  border: none;
 }
 
 .orderByText {
@@ -49,6 +50,44 @@
   font-weight: 400;
   position: relative;
   z-index: 0;
+}
+
+.orderByOptionsContainer {
+  box-sizing: border-box;
+  min-width: 260px;
+  margin-top: 8px;
+  padding: 8px;
+  background: #1C1C1C;
+  border: 1px solid #3F3F3F;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  z-index: 5;
+}
+
+.orderByOptionItem {
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 10px 12px;
+  color: #F3F3F3;
+  background-color: transparent;
+  border-radius: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.orderByOptionItem:hover {
+  color: #FFFFFF;
+  background-color: #333333;
+}
+
+.orderByOptionItem--selected {
+  color: #FA0209 !important;
+  background: #292929 !important;
+  font-weight: 700;
 }
 
 .filterMessage,
@@ -66,6 +105,7 @@
   padding: 16px;
   color: #FFFFFF;
   margin-bottom: 24px;
+  border: none;
 }
 
 .filter.filterIsOpen,
@@ -94,7 +134,7 @@
 }
 
 .filter__container--priceRange :global(.vtex-slider__selector) {
-  background: #151F6D;
+  background: #FA0209;
 }
 
 .filterItem:not(:first-child) {
@@ -136,6 +176,38 @@
   line-height: 16px;
 }
 
+.showingProducts {
+  display: none;
+}
+
+.buttonShowMore {
+  margin: 0;
+  padding: 0;
+}
+
+.buttonShowMore :global(.vtex-button) {
+  min-height: 31px;
+  min-width: 151px;
+  border: 1px solid #F5BE4B;
+  border-radius: 20px;
+  background: transparent;
+}
+
+.buttonShowMore :global(.vtex-button__label) {
+  padding: 6px 24px !important;
+  color: #F5BE4B;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: none;
+}
+
+.buttonShowMore :global(.vtex-button__label)::before {
+  content: 'Ver mais';
+  font-size: 14px;
+}
+
 @media (max-width: 1025px) {
   .galleryTitle--layout {
     font-size: 24px;
@@ -144,8 +216,217 @@
   }
 
   .filtersWrapperMobile {
+    background: #1C1C1C;
     border: 0;
     border-radius: 0;
+  }
+
+  .filterPopupContent,
+  .filterPopupContentContainer,
+  .filterPopupContentContainerOpen {
+    background: #1C1C1C;
+    color: #FFFFFF;
+  }
+
+  .filterPopupContentContainer {
+    box-shadow: 8px 0 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .filterPopupContent {
+    padding: 24px 24px 112px;
+  }
+
+  .filterPopupContent .filterPopupTitle {
+    display: block;
+    margin: 0 0 16px;
+    color: #FFFFFF;
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: left;
+  }
+
+  .filterPopupFooter {
+    background: #050505;
+    border-top: 1px solid #3F3F3F;
+    padding: 14px 16px;
+  }
+
+  .filterButtonsBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .filterClearButtonWrapper,
+  .filterApplyButtonWrapper {
+    flex: 1 1 0;
+  }
+
+  .footerButton {
+    min-height: 36px;
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  .filterClearButtonWrapper :global(.vtex-button),
+  .filterClearButtonWrapper .footerButton {
+    color: #F5BE4B !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+  }
+
+  .filterApplyButtonWrapper :global(.vtex-button),
+  .filterApplyButtonWrapper .footerButton {
+    color: #050505 !important;
+    background: #F5BE4B !important;
+    border: 1px solid #F5BE4B !important;
+  }
+
+  .filterClearButtonWrapper :global(.vtex-button__label) {
+    color: #F5BE4B !important;
+    padding: 8px 12px !important;
+  }
+
+  .filterApplyButtonWrapper :global(.vtex-button__label) {
+    color: #050505 !important;
+    padding: 8px 12px !important;
+  }
+
+  .accordionFilterContainer,
+  .accordionFilterContent,
+  .accordionFilter,
+  .accordionFilterItem,
+  .accordionFilterItemActive,
+  .accordionFilterItemOptions,
+  .filterAccordionItemBox,
+  .filterAccordionBreadcrumbs {
+    box-sizing: border-box;
+    width: 100%;
+    background: #1C1C1C;
+    color: #FFFFFF;
+  }
+
+  .accordionFilterItemHidden {
+    display: none !important;
+  }
+
+  .accordionFilterOpen .accordionFilterItem:not(.accordionFilterItemActive) {
+    display: none !important;
+  }
+
+  .accordionFilterItemActive {
+    display: block;
+  }
+
+  .filterAccordionItemBox {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-height: 43px;
+    border-color: #3F3F3F;
+    border-width: 0 0 1px;
+    padding: 12px 32px 11px 0;
+  }
+
+  .accordionFilterItemTitle,
+  .filterBreadcrumbsText,
+  .filterBreadcrumbsItemName {
+    color: #FFFFFF;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .accordionFilterItemTitle {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  .accordionFilterItemIcon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    flex: 0 0 24px;
+    align-items: center;
+    justify-content: flex-end;
+    width: 24px;
+    margin-right: 10px;
+    transform: translateY(-50%);
+    color: #F5BE4B;
+    pointer-events: none;
+  }
+
+  .filterBreadcrumbsItem {
+    color: #F5BE4B;
+  }
+
+  .filterAccordionBreadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    border-bottom: 1px solid #3F3F3F;
+  }
+
+  .filterBreadcrumbsContent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 20px;
+  }
+
+  .filterBreadcrumbsText,
+  .filterBreadcrumbsItemName {
+    display: inline-flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  .filterBreadcrumbsItem {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    line-height: 20px;
+  }
+
+  .accordionSelectedFilters,
+  .filterSelectedFilters,
+  .filterTotalProducts {
+    color: #F3F3F3;
+  }
+
+  .accordionFilterContent .filterItem {
+    margin-top: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #3F3F3F;
+  }
+
+  .accordionFilterContent .filterItem:last-child {
+    border-bottom: 0;
+  }
+
+  .accordionFilterContent .filterItem :global(.vtex-checkbox__line-container) {
+    align-items: center;
+    gap: 8px;
+  }
+
+  .accordionFilterContent .filterItem :global(.vtex-checkbox__label) {
+    color: #F3F3F3;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .orderByButton,
@@ -168,6 +449,22 @@
   }
 
   .orderByText {
+    display: none;
+  }
+
+  .orderByButton .filterPopupTitle {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+  }
+
+  .orderByButton .filterPopupArrowIcon {
+    padding-left: 8px;
+  }
+
+  .filterPopupButton .filterPopupTitle {
     display: block;
     max-width: 120px;
     padding: 0;
@@ -177,18 +474,7 @@
     white-space: normal;
   }
 
-  .orderByText::after {
-    content: 'Relevância';
-    font-family: "DM Sans", sans-serif;
-    display: block;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-  }
-
-  .filterPopupButton .filterPopupTitle,
-  .filterPopupTitle {
+  .filterPopupButton .filterPopupTitle {
     color: #FFFFFF;
     font-size: 0;
     line-height: 0;
@@ -212,13 +498,27 @@
     padding-left: 34px;
   }
 
+  .orderByOptionsContainer {
+    width: calc(100vw - 40px);
+    max-width: 320px;
+    min-width: 0;
+    padding: 8px;
+  }
+
+  .orderByOptionItem {
+    min-height: 42px;
+    padding: 11px 12px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
   .filterAccordionItemBox {
-    padding-right: 0;
-    min-height: initial;
+    padding-right: 32px;
+    min-height: 43px;
   }
 
   .filterAccordionItemBox:not(:first-child) {
-    padding-top: 15px;
+    padding-top: 12px;
   }
 
   .filterAccordionItemBox :global(.vtex-checkbox__label),
@@ -271,34 +571,6 @@
   .showingProducts,
   .progressBar {
     display: none;
-  }
-
-  .buttonShowMore {
-    margin: 0;
-    padding: 0;
-  }
-
-  .buttonShowMore :global(.vtex-button) {
-    min-height: 31px;
-    min-width: 151px;
-    border: 1px solid #F5BE4B;
-    border-radius: 20px;
-    background: transparent;
-  }
-
-  .buttonShowMore :global(.vtex-button__label) {
-    padding: 6px 24px !important;
-    color: #F5BE4B;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0;
-    font-weight: 700;
-    line-height: 20px;
-    text-transform: none;
-  }
-
-  .buttonShowMore :global(.vtex-button__label)::before {
-    content: 'Ver mais';
-    font-size: 14px;
   }
 }
 
