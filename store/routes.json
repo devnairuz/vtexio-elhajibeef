@@ -1,4 +1,7 @@
 {
+"store.custom#search-custom": {
+  "path": "/colecao"
+},
 "store.custom#fale-conosco": {
   "path": "/fale-conosco"
 },

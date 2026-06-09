@@ -1,8 +1,11 @@
 .youtubeVideoRoot {
   width: 100%;
-  height: 254px;
+  max-width: 100%;
+  aspect-ratio: 528 / 254;
+  height: auto;
   overflow: hidden;
   background: #050505;
+  border-radius: 4px;
 }
 
 .youtubeVideoFrame {
@@ -29,6 +32,7 @@
 @media (max-width: 768px) {
   .youtubeVideoRoot,
   .youtubeVideoFallback {
-    height: 218px;
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
 }

@@ -752,3 +752,310 @@ $(document).ready(function() {
     if (bind() || tries > 40) clearInterval(t);
   }, 250);
 })()
+
+// Oculta Pix quando houver produto com peso variavel no carrinho
+;(function initHidePixForVariableWeightProducts() {
+  var VARIABLE_WEIGHT_SPEC_NAME = 'Produto Pesável?'
+  var PIX_GROUP_ID = 'payment-group-instantPaymentPaymentGroup'
+  var PIX_HIDDEN_CLASS = 'nrz-hide-pix-payment'
+  var productCache = {}
+  var lastSignature = ''
+  var lastShouldHidePix = null
+  var requestToken = 0
+  var scheduled = false
+  var scheduledOrderForm = null
+  var observer = null
+
+  function normalizeText(value) {
+    return String(value || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .trim()
+      .toLowerCase()
+  }
+
+  function isTrueValue(value) {
+    var normalized = normalizeText(Array.isArray(value) ? value[0] : value)
+
+    return normalized === 'true' || normalized === 'sim' || normalized === 'yes' || normalized === '1'
+  }
+
+  function getSpecificationValue(product, specificationName) {
+    var targetName = normalizeText(specificationName)
+
+    if (!product) return undefined
+
+    var directKey = Object.keys(product).find(function (key) {
+      return normalizeText(key) === targetName
+    })
+
+    if (directKey) {
+      var directValue = product[directKey]
+
+      return Array.isArray(directValue) ? directValue[0] : directValue
+    }
+
+    var properties = product.properties || product.productSpecifications || product.specifications || []
+    var property = properties.find(function (item) {
+      return normalizeText(item && item.name) === targetName
+    })
+
+    if (property) {
+      var propertyValue = property.values || property.value || property.Values || property.Value
+
+      return Array.isArray(propertyValue) ? propertyValue[0] : propertyValue
+    }
+
+    var groups = product.specificationGroups || []
+    var groupSpecification
+
+    groups.some(function (group) {
+      var specs = group && group.specifications ? group.specifications : []
+
+      groupSpecification = specs.find(function (item) {
+        return normalizeText(item && item.name) === targetName
+      })
+
+      return !!groupSpecification
+    })
+
+    if (groupSpecification) {
+      var groupValue = groupSpecification.values || groupSpecification.value || groupSpecification.Values || groupSpecification.Value
+
+      return Array.isArray(groupValue) ? groupValue[0] : groupValue
+    }
+
+    return undefined
+  }
+
+  function isVariableWeightProduct(product) {
+    return isTrueValue(getSpecificationValue(product, VARIABLE_WEIGHT_SPEC_NAME))
+  }
+
+  function isVariableWeightItem(item) {
+    if (!item) return false
+
+    return (
+      isVariableWeightProduct(item) ||
+      isVariableWeightProduct(item.additionalInfo) ||
+      isVariableWeightProduct(item.product) ||
+      isVariableWeightProduct(item.itemMetadata)
+    )
+  }
+
+  function getProductId(item) {
+    return String((item && item.productId) || '').trim()
+  }
+
+  function getCartSignature(orderForm) {
+    return (orderForm && orderForm.items ? orderForm.items : [])
+      .map(function (item) {
+        return [
+          item.uniqueId || '',
+          item.id || '',
+          item.productId || '',
+          item.quantity || 0,
+        ].join(':')
+      })
+      .join('|')
+  }
+
+  function fetchProduct(productId) {
+    if (!productId) return Promise.resolve(null)
+
+    if (productCache[productId]) return productCache[productId]
+
+    productCache[productId] = fetch('/api/catalog_system/pub/products/search/?fq=productId:' + encodeURIComponent(productId) + '&_from=0&_to=0', {
+      credentials: 'same-origin',
+    })
+      .then(function (response) {
+        if (!response.ok) return null
+
+        return response.json()
+      })
+      .then(function (products) {
+        return products && products[0] ? products[0] : null
+      })
+      .catch(function () {
+        return null
+      })
+
+    return productCache[productId]
+  }
+
+  function orderFormHasVariableWeightProduct(orderForm) {
+    var items = orderForm && orderForm.items ? orderForm.items : []
+
+    if (!items.length) return Promise.resolve(false)
+
+    if (items.some(isVariableWeightItem)) return Promise.resolve(true)
+
+    var productIds = items
+      .map(getProductId)
+      .filter(function (productId, index, list) {
+        return productId && list.indexOf(productId) === index
+      })
+
+    if (!productIds.length) return Promise.resolve(false)
+
+    return Promise.all(productIds.map(fetchProduct)).then(function (products) {
+      return products.some(isVariableWeightProduct)
+    })
+  }
+
+  function getPixElements() {
+    var selectors = [
+      '#' + PIX_GROUP_ID,
+      '[data-name="Pix"]',
+      '[data-name="PIX"]',
+      '.payment-group-item[href="#/payment/' + PIX_GROUP_ID.replace('payment-group-', '') + '"]',
+      '.payment-group-item[data-payment-group="' + PIX_GROUP_ID.replace('payment-group-', '') + '"]',
+    ]
+    var elements = []
+
+    selectors.forEach(function (selector) {
+      Array.prototype.forEach.call(document.querySelectorAll(selector), function (element) {
+        if (elements.indexOf(element) === -1) elements.push(element)
+      })
+    })
+
+    return elements.filter(function (element) {
+      var text = normalizeText(element.textContent)
+      var id = normalizeText(element.id)
+
+      return id.indexOf('instantpayment') !== -1 || text === 'pix' || text.indexOf('pix') !== -1
+    })
+  }
+
+  function injectStyle() {
+    if (document.querySelector('#nrz-hide-pix-payment-style')) return
+
+    var style = document.createElement('style')
+    style.id = 'nrz-hide-pix-payment-style'
+    style.textContent = '.' + PIX_HIDDEN_CLASS + '{display:none!important;}'
+    document.head.appendChild(style)
+  }
+
+  function isVisible(element) {
+    return !!(element && element.offsetParent !== null && window.getComputedStyle(element).display !== 'none')
+  }
+
+  function selectAlternativePayment() {
+    var pixElements = getPixElements()
+    var selectedPix = pixElements.find(function (element) {
+      return element.classList.contains('active') ||
+        element.classList.contains('payment-group-item-active') ||
+        element.getAttribute('aria-selected') === 'true'
+    })
+
+    if (!selectedPix) return
+
+    var alternatives = Array.prototype.slice.call(document.querySelectorAll('.payment-group-item')).filter(function (element) {
+      return pixElements.indexOf(element) === -1 && isVisible(element) && !element.classList.contains(PIX_HIDDEN_CLASS)
+    })
+
+    if (alternatives[0]) alternatives[0].click()
+  }
+
+  function applyPixVisibility(shouldHidePix) {
+    injectStyle()
+
+    getPixElements().forEach(function (element) {
+      element.classList.toggle(PIX_HIDDEN_CLASS, shouldHidePix)
+      element.setAttribute('aria-hidden', shouldHidePix ? 'true' : 'false')
+    })
+
+    if (shouldHidePix) {
+      selectAlternativePayment()
+    }
+  }
+
+  function getOrderFormFromVtex() {
+    if (window.vtexjs && window.vtexjs.checkout && window.vtexjs.checkout.getOrderForm) {
+      return window.vtexjs.checkout.getOrderForm()
+    }
+
+    return null
+  }
+
+  function evaluate(orderForm) {
+    var currentToken = ++requestToken
+
+    if (!orderForm) {
+      var promise = getOrderFormFromVtex()
+
+      if (promise && promise.done) {
+        promise.done(evaluate)
+      }
+
+      return
+    }
+
+    var signature = getCartSignature(orderForm)
+
+    if (signature === lastSignature && lastShouldHidePix !== null) {
+      applyPixVisibility(lastShouldHidePix)
+      return
+    }
+
+    lastSignature = signature
+
+    orderFormHasVariableWeightProduct(orderForm).then(function (shouldHidePix) {
+      if (currentToken !== requestToken) return
+
+      lastShouldHidePix = shouldHidePix
+      applyPixVisibility(shouldHidePix)
+    })
+  }
+
+  function schedule(orderForm) {
+    if (orderForm) scheduledOrderForm = orderForm
+    if (scheduled) return
+
+    scheduled = true
+    setTimeout(function () {
+      var nextOrderForm = scheduledOrderForm
+
+      scheduledOrderForm = null
+      scheduled = false
+      evaluate(nextOrderForm)
+    }, 150)
+  }
+
+  function startObserver() {
+    if (observer || !document.body) return
+
+    observer = new MutationObserver(function (mutations) {
+      var shouldRun = mutations.some(function (mutation) {
+        if (mutation.type !== 'childList') return false
+
+        return Array.prototype.some.call(mutation.addedNodes, function (node) {
+          if (!node || node.nodeType !== 1) return false
+
+          return !!(
+            (node.matches && node.matches('#payment-data, .payment-group, .payment-group-item, #' + PIX_GROUP_ID)) ||
+            (node.querySelector && node.querySelector('#payment-data, .payment-group, .payment-group-item, #' + PIX_GROUP_ID))
+          )
+        })
+      })
+
+      if (shouldRun) schedule()
+    })
+
+    observer.observe(document.body, { childList: true, subtree: true })
+  }
+
+  $(function () {
+    schedule()
+    startObserver()
+  })
+
+  $(window)
+    .off('orderFormUpdated.vtex.hidePixForVariableWeight hashchange.hidePixForVariableWeight')
+    .on('orderFormUpdated.vtex.hidePixForVariableWeight', function (_, orderForm) {
+      schedule(orderForm)
+    })
+    .on('hashchange.hidePixForVariableWeight', function () {
+      schedule()
+    })
+})()
