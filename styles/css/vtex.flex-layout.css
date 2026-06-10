@@ -24,6 +24,7 @@
 }
 
 .flexRow--wrapper-topbar {
+  display: none;
   background: #666666;
 }
 .flexRowContent--wrapper-topbar {

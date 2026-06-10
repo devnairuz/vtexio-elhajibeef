@@ -1,3 +1,7 @@
+.homeRoute :global(.vtex-flex-layout-0-x-flexRow--wrapper-topbar) {
+  display: block;
+}
+
 @media (min-width: 1100px) {
   .homeRoute {
     position: absolute !important;
