@@ -108,6 +108,10 @@
   border: none;
 }
 
+.filter__container--brand {
+  display: none;
+}
+
 .filter.filterIsOpen,
 .filter__container--priceRange .filter {
   margin-bottom: 24px;
@@ -596,4 +600,8 @@
     row-gap: 14px;
     padding: 0 12px;
   }
+}
+
+.searchNotFoundInfo {
+  color: #FFFFFF;
 }

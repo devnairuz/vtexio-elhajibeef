@@ -1,6 +1,7 @@
 /* GERAL */
 .container {
   padding: 0;
+  max-width: none;
 }
 .imageElementLink {
   display: inline-block;

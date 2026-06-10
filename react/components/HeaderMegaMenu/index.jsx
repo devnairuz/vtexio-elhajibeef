@@ -61,7 +61,7 @@ const mapCategory = (category, banners) => {
   }
 }
 
-const hasDropdown = item => item?.banner || item?.subcategories?.length
+const hasDropdown = item => Boolean(item?.banner) || (item?.subcategories?.length || 0) > 0
 
 const FullCategoriesDropdown = ({ activeItem, items }) => (
   <div className={styles.fullDropdown}>

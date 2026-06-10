@@ -298,12 +298,12 @@ $(document).ready(function() {
         width: 14px;
         height: 14px;
         border-radius: 3px;
-        border: 2px solid #ff6600;
+        border: 2px solid #FA0209;
         box-sizing: border-box;
         margin-right: 8px;
       }
       .nrz-client-type-option input:checked + .nrz-client-type-radio {
-        background-color: #ff6600;
+        background-color: #FA0209;
       }
       .nrz-client-type-label {
         user-select: none;

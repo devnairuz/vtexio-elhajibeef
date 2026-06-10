@@ -133,6 +133,50 @@
   padding-bottom: 40px;
 }
 
+.orderPaymentItem :global(.vtex-button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 208px;
+  min-height: 36px;
+  margin-top: 16px;
+  padding: 8px 24px;
+  background-color: #f5be4b;
+  border: 1px solid #f5be4b;
+  box-shadow: none;
+  border-radius: 999px;
+  color: #050505;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.orderPaymentItem :global(.vtex-button__label) {
+  padding: 0 !important;
+  color: inherit;
+  font-size: 0;
+  text-transform: none;
+}
+
+.orderPaymentItem :global(.vtex-button__label)::before {
+  content: "Abrir comprovante";
+  font-size: 14px;
+  text-transform: none;
+}
+
+.orderPaymentItem :global(.vtex-button):hover,
+.orderPaymentItem :global(.vtex-button):focus {
+  background-color: #ffca55;
+  border-color: #ffca55;
+  color: #050505;
+  text-decoration: none;
+}
+
 .package--delivery {
   margin: 40px 0;
 }

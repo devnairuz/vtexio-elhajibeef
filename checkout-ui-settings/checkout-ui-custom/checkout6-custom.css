@@ -177,7 +177,7 @@ p.coupon-data {
 }
 
 .cart-items th.product-price::before {
-	content: 'PreÃ§o UnitÃ¡rio';
+	content: 'Pre\00e7o Unit\00e1rio';
 	font-size: 14px;
 }
 
@@ -2384,7 +2384,7 @@ p.notification {
 }
 
 .body-cart .cart-items th.product-price::before {
-	content: 'PreÃ§o UnitÃ¡rio';
+	content: 'Pre\00e7o Unit\00e1rio';
 	font-size: 14px;
 }
 
