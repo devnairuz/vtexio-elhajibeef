@@ -41,10 +41,16 @@ InfoCards.schema = {
           headline: {
             title: 'Título',
             type: 'string',
+            widget: {
+              'ui:widget': 'textarea',
+            },
           },
           subheadline: {
             title: 'Texto de apoio',
             type: 'string',
+            widget: {
+              'ui:widget': 'textarea',
+            },
           },
         },
       },

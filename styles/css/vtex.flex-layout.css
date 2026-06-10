@@ -539,7 +539,7 @@
   display: none !important;
 }
 .flexColChild--footer-category-menu-content :global(.vtex-category-menu-2-x-itemContainer--department):not(:first-child) {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .flexColChild--footer-category-menu-content :global(.vtex-category-menu-2-x-departmentLink):first-child,
 .flexColChild--footer-category-menu-content :global(.vtex-category-menu-2-x-departmentLink) {
@@ -673,7 +673,7 @@
 /* PÁGINA DO PRODUTO */
 .flexRowContent--product-main-container {
   display: flex;
-  gap: 14px;
+  gap: 30px;
   justify-content: space-between;
 }
 
@@ -1148,7 +1148,7 @@
 
 /* Aplica espacamento entre os blocos do menu CMS, mas ignora o primeiro item. */
 .flexColChild--cms-menu-wrapper-content:not(:first-child) {
-  margin-top: 8px;
+  margin-top: 20px;
 }
 
 /* Esconde o breadcrumb quando ele esta dentro do container principal da pagina CMS. */

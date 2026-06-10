@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: clamp(52px, 8vh, 58px);
+  min-height: clamp(52px, 7vh, 58px);
   background-color: #aa1e1e;
   box-sizing: border-box;
 }
