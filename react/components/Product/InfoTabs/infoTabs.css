@@ -161,6 +161,10 @@
   background-image: url("../../../../assets/icons/airfryer.svg");
 }
 
+.preparationTagIconFrigideira {
+  background-image: url("../../../../assets/icons/frigideira.svg");
+}
+
 .containerImageDescription {
   color: #FFFFFF;
   display: flex;

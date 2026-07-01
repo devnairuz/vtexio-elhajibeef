@@ -11,6 +11,7 @@ const preparationIconClasses = {
   cozido: 'preparationTagIconCozido',
   'air fryer': 'preparationTagIconAirFryer',
   airfryer: 'preparationTagIconAirFryer',
+  frigideira: 'preparationTagIconFrigideira',
 }
 
 const normalizeText = value =>
