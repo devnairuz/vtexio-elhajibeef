@@ -755,6 +755,8 @@ $(document).ready(function() {
 
 // Oculta Pix quando houver produto com peso variavel no carrinho
 ;(function initHidePixForVariableWeightProducts() {
+  return
+
   var VARIABLE_WEIGHT_SPEC_NAME = 'Produto Pesável?'
   var PIX_GROUP_ID = 'payment-group-instantPaymentPaymentGroup'
   var PIX_HIDDEN_CLASS = 'nrz-hide-pix-payment'

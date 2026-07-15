@@ -4040,6 +4040,8 @@ button[data-for="GPSDenied"] {
 	color: #ffffff !important;
 }
 
-#unavailable-delivery-disclaimer {
-	color: #FFFFFF;
+#unavailable-delivery-disclaimer,
+#unavailable-delivery-disclaimer span,
+#shp-unavailable-delivery-available-pickup span {
+	color: #ffffff !important;
 }
