@@ -2,6 +2,11 @@ import React, { useCallback, useEffect, useState } from 'react'
 
 import styles from './mobileMenu.css'
 
+const compareByName = (first, second) =>
+  String(first?.name || '').localeCompare(String(second?.name || ''), 'pt-BR', {
+    sensitivity: 'base',
+  })
+
 const toCategoryUrl = category => {
   const rawUrl = String(category?.url || category?.href || '').trim()
 
@@ -94,12 +99,14 @@ const MobileMenu = ({ allCategoriesLabel, allCategoriesUrl }) => {
       url: toCategoryUrl(category),
       children: (category.children || [])
         .filter(child => child?.name)
+        .sort(compareByName)
         .map(child => ({
           id: child.id,
           label: child.name,
           url: toCategoryUrl(child),
           children: (child.children || [])
             .filter(grand => grand?.name)
+            .sort(compareByName)
             .map(grand => ({
               id: grand.id,
               label: grand.name,

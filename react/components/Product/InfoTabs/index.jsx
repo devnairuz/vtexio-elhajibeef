@@ -41,7 +41,11 @@ const InfoTabs = ({ children, imageDescription }) => {
   const productSpecificationGroups = product?.specificationGroups ?? []
 
   const [productSpecifications, setProductSpecifications] = useState([])
-  const [activeIndex, setActiveIndex] = useState(null)
+  const [activeIndex, setActiveIndex] = useState('descricao')
+
+  useEffect(() => {
+    setActiveIndex('descricao')
+  }, [productId])
 
   useEffect(() => {
     if (!productSpecificationGroups.length) {

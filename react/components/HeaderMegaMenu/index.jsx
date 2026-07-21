@@ -9,6 +9,11 @@ const normalizeText = value =>
     .trim()
     .toLowerCase()
 
+const compareByName = (first, second) =>
+  String(first?.name || '').localeCompare(String(second?.name || ''), 'pt-BR', {
+    sensitivity: 'base',
+  })
+
 const toCategoryUrl = category => {
   const rawUrl = String(category?.url || category?.href || '').trim()
 
@@ -53,11 +58,14 @@ const mapCategory = (category, banners) => {
     url: toCategoryUrl(category),
     banner: bannerConfig?.banner,
     alt: bannerConfig?.alt || category?.name,
-    subcategories: (category?.children || []).map(child => ({
-      id: child?.id,
-      label: child?.name,
-      url: toCategoryUrl(child),
-    })),
+    subcategories: [...(category?.children || [])]
+      .filter(child => child?.name)
+      .sort(compareByName)
+      .map(child => ({
+        id: child?.id,
+        label: child?.name,
+        url: toCategoryUrl(child),
+      })),
   }
 }
 
